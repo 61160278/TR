@@ -33,12 +33,21 @@
 
                 <li class="menu-item">
                     <a href=""><i
-                            class="menu-icon fa fa-tasks" style="color:"></i>ทำเอานะ</a>
+                            class="menu-icon fa fa-tasks" style="color:"></i>Home</a>
                 </li>
                 <!-- อิอิ  -->
 
+                <li class="menu-item">
+                    <a href=""><i
+                            class="menu-icon fa fa-tasks" style="color:"></i>Create</a>
+                </li>
+                <!-- อิอิ  -->
 
-
+                <li class="menu-item">
+                    <a href=""><i
+                            class="menu-icon fa fa-tasks" style="color:"></i>ETR</a>
+                </li>
+                <!-- อิอิ  -->
 
             </ul>
             <!-- End tap menu sidebar  -->
