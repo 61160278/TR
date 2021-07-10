@@ -1,14 +1,14 @@
 <style>
 .border4 {
-    border-left: 4px solid #4b6777;
+      border-left: 4px solid #4b6777;
 }
 
 .text4 {
-    color: #c1432e;
+      color: #c1432e;
 }
 
 #panel_th_home {
-    background-color: #c1432e;
+      background-color: #c1432e;
 }
 </style>
 <!-- End style CSS  -->
@@ -16,143 +16,179 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
-    <!-- Start col-lg-12 -->
-    <div class="col-lg-12">
+      <!-- Start col-lg-12 -->
+      <div class="col-lg-12">
 
-        <!-- Start card shadow -->
-        <div class="card shadow mb-4">
+            <!-- Start card shadow -->
+            <div class="card shadow mb-4">
 
-            <!-- Start header  -->
-            <div class="card-header py-3" id="panel_th_home">
+                  <!-- Start header  -->
+                  <div class="card-header py-3" id="panel_th_home">
 
-                <!-- Start panel  -->
-                <div class="col-xl-12">
-                    <h1 class="m-0 font-weight-bold text-primary"><i class="fa  fa-home text-white"></i>
-                        <font color="white">Home</font>
-                    </h1>
-                </div>
-                <!-- End panel  -->
-
-            </div>
-            <!-- End header  -->
-
-
-
-            <!-- Start content  -->
-            <div class="card-body row">
-
-                <!-- Start Menu Manage Training Configuration -->
-                <div class="col-xl-4 col-md-6 mb-4">
-                    <a href="">
-                        <div class="card border4 shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text4 text-uppercase mb-1">Menu</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">Manage Training Configuration</div>
-                                    </div>
-                                    <!-- col-2 -->
-                                </div>
-                                <!-- row -->
-                            </div>
-                            <!-- card body -->
+                        <!-- Start panel  -->
+                        <div class="col-xl-12">
+                              <h1 class="m-0 font-weight-bold text-primary"><i class="fa  fa-home text-white"></i>
+                                    <font color="white">Home</font>
+                              </h1>
                         </div>
-                        <!-- card -->
-                    </a>
-                    <!-- a href -->
-                </div>
-                <!-- End Menu Manage Training Configuration  -->
+                        <!-- End panel  -->
 
-                <!-- Start Menu Employee Training Record -->
-                <div class="col-xl-4 col-md-6 mb-4">
-                    <a href="">
-                        <div class="card border4 shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text4 text-uppercase mb-1">Menu</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">Employee Training Record</div>
+                  </div>
+                  <!-- End header  -->
+
+
+
+                  <!-- Start content  -->
+                  <div class="card-body row">
+
+                        <!-- Start Menu Manage Training Configuration -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                              <a href="">
+                                    <div class="card border4 shadow h-100 py-2">
+                                          <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                      <div class="col mr-2">
+                                                            <div
+                                                                  class="text-xs font-weight-bold text4 text-uppercase mb-1">
+                                                                  Menu</div>
+                                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Manage
+                                                                  Training Configuration</div>
+                                                      </div>
+                                                      <!-- col-2 -->
+                                                </div>
+                                                <!-- row -->
+                                          </div>
+                                          <!-- card body -->
                                     </div>
-                                    <!-- col-2 -->
-                                </div>
-                                <!-- row -->
-                            </div>
-                            <!-- card body -->
+                                    <!-- card -->
+                              </a>
+                              <!-- a href -->
                         </div>
-                        <!-- card -->
-                    </a>
-                    <!-- a href -->
-                </div>
-                <!-- End Menu Employee Training Record  -->
+                        <!-- End Menu Manage Training Configuration  -->
 
-                <!-- Start Menu Manage Training -->
-                <div class="col-xl-4 col-md-6 mb-4">
-                    <a href="">
-                        <div class="card border4 shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text4 text-uppercase mb-1">Menu</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">Manage Training </div>
+                        <!-- Start Menu Manage Training Record -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                              <a href="">
+                                    <div class="card border4 shadow h-100 py-2">
+                                          <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                      <div class="col mr-2">
+                                                            <div
+                                                                  class="text-xs font-weight-bold text4 text-uppercase mb-1">
+                                                                  Menu</div>
+                                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Manage
+                                                                  Training Record</div>
+                                                      </div>
+                                                      <!-- col-2 -->
+                                                </div>
+                                                <!-- row -->
+                                          </div>
+                                          <!-- card body -->
                                     </div>
-                                    <!-- col-2 -->
-                                </div>
-                                <!-- row -->
-                            </div>
-                            <!-- card body -->
+                                    <!-- card -->
+                              </a>
+                              <!-- a href -->
                         </div>
-                        <!-- card -->
-                    </a>
-                    <!-- a href -->
-                </div>
-                <!-- End Menu Manage Training  -->
+                        <!-- End Menu Manage Training Record -->
 
-                <!-- Start Menu Report -->
-                <div class="col-xl-4 col-md-6 mb-4">
-                    <a href="">
-                        <div class="card border4 shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text4 text-uppercase mb-1">Menu</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">Report </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- Start Menu Employee Training Record -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                              <a href="">
+                                    <div class="card border4 shadow h-100 py-2">
+                                          <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                      <div class="col mr-2">
+                                                            <div
+                                                                  class="text-xs font-weight-bold text4 text-uppercase mb-1">
+                                                                  Menu</div>
+                                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Employee
+                                                                  Training Record</div>
+                                                      </div>
+                                                      <!-- col-2 -->
+                                                </div>
+                                                <!-- row -->
+                                          </div>
+                                          <!-- card body -->
                                     </div>
-                                    <!-- col-2 -->
-                                </div>
-                                <!-- row -->
-                            </div>
-                            <!-- card body -->
+                                    <!-- card -->
+                              </a>
+                              <!-- a href -->
                         </div>
-                        <!-- card -->
-                    </a>
-                    <!-- a href -->
-                </div>
-                <!-- End Menu Report  -->
+                        <!-- End Menu Employee Training Record  -->
 
 
-                <!-- Start Menu Profile -->
-                <div class="col-xl-4 col-md-6 mb-4">
-                    <a href="">
-                        <div class="card border4 shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text4 text-uppercase mb-1">Menu</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">Profile </div>
+
+                        <!-- Start Menu Report -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                              <a href="">
+                                    <div class="card border4 shadow h-100 py-2">
+                                          <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                      <div class="col mr-2">
+                                                            <div
+                                                                  class="text-xs font-weight-bold text4 text-uppercase mb-1">
+                                                                  Menu</div>
+                                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Report
+                                                            </div>
+                                                      </div>
+                                                      <!-- col-2 -->
+                                                </div>
+                                                <!-- row -->
+                                          </div>
+                                          <!-- card body -->
                                     </div>
-                                    <!-- col-2 -->
-                                </div>
-                                <!-- row -->
-                            </div>
-                            <!-- card body -->
+                                    <!-- card -->
+                              </a>
+                              <!-- a href -->
                         </div>
-                        <!-- card -->
-                    </a>
-                    <!-- a href -->
-                </div>
-                <!-- End Menu Profile -->
+                        <!-- End Menu Report  -->
 
-            
 
-</div>
- <!-- /.container-fluid -->
+                        <!-- Start Menu Profile -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                              <a href="">
+                                    <div class="card border4 shadow h-100 py-2">
+                                          <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                      <div class="col mr-2">
+                                                            <div
+                                                                  class="text-xs font-weight-bold text4 text-uppercase mb-1">
+                                                                  Menu</div>
+                                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Profile
+                                                            </div>
+                                                      </div>
+                                                      <!-- col-2 -->
+                                                </div>
+                                                <!-- row -->
+                                          </div>
+                                          <!-- card body -->
+                                    </div>
+                                    <!-- card -->
+                              </a>
+                              <!-- a href -->
+                        </div>
+                        <!-- End Menu Profile -->
+
+
+
+                  </div>
+                  <!-- /.container-fluid -->
