@@ -1,6 +1,6 @@
 <style>
 .border4 {
-      border-left: 4px solid #4b6777;
+      border-left: 4px solid #4E73DF;
 }
 
 .text4 {
@@ -8,7 +8,7 @@
 }
 
 #panel_th_home {
-      background-color: #c1432e;
+      background-color: #4E73DF;
 }
 </style>
 <!-- End style CSS  -->
