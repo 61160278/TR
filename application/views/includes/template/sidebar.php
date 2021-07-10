@@ -9,7 +9,15 @@
 */
 
 ?>
+<style>
 
+#left-panel {
+      background-color: #263238;
+}
+#main-menu{
+      background-color: #263238;
+}
+</style>
 
 <!--Start  side bar -->
 <aside id="left-panel" class="left-panel">
@@ -23,29 +31,47 @@
             <ul class="nav navbar-nav">
                 <li class="menu-item">
                     <a href="<?php echo base_url()?>Trs_Controller/index"><i class="menu-icon fa fa-home"
-                            style="color:"></i>Home </a>
+                            style="color: white"></i>Home </a>
                 </li>
                 <!-- Home page  -->
 
-                <li class="menu-title">Menu</li>
+                <li class="menu-title"><font color="white">Menu</font></li>
                 <!-- /.menu-title -->
 
 
                 <li class="menu-item">
                     <a href=""><i
-                            class="menu-icon fa fa-tasks" style="color:"></i>Home</a>
+                            class="menu-icon fa fa-tasks" style="color: white"></i>Home</a>
                 </li>
                 <!-- อิอิ  -->
 
                 <li class="menu-item">
                     <a href=""><i
-                            class="menu-icon fa fa-tasks" style="color:"></i>Create</a>
+                            class="menu-icon fa fa-tasks" style="color: white"></i>Create</a>
                 </li>
                 <!-- อิอิ  -->
 
                 <li class="menu-item">
                     <a href=""><i
-                            class="menu-icon fa fa-tasks" style="color:"></i>ETR</a>
+                            class="menu-icon fa fa-tasks" style="color: white"></i>ETR</a>
+                </li>
+                <!-- อิอิ  -->
+
+                <li class="menu-item">
+                    <a href=""><i
+                            class="menu-icon fa fa-tasks" style="color: white"></i>MT</a>
+                </li>
+                <!-- อิอิ  -->
+
+                <li class="menu-item">
+                    <a href=""><i
+                            class="menu-icon fa fa-tasks" style="color: white"></i>Report</a>
+                </li>
+                <!-- อิอิ  -->
+
+                <li class="menu-item">
+                    <a href=""><i
+                            class="menu-icon fa fa-tasks" style="color: white"></i>Profile</a>
                 </li>
                 <!-- อิอิ  -->
 
