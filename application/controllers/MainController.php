@@ -1,7 +1,6 @@
 <?php
 /*
 * MainCcontroller
-* Form Management
 * @input  -
 * @output -
 * @author Kunanya Singmee
