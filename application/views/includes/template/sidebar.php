@@ -38,13 +38,6 @@
                 <li class="menu-title"><font color="white">Menu</font></li>
                 <!-- /.menu-title -->
 
-
-                <li class="menu-item">
-                    <a href=""><i
-                            class="menu-icon fa fa-tasks" style="color: white"></i>Home</a>
-                </li>
-                <!-- อิอิ  -->
-
                 <li class="menu-item">
                     <a href=""><i
                             class="menu-icon fa fa-tasks" style="color: white"></i>Create</a>
@@ -53,7 +46,7 @@
 
                 <li class="menu-item">
                     <a href=""><i
-                            class="menu-icon fa fa-tasks" style="color: white"></i>ETR</a>
+                            class="menu-icon ti ti-id-badge" style="color: white"></i>ETR</a>
                 </li>
                 <!-- อิอิ  -->
 
@@ -74,6 +67,9 @@
                             class="menu-icon fa fa-tasks" style="color: white"></i>Profile</a>
                 </li>
                 <!-- อิอิ  -->
+                
+                <a id="menuToggle" class="menutoggle"><i class="fa fa-angle-right"></i></a>
+                <!-- link top image  -->
 
             </ul>
             <!-- End tap menu sidebar  -->

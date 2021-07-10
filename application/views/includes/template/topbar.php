@@ -9,21 +9,26 @@
 */
 
 ?>
+<style>
+#head{
+    background-color: #4E73DF
+}
 
+
+</style>
 
 <!-- right Panel -->
 <div id="right-panel" class="right-panel">
     <!-- Header-->
-    <header class="header">
+    <header class="header" id="head">
         <!-- Start div top-right  -->
         <div class="top-left">
             <!-- Start div navbar-header -->
-            <div class="navbar-header">
+            <div class="navbar-header" id = "head">
                 <a class="navbar-brand" href="<?php echo base_url()?>Trs_Controller/index">
                     <img src="<?php echo base_url();?>elaadmin/images/LOGO_49.png" alt="Logo" height="80%">
                 </a>
-                <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
-                <!-- link top image  -->
+                
             </div>
             <!-- End div navbar-header -->
         </div>
@@ -32,14 +37,14 @@
         <!-- Start div top-right -->
         <div class="top-right">
             <!-- Start header menu  -->
-            <div class="header-menu">
+            <div class="header-menu" >
                 <!-- Start header-left -->
-                <div class="header-left">
+                <div class="header-left" >
                     <!-- Start user dropdow -->
                     <div class="user-area dropdown float-right">
                         <!-- Start image  -->
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
+                            aria-expanded="false" >
                             <img class="user-avatar rounded-circle"
                                 src="<?php echo base_url();?>elaadmin/images/admin.jpg" alt="User Avatar">
                         </a>
