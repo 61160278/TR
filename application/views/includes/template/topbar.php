@@ -19,7 +19,7 @@
         <div class="top-left">
             <!-- Start div navbar-header -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="<?php echo base_url()?>Evs_Controller/index">
+                <a class="navbar-brand" href="<?php echo base_url()?>Trs_Controller/index">
                     <img src="<?php echo base_url();?>elaadmin/images/LOGO_49.png" alt="Logo" height="80%">
                 </a>
                 <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
@@ -41,13 +41,13 @@
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                             <img class="user-avatar rounded-circle"
-                                src="http://10.73.148.5/DBMC/IMG/emp120/<?echo $_SESSION["UsEmp_ID"]?>.jpg" alt="User Avatar">
+                                src="<?php echo base_url();?>elaadmin/images/admin.jpg" alt="User Avatar">
                         </a>
                         <!-- End image   -->
 
                         <!-- Start profile  -->
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="<?php echo base_url(); ?>/Auth/logout"><i
+                            <a class="nav-link" href=""><i
                                     class="fa fa-power -off"></i>Logout</a>
                         </div>
                         <!-- End profile  -->
