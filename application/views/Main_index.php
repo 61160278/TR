@@ -14,6 +14,10 @@
     font-size: 35px;
     text-shadow: 1px 1px 1px #000;
 }
+#Home{
+    font-size: 60px;
+    text-shadow: 1px 1px 1px #000;
+}
 </style>
 <!-- End style CSS  -->
 
@@ -31,7 +35,7 @@
 
                         <!-- Start panel  -->
                         <div class="col-xl-12">
-                              <h1 class="m-0 font-weight-bold text-primary"><i class="fa  fa-home text-white "></i>
+                              <h1 class="m-0 font-weight-bold text-primary"><i class="fa  fa-home text-white" id="Home"></i>
                                     <font color="white">Home</font>
                               </h1>
                         </div>
@@ -52,7 +56,7 @@
                                           <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
                                                       <div class="col mr-2">
-                                                            <div class="menu-icon fa fa-tasks" style="color: blue" id="icon_main_menu"></div>
+                                                            <div class="menu-icon fa fa-tasks" style="color: gray-800" id="icon_main_menu"></div>
                                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Manage
                                                                   Training Configuration</div>
                                                       </div>
@@ -75,7 +79,7 @@
                                           <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
                                                       <div class="col mr-2">
-                                                      <div class="menu-icon fa fa-pencil-square" style="color: blue" id="icon_main_menu"></div>
+                                                      <div class="menu-icon fa fa-pencil-square" style="color: gray-800" id="icon_main_menu"></div>
                                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Manage
                                                                   Training Record</div>
                                                       </div>
@@ -99,7 +103,7 @@
                                           <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
                                                       <div class="col mr-2">
-                                                      <div class="menu-icon fa fa-users" style="color: blue" id="icon_main_menu"></div>
+                                                      <div class="menu-icon fa fa-users" style="color: gray-800" id="icon_main_menu"></div>
                                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Employee
                                                                   Training Record</div>
                                                       </div>
@@ -124,7 +128,7 @@
                                           <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
                                                       <div class="col mr-2">
-                                                      <div class="menu-icon fa fa-book" style="color: blue" id="icon_main_menu"></div>
+                                                      <div class="menu-icon fa fa-book" style="color: gray-800" id="icon_main_menu"></div>
                                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Report
                                                             </div>
                                                       </div>
@@ -148,7 +152,7 @@
                                           <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
                                                       <div class="col mr-2">
-                                                      <div class="menu-icon fa fa-tasks" style="color: blue" id="icon_main_menu"></div>
+                                                      <div class="menu-icon fa fa-tasks" style="color: gray-800" id="icon_main_menu"></div>
                                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Profile
                                                             </div>
                                                       </div>
