@@ -40,19 +40,19 @@
 
                 <li class="menu-item">
                     <a href=""><i
-                            class="menu-icon fa fa-tasks" style="color: white"></i>Create</a>
+                            class="menu-icon fa fa-tasks" style="color: white"></i>Manage Training Configuration</a>
                 </li>
                 <!-- อิอิ  -->
 
                 <li class="menu-item">
                     <a href=""><i
-                            class="menu-icon ti ti-id-badge" style="color: white"></i>ETR</a>
+                            class="menu-icon ti ti-id-badge" style="color: white"></i>Employee Training Record</a>
                 </li>
                 <!-- อิอิ  -->
 
                 <li class="menu-item">
                     <a href=""><i
-                            class="menu-icon fa fa-tasks" style="color: white"></i>MT</a>
+                            class="menu-icon fa fa-tasks" style="color: white"></i>Manage Training Record</a>
                 </li>
                 <!-- อิอิ  -->
 
@@ -67,10 +67,10 @@
                             class="menu-icon fa fa-tasks" style="color: white"></i>Profile</a>
                 </li>
                 <!-- อิอิ  -->
-                
+                <center>
                 <a id="menuToggle" class="menutoggle"><i class="fa fa-angle-right"></i></a>
                 <!-- link top image  -->
-
+</center>
             </ul>
             <!-- End tap menu sidebar  -->
         </div>
