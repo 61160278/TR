@@ -17,6 +17,10 @@
 #main-menu{
       background-color: #263238;
 }
+#icon_sidebar{
+    font-size: 25px;
+   
+}
 </style>
 
 <!--Start  side bar -->
@@ -30,47 +34,51 @@
             <!-- Start tap menu sidebar   -->
             <ul class="nav navbar-nav">
                 <li class="menu-item">
-                    <a href="<?php echo base_url()?>Trs_Controller/index"><i class="menu-icon fa fa-home"
-                            style="color: white"></i>Home </a>
+                    <a href="<?php echo base_url()?>Trs_Controller/index"><i class="menu-icon fa fa-home fa-lg"
+                            style="color: white" id="icon_sidebar"></i>Home </a>
                 </li>
                 <!-- Home page  -->
 
-                <li class="menu-title"><font color="white">Menu</font></li>
+                <li class="menu-title" ><font color="white">Menu</font></li>
                 <!-- /.menu-title -->
 
                 <li class="menu-item">
                     <a href=""><i
-                            class="menu-icon fa fa-tasks" style="color: white"></i>Manage Training Configuration</a>
+                            class="menu-icon fa fa-tasks " style="color: white" id="icon_sidebar"></i>Manage Training Configuration</a>
                 </li>
                 <!-- อิอิ  -->
 
                 <li class="menu-item">
                     <a href=""><i
-                            class="menu-icon ti ti-id-badge" style="color: white"></i>Employee Training Record</a>
+                            class="menu-icon fa fa-users" style="color: white" id="icon_sidebar"></i>Employee Training Record</a>
                 </li>
                 <!-- อิอิ  -->
 
                 <li class="menu-item">
                     <a href=""><i
-                            class="menu-icon fa fa-tasks" style="color: white"></i>Manage Training Record</a>
+                            class="menu-icon fa fa-pencil-square" style="color: white" id="icon_sidebar"></i>Manage Training Record</a>
                 </li>
                 <!-- อิอิ  -->
 
                 <li class="menu-item">
                     <a href=""><i
-                            class="menu-icon fa fa-tasks" style="color: white"></i>Report</a>
+                            class="menu-icon fa fa-book" style="color: white" id="icon_sidebar"></i>Report</a>
                 </li>
                 <!-- อิอิ  -->
 
                 <li class="menu-item">
                     <a href=""><i
-                            class="menu-icon fa fa-tasks" style="color: white"></i>Profile</a>
+                            class="menu-icon ti ti-id-badge" style="color: white" id="icon_sidebar"></i>Profile</a>
                 </li>
                 <!-- อิอิ  -->
-                <center>
-                <a id="menuToggle" class="menutoggle"><i class="fa fa-angle-right"></i></a>
+
+         
+                
+                <a id="menuToggle" class="menutoggle"><i class="fa fa-angle-right" align="center" ></i></a>
                 <!-- link top image  -->
-</center>
+
+
+
             </ul>
             <!-- End tap menu sidebar  -->
         </div>
