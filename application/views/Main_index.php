@@ -10,13 +10,15 @@
 #panel_th_home {
       background-color: #4E73DF;
 }
-#icon_main_menu{
-    font-size: 35px;
-    text-shadow: 1px 1px 1px #000;
+
+#icon_main_menu {
+      font-size: 35px;
+      text-shadow: 1px 1px 1px #000;
 }
-#Home{
-    font-size: 60px;
-    text-shadow: 1px 1px 1px #000;
+
+#Home {
+      font-size: 60px;
+      text-shadow: 1px 1px 1px #000;
 }
 </style>
 <!-- End style CSS  -->
@@ -35,7 +37,8 @@
 
                         <!-- Start panel  -->
                         <div class="col-xl-12">
-                              <h1 class="m-0 font-weight-bold text-primary"><i class="fa  fa-home text-white" id="Home"></i>
+                              <h1 class="m-0 font-weight-bold text-primary"><i class="fa  fa-home text-white"
+                                          id="Home"></i>
                                     <font color="white">Home</font>
                               </h1>
                         </div>
@@ -48,15 +51,17 @@
 
                   <!-- Start content  -->
                   <div class="card-body row">
-                  
+
                         <!-- Start Menu Manage Training Configuration -->
                         <div class="col-xl-4 col-md-6 mb-4">
-                              <a href="<?php echo base_url() ?>tr_manage_training_configuration/Manage_training_configuration/index">
+                              <a
+                                    href="<?php echo base_url() ?>tr_manage_training_configuration/Manage_training_configuration/index">
                                     <div class="card border4 shadow h-100 py-2">
                                           <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
                                                       <div class="col mr-2">
-                                                            <div class="menu-icon fa fa-tasks" style="color: #4E73DF" id="icon_main_menu"></div>
+                                                            <div class="menu-icon fa fa-tasks" style="color: #4E73DF"
+                                                                  id="icon_main_menu"></div>
                                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Manage
                                                                   Training Configuration</div>
                                                       </div>
@@ -79,7 +84,8 @@
                                           <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
                                                       <div class="col mr-2">
-                                                      <div class="menu-icon fa fa-pencil-square" style="color: gray-800" id="icon_main_menu"></div>
+                                                            <div class="menu-icon fa fa-pencil-square"
+                                                                  style="color: gray-800" id="icon_main_menu"></div>
                                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Manage
                                                                   Training Record</div>
                                                       </div>
@@ -103,7 +109,8 @@
                                           <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
                                                       <div class="col mr-2">
-                                                      <div class="menu-icon fa fa-users" style="color: gray-800" id="icon_main_menu"></div>
+                                                            <div class="menu-icon fa fa-users" style="color: gray-800"
+                                                                  id="icon_main_menu"></div>
                                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Employee
                                                                   Training Record</div>
                                                       </div>
@@ -128,7 +135,8 @@
                                           <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
                                                       <div class="col mr-2">
-                                                      <div class="menu-icon fa fa-book" style="color: gray-800" id="icon_main_menu"></div>
+                                                            <div class="menu-icon fa fa-book" style="color: gray-800"
+                                                                  id="icon_main_menu"></div>
                                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Report
                                                             </div>
                                                       </div>
@@ -152,7 +160,8 @@
                                           <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
                                                       <div class="col mr-2">
-                                                      <div class="menu-icon fa fa-tasks" style="color: gray-800" id="icon_main_menu"></div>
+                                                            <div class="menu-icon fa fa-tasks" style="color: gray-800"
+                                                                  id="icon_main_menu"></div>
                                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Profile
                                                             </div>
                                                       </div>
@@ -168,7 +177,12 @@
                         </div>
                         <!-- End Menu Profile -->
 
-
-
                   </div>
-                  <!-- /.container-fluid -->
+                  <!-- card-body-row -->
+            </div>
+            <!-- card-shadow mb-4 -->
+      </div>
+      <!-- col-lg-12 -->
+
+</div>
+<!-- /.container-fluid -->
