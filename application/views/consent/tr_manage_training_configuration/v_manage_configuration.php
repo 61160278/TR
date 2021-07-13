@@ -27,7 +27,7 @@
     text-shadow: 1px 1px 1px #000;
 }
 #Home{
-    font-size: 60px;
+    font-size: 50px;
     text-shadow: 1px 1px 1px #000;
 }
 </style>
@@ -70,7 +70,7 @@
                                                       <div class="col mr-2">
                                                       <div class="menu-icon fa fa-pencil-square" style="color: gray-800" id="icon_main_menu"></div>
                                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Manage
-                                                                  Training Record</div>
+                                                                  Training Course</div>
                                                       </div>
                                                       <!-- col-2 -->
                                                 </div>
@@ -93,8 +93,7 @@
                                                 <div class="row no-gutters align-items-center">
                                                       <div class="col mr-2">
                                                       <div class="menu-icon fa fa-users" style="color: gray-800" id="icon_main_menu"></div>
-                                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Employee
-                                                                  Training Record</div>
+                                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Manage Instructor</div>
                                                       </div>
                                                       <!-- col-2 -->
                                                 </div>
