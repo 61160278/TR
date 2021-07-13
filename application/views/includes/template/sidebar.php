@@ -34,8 +34,9 @@
             <!-- Start tap menu sidebar   -->
             <ul class="nav navbar-nav">
                 <li class="menu-item">
+                
                     <a href="<?php echo base_url()?>Trs_Controller/index"><i class="menu-icon fa fa-home fa-lg"
-                            style="color: white" id="icon_sidebar"></i>Home </a>
+                            style="color: white" id="icon_sidebar"></i><font size="5">Home</font> </a>
                 </li>
                 <!-- Home page  -->
 
