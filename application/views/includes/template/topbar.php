@@ -46,7 +46,7 @@
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false" >
                             <img class="user-avatar rounded-circle"
-                                src="<?php echo base_url();?>elaadmin/images/admin.jpg" alt="User Avatar">
+                                src="<?php echo base_url();?>elaadmin/images/Kenad.jpg" alt="User Avatar">
                         </a>
                         <!-- End image   -->
 

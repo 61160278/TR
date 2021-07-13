@@ -68,21 +68,30 @@
                                           <div class="col-md-12">
                                                 <div class="card">
                                                       <div class="card-header">
-                                                      
-                                                      <button type="button" class="btn btn-success" >Create Course <i class="fa fa-plus text-black"></i></button>
+
+                                                            <div class="pull-left margin">
+                                                                  <input class="form-control col-md-12" type="text"
+                                                                        placeholder="Search ..." aria-label="Search">
+
+                                                            </div>
+                                                            <div class="pull-right margin">
+                                                                  <button type="button" class="btn btn-success">Create
+                                                                        Course
+                                                                        <i class="fa fa-plus text-black"></i></button>
+                                                            </div>
                                                       </div>
                                                       <div class="card-body">
                                                             <table id="bootstrap-data-table"
                                                                   class="table table-striped table-bordered">
                                                                   <thead>
                                                                         <tr align="center">
-                                                                              
-                                                                                    <th>No.</th>
-                                                                                    <th>Course Code</th>
-                                                                                    <th>Training Name</th>
-                                                                                    <th>Training Description</th>
-                                                                                    <th>Action</th>
-                                                                              
+
+                                                                              <th>No.</th>
+                                                                              <th>Course Code</th>
+                                                                              <th>Training Name</th>
+                                                                              <th>Training Description</th>
+                                                                              <th>Action</th>
+
                                                                         </tr>
                                                                   </thead>
                                                                   <tbody>
@@ -139,8 +148,10 @@
       </div>
       <!-- /.container-fluid -->
 
-      <div class="col-md-7">
-            <a href="<?php echo base_url() ?>tr_manage_training_configuration/Manage_training_configuration/index">
-                  <button type="button" class="btn btn-secondary">Back</button>
-            </a>
-      </div>
+            <div class="col-md-7">
+                  <a
+                        href="<?php echo base_url() ?>tr_manage_training_configuration/Manage_training_configuration/index">
+                        <button type="button" class="btn btn-secondary">Back</button>
+                  </a>
+            </div>
+    
