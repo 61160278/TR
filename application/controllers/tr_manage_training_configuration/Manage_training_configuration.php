@@ -10,9 +10,10 @@
 ?>
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-require_once(dirname(__FILE__) . "/MainController.php");
+require_once(dirname(__FILE__) . "/../MainController.php");
 
-class Trs_Controller extends MainController {
+
+class Manage_training_configuration extends MainController {
 
 	/**
 	 * Index Page for this controller.
@@ -40,7 +41,7 @@ class Trs_Controller extends MainController {
 	*/
 	function index()
 	{
-		$this->output('Main_index');
+		$this->output('/consent/tr_manage_training_configuration/v_manage_configuration');
 	}
 	// function index()
  

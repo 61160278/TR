@@ -10,38 +10,104 @@
 ?>
 
 <head>
-    <style>
-    thead {
-        color: black;
-        text-align: center;
-        font-size: 20px;
-    }
+<style>
+.border4 {
+      border-left: 4px solid #4E73DF;
+}
 
-    tbody {
-        text-align: center;
-        font-size: 15px;
-    }
+.text4 {
+      color: #c1432e;
+}
 
-    .panel.panel-indigo .panel-heading {
-        color: #e8eaf6;
-        background-color: #134466;
-    }
+#panel_th_home {
+      background-color: #4E73DF;
+}
+#icon_main_menu{
+    font-size: 35px;
+    text-shadow: 1px 1px 1px #000;
+}
+#Home{
+    font-size: 60px;
+    text-shadow: 1px 1px 1px #000;
+}
+</style>
+<!-- End style CSS  -->
 
-    .margin {
-        margin-top: 10px;
-    }
+<!-- Begin Page Content -->
+<div class="container-fluid">
 
-    #color_head {
-        background-color: #3f51b5;
-    }
-    </style>
-</head>
-<script>
+      <!-- Start col-lg-12 -->
+      <div class="col-lg-12">
 
-</script>
+            <!-- Start card shadow -->
+            <div class="card shadow mb-4">
 
-<!DOCTYPE html>
-<html>
+                  <!-- Start header  -->
+                  <div class="card-header py-3" id="panel_th_home">
 
-Hello
-    
+                        <!-- Start panel  -->
+                        <div class="col-xl-12">
+                              <h1 class="m-0 font-weight-bold text-primary"><i class="fa  fa-tasks text-white" id="Home"></i>
+                                    <font color="white">Manage Training Configuration</font>
+                              </h1>
+                        </div>
+                        <!-- End panel  -->
+
+                  </div>
+                  <!-- End header  -->
+
+
+
+                  <!-- Start content  -->
+                  <div class="card-body row">
+  
+                        <!-- Start Menu Manage Training Record -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                              <a href="">
+                                    <div class="card border4 shadow h-100 py-2">
+                                          <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                      <div class="col mr-2">
+                                                      <div class="menu-icon fa fa-pencil-square" style="color: gray-800" id="icon_main_menu"></div>
+                                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Manage
+                                                                  Training Record</div>
+                                                      </div>
+                                                      <!-- col-2 -->
+                                                </div>
+                                                <!-- row -->
+                                          </div>
+                                          <!-- card body -->
+                                    </div>
+                                    <!-- card -->
+                              </a>
+                              <!-- a href -->
+                        </div>
+                        <!-- End Menu Manage Training Record -->
+
+
+                        <!-- Start Menu Employee Training Record -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                              <a href="">
+                                    <div class="card border4 shadow h-100 py-2">
+                                          <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                      <div class="col mr-2">
+                                                      <div class="menu-icon fa fa-users" style="color: gray-800" id="icon_main_menu"></div>
+                                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Employee
+                                                                  Training Record</div>
+                                                      </div>
+                                                      <!-- col-2 -->
+                                                </div>
+                                                <!-- row -->
+                                          </div>
+                                          <!-- card body -->
+                                    </div>
+                                    <!-- card -->
+                              </a>
+                              <!-- a href -->
+                        </div>
+                        <!-- End Menu Employee Training Record  -->
+
+
+                  </div>
+                  <!-- /.container-fluid -->

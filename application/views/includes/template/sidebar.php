@@ -44,7 +44,7 @@
                 <!-- /.menu-title -->
 
                 <li class="menu-item">
-                    <a href=""><i
+                    <a href="<?php echo base_url() ?>tr_manage_training_configuration/Manage_training_configuration/index"><i
                             class="menu-icon fa fa-tasks " style="color: white" id="icon_sidebar"></i>Manage Training Configuration</a>
                 </li>
                 <!-- อิอิ  -->
