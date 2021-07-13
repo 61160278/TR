@@ -68,8 +68,21 @@
                                           <div class="col-md-12">
                                                 <div class="card">
                                                       <div class="card-header">
-                                                            <strong class="card-title">Data Table</strong>
-                                                      </div>
+
+                                                      <div class="pull-left margin">
+                                                                  <input class="form-control col-md-12" type="text"
+                                                                        placeholder="Search ..." aria-label="Search">
+
+                                                            </div>
+                                                            <div class="pull-right margin">
+                                                                  <button type="button" class="btn btn-success">Create
+                                                                        Trainer
+                                                                        <i class="fa fa-plus text-black"></i></button>
+                                                            </div>
+
+                                                      </div> 
+                                                      <!-- card header -->
+
                                                       <div class="card-body">
                                                             <table id="bootstrap-data-table"
                                                                   class="table table-striped table-bordered">
@@ -88,31 +101,46 @@
                                                                               <td>1.</td>
                                                                               <td>Mr.Kenji Sleeptogether</td>
                                                                               <td>DENSO</td>
-                                                                              <td>action</td>
+                                                                              <td>
+                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
+                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                              </td>
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>2.</td>
                                                                               <td>Mr.Denial Ok</td>
                                                                               <td>DENSO</td>
-                                                                              <td>action</td>
+                                                                              <td>
+                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
+                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                              </td>
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>3.</td>
                                                                               <td>Ms.Kate J.son</td>
                                                                               <td>DENSO</td>
-                                                                              <td>action</td>
+                                                                              <td>
+                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
+                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                              </td>
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>4.</td>
                                                                               <td>Mr.Tony Roger</td>
                                                                               <td>DENSO</td>
-                                                                              <td>action</td>
+                                                                              <td>
+                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
+                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                              </td>
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>5.</td>
                                                                               <td>Ms.Maria Del</td>
                                                                               <td>DENSO</td>
-                                                                              <td>action</td>
+                                                                              <td>
+                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
+                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                              </td>
                                                                         </tr>
 
                                                                   </tbody>

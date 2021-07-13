@@ -100,35 +100,50 @@
                                                                               <td>IN-00001</td>
                                                                               <td>General Safety</td>
                                                                               <td>General Safety</td>
-                                                                              <td>action</td>
+                                                                              <td>
+                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
+                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                              </td>
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>2.</td>
                                                                               <td>IN-00002</td>
                                                                               <td>Leader andd Management</td>
                                                                               <td>Communication for Leader</td>
-                                                                              <td>action</td>
+                                                                              <td>
+                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
+                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                              </td>
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>3.</td>
                                                                               <td>IN-00003</td>
                                                                               <td>Professional Golf Caddie</td>
                                                                               <td>Communication Efficiency</td>
-                                                                              <td>action</td>
+                                                                              <td>
+                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
+                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                              </td>
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>4.</td>
                                                                               <td>EX-00004</td>
                                                                               <td>Building Good Attitude at Work</td>
                                                                               <td>Self and Work Development</td>
-                                                                              <td>action</td>
+                                                                              <td>
+                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit"></i></button>
+                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                              </td>
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>5.</td>
                                                                               <td>EX-00005</td>
                                                                               <td>Working as one team</td>
                                                                               <td>Social skill for working together</td>
-                                                                              <td>action</td>
+                                                                              <td>
+                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
+                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                              </td>
                                                                         </tr>
 
                                                                   </tbody>
