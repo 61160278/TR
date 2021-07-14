@@ -242,6 +242,23 @@
                                                 <option value="3">Requirement</option>
                                                 <option value="4">Instructor</option>
                                           </select>
+                                          <select name="example_length" class="form-control" aria-controls="example"
+                                                onChange="select_company(value)">
+                                                <option value="0">Select</option>
+                                                <option value="1">In-house</option>
+                                                <option value="2">External Training</option>
+                                                <option value="3">On the job training</option>
+                                                <option value="4">Seminar</option>
+                                          </select>
+                                          <select name="example_length" class="form-control" aria-controls="example"
+                                                onChange="select_company(value)">
+                                                <option value="0">Select</option>
+                                                <option value="1">Classroom </option>
+                                                <option value="2">E-learning</option>
+                                                <option value="3">Self studyt</option>
+                                                <option value="4">Both Classroom & On the job training</option>
+                                                <option value="5">On the job training</option>
+                                          </select>
                                     </div>
                               </div>
 
