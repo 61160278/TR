@@ -75,7 +75,9 @@
 
                                                             </div>
                                                             <div class="pull-right margin">
-                                                                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#CreateModal">Create
+                                                                  <button type="button" class="btn btn-success"
+                                                                        data-toggle="modal"
+                                                                        data-target="#CreateModal">Create
                                                                         Course
                                                                         <i class="fa fa-plus text-black"></i></button>
                                                             </div>
@@ -101,8 +103,12 @@
                                                                               <td>General Safety</td>
                                                                               <td>General Safety</td>
                                                                               <td>
-                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
-                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-warning"><i
+                                                                                                class="fa fa-edit "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-danger"><i
+                                                                                                class="ti ti-trash "></i></button>
                                                                               </td>
                                                                         </tr>
                                                                         <tr align="center">
@@ -111,8 +117,12 @@
                                                                               <td>Leader andd Management</td>
                                                                               <td>Communication for Leader</td>
                                                                               <td>
-                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
-                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-warning"><i
+                                                                                                class="fa fa-edit "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-danger"><i
+                                                                                                class="ti ti-trash "></i></button>
                                                                               </td>
                                                                         </tr>
                                                                         <tr align="center">
@@ -121,8 +131,12 @@
                                                                               <td>Professional Golf Caddie</td>
                                                                               <td>Communication Efficiency</td>
                                                                               <td>
-                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
-                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-warning"><i
+                                                                                                class="fa fa-edit "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-danger"><i
+                                                                                                class="ti ti-trash "></i></button>
                                                                               </td>
                                                                         </tr>
                                                                         <tr align="center">
@@ -131,8 +145,12 @@
                                                                               <td>Building Good Attitude at Work</td>
                                                                               <td>Self and Work Development</td>
                                                                               <td>
-                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit"></i></button>
-                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-warning"><i
+                                                                                                class="fa fa-edit"></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-danger"><i
+                                                                                                class="ti ti-trash "></i></button>
                                                                               </td>
                                                                         </tr>
                                                                         <tr align="center">
@@ -141,8 +159,12 @@
                                                                               <td>Working as one team</td>
                                                                               <td>Social skill for working together</td>
                                                                               <td>
-                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
-                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-warning"><i
+                                                                                                class="fa fa-edit "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-danger"><i
+                                                                                                class="ti ti-trash "></i></button>
                                                                               </td>
                                                                         </tr>
 
@@ -163,36 +185,117 @@
       </div>
       <!-- /.container-fluid -->
 
-            <div class="col-md-7">
-                  <a
-                        href="<?php echo base_url() ?>tr_manage_training_configuration/Manage_training_configuration/index">
-                        <button type="button" class="btn btn-secondary">Back</button>
-                  </a>
-            </div>
-    
-           <!-- Modal -->
-            <div class="modal fade" id="CreateModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="mediumModalLabel">Medium Modal</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+      <div class="col-md-7">
+            <a href="<?php echo base_url() ?>tr_manage_training_configuration/Manage_training_configuration/index">
+                  <button type="button" class="btn btn-secondary">Back</button>
+            </a>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="CreateModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                        <div class="modal-header" style="background-color:#00B050;">
+                              <h5 class="modal-title" id="mediumModalLabel"><b>
+                                          <font color="white" size="5px">Create Course</font>
+                                    </b></h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                              </button>
                         </div>
                         <div class="modal-body">
-                            <p>
-                                There are three species of zebras: the plains zebra, the mountain zebra and the Grévy's zebra. The plains zebra
-                                and the mountain zebra belong to the subgenus Hippotigris, but Grévy's zebra is the sole species of subgenus
-                                Dolichohippus. The latter resembles an ass, to which it is closely related, while the former two are more
-                                horse-like. All three belong to the genus Equus, along with other living equids.
-                            </p>
+
+
+
+
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Code</label>
+                                    <div class="col-sm-6">
+                                          <input type="text" class="form-control" id="grouptext" placeholder="Code">
+                                    </div>
+
+                              </div>
+                              <br>
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Code</label>
+                                    <div class="col-sm-6">
+                                          <input type="text" class="form-control" id="grouptext" placeholder="Code">
+                                    </div>
+                              </div>
+                              <br>
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Description</label>
+                                    <div class="col-sm-6">
+                                          <input type="text" class="form-control" id="grouptext" placeholder="Code">
+                                    </div>
+                              </div>
+                              <br>
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Category</label>
+                                    <div class="col-sm-3">
+                                          <select name="example_length" class="form-control" aria-controls="example"
+                                                onChange="select_company(value)">
+                                                <option value="0">Select</option>
+                                                <option value="1">General</option>
+                                                <option value="2">Technical</option>
+                                                <option value="3">Requirement</option>
+                                                <option value="4">Instructor</option>
+                                          </select>
+                                    </div>
+                              </div>
+
+
+
+
+
+
+
+
+
+
+
+
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-primary">Confirm</button>
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                              <button type="button" class="btn btn-primary">Confirm</button>
                         </div>
-                    </div>
-                </div>
+                  </div>
             </div>
-             <!-- Create Modal -->
+      </div>
+      <!-- Create Modal -->
+
+
+
+
+      <!-- Modal Add -->
+      <div class="modal fade" id="CreateModalsss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                  <div class="modal-content">
+                        <div class="modal-header" style="background-color:#134466;">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                    style="color:white;">&times;</button>
+                              <h2 class="modal-title">
+                                    <b>
+                                          <font color="white">Add Group Data & Head Dept.</font>
+                                    </b>
+                              </h2>
+                        </div>
+                        <!-- modal header -->
+
+                        <div class="modal-body">
+                              <form class="form-horizontal">
+                                    <div class="form-group">
+                                          <label for="focusedinput" class="col-sm-3 control-label">Group
+                                                Name</label>
+                                          <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="grouptext"
+                                                      placeholder="HR AGM">
+                                                <label class="col-sm-12 control-label"></label>
+                                                <p id="alert_grouptext">
+                                                      <font color="red"><b>This data already to used! </b></font>
+                                                </p>
+                                          </div>
+                                    </div>
