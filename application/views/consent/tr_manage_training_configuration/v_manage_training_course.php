@@ -105,10 +105,12 @@
                                                                               <td>
                                                                                     <button type="button"
                                                                                           class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "></i></button>
+                                                                                                class="fa fa-edit " data-toggle="modal"
+                                                                        data-target="#EditModal"></i></button>
                                                                                     <button type="button"
                                                                                           class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "></i></button>
+                                                                                                class="ti ti-trash " data-toggle="modal"
+                                                                        data-target="#DeleteModal"></i></button>
                                                                               </td>
                                                                         </tr>
                                                                         <tr align="center">
@@ -119,10 +121,12 @@
                                                                               <td>
                                                                                     <button type="button"
                                                                                           class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "></i></button>
+                                                                                                class="fa fa-edit "data-toggle="modal"
+                                                                        data-target="#EditModal"></i></button>
                                                                                     <button type="button"
                                                                                           class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "></i></button>
+                                                                                                class="ti ti-trash " data-toggle="modal"
+                                                                        data-target="#DeleteModal"></i></button>
                                                                               </td>
                                                                         </tr>
                                                                         <tr align="center">
@@ -210,7 +214,7 @@
 
 
                               <div class="row">
-                                    <label for="focusedinput" class="col-sm-3 control-label">Course Code</label>
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Code :</label>
                                     <div class="col-sm-6">
                                           <input type="text" class="form-control" id="grouptext" placeholder="Code">
                                     </div>
@@ -218,21 +222,22 @@
                               </div>
                               <br>
                               <div class="row">
-                                    <label for="focusedinput" class="col-sm-3 control-label">Course Code</label>
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Name :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext" placeholder="Code">
+                                          <input type="text" class="form-control" id="grouptext" placeholder="Name">
                                     </div>
                               </div>
                               <br>
                               <div class="row">
-                                    <label for="focusedinput" class="col-sm-3 control-label">Course Description</label>
-                                    <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext" placeholder="Code">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Description
+                                          :</label>
+                                    <div class="col-10 col-md-6"><textarea name="textarea-input" id="textarea-input"
+                                                rows="9" placeholder="Description..." class="form-control"></textarea>
                                     </div>
                               </div>
                               <br>
                               <div class="row">
-                                    <label for="focusedinput" class="col-sm-3 control-label">Course Category</label>
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Category :</label>
                                     <div class="col-sm-3">
                                           <select name="example_length" class="form-control" aria-controls="example"
                                                 onChange="select_company(value)">
@@ -242,6 +247,8 @@
                                                 <option value="3">Requirement</option>
                                                 <option value="4">Instructor</option>
                                           </select>
+                                    </div>
+                                    <div class="col-sm-3">
                                           <select name="example_length" class="form-control" aria-controls="example"
                                                 onChange="select_company(value)">
                                                 <option value="0">Select</option>
@@ -250,6 +257,8 @@
                                                 <option value="3">On the job training</option>
                                                 <option value="4">Seminar</option>
                                           </select>
+                                    </div>
+                                    <div class="col-sm-3">
                                           <select name="example_length" class="form-control" aria-controls="example"
                                                 onChange="select_company(value)">
                                                 <option value="0">Select</option>
@@ -260,23 +269,38 @@
                                                 <option value="5">On the job training</option>
                                           </select>
                                     </div>
+
                               </div>
+                              <br>
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Type :</label>
+                                    <div class="col col-md-9">
+
+                                          <div class="checkbox">
+                                                <label for="checkbox1" class="form-check-label ">
+                                                      <div class="col-md-3">
+                                                            <input type="checkbox" id="checkbox1" name="checkbox1"
+                                                                  value="option1" class="form-check-input">Internal
+                                                      </div>
+                                                </label>
+
+                                                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                                <label for="checkbox2" class="form-check-label ">
+                                                      <div class="col-md-3">
+                                                            <input type="checkbox" id="checkbox2" name="checkbox2"
+                                                                  value="option2" class="form-check-input">External
+                                                      </div>
+                                                </label>
+                                          </div>
 
 
-
-
-
-
-
-
-
-
-
+                                    </div>
+                              </div>
 
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary">Confirm</button>
+                              <button type="button" class="btn btn-primary">Save</button>
                         </div>
                   </div>
             </div>
@@ -284,35 +308,137 @@
       <!-- Create Modal -->
 
 
-
-
-      <!-- Modal Add -->
-      <div class="modal fade" id="CreateModalsss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
-                        <div class="modal-header" style="background-color:#134466;">
-                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
-                                    style="color:white;">&times;</button>
-                              <h2 class="modal-title">
-                                    <b>
-                                          <font color="white">Add Group Data & Head Dept.</font>
-                                    </b>
-                              </h2>
+                        <div class="modal-header" style="background-color:#FFC000;">
+                              <h5 class="modal-title" id="mediumModalLabel"><b>
+                                          <font color="white" size="5px">Edit Course</font>
+                                    </b></h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                              </button>
                         </div>
-                        <!-- modal header -->
-
                         <div class="modal-body">
-                              <form class="form-horizontal">
-                                    <div class="form-group">
-                                          <label for="focusedinput" class="col-sm-3 control-label">Group
-                                                Name</label>
-                                          <div class="col-sm-6">
-                                                <input type="text" class="form-control" id="grouptext"
-                                                      placeholder="HR AGM">
-                                                <label class="col-sm-12 control-label"></label>
-                                                <p id="alert_grouptext">
-                                                      <font color="red"><b>This data already to used! </b></font>
-                                                </p>
-                                          </div>
+
+
+
+
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Code :</label>
+                                    <div class="col-sm-6">
+                                          <input type="text" class="form-control" id="grouptext" placeholder="Code">
                                     </div>
+
+                              </div>
+                              <br>
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Name :</label>
+                                    <div class="col-sm-6">
+                                          <input type="text" class="form-control" id="grouptext" placeholder="Name">
+                                    </div>
+                              </div>
+                              <br>
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Description
+                                          :</label>
+                                    <div class="col-10 col-md-6"><textarea name="textarea-input" id="textarea-input"
+                                                rows="9" placeholder="Description..." class="form-control"></textarea>
+                                    </div>
+                              </div>
+                              <br>
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Category :</label>
+                                    <div class="col-sm-3">
+                                          <select name="example_length" class="form-control" aria-controls="example"
+                                                onChange="select_company(value)">
+                                                <option value="0">Select</option>
+                                                <option value="1">General</option>
+                                                <option value="2">Technical</option>
+                                                <option value="3">Requirement</option>
+                                                <option value="4">Instructor</option>
+                                          </select>
+                                    </div>
+                                    <div class="col-sm-3">
+                                          <select name="example_length" class="form-control" aria-controls="example"
+                                                onChange="select_company(value)">
+                                                <option value="0">Select</option>
+                                                <option value="1">In-house</option>
+                                                <option value="2">External Training</option>
+                                                <option value="3">On the job training</option>
+                                                <option value="4">Seminar</option>
+                                          </select>
+                                    </div>
+                                    <div class="col-sm-3">
+                                          <select name="example_length" class="form-control" aria-controls="example"
+                                                onChange="select_company(value)">
+                                                <option value="0">Select</option>
+                                                <option value="1">Classroom </option>
+                                                <option value="2">E-learning</option>
+                                                <option value="3">Self studyt</option>
+                                                <option value="4">Both Classroom & On the job training</option>
+                                                <option value="5">On the job training</option>
+                                          </select>
+                                    </div>
+
+                              </div>
+                              <br>
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Type :</label>
+                                    <div class="col col-md-9">
+
+                                          <div class="checkbox">
+                                                <label for="checkbox1" class="form-check-label ">
+                                                      <div class="col-md-3">
+                                                            <input type="checkbox" id="checkbox1" name="checkbox1"
+                                                                  value="option1" class="form-check-input">Internal
+                                                      </div>
+                                                </label>
+
+                                                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                                <label for="checkbox2" class="form-check-label ">
+                                                      <div class="col-md-3">
+                                                            <input type="checkbox" id="checkbox2" name="checkbox2"
+                                                                  value="option2" class="form-check-input">External
+                                                      </div>
+                                                </label>
+                                          </div>
+
+
+                                    </div>
+                              </div>
+
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                              <button type="button" class="btn btn-primary">Save</button>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <!-- Edit Modal -->
+
+
+      <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm-5" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background-color:#E74A3B;">
+                            <h5 class="modal-title" id="staticModalLabel"><b><font color="white" size="5px">Delete</font></b></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                               Please Confirm delete data.
+                           </p>
+                       </div>
+                       <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <!-- Delete Modal -->
