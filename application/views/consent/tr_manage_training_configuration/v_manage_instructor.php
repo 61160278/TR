@@ -69,18 +69,20 @@
                                                 <div class="card">
                                                       <div class="card-header">
 
-                                                      <div class="pull-left margin">
+                                                            <div class="pull-left margin">
                                                                   <input class="form-control col-md-12" type="text"
                                                                         placeholder="Search ..." aria-label="Search">
 
                                                             </div>
                                                             <div class="pull-right margin">
-                                                                  <button type="button" class="btn btn-success">Create
+                                                                  <button type="button" class="btn btn-success"
+                                                                        data-toggle="modal"
+                                                                        data-target="#CreateModal">Create
                                                                         Trainer
                                                                         <i class="fa fa-plus text-black"></i></button>
                                                             </div>
 
-                                                      </div> 
+                                                      </div>
                                                       <!-- card header -->
 
                                                       <div class="card-body">
@@ -88,12 +90,12 @@
                                                                   class="table table-striped table-bordered">
                                                                   <thead>
                                                                         <tr align="center">
-                                                                              
-                                                                                    <th>No.</th>
-                                                                                    <th>Trainer</th>
-                                                                                    <th>Institution</th>               
-                                                                                    <th>Action</th>
-                                                                              
+
+                                                                              <th>No.</th>
+                                                                              <th>Trainer</th>
+                                                                              <th>Institution</th>
+                                                                              <th>Action</th>
+
                                                                         </tr>
                                                                   </thead>
                                                                   <tbody>
@@ -102,8 +104,16 @@
                                                                               <td>Mr.Kenji Sleeptogether</td>
                                                                               <td>DENSO</td>
                                                                               <td>
-                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
-                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-warning"
+                                                                                          data-toggle="modal"
+                                                                                          data-target="#EditModal"><i
+                                                                                                class="fa fa-edit "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-danger"
+                                                                                          data-toggle="modal"
+                                                                                          data-target="#DeleteModal"><i
+                                                                                                class="ti ti-trash "></i></button>
                                                                               </td>
                                                                         </tr>
                                                                         <tr align="center">
@@ -111,8 +121,16 @@
                                                                               <td>Mr.Denial Ok</td>
                                                                               <td>DENSO</td>
                                                                               <td>
-                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
-                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-warning"
+                                                                                          data-toggle="modal"
+                                                                                          data-target="#EditModal"><i
+                                                                                                class="fa fa-edit "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-danger"
+                                                                                          data-toggle="modal"
+                                                                                          data-target="#DeleteModal"><i
+                                                                                                class="ti ti-trash "></i></button>
                                                                               </td>
                                                                         </tr>
                                                                         <tr align="center">
@@ -120,8 +138,12 @@
                                                                               <td>Ms.Kate J.son</td>
                                                                               <td>DENSO</td>
                                                                               <td>
-                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
-                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-warning"><i
+                                                                                                class="fa fa-edit "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-danger"><i
+                                                                                                class="ti ti-trash "></i></button>
                                                                               </td>
                                                                         </tr>
                                                                         <tr align="center">
@@ -129,8 +151,12 @@
                                                                               <td>Mr.Tony Roger</td>
                                                                               <td>DENSO</td>
                                                                               <td>
-                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
-                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-warning"><i
+                                                                                                class="fa fa-edit "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-danger"><i
+                                                                                                class="ti ti-trash "></i></button>
                                                                               </td>
                                                                         </tr>
                                                                         <tr align="center">
@@ -138,8 +164,12 @@
                                                                               <td>Ms.Maria Del</td>
                                                                               <td>DENSO</td>
                                                                               <td>
-                                                                              <button type="button" class="btn btn-warning"><i class="fa fa-edit "></i></button>
-                                                                              <button type="button" class="btn btn-danger"><i class="ti ti-trash "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-warning"><i
+                                                                                                class="fa fa-edit "></i></button>
+                                                                                    <button type="button"
+                                                                                          class="btn btn-danger"><i
+                                                                                                class="ti ti-trash "></i></button>
                                                                               </td>
                                                                         </tr>
 
@@ -165,3 +195,161 @@
                   <button type="button" class="btn btn-secondary">Back</button>
             </a>
       </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="CreateModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                        <div class="modal-header" style="background-color:#00B050;">
+                              <h5 class="modal-title" id="mediumModalLabel"><b>
+                                          <font color="white" size="5px">Create Course</font>
+                                    </b></h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                              </button>
+                        </div>
+                        <div class="modal-body">
+
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Category :</label>
+                                    <div class="col-sm-2">
+                                          <select name="example_length" class="form-control" aria-controls="example"
+                                                onChange="select_company(value)">
+                                                <option value="0">Select</option>
+                                                <option value="1">Mr.</option>
+                                                <option value="2">Ms.</option>
+
+                                          </select>
+                                    </div>
+
+
+                              </div>
+                              <br>
+
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Firstname :</label>
+                                    <div class="col-sm-6">
+                                          <input type="text" class="form-control" id="grouptext" placeholder="FirstName">
+                                    </div>
+
+                              </div>
+                              <br>
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Surname :</label>
+                                    <div class="col-sm-6">
+                                          <input type="text" class="form-control" id="grouptext" placeholder="Surname">
+                                    </div>
+                              </div>
+                              <br>
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Institution :</label>
+                                    <div class="col-sm-6">
+                                          <input type="text" class="form-control" id="grouptext" placeholder="Institution">
+                                    </div>
+                              </div>
+                              
+                             
+
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                              <button type="button" class="btn btn-primary">Save</button>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <!-- Create Modal -->
+
+
+      <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                        <div class="modal-header" style="background-color:#FFC000;">
+                              <h5 class="modal-title" id="mediumModalLabel"><b>
+                                          <font color="white" size="5px">Edit Course</font>
+                                    </b></h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                              </button>
+                        </div>
+                        <div class="modal-body">
+
+
+
+
+                        <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Category :</label>
+                                    <div class="col-sm-2">
+                                          <select name="example_length" class="form-control" aria-controls="example"
+                                                onChange="select_company(value)">
+                                                <option value="0">Select</option>
+                                                <option value="1">Mr.</option>
+                                                <option value="2">Ms.</option>
+
+                                          </select>
+                                    </div>
+
+
+                              </div>
+                              <br>
+
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Firstname :</label>
+                                    <div class="col-sm-6">
+                                          <input type="text" class="form-control" id="grouptext" placeholder="FirstName">
+                                    </div>
+
+                              </div>
+                              <br>
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Surname :</label>
+                                    <div class="col-sm-6">
+                                          <input type="text" class="form-control" id="grouptext" placeholder="Surname">
+                                    </div>
+                              </div>
+                              <br>
+                              <div class="row">
+                                    <label for="focusedinput" class="col-sm-3 control-label">Institution :</label>
+                                    <div class="col-sm-6">
+                                          <input type="text" class="form-control" id="grouptext" placeholder="Institution">
+                                    </div>
+                              </div>
+
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                              <button type="button" class="btn btn-primary">Save</button>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <!-- Edit Modal -->
+
+
+      <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-sm-5" role="document">
+                  <div class="modal-content">
+                        <div class="modal-header" style="background-color:#E74A3B;">
+                              <h5 class="modal-title" id="staticModalLabel"><b>
+                                          <font color="white" size="5px">Delete</font>
+                                    </b></h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                              </button>
+                        </div>
+                        <div class="modal-body">
+                              <p>
+                                    Please Confirm delete data.
+                              </p>
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                              <button type="button" class="btn btn-primary">Confirm</button>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <!-- Delete Modal -->
