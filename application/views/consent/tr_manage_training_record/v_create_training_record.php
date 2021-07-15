@@ -65,45 +65,132 @@
                               <div class="animated fadeIn">
                                     <div class="row">
 
-                                    <div class="col-md-12">
-                        <div class="card border border-primary">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <!-- card-body -->
-                        </div>
-                    </div>
-      </div>
-      <!-- /.container-fluid -->
+                                          <div class="col-md-12">
+                                                <div class="card border border-primary">
+                                                      <div class="card-body">
 
-      <div class="col-md-7">
-            <a href="<?php echo base_url()?>Trs_Controller/index">
-                  <button type="button" class="btn btn-secondary">Back</button>
-            </a>
-      </div>
-      <!-- Modal -->
-      <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-sm-5" role="document">
-                  <div class="modal-content">
-                        <div class="modal-header" style="background-color:#E74A3B;">
-                              <h5 class="modal-title" id="staticModalLabel"><b>
-                                          <font color="white" size="5px">Delete</font>
-                                    </b></h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                              </button>
-                        </div>
-                        <div class="modal-body">
-                              <p>
-                                    Please Confirm delete data.
-                              </p>
-                        </div>
-                        <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary">Confirm</button>
-                        </div>
-                  </div>
-            </div>
-      </div>
-      <!-- Delete Modal -->
+
+                                                            <div class="row">
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Type of Training :
+                                                                  <div class="col-sm-1">
+                                                                        <input type="text" class="form-control"
+                                                                              id="grouptext" placeholder="Type">
+                                                                  </div>
+
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; ครั้งที่ :
+                                                                  <div class="col-sm-1">
+                                                                        <input type="text" class="form-control"
+                                                                              id="grouptext">
+                                                                  </div>
+
+
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Course Code :
+                                                                  <div class="col-sm-2">
+                                                                        <input type="text" class="form-control"
+                                                                              id="grouptext" placeholder="Code">
+                                                                  </div>
+
+
+
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Training Name :
+                                                                  <div class="col-sm-4">
+                                                                        <input type="text" class="form-control"
+                                                                              id="grouptext"
+                                                                              placeholder="Training Name">
+                                                                  </div>
+
+                                                            </div>
+                                                            <!-- row 1 -->
+                                                            <br>
+
+                                                            <div class="row">
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;Course Category :
+                                    <div class="col-sm-2">
+                                          <select name="example_length" class="form-control" aria-controls="example"
+                                                onChange="select_company(value)">
+                                                <option value="0">Select</option>
+                                                <option value="1">General</option>
+                                                <option value="2">Technical</option>
+                                                <option value="3">Requirement</option>
+                                                <option value="4">Instructor</option>
+                                          </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                          <select name="example_length" class="form-control" aria-controls="example"
+                                                onChange="select_company(value)">
+                                                <option value="0">Select</option>
+                                                <option value="1">In-house</option>
+                                                <option value="2">External Training</option>
+                                                <option value="3">On the job training</option>
+                                                <option value="4">Seminar</option>
+                                          </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                          <select name="example_length" class="form-control" aria-controls="example"
+                                                onChange="select_company(value)">
+                                                <option value="0">Select</option>
+                                                <option value="1">Classroom </option>
+                                                <option value="2">E-learning</option>
+                                                <option value="3">Self studyt</option>
+                                                <option value="4">Both Classroom & On the job training</option>
+                                                <option value="5">On the job training</option>
+                                          </select>
+                                    </div>
+
+
+                                    &nbsp;&nbsp;&nbsp;&nbsp; Place :
+                                                                  <div class="col-sm-3">
+                                                                        <input type="text" class="form-control"
+                                                                              id="grouptext"  placeholder="Place">
+                                                                  </div>
+
+
+
+
+                              </div>
+                                                            <!-- row 2 -->
+
+
+
+                                                      </div>
+                                                      <!-- card-body -->
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <!-- /.container-fluid -->
+
+                                    <div class="col-md-7">
+                                          <a
+                                                href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
+                                                <button type="button" class="btn btn-secondary">Back</button>
+                                          </a>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog"
+                                          aria-labelledby="staticModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-sm-5" role="document">
+                                                <div class="modal-content">
+                                                      <div class="modal-header" style="background-color:#E74A3B;">
+                                                            <h5 class="modal-title" id="staticModalLabel"><b>
+                                                                        <font color="white" size="5px">Delete</font>
+                                                                  </b></h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                  aria-label="Close">
+                                                                  <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                      </div>
+                                                      <div class="modal-body">
+                                                            <p>
+                                                                  Please Confirm delete data.
+                                                            </p>
+                                                      </div>
+                                                      <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                  data-dismiss="modal">Cancel</button>
+                                                            <button type="button"
+                                                                  class="btn btn-primary">Confirm</button>
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <!-- Delete Modal -->
