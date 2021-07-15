@@ -284,7 +284,7 @@
                                                       <div class="row">
                                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                   <input class="form-control col-md-2" type="text"
-                                                                        placeholder="Search ..." aria-label="Search">
+                                                                        placeholder="Employee ID" aria-label="Search">
 
                                                             
                                                                         &nbsp;&nbsp;
