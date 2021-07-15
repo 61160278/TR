@@ -20,7 +20,7 @@
       }
 
       #panel_th_home {
-            background-color: #00B050;
+            background-color: #FFC000;
 
       }
 
@@ -52,7 +52,7 @@
                               <div class="col-xl-12">
                                     <h1 class="m-0 font-weight-bold text-primary"><i
                                                 class="fa  fa-pencil-square text-white" id="Home"></i>
-                                          <font color="white">Create Training Data</font>
+                                          <font color="white">Edit Training Data</font>
                                     </h1>
                               </div>
                               <!-- End panel  -->

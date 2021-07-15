@@ -331,36 +331,10 @@
                   </div>
 
 
-
-
-
-
-
-
-
             </div>
             <!-- Start col-lg-12 -->
 
-
-
-
-
-
-
-
-
       </div> <!-- /.container-fluid -->
-
-
-
-
-
-
-
-
-
-
-
 
 
       <div class="col-md-3">
