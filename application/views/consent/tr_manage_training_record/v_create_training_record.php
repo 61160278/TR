@@ -303,13 +303,14 @@
                                                                         <tr align="center">
 
                                                                               <th>No.</th>
-                                                                              <th>Course Code</th>
-                                                                              <th>Training Name</th>
-                                                                              <th>Training Description</th>
-                                                                              <th>Start-Date</th>
-                                                                              <th>End-Date</th>
-                                                                              <th>Trainer</th>
-                                                                              <th>Action</th>
+                                                                              <th>Employee Code</th>
+                                                                              <th>Firstname-Surname</th>
+                                                                              <th>Position</th>
+                                                                              <th>Department</th>
+                                                                              <th>Section</th>
+                                                                              <th>Hours</th>
+                                                                              <th>Status</th>
+                                                                              <th>Certificate</th>
 
                                                                         </tr>
                                                                   </thead>
@@ -322,21 +323,7 @@
                                                                               <td>02/01/2021</td>
                                                                               <td>02/01/2021</td>
                                                                               <td>Mr.Kenji Sleeptogether</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-info"><i
-                                                                                                class="fa fa-info-circle "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "
-                                                                                                data-toggle="modal"
-                                                                                                data-target="#EditModal"></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "
-                                                                                                data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button>
-                                                                              </td>
+                                                                            
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>2.</td>
@@ -346,21 +333,7 @@
                                                                               <td>21/01/2021</td>
                                                                               <td>21/01/2021</td>
                                                                               <td>Mr.Denial Ok</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-info"><i
-                                                                                                class="fa fa-info-circle "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "
-                                                                                                data-toggle="modal"
-                                                                                                data-target="#EditModal"></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "
-                                                                                                data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button>
-                                                                              </td>
+                                                                             
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>3.</td>
@@ -370,17 +343,7 @@
                                                                               <td>05/08/2021</td>
                                                                               <td>05/08/2021</td>
                                                                               <td>Mr.Kate J.son</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-info"><i
-                                                                                                class="fa fa-info-circle "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "></i></button>
-                                                                              </td>
+                                                                            
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>4.</td>
@@ -390,17 +353,7 @@
                                                                               <td>25/02/2022</td>
                                                                               <td>25/02/2022</td>
                                                                               <td>Mr.Tony Roger</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-info"><i
-                                                                                                class="fa fa-info-circle "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit"></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "></i></button>
-                                                                              </td>
+                                                                             
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>5.</td>
@@ -410,17 +363,7 @@
                                                                               <td>07/03/2022</td>
                                                                               <td>07/03/2022</td>
                                                                               <td>Mr.Kenji Sleeptogether</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-info"><i
-                                                                                                class="fa fa-info-circle "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "></i></button>
-                                                                              </td>
+                                                                            
                                                                         </tr>
 
                                                                   </tbody>
