@@ -251,9 +251,9 @@
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Number of people :
-                                                                  <div class="col-2">
+                                                                  <div class="col-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext">
+                                                                              id="grouptext" disabled>
                                                                   </div>
 
                                                             </div>
@@ -264,15 +264,16 @@
                                                 </div>
                                           </div>
                                     </div>
-                                    <!-- /.container-fluid -->
+                                   
 
 
                               </div>
                         </div>
                   </div>
             </div>
+            <!-- Start col-lg-12 -->
 
-      </div>
+      </div>  <!-- /.container-fluid -->
 
 
       <div class="col-md-3">
