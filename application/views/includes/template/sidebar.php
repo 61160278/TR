@@ -75,8 +75,7 @@
 
          
                 
-                <a id="menuToggle" class="menutoggle"><i class="fa fa-angle-right" align="center" ></i></a>
-                <!-- link top image  -->
+              
 
 
 

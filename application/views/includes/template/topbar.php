@@ -28,7 +28,7 @@
                 <a class="navbar-brand" href="<?php echo base_url()?>Trs_Controller/index">
                     <img src="<?php echo base_url();?>elaadmin/images/LOGO_49.png" alt="Logo" height="80%">
                 </a>
-                
+                <a id="menuToggle" class="menutoggle"><font color="white"><i class="fa fa-bars"></i></font></a>
             </div>
             <!-- End div navbar-header -->
         </div>
