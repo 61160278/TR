@@ -94,7 +94,7 @@
 
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Training Name :
-                                                                  <div class="col-sm-3">
+                                                                  <div class="col-sm-4">
                                                                         <input type="text" class="form-control"
                                                                               id="grouptext"
                                                                               placeholder="Training Name">
