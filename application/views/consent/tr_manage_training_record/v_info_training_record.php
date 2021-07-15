@@ -20,7 +20,7 @@
       }
 
       #panel_th_home {
-            background-color: #FFC000;
+            background-color: #17A2B8;
 
       }
 
@@ -52,7 +52,7 @@
                               <div class="col-xl-12">
                                     <h1 class="m-0 font-weight-bold text-primary"><i
                                                 class="fa  fa-pencil-square text-white" id="Home"></i>
-                                          <font color="white">Edit Training Data</font>
+                                          <font color="white">Info Training Data</font>
                                     </h1>
                               </div>
                               <!-- End panel  -->
@@ -89,7 +89,7 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Course Code :
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Code">
+                                                                              id="grouptext" placeholder="Code" disabled>
                                                                   </div>
 
 
@@ -98,7 +98,7 @@
                                                                   <div class="col-sm-3">
                                                                         <input type="text" class="form-control"
                                                                               id="grouptext"
-                                                                              placeholder="Training Name">
+                                                                              placeholder="Training Name" disabled>
                                                                   </div>
 
                                                             </div>
@@ -108,7 +108,7 @@
                                                             <div class="row">
                                                                   &nbsp;&nbsp;&nbsp;&nbsp;Course Category :
                                                                   <div class="col-sm-2">
-                                                                        <select name="example_length"
+                                                                        <select name="example_length" disabled
                                                                               class="form-control"
                                                                               aria-controls="example"
                                                                               onChange="select_company(value)">
@@ -120,7 +120,7 @@
                                                                         </select>
                                                                   </div>
                                                                   <div class="col-sm-2">
-                                                                        <select name="example_length"
+                                                                        <select name="example_length" disabled
                                                                               class="form-control"
                                                                               aria-controls="example"
                                                                               onChange="select_company(value)">
@@ -134,7 +134,7 @@
                                                                         </select>
                                                                   </div>
                                                                   <div class="col-sm-2">
-                                                                        <select name="example_length"
+                                                                        <select name="example_length" disabled
                                                                               class="form-control"
                                                                               aria-controls="example"
                                                                               onChange="select_company(value)">
@@ -153,7 +153,7 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Place :
                                                                   <div class="col-sm-3">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Place">
+                                                                              id="grouptext" placeholder="Place" disabled>
                                                                   </div>
 
                                                             </div>
@@ -163,26 +163,26 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Start-Date :
                                                                   <div class="col-sm-2">
                                                                         <input type="date" class="form-control"
-                                                                              id="grouptext" placeholder="Type">
+                                                                              id="grouptext" placeholder="Type" disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Start-Time :
                                                                   <div class="col-sm-2">
                                                                         <input type="time" class="form-control"
-                                                                              id="grouptext" placeholder="Code">
+                                                                              id="grouptext" placeholder="Code" disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; End-Date :
                                                                   <div class="col-sm-2">
                                                                         <input type="date" class="form-control"
-                                                                              id="grouptext">
+                                                                              id="grouptext" disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; End-Time :
                                                                   <div class="col-sm-2">
                                                                         <input type="time" class="form-control"
                                                                               id="grouptext"
-                                                                              placeholder="Training Name">
+                                                                              placeholder="Training Name" disabled>
                                                                   </div>
 
                                                             </div>
@@ -198,7 +198,7 @@
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Trainer :
                                                                   <div class="col-sm-2">
-                                                                        <select name="example_length"
+                                                                        <select name="example_length" disabled
                                                                               class="form-control"
                                                                               aria-controls="example"
                                                                               onChange="select_company(value)">
@@ -217,19 +217,19 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Cost :
                                                                   <div class="col-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext">
+                                                                              id="grouptext" disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Pre-test :
                                                                   <div class="col-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext">
+                                                                              id="grouptext" disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Post-test :
                                                                   <div class="col-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext">
+                                                                              id="grouptext" disabled> 
                                                                   </div>
 
                                                             </div>
@@ -246,7 +246,7 @@
                                                                         <div class="col-md-3">
                                                                               <input type="checkbox" id="checkbox2"
                                                                                     name="checkbox2" value="option2"
-                                                                                    class="form-check-input">
+                                                                                    class="form-check-input" disabled>
                                                                         </div>
 
                                                                   </div>
@@ -284,16 +284,7 @@
                                                       <div class="row">
                                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                   <input class="form-control col-md-2" type="text"
-                                                                        placeholder="Employee ID" aria-label="Search">
-
-                                                            
-                                                                        &nbsp;&nbsp;
-                                                                 
-                                                                        <button type="button"
-                                                                              class="btn btn-success">Add Member
-                                                                              <i
-                                                                                    class="fa fa-plus text-black"></i></button>
-                                                                 
+                                                                        placeholder="Search.." aria-label="Search">                                  
                                                          
                                                       </div>
                                                       <div class="card-body">
@@ -311,7 +302,7 @@
                                                                               <th>Hours</th>
                                                                               <th>Status</th>
                                                                               <th>Certificate</th>
-                                                                              <th>Action</th>
+                                                                             
 
                                                                         </tr>
                                                                   </thead>
@@ -341,14 +332,7 @@
                                                                                     class="form-check-input">
 
                                                                               </td>
-                                                                              <td> 
-                                                                                   
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "
-                                                                                                data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button> 
-                                                                                          </td>
+                                                                            
                                                                             
                                                                         </tr>
                                                                         <tr align="center">
@@ -374,12 +358,7 @@
                                                                                     class="form-check-input">
 
                                                                               </td>
-                                                                              <td>  <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "
-                                                                                                data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button> 
-                                                                                          </td>
+                                                                             
                                                                              
                                                                         </tr>
                                                                         <tr align="center">
@@ -405,12 +384,7 @@
                                                                                     class="form-check-input">
 
                                                                               </td>
-                                                                              <td>  <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "
-                                                                                                data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button> 
-                                                                                          </td>
+                                                                            
                                                                             
                                                                         </tr>
                                                                      
@@ -432,6 +406,7 @@
             <!-- Start col-lg-12 -->
 
       </div> <!-- /.container-fluid -->
+
 
       <div class="col-md-3">
             <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">

@@ -112,9 +112,11 @@
                                                                               <td>02/01/2021</td>
                                                                               <td>Mr.Kenji Sleeptogether</td>
                                                                               <td>
+                                                                              <a
+                                                                        href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/info_training_data">
                                                                                     <button type="button"
                                                                                           class="btn btn-info"><i
-                                                                                                class="fa fa-info-circle "></i></button>
+                                                                                                class="fa fa-info-circle "></i></button></a>
                                                                                                 <a
                                                                         href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/edit_training_data">
                                                                                     <button type="button"
