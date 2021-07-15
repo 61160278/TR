@@ -202,7 +202,8 @@
                                                                               aria-controls="example"
                                                                               onChange="select_company(value)">
                                                                               <option value="0">Select Trainer</option>
-                                                                              <option value="1">Mr.Kenji Sleeptogether</option>
+                                                                              <option value="1">Mr.Kenji Sleeptogether
+                                                                              </option>
                                                                               <option value="2">Mr.Denial Ok
                                                                               </option>
                                                                               <option value="3">Mr.Kate J.son
@@ -215,55 +216,48 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Cost :
                                                                   <div class="col-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" >
+                                                                              id="grouptext">
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Pre-test :
                                                                   <div class="col-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" >
+                                                                              id="grouptext">
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Post-test :
                                                                   <div class="col-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" >
+                                                                              id="grouptext">
                                                                   </div>
 
                                                             </div>
                                                             <!-- row 4 -->
 
-
-
                                                             <br>
                                                             <div class="row">
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Certificate :
-                                                                  <div class="col-sm-1">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext" disabled>
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Certificate
+                                                                  :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                  <div class="checkbox">
+
+
+
+                                                                        <div class="col-md-3">
+                                                                              <input type="checkbox" id="checkbox2"
+                                                                                    name="checkbox2" value="option2"
+                                                                                    class="form-check-input">
+                                                                        </div>
+
                                                                   </div>
-
-                                                             
-
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Number of people :
                                                                   <div class="col-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" >
+                                                                              id="grouptext">
                                                                   </div>
-
-                                                                 
 
                                                             </div>
                                                             <!-- row 5 -->
-
-
-
-
-
-
-
-
 
                                                       </div>
                                                       <!-- card-body -->
