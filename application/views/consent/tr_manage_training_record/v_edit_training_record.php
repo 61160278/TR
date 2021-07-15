@@ -311,60 +311,109 @@
                                                                               <th>Hours</th>
                                                                               <th>Status</th>
                                                                               <th>Certificate</th>
+                                                                              <th>Action</th>
 
                                                                         </tr>
                                                                   </thead>
                                                                   <tbody>
                                                                         <tr align="center">
                                                                               <td>1.</td>
-                                                                              <td>IN-00001</td>
-                                                                              <td>General Safety</td>
-                                                                              <td>General Safety</td>
-                                                                              <td>02/01/2021</td>
-                                                                              <td>02/01/2021</td>
-                                                                              <td>Mr.Kenji Sleeptogether</td>
+                                                                              <td>TN00035</td>
+                                                                              <td>Kanchanaphitcha Meesuk</td>
+                                                                              <td>Board of Directors</td>
+                                                                              <td>Human Resource</td>
+                                                                              <td>6180</td>
+                                                                              <td>
+                                                                        <input type="text" class="form-control"
+                                                                              id="grouptext" value="" disabled>
+                                                                  </td>
+                                                                              <td> 
+                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                              <input type="checkbox" id="checkbox2"
+                                                                                    name="checkbox2" value="select"
+                                                                                    class="form-check-input">
+
+                                                                              </td>
+                                                                              <td> 
+                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                              <input type="checkbox" id="checkbox2"
+                                                                                    name="checkbox2" value="option2"
+                                                                                    class="form-check-input">
+
+                                                                              </td>
+                                                                              <td> 
+                                                                                   
+                                                                                    <button type="button"
+                                                                                          class="btn btn-danger"><i
+                                                                                                class="ti ti-trash "
+                                                                                                data-toggle="modal"
+                                                                                                data-target="#DeleteModal"></i></button> 
+                                                                                          </td>
                                                                             
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>2.</td>
-                                                                              <td>IN-00002</td>
-                                                                              <td>Leader andd Management</td>
-                                                                              <td>Communication for Leader</td>
-                                                                              <td>21/01/2021</td>
-                                                                              <td>21/01/2021</td>
-                                                                              <td>Mr.Denial Ok</td>
+                                                                              <td>TN00036</td>
+                                                                              <td>Lapatrada Puttamongkol</td>
+                                                                              <td>Board of Directors</td>
+                                                                              <td>Human Resource</td>
+                                                                              <td>6180</td>
+                                                                              <td>   <input type="text" class="form-control"
+                                                                              id="grouptext" disabled></td>
+                                                                              <td> 
+                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                              <input type="checkbox" id="checkbox2"
+                                                                                    name="checkbox2" value="option2"
+                                                                                    class="form-check-input">
+
+                                                                              </td>
+                                                                              <td> 
+                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                              <input type="checkbox" id="checkbox2"
+                                                                                    name="checkbox2" value="option2"
+                                                                                    class="form-check-input">
+
+                                                                              </td>
+                                                                              <td>  <button type="button"
+                                                                                          class="btn btn-danger"><i
+                                                                                                class="ti ti-trash "
+                                                                                                data-toggle="modal"
+                                                                                                data-target="#DeleteModal"></i></button> 
+                                                                                          </td>
                                                                              
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>3.</td>
-                                                                              <td>IN-00003</td>
-                                                                              <td>Professional Golf Caddie</td>
-                                                                              <td>Communication Efficiency</td>
-                                                                              <td>05/08/2021</td>
-                                                                              <td>05/08/2021</td>
-                                                                              <td>Mr.Kate J.son</td>
+                                                                              <td>TN00037</td>
+                                                                              <td>Jirayu Jaravichit</td>
+                                                                              <td>Board of Directors</td>
+                                                                              <td>Human Resource</td>
+                                                                              <td>6180</td>
+                                                                              <td>   <input type="text" class="form-control"
+                                                                              id="grouptext" disabled></td>
+                                                                              <td> 
+                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                              <input type="checkbox" id="checkbox2"
+                                                                                    name="checkbox2" value="option2"
+                                                                                    class="form-check-input">
+
+                                                                              </td>
+                                                                              <td> 
+                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                              <input type="checkbox" id="checkbox2"
+                                                                                    name="checkbox2" value="option2"
+                                                                                    class="form-check-input">
+
+                                                                              </td>
+                                                                              <td>  <button type="button"
+                                                                                          class="btn btn-danger"><i
+                                                                                                class="ti ti-trash "
+                                                                                                data-toggle="modal"
+                                                                                                data-target="#DeleteModal"></i></button> 
+                                                                                          </td>
                                                                             
                                                                         </tr>
-                                                                        <tr align="center">
-                                                                              <td>4.</td>
-                                                                              <td>EX-00004</td>
-                                                                              <td>Building Good Attitude at Work</td>
-                                                                              <td>Self and Work Development</td>
-                                                                              <td>25/02/2022</td>
-                                                                              <td>25/02/2022</td>
-                                                                              <td>Mr.Tony Roger</td>
-                                                                             
-                                                                        </tr>
-                                                                        <tr align="center">
-                                                                              <td>5.</td>
-                                                                              <td>EX-00005</td>
-                                                                              <td>Working as one team</td>
-                                                                              <td>Social skill for working together</td>
-                                                                              <td>07/03/2022</td>
-                                                                              <td>07/03/2022</td>
-                                                                              <td>Mr.Kenji Sleeptogether</td>
-                                                                            
-                                                                        </tr>
+                                                                     
 
                                                                   </tbody>
                                                             </table>
