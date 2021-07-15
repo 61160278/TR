@@ -94,7 +94,7 @@
 
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Training Name :
-                                                                  <div class="col-sm-4">
+                                                                  <div class="col-sm-3">
                                                                         <input type="text" class="form-control"
                                                                               id="grouptext"
                                                                               placeholder="Training Name">
@@ -266,38 +266,46 @@
                                     </div>
                                     <!-- /.container-fluid -->
 
-                                    <div class="col-md-7">
-                                          <a
-                                                href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
-                                                <button type="button" class="btn btn-secondary">Back</button>
-                                          </a>
-                                    </div>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog"
-                                          aria-labelledby="staticModalLabel" aria-hidden="true">
-                                          <div class="modal-dialog modal-sm-5" role="document">
-                                                <div class="modal-content">
-                                                      <div class="modal-header" style="background-color:#E74A3B;">
-                                                            <h5 class="modal-title" id="staticModalLabel"><b>
-                                                                        <font color="white" size="5px">Delete</font>
-                                                                  </b></h5>
-                                                            <button type="button" class="close" data-dismiss="modal"
-                                                                  aria-label="Close">
-                                                                  <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                      </div>
-                                                      <div class="modal-body">
-                                                            <p>
-                                                                  Please Confirm delete data.
-                                                            </p>
-                                                      </div>
-                                                      <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary"
-                                                                  data-dismiss="modal">Cancel</button>
-                                                            <button type="button"
-                                                                  class="btn btn-primary">Confirm</button>
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div>
-                                    <!-- Delete Modal -->
+
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+      </div>
+
+
+      <div class="col-md-3">
+            <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
+                  <button type="button" class="btn btn-secondary">Back</button>
+            </a>
+      </div>
+
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-sm-5" role="document">
+                  <div class="modal-content">
+                        <div class="modal-header" style="background-color:#E74A3B;">
+                              <h5 class="modal-title" id="staticModalLabel"><b>
+                                          <font color="white" size="5px">Delete</font>
+                                    </b></h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                              </button>
+                        </div>
+                        <div class="modal-body">
+                              <p>
+                                    Please Confirm delete data.
+                              </p>
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                              <button type="button" class="btn btn-primary">Confirm</button>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <!-- Delete Modal -->
