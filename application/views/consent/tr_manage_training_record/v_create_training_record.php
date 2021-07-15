@@ -20,7 +20,8 @@
       }
 
       #panel_th_home {
-            background-color: #4E73DF;
+            background-color:#00B050;
+           
       }
 
       #icon_main_menu {
