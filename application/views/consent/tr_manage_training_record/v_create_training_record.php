@@ -104,53 +104,90 @@
                                                             <br>
 
                                                             <div class="row">
-                                                            &nbsp;&nbsp;&nbsp;&nbsp;Course Category :
-                                    <div class="col-sm-2">
-                                          <select name="example_length" class="form-control" aria-controls="example"
-                                                onChange="select_company(value)">
-                                                <option value="0">Select</option>
-                                                <option value="1">General</option>
-                                                <option value="2">Technical</option>
-                                                <option value="3">Requirement</option>
-                                                <option value="4">Instructor</option>
-                                          </select>
-                                    </div>
-                                    <div class="col-sm-2">
-                                          <select name="example_length" class="form-control" aria-controls="example"
-                                                onChange="select_company(value)">
-                                                <option value="0">Select</option>
-                                                <option value="1">In-house</option>
-                                                <option value="2">External Training</option>
-                                                <option value="3">On the job training</option>
-                                                <option value="4">Seminar</option>
-                                          </select>
-                                    </div>
-                                    <div class="col-sm-2">
-                                          <select name="example_length" class="form-control" aria-controls="example"
-                                                onChange="select_company(value)">
-                                                <option value="0">Select</option>
-                                                <option value="1">Classroom </option>
-                                                <option value="2">E-learning</option>
-                                                <option value="3">Self studyt</option>
-                                                <option value="4">Both Classroom & On the job training</option>
-                                                <option value="5">On the job training</option>
-                                          </select>
-                                    </div>
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp;Course Category :
+                                                                  <div class="col-sm-2">
+                                                                        <select name="example_length"
+                                                                              class="form-control"
+                                                                              aria-controls="example"
+                                                                              onChange="select_company(value)">
+                                                                              <option value="0">Select</option>
+                                                                              <option value="1">General</option>
+                                                                              <option value="2">Technical</option>
+                                                                              <option value="3">Requirement</option>
+                                                                              <option value="4">Instructor</option>
+                                                                        </select>
+                                                                  </div>
+                                                                  <div class="col-sm-2">
+                                                                        <select name="example_length"
+                                                                              class="form-control"
+                                                                              aria-controls="example"
+                                                                              onChange="select_company(value)">
+                                                                              <option value="0">Select</option>
+                                                                              <option value="1">In-house</option>
+                                                                              <option value="2">External Training
+                                                                              </option>
+                                                                              <option value="3">On the job training
+                                                                              </option>
+                                                                              <option value="4">Seminar</option>
+                                                                        </select>
+                                                                  </div>
+                                                                  <div class="col-sm-2">
+                                                                        <select name="example_length"
+                                                                              class="form-control"
+                                                                              aria-controls="example"
+                                                                              onChange="select_company(value)">
+                                                                              <option value="0">Select</option>
+                                                                              <option value="1">Classroom </option>
+                                                                              <option value="2">E-learning</option>
+                                                                              <option value="3">Self studyt</option>
+                                                                              <option value="4">Both Classroom & On the
+                                                                                    job training</option>
+                                                                              <option value="5">On the job training
+                                                                              </option>
+                                                                        </select>
+                                                                  </div>
 
 
-                                    &nbsp;&nbsp;&nbsp;&nbsp; Place :
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Place :
                                                                   <div class="col-sm-3">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext"  placeholder="Place">
+                                                                              id="grouptext" placeholder="Place">
+                                                                  </div>
+
+                                                            </div>
+                                                            <!-- row 2 -->
+                                                            <br>
+                                                            <div class="row">
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Start-Date :
+                                                                  <div class="col-sm-2">
+                                                                        <input type="date" class="form-control"
+                                                                              id="grouptext" placeholder="Type">
+                                                                  </div>
+
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; End-Date :
+                                                                  <div class="col-sm-2">
+                                                                        <input type="date" class="form-control"
+                                                                              id="grouptext">
+                                                                  </div>
+
+
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Start-Time :
+                                                                  <div class="col-sm-2">
+                                                                        <input type="time" class="form-control"
+                                                                              id="grouptext" placeholder="Code">
                                                                   </div>
 
 
 
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; End-Time :
+                                                                  <div class="col-sm-2">
+                                                                        <input type="time" class="form-control"
+                                                                              id="grouptext"
+                                                                              placeholder="Training Name">
+                                                                  </div>
 
-                              </div>
-                                                            <!-- row 2 -->
-
-
+                                                            </div>
+                                                            <!-- row 3 -->
 
                                                       </div>
                                                       <!-- card-body -->
