@@ -44,6 +44,11 @@ class Manage_training_record extends MainController {
 		$this->output('/consent/tr_manage_training_record/v_manage_training_record');
 	}
 	// function index()
+	function create_training_data()
+	{
+		$this->output('/consent/tr_manage_training_record/v_create_training_record');
+	}
+	// function create_training_data()
  
 }
 // 
