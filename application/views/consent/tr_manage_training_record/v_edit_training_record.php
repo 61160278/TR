@@ -315,7 +315,56 @@
                                                                         </tr>
                                                                   </thead>
                                                                   <tbody>
-                                                                      
+                                                                        <tr align="center">
+                                                                              <td>1.</td>
+                                                                              <td>IN-00001</td>
+                                                                              <td>General Safety</td>
+                                                                              <td>General Safety</td>
+                                                                              <td>02/01/2021</td>
+                                                                              <td>02/01/2021</td>
+                                                                              <td>Mr.Kenji Sleeptogether</td>
+                                                                            
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                              <td>2.</td>
+                                                                              <td>IN-00002</td>
+                                                                              <td>Leader andd Management</td>
+                                                                              <td>Communication for Leader</td>
+                                                                              <td>21/01/2021</td>
+                                                                              <td>21/01/2021</td>
+                                                                              <td>Mr.Denial Ok</td>
+                                                                             
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                              <td>3.</td>
+                                                                              <td>IN-00003</td>
+                                                                              <td>Professional Golf Caddie</td>
+                                                                              <td>Communication Efficiency</td>
+                                                                              <td>05/08/2021</td>
+                                                                              <td>05/08/2021</td>
+                                                                              <td>Mr.Kate J.son</td>
+                                                                            
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                              <td>4.</td>
+                                                                              <td>EX-00004</td>
+                                                                              <td>Building Good Attitude at Work</td>
+                                                                              <td>Self and Work Development</td>
+                                                                              <td>25/02/2022</td>
+                                                                              <td>25/02/2022</td>
+                                                                              <td>Mr.Tony Roger</td>
+                                                                             
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                              <td>5.</td>
+                                                                              <td>EX-00005</td>
+                                                                              <td>Working as one team</td>
+                                                                              <td>Social skill for working together</td>
+                                                                              <td>07/03/2022</td>
+                                                                              <td>07/03/2022</td>
+                                                                              <td>Mr.Kenji Sleeptogether</td>
+                                                                            
+                                                                        </tr>
 
                                                                   </tbody>
                                                             </table>
