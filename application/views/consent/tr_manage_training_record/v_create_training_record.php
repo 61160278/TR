@@ -74,13 +74,14 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Type of Training :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Type">
+                                                                              id="grouptext" placeholder="Type"
+                                                                              disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; ครั้งที่ :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext">
+                                                                              id="grouptext" disabled>
                                                                   </div>
 
 
@@ -164,20 +165,17 @@
                                                                               id="grouptext" placeholder="Type">
                                                                   </div>
 
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; End-Date :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="date" class="form-control"
-                                                                              id="grouptext">
-                                                                  </div>
-
-
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Start-Time :
                                                                   <div class="col-sm-2">
                                                                         <input type="time" class="form-control"
                                                                               id="grouptext" placeholder="Code">
                                                                   </div>
 
-
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; End-Date :
+                                                                  <div class="col-sm-2">
+                                                                        <input type="date" class="form-control"
+                                                                              id="grouptext">
+                                                                  </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; End-Time :
                                                                   <div class="col-sm-2">
@@ -188,6 +186,84 @@
 
                                                             </div>
                                                             <!-- row 3 -->
+
+                                                            <br>
+                                                            <div class="row">
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Total Hours :
+                                                                  <div class="col-sm-1">
+                                                                        <input type="text" class="form-control"
+                                                                              id="grouptext" disabled>
+                                                                  </div>
+
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Trainer :
+                                                                  <div class="col-sm-2">
+                                                                        <select name="example_length"
+                                                                              class="form-control"
+                                                                              aria-controls="example"
+                                                                              onChange="select_company(value)">
+                                                                              <option value="0">Select Trainer</option>
+                                                                              <option value="1">Mr.Kenji Sleeptogether</option>
+                                                                              <option value="2">Mr.Denial Ok
+                                                                              </option>
+                                                                              <option value="3">Mr.Kate J.son
+                                                                              </option>
+                                                                              <option value="4">Mr.Tony Roger</option>
+                                                                        </select>
+                                                                  </div>
+
+
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Cost :
+                                                                  <div class="col-2">
+                                                                        <input type="text" class="form-control"
+                                                                              id="grouptext" >
+                                                                  </div>
+
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Pre-test :
+                                                                  <div class="col-1">
+                                                                        <input type="text" class="form-control"
+                                                                              id="grouptext" >
+                                                                  </div>
+
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Post-test :
+                                                                  <div class="col-1">
+                                                                        <input type="text" class="form-control"
+                                                                              id="grouptext" >
+                                                                  </div>
+
+                                                            </div>
+                                                            <!-- row 4 -->
+
+
+
+                                                            <br>
+                                                            <div class="row">
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Certificate :
+                                                                  <div class="col-sm-1">
+                                                                        <input type="text" class="form-control"
+                                                                              id="grouptext" disabled>
+                                                                  </div>
+
+                                                             
+
+
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Number of people :
+                                                                  <div class="col-2">
+                                                                        <input type="text" class="form-control"
+                                                                              id="grouptext" >
+                                                                  </div>
+
+                                                                 
+
+                                                            </div>
+                                                            <!-- row 5 -->
+
+
+
+
+
+
+
+
 
                                                       </div>
                                                       <!-- card-body -->
