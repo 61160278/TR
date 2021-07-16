@@ -112,17 +112,16 @@
                                                                               <td>02/01/2021</td>
                                                                               <td>Mr.Kenji Sleeptogether</td>
                                                                               <td>
-                                                                              <a
-                                                                        href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/info_training_data">
-                                                                                    <button type="button"
-                                                                                          class="btn btn-info"><i
-                                                                                                class="fa fa-info-circle "></i></button></a>
-                                                                                                <a
-                                                                        href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/edit_training_data">
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "
-                                                                                                ></i></button></a>
+                                                                                    <a
+                                                                                          href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/info_training_data">
+                                                                                          <button type="button"
+                                                                                                class="btn btn-info"><i
+                                                                                                      class="fa fa-info-circle "></i></button></a>
+                                                                                    <a
+                                                                                          href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/edit_training_data">
+                                                                                          <button type="button"
+                                                                                                class="btn btn-warning"><i
+                                                                                                      class="fa fa-edit "></i></button></a>
                                                                                     <button type="button"
                                                                                           class="btn btn-danger"><i
                                                                                                 class="ti ti-trash "
@@ -227,16 +226,17 @@
                         </div><!-- .content -->
                   </div>
                   <!-- card-shadow mb-4 -->
+                  <div class="col-md-7">
+                        <a href="<?php echo base_url()?>Trs_Controller/index">
+                              <button type="button" class="btn btn-secondary">Back</button>
+                        </a>
+                  </div>
             </div>
             <!-- col-lg-12 -->
       </div>
       <!-- /.container-fluid -->
 
-      <div class="col-md-7">
-            <a href="<?php echo base_url()?>Trs_Controller/index">
-                  <button type="button" class="btn btn-secondary">Back</button>
-            </a>
-      </div>
+
       <!-- Modal -->
       <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
             aria-hidden="true">

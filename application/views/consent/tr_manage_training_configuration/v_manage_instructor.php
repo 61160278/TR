@@ -185,16 +185,18 @@
                         </div><!-- .content -->
                   </div>
                   <!-- card-shadow mb-4 -->
+                  <div class="col-md-7">
+                        <a
+                              href="<?php echo base_url() ?>tr_manage_training_configuration/Manage_training_configuration/index">
+                              <button type="button" class="btn btn-secondary">Back</button>
+                        </a>
+                  </div>
             </div>
             <!-- col-lg-12 -->
       </div>
       <!-- /.container-fluid -->
 
-      <div class="col-md-7">
-            <a href="<?php echo base_url() ?>tr_manage_training_configuration/Manage_training_configuration/index">
-                  <button type="button" class="btn btn-secondary">Back</button>
-            </a>
-      </div>
+
 
       <!-- Modal -->
       <div class="modal fade" id="CreateModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
@@ -230,7 +232,8 @@
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Firstname :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext" placeholder="FirstName">
+                                          <input type="text" class="form-control" id="grouptext"
+                                                placeholder="FirstName">
                                     </div>
 
                               </div>
@@ -245,11 +248,12 @@
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Institution :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext" placeholder="Institution">
+                                          <input type="text" class="form-control" id="grouptext"
+                                                placeholder="Institution">
                                     </div>
                               </div>
-                              
-                             
+
+
 
                         </div>
                         <div class="modal-footer">
@@ -279,7 +283,7 @@
 
 
 
-                        <div class="row">
+                              <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Category :</label>
                                     <div class="col-sm-2">
                                           <select name="example_length" class="form-control" aria-controls="example"
@@ -298,7 +302,8 @@
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Firstname :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext" placeholder="FirstName">
+                                          <input type="text" class="form-control" id="grouptext"
+                                                placeholder="FirstName">
                                     </div>
 
                               </div>
@@ -313,7 +318,8 @@
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Institution :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext" placeholder="Institution">
+                                          <input type="text" class="form-control" id="grouptext"
+                                                placeholder="Institution">
                                     </div>
                               </div>
 

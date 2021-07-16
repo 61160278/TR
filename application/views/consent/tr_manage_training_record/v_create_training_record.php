@@ -282,19 +282,17 @@
                                                 <div class="card">
 
                                                       <div class="row">
-                                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                  <input class="form-control col-md-2" type="text"
-                                                                        placeholder="Employee ID" aria-label="Search">
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <input class="form-control col-md-2" type="text"
+                                                                  placeholder="Employee ID" aria-label="Search">
 
-                                                            
-                                                                        &nbsp;&nbsp;
-                                                                 
-                                                                        <button type="button"
-                                                                              class="btn btn-success">Add Member
-                                                                              <i
-                                                                                    class="fa fa-plus text-black"></i></button>
-                                                                 
-                                                         
+
+                                                            &nbsp;&nbsp;
+
+                                                            <button type="button" class="btn btn-success">Add Member
+                                                                  <i class="fa fa-plus text-black"></i></button>
+
+
                                                       </div>
                                                       <div class="card-body">
                                                             <table id="bootstrap-data-table"
@@ -315,7 +313,7 @@
                                                                         </tr>
                                                                   </thead>
                                                                   <tbody>
-                                                                      
+
 
                                                                   </tbody>
                                                             </table>
@@ -330,18 +328,18 @@
 
                   </div>
 
-
+                  <div class="col-md-3">
+                        <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
+                              <button type="button" class="btn btn-secondary">Back</button>
+                        </a>
+                  </div>
             </div>
             <!-- Start col-lg-12 -->
 
       </div> <!-- /.container-fluid -->
 
 
-      <div class="col-md-3">
-            <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
-                  <button type="button" class="btn btn-secondary">Back</button>
-            </a>
-      </div>
+
 
 
 

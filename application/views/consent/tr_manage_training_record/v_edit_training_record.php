@@ -282,19 +282,17 @@
                                                 <div class="card">
 
                                                       <div class="row">
-                                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                  <input class="form-control col-md-2" type="text"
-                                                                        placeholder="Employee ID" aria-label="Search">
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <input class="form-control col-md-2" type="text"
+                                                                  placeholder="Employee ID" aria-label="Search">
 
-                                                            
-                                                                        &nbsp;&nbsp;
-                                                                 
-                                                                        <button type="button"
-                                                                              class="btn btn-success">Add Member
-                                                                              <i
-                                                                                    class="fa fa-plus text-black"></i></button>
-                                                                 
-                                                         
+
+                                                            &nbsp;&nbsp;
+
+                                                            <button type="button" class="btn btn-success">Add Member
+                                                                  <i class="fa fa-plus text-black"></i></button>
+
+
                                                       </div>
                                                       <div class="card-body">
                                                             <table id="bootstrap-data-table"
@@ -324,32 +322,38 @@
                                                                               <td>Human Resource</td>
                                                                               <td>6180</td>
                                                                               <td>
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext" value="" disabled>
-                                                                  </td>
-                                                                              <td> 
-                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                              <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" value="select"
-                                                                                    class="form-check-input">
+                                                                                    <input type="text"
+                                                                                          class="form-control"
+                                                                                          id="grouptext" value=""
+                                                                                          disabled>
+                                                                              </td>
+                                                                              <td>
+                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                                    <input type="checkbox"
+                                                                                          id="checkbox2"
+                                                                                          name="checkbox2"
+                                                                                          value="select"
+                                                                                          class="form-check-input">
 
                                                                               </td>
-                                                                              <td> 
-                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                              <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" value="option2"
-                                                                                    class="form-check-input">
+                                                                              <td>
+                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                                    <input type="checkbox"
+                                                                                          id="checkbox2"
+                                                                                          name="checkbox2"
+                                                                                          value="option2"
+                                                                                          class="form-check-input">
 
                                                                               </td>
-                                                                              <td> 
-                                                                                   
+                                                                              <td>
+
                                                                                     <button type="button"
                                                                                           class="btn btn-danger"><i
                                                                                                 class="ti ti-trash "
                                                                                                 data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button> 
-                                                                                          </td>
-                                                                            
+                                                                                                data-target="#DeleteModal"></i></button>
+                                                                              </td>
+
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>2.</td>
@@ -358,29 +362,34 @@
                                                                               <td>Board of Directors</td>
                                                                               <td>Human Resource</td>
                                                                               <td>6180</td>
-                                                                              <td>   <input type="text" class="form-control"
-                                                                              id="grouptext" disabled></td>
-                                                                              <td> 
-                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                              <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" value="option2"
-                                                                                    class="form-check-input">
+                                                                              <td> <input type="text"
+                                                                                          class="form-control"
+                                                                                          id="grouptext" disabled></td>
+                                                                              <td>
+                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                                    <input type="checkbox"
+                                                                                          id="checkbox2"
+                                                                                          name="checkbox2"
+                                                                                          value="option2"
+                                                                                          class="form-check-input">
 
                                                                               </td>
-                                                                              <td> 
-                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                              <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" value="option2"
-                                                                                    class="form-check-input">
+                                                                              <td>
+                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                                    <input type="checkbox"
+                                                                                          id="checkbox2"
+                                                                                          name="checkbox2"
+                                                                                          value="option2"
+                                                                                          class="form-check-input">
 
                                                                               </td>
-                                                                              <td>  <button type="button"
+                                                                              <td> <button type="button"
                                                                                           class="btn btn-danger"><i
                                                                                                 class="ti ti-trash "
                                                                                                 data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button> 
-                                                                                          </td>
-                                                                             
+                                                                                                data-target="#DeleteModal"></i></button>
+                                                                              </td>
+
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>3.</td>
@@ -389,31 +398,36 @@
                                                                               <td>Board of Directors</td>
                                                                               <td>Human Resource</td>
                                                                               <td>6180</td>
-                                                                              <td>   <input type="text" class="form-control"
-                                                                              id="grouptext" disabled></td>
-                                                                              <td> 
-                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                              <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" value="option2"
-                                                                                    class="form-check-input">
+                                                                              <td> <input type="text"
+                                                                                          class="form-control"
+                                                                                          id="grouptext" disabled></td>
+                                                                              <td>
+                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                                    <input type="checkbox"
+                                                                                          id="checkbox2"
+                                                                                          name="checkbox2"
+                                                                                          value="option2"
+                                                                                          class="form-check-input">
 
                                                                               </td>
-                                                                              <td> 
-                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                              <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" value="option2"
-                                                                                    class="form-check-input">
+                                                                              <td>
+                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                                    <input type="checkbox"
+                                                                                          id="checkbox2"
+                                                                                          name="checkbox2"
+                                                                                          value="option2"
+                                                                                          class="form-check-input">
 
                                                                               </td>
-                                                                              <td>  <button type="button"
+                                                                              <td> <button type="button"
                                                                                           class="btn btn-danger"><i
                                                                                                 class="ti ti-trash "
                                                                                                 data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button> 
-                                                                                          </td>
-                                                                            
+                                                                                                data-target="#DeleteModal"></i></button>
+                                                                              </td>
+
                                                                         </tr>
-                                                                     
+
 
                                                                   </tbody>
                                                             </table>
@@ -427,17 +441,17 @@
                         </div><!-- .content 2 -->
 
                   </div>
-
+                  <div class="col-md-3">
+                        <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
+                              <button type="button" class="btn btn-secondary">Back</button>
+                        </a>
+                  </div>
             </div>
             <!-- Start col-lg-12 -->
 
       </div> <!-- /.container-fluid -->
 
-      <div class="col-md-3">
-            <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
-                  <button type="button" class="btn btn-secondary">Back</button>
-            </a>
-      </div>
+
 
 
 

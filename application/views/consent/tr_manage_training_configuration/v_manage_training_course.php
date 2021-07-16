@@ -105,12 +105,14 @@
                                                                               <td>
                                                                                     <button type="button"
                                                                                           class="btn btn-warning"><i
-                                                                                                class="fa fa-edit " data-toggle="modal"
-                                                                        data-target="#EditModal"></i></button>
+                                                                                                class="fa fa-edit "
+                                                                                                data-toggle="modal"
+                                                                                                data-target="#EditModal"></i></button>
                                                                                     <button type="button"
                                                                                           class="btn btn-danger"><i
-                                                                                                class="ti ti-trash " data-toggle="modal"
-                                                                        data-target="#DeleteModal"></i></button>
+                                                                                                class="ti ti-trash "
+                                                                                                data-toggle="modal"
+                                                                                                data-target="#DeleteModal"></i></button>
                                                                               </td>
                                                                         </tr>
                                                                         <tr align="center">
@@ -121,12 +123,14 @@
                                                                               <td>
                                                                                     <button type="button"
                                                                                           class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "data-toggle="modal"
-                                                                        data-target="#EditModal"></i></button>
+                                                                                                class="fa fa-edit "
+                                                                                                data-toggle="modal"
+                                                                                                data-target="#EditModal"></i></button>
                                                                                     <button type="button"
                                                                                           class="btn btn-danger"><i
-                                                                                                class="ti ti-trash " data-toggle="modal"
-                                                                        data-target="#DeleteModal"></i></button>
+                                                                                                class="ti ti-trash "
+                                                                                                data-toggle="modal"
+                                                                                                data-target="#DeleteModal"></i></button>
                                                                               </td>
                                                                         </tr>
                                                                         <tr align="center">
@@ -184,16 +188,18 @@
                         </div><!-- .content -->
                   </div>
                   <!-- card-shadow mb-4 -->
+                  <div class="col-md-7">
+                        <a
+                              href="<?php echo base_url() ?>tr_manage_training_configuration/Manage_training_configuration/index">
+                              <button type="button" class="btn btn-secondary">Back</button>
+                        </a>
+                  </div>
             </div>
             <!-- col-lg-12 -->
       </div>
       <!-- /.container-fluid -->
 
-      <div class="col-md-7">
-            <a href="<?php echo base_url() ?>tr_manage_training_configuration/Manage_training_configuration/index">
-                  <button type="button" class="btn btn-secondary">Back</button>
-            </a>
-      </div>
+
 
       <!-- Modal -->
       <div class="modal fade" id="CreateModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
@@ -420,25 +426,28 @@
       <!-- Edit Modal -->
 
 
-      <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-sm-5" role="document">
-                    <div class="modal-content">
+      <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-sm-5" role="document">
+                  <div class="modal-content">
                         <div class="modal-header" style="background-color:#E74A3B;">
-                            <h5 class="modal-title" id="staticModalLabel"><b><font color="white" size="5px">Delete</font></b></h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                              <h5 class="modal-title" id="staticModalLabel"><b>
+                                          <font color="white" size="5px">Delete</font>
+                                    </b></h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                              </button>
                         </div>
                         <div class="modal-body">
-                            <p>
-                               Please Confirm delete data.
-                           </p>
-                       </div>
-                       <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary">Confirm</button>
-                    </div>
-                </div>
+                              <p>
+                                    Please Confirm delete data.
+                              </p>
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                              <button type="button" class="btn btn-primary">Confirm</button>
+                        </div>
+                  </div>
             </div>
-        </div>
+      </div>
       <!-- Delete Modal -->

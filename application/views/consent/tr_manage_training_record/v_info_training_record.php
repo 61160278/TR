@@ -89,7 +89,8 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Course Code :
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Code" disabled>
+                                                                              id="grouptext" placeholder="Code"
+                                                                              disabled>
                                                                   </div>
 
 
@@ -97,8 +98,8 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Training Name :
                                                                   <div class="col-sm-3">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext"
-                                                                              placeholder="Training Name" disabled>
+                                                                              id="grouptext" placeholder="Training Name"
+                                                                              disabled>
                                                                   </div>
 
                                                             </div>
@@ -153,7 +154,8 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Place :
                                                                   <div class="col-sm-3">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Place" disabled>
+                                                                              id="grouptext" placeholder="Place"
+                                                                              disabled>
                                                                   </div>
 
                                                             </div>
@@ -163,13 +165,15 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Start-Date :
                                                                   <div class="col-sm-2">
                                                                         <input type="date" class="form-control"
-                                                                              id="grouptext" placeholder="Type" disabled>
+                                                                              id="grouptext" placeholder="Type"
+                                                                              disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Start-Time :
                                                                   <div class="col-sm-2">
                                                                         <input type="time" class="form-control"
-                                                                              id="grouptext" placeholder="Code" disabled>
+                                                                              id="grouptext" placeholder="Code"
+                                                                              disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; End-Date :
@@ -181,8 +185,8 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; End-Time :
                                                                   <div class="col-sm-2">
                                                                         <input type="time" class="form-control"
-                                                                              id="grouptext"
-                                                                              placeholder="Training Name" disabled>
+                                                                              id="grouptext" placeholder="Training Name"
+                                                                              disabled>
                                                                   </div>
 
                                                             </div>
@@ -229,7 +233,7 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Post-test :
                                                                   <div class="col-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" disabled> 
+                                                                              id="grouptext" disabled>
                                                                   </div>
 
                                                             </div>
@@ -282,10 +286,10 @@
                                                 <div class="card">
 
                                                       <div class="row">
-                                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                  <input class="form-control col-md-2" type="text"
-                                                                        placeholder="Search.." aria-label="Search">                                  
-                                                         
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <input class="form-control col-md-2" type="text"
+                                                                  placeholder="Search.." aria-label="Search">
+
                                                       </div>
                                                       <div class="card-body">
                                                             <table id="bootstrap-data-table"
@@ -302,7 +306,7 @@
                                                                               <th>Hours</th>
                                                                               <th>Status</th>
                                                                               <th>Certificate</th>
-                                                                             
+
 
                                                                         </tr>
                                                                   </thead>
@@ -315,25 +319,31 @@
                                                                               <td>Human Resource</td>
                                                                               <td>6180</td>
                                                                               <td>
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext" value="" disabled>
-                                                                  </td>
-                                                                              <td> 
-                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                              <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" value="select"
-                                                                                    class="form-check-input">
+                                                                                    <input type="text"
+                                                                                          class="form-control"
+                                                                                          id="grouptext" value=""
+                                                                                          disabled>
+                                                                              </td>
+                                                                              <td>
+                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                                    <input type="checkbox"
+                                                                                          id="checkbox2"
+                                                                                          name="checkbox2"
+                                                                                          value="select"
+                                                                                          class="form-check-input">
 
                                                                               </td>
-                                                                              <td> 
-                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                              <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" value="option2"
-                                                                                    class="form-check-input">
+                                                                              <td>
+                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                                    <input type="checkbox"
+                                                                                          id="checkbox2"
+                                                                                          name="checkbox2"
+                                                                                          value="option2"
+                                                                                          class="form-check-input">
 
                                                                               </td>
-                                                                            
-                                                                            
+
+
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>2.</td>
@@ -342,24 +352,29 @@
                                                                               <td>Board of Directors</td>
                                                                               <td>Human Resource</td>
                                                                               <td>6180</td>
-                                                                              <td>   <input type="text" class="form-control"
-                                                                              id="grouptext" disabled></td>
-                                                                              <td> 
-                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                              <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" value="option2"
-                                                                                    class="form-check-input">
+                                                                              <td> <input type="text"
+                                                                                          class="form-control"
+                                                                                          id="grouptext" disabled></td>
+                                                                              <td>
+                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                                    <input type="checkbox"
+                                                                                          id="checkbox2"
+                                                                                          name="checkbox2"
+                                                                                          value="option2"
+                                                                                          class="form-check-input">
 
                                                                               </td>
-                                                                              <td> 
-                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                              <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" value="option2"
-                                                                                    class="form-check-input">
+                                                                              <td>
+                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                                    <input type="checkbox"
+                                                                                          id="checkbox2"
+                                                                                          name="checkbox2"
+                                                                                          value="option2"
+                                                                                          class="form-check-input">
 
                                                                               </td>
-                                                                             
-                                                                             
+
+
                                                                         </tr>
                                                                         <tr align="center">
                                                                               <td>3.</td>
@@ -368,26 +383,31 @@
                                                                               <td>Board of Directors</td>
                                                                               <td>Human Resource</td>
                                                                               <td>6180</td>
-                                                                              <td>   <input type="text" class="form-control"
-                                                                              id="grouptext" disabled></td>
-                                                                              <td> 
-                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                              <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" value="option2"
-                                                                                    class="form-check-input">
+                                                                              <td> <input type="text"
+                                                                                          class="form-control"
+                                                                                          id="grouptext" disabled></td>
+                                                                              <td>
+                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                                    <input type="checkbox"
+                                                                                          id="checkbox2"
+                                                                                          name="checkbox2"
+                                                                                          value="option2"
+                                                                                          class="form-check-input">
 
                                                                               </td>
-                                                                              <td> 
-                                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                              <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" value="option2"
-                                                                                    class="form-check-input">
+                                                                              <td>
+                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                                                                    <input type="checkbox"
+                                                                                          id="checkbox2"
+                                                                                          name="checkbox2"
+                                                                                          value="option2"
+                                                                                          class="form-check-input">
 
                                                                               </td>
-                                                                            
-                                                                            
+
+
                                                                         </tr>
-                                                                     
+
 
                                                                   </tbody>
                                                             </table>
@@ -401,18 +421,18 @@
                         </div><!-- .content 2 -->
 
                   </div>
-
+                  <div class="col-md-3">
+                        <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
+                              <button type="button" class="btn btn-secondary">Back</button>
+                        </a>
+                  </div>
             </div>
             <!-- Start col-lg-12 -->
 
       </div> <!-- /.container-fluid -->
 
 
-      <div class="col-md-3">
-            <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
-                  <button type="button" class="btn btn-secondary">Back</button>
-            </a>
-      </div>
+
 
 
 
