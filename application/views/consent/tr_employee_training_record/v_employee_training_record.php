@@ -49,8 +49,8 @@
 
                               <!-- Start panel  -->
                               <div class="col-xl-12">
-                                    <h1 class="m-0 font-weight-bold text-primary"><i
-                                                class="fa  fa-users text-white" id="Home"></i>
+                                    <h1 class="m-0 font-weight-bold text-primary"><i class="fa  fa-users text-white"
+                                                id="Home"></i>
                                           <font color="white">Employee Training Record</font>
                                     </h1>
                               </div>
@@ -70,45 +70,48 @@
 
                                                       <div class="card-body">
 
-
-
-
-                                                            <div class="row">
+                                                            <div class="row form-group">
                                                                   <div class="col-sm-2">
                                                                         Employee ID :
                                                                   </div>
-                                                                  <div class="col-sm-3">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Search">
+
+                                                                  <div class="col col-md-3">
+                                                                        <div class="input-group">
+                                                                              <input type="text" class="form-control"
+                                                                                    id="grouptext"
+                                                                                    placeholder="Search"><button
+                                                                                    class="btn btn-primary"><i
+                                                                                          class="fa  fa-search"></i>
+                                                                        </div>
                                                                   </div>
-
                                                             </div>
-
-
-
-
-
-
                                                       </div>
+
+
+
+
+
                                                 </div>
                                           </div>
-
-
                                     </div>
-                              </div><!-- .animated -->
-                        </div><!-- .content -->
-                  </div>
-                  <!-- card-shadow mb-4 -->
+
+
+                              </div>
+                        </div><!-- .animated -->
+                  </div><!-- .content -->
             </div>
-            <!-- col-lg-12 -->
+            <!-- card-shadow mb-4 -->
+            <div class="col-md-7">
+                  <a href="<?php echo base_url()?>Trs_Controller/index">
+                        <button type="button" class="btn btn-secondary">Back</button>
+                  </a>
+            </div>
+      </div>
+      <!-- col-lg-12 -->
       </div>
       <!-- /.container-fluid -->
 
-      <div class="col-md-7">
-            <a href="<?php echo base_url()?>Trs_Controller/index">
-                  <button type="button" class="btn btn-secondary">Back</button>
-            </a>
-      </div>
+
       <!-- Modal -->
       <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
             aria-hidden="true">

@@ -50,7 +50,7 @@
                 <!-- อิอิ  -->
 
                 <li class="menu-item">
-                    <a href=""><i
+                    <a href="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Employee_training"><i
                             class="menu-icon fa fa-users" style="color: white" id="icon_sidebar"></i>Employee Training Record</a>
                 </li>
                 <!-- อิอิ  -->
