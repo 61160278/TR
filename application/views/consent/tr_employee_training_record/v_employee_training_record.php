@@ -50,7 +50,7 @@
                               <!-- Start panel  -->
                               <div class="col-xl-12">
                                     <h1 class="m-0 font-weight-bold text-primary"><i
-                                                class="fa  fa-pencil-square text-white" id="Home"></i>
+                                                class="fa  fa-users text-white" id="Home"></i>
                                           <font color="white">Employee Training Record</font>
                                     </h1>
                               </div>
