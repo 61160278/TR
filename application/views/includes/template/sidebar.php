@@ -68,7 +68,7 @@
                 <!-- อิอิ  -->
 
                 <li class="menu-item">
-                    <a href=""><i
+                    <a href="<?php echo base_url() ?>tr_profile/TR_profile/Profile"><i
                             class="menu-icon ti ti-id-badge" style="color: white" id="icon_sidebar"></i>Profile</a>
                 </li>
                 <!-- อิอิ  -->
