@@ -130,7 +130,7 @@
 
                         <!-- Start Menu Report -->
                         <div class="col-xl-4 col-md-6 mb-4">
-                              <a href="">
+                              <a href="<?php echo base_url() ?>tr_report/TR_report/Report">">
                                     <div class="card border4 shadow h-100 py-2">
                                           <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
@@ -155,7 +155,7 @@
 
                         <!-- Start Menu Profile -->
                         <div class="col-xl-4 col-md-6 mb-4">
-                              <a href="">
+                              <a href="<?php echo base_url() ?>tr_profile/TR_profile/Profile">">
                                     <div class="card border4 shadow h-100 py-2">
                                           <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
