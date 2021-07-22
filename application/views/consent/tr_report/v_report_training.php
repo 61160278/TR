@@ -71,19 +71,19 @@
                                                       <div class="card-body">
 
                                                             <div class="row form-group">
-                                                                  <div class="col-sm-2">
-                                                                        Employee ID :
+                                                                  <div class="col-sm-3">
+
+                                                                        Employee Training Record Form :
+                                                                        <br>
+                                                                        <br>
+                                                                        Employee Training Record By Department :
+                                                                        <br>
+                                                                        <br>
+                                                                        Employee Training Record By Course :
+
                                                                   </div>
 
-                                                                  <div class="col col-md-3">
-                                                                        <div class="input-group">
-                                                                              <input type="text" class="form-control"
-                                                                                    id="grouptext"
-                                                                                    placeholder="Search"><button
-                                                                                    class="btn btn-primary"><i
-                                                                                          class="fa  fa-search"></i>
-                                                                        </div>
-                                                                  </div>
+                                                                  
                                                             </div>
                                                       </div>
 
