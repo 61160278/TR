@@ -62,7 +62,7 @@
                 <!-- อิอิ  -->
 
                 <li class="menu-item">
-                    <a href=""><i
+                    <a href="<?php echo base_url() ?>tr_report/TR_report/Report"><i
                             class="menu-icon fa fa-book" style="color: white" id="icon_sidebar"></i>Report</a>
                 </li>
                 <!-- อิอิ  -->
