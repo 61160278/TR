@@ -75,10 +75,13 @@
                                     <div class="row">
 
                                           <div class="col-md-12">
-                                                <div class="card border border-success">
+                                                <div class="card border border-secondary">
                                                       <div class="card-body">
+                                                            <div class="row">
+                                                            <img src="Logo_TR.png" width="100" height="100" boder="1">
 
-                                                          
+                                                            </div>
+                                                            <br>
 
                                                             <div class="row">
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; รหัสประจำตัวพนักงาน :
