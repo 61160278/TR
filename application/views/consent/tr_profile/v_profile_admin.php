@@ -78,9 +78,10 @@
                                                 <div class="card border border-secondary">
                                                       <div class="card-body">
                                                             <div class="row">
-                                                            <img src="Logo_TR.png" width="100" height="100" boder="1">
+                                                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <img src="<?php echo base_url();?>elaadmin/images/1.jpg" width="200" height="200" class="rounded-circle"/>
 
                                                             </div>
+                                                            <br>
                                                             <br>
 
                                                             <div class="row">
@@ -178,6 +179,11 @@
 
                                                             <div class="card-header" id="headdata">
                                                                   <strong class="card-title">History</strong>
+                                                                  <div class="pull-right margin">
+                                                                  <input class="form-control col-md-12" type="text"
+                                                                        placeholder="Search ..." aria-label="Search">
+
+                                                            </div>
                                                             </div>
                                                             <div class="card-body">
                                                                   <ul class="nav nav-pills mb-3" id="pills-tab"
