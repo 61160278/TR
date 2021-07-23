@@ -34,6 +34,13 @@
             font-size: 50px;
             text-shadow: 1px 1px 1px #000;
       }
+
+      #headdata {
+            font-size: 30px;
+            color: white;
+            background-color: #17A2B8;
+
+      }
       </style>
       <!-- End style CSS  -->
 
@@ -164,53 +171,224 @@
 
                                                 <div class="col-md-12">
                                                       <div class="card">
-                                                            <h3>Tabs</h3>
-                                                            <ul class="nav nav-tabs">
-                                                                  <li class="active"><a href="#">Home</a></li>
-                                                                  <li><a href="#">Menu 1</a></li>
 
-                                                            </ul>
-                                                            <div class="card-header">
-
-
-                                                                  <strong class="card-title">Data Table</strong>
-
-
+                                                            <div class="card-header" id="headdata">
+                                                                  <strong class="card-title">History</strong>
                                                             </div>
                                                             <div class="card-body">
-                                                                  <table id="bootstrap-data-table"
-                                                                        class="table table-striped table-bordered">
-                                                                        <thead>
-                                                                              <tr>
-                                                                                    <th>Name</th>
-                                                                                    <th>Position</th>
-                                                                                    <th>Office</th>
-                                                                                    <th>Salary</th>
-                                                                              </tr>
-                                                                        </thead>
-                                                                        <tbody>
+                                                                  <ul class="nav nav-pills mb-3" id="pills-tab"
+                                                                        role="tablist">
+                                                                        <li class="nav-item">
+                                                                              <a class="nav-link active"
+                                                                                    id="pills-home-tab"
+                                                                                    data-toggle="pill"
+                                                                                    href="#pills-home" role="tab"
+                                                                                    aria-controls="pills-home"
+                                                                                    aria-selected="true">Training
+                                                                                    History</a>
+                                                                        </li>
+                                                                        <li class="nav-item">
+                                                                              <a class="nav-link" id="pills-profile-tab"
+                                                                                    data-toggle="pill"
+                                                                                    href="#pills-profile" role="tab"
+                                                                                    aria-controls="pills-profile"
+                                                                                    aria-selected="false">Movement</a>
+                                                                        </li>
 
-                                                                              <tr>
-                                                                                    <td>Cara Stevens</td>
-                                                                                    <td>Sales Assistant</td>
-                                                                                    <td>New York</td>
-                                                                                    <td>$145,600</td>
-                                                                              </tr>
-                                                                              <tr>
-                                                                                    <td>Hermione Butler</td>
-                                                                                    <td>Regional Director</td>
-                                                                                    <td>London</td>
-                                                                                    <td>$356,250</td>
-                                                                              </tr>
-                                                                              <tr>
-                                                                                    <td>Lael Greer</td>
-                                                                                    <td>Systems Administrator</td>
-                                                                                    <td>London</td>
-                                                                                    <td>$103,500</td>
-                                                                              </tr>
+                                                                  </ul>
 
-                                                                        </tbody>
-                                                                  </table>
+                                                                  <div class="tab-content" id="pills-tabContent">
+                                                                        <div class="tab-pane fade show active"
+                                                                              id="pills-home" role="tabpanel"
+                                                                              aria-labelledby="pills-home-tab">
+
+
+                                                                              <table id="bootstrap-data-table"
+                                                                                    class="table table-striped table-bordered">
+                                                                                    <thead>
+                                                                                          <tr align="center">
+
+                                                                                                <th>No.</th>
+                                                                                                <th>Course Code</th>
+                                                                                                <th>Training Name</th>
+                                                                                                <th>Training Description
+                                                                                                </th>
+                                                                                                <th>Start-Date</th>
+                                                                                                <th>End-Date</th>
+                                                                                                <th>Trainer</th>
+                                                                                                <th>Certificate</th>
+
+                                                                                          </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                          <tr align="center">
+                                                                                                <td>1.</td>
+                                                                                                <td>IN-00001</td>
+                                                                                                <td>General Safety</td>
+                                                                                                <td>General Safety</td>
+                                                                                                <td>02/01/2021</td>
+                                                                                                <td>02/01/2021</td>
+                                                                                                <td>Mr.Kenji
+                                                                                                      Sleeptogether</td>
+                                                                                                <td>
+
+                                                                                                      &nbsp;&nbsp;
+                                                                                                      &nbsp;&nbsp;
+                                                                                                      &nbsp;
+                                                                                                      <input type="checkbox"
+                                                                                                            id="checkbox2"
+                                                                                                            name="checkbox2"
+                                                                                                            value="option2"
+                                                                                                            class="form-check-input">
+
+
+                                                                                                </td>
+                                                                                          </tr>
+                                                                                          <tr align="center">
+                                                                                                <td>2.</td>
+                                                                                                <td>IN-00002</td>
+                                                                                                <td>Leader andd
+                                                                                                      Management</td>
+                                                                                                <td>Communication for
+                                                                                                      Leader</td>
+                                                                                                <td>21/01/2021</td>
+                                                                                                <td>21/01/2021</td>
+                                                                                                <td>Mr.Denial Ok</td>
+                                                                                                <td>
+
+
+                                                                                                      &nbsp;&nbsp;
+                                                                                                      &nbsp;&nbsp;
+                                                                                                      &nbsp;
+                                                                                                      <input type="checkbox"
+                                                                                                            id="checkbox2"
+                                                                                                            name="checkbox2"
+                                                                                                            value="option2"
+                                                                                                            class="form-check-input">
+
+                                                                                                </td>
+                                                                                          </tr>
+                                                                                          <tr align="center">
+                                                                                                <td>3.</td>
+                                                                                                <td>IN-00003</td>
+                                                                                                <td>Professional Golf
+                                                                                                      Caddie</td>
+                                                                                                <td>Communication
+                                                                                                      Efficiency</td>
+                                                                                                <td>05/08/2021</td>
+                                                                                                <td>05/08/2021</td>
+                                                                                                <td>Mr.Kate J.son</td>
+                                                                                                <td>
+
+                                                                                                      &nbsp;&nbsp;
+                                                                                                      &nbsp;&nbsp;
+                                                                                                      &nbsp;
+                                                                                                      <input type="checkbox"
+                                                                                                            id="checkbox2"
+                                                                                                            name="checkbox2"
+                                                                                                            value="option2"
+                                                                                                            class="form-check-input">
+
+
+                                                                                                </td>
+                                                                                          </tr>
+                                                                                          <tr align="center">
+                                                                                                <td>4.</td>
+                                                                                                <td>EX-00004</td>
+                                                                                                <td>Building Good
+                                                                                                      Attitude at Work
+                                                                                                </td>
+                                                                                                <td>Self and Work
+                                                                                                      Development</td>
+                                                                                                <td>25/02/2022</td>
+                                                                                                <td>25/02/2022</td>
+                                                                                                <td>Mr.Tony Roger</td>
+                                                                                                <td>
+
+
+                                                                                                      &nbsp;&nbsp;
+                                                                                                      &nbsp;&nbsp;
+                                                                                                      &nbsp;
+                                                                                                      <input type="checkbox"
+                                                                                                            id="checkbox2"
+                                                                                                            name="checkbox2"
+                                                                                                            value="option2"
+                                                                                                            class="form-check-input">
+
+
+                                                                                                </td>
+                                                                                          </tr>
+                                                                                          <tr align="center">
+                                                                                                <td>5.</td>
+                                                                                                <td>EX-00005</td>
+                                                                                                <td>Working as one team
+                                                                                                </td>
+                                                                                                <td>Social skill for
+                                                                                                      working together
+                                                                                                </td>
+                                                                                                <td>07/03/2022</td>
+                                                                                                <td>07/03/2022</td>
+                                                                                                <td>Mr.Kenji
+                                                                                                      Sleeptogether</td>
+                                                                                                <td>
+
+                                                                                                      &nbsp;&nbsp;
+                                                                                                      &nbsp;&nbsp;
+                                                                                                      &nbsp;
+                                                                                                      <input type="checkbox"
+                                                                                                            id="checkbox2"
+                                                                                                            name="checkbox2"
+                                                                                                            value="option2"
+                                                                                                            class="form-check-input">
+
+
+                                                                                                </td>
+                                                                                          </tr>
+
+                                                                                    </tbody>
+                                                                              </table>
+
+
+                                                                        </div>
+                                                                        <div class="tab-pane fade" id="pills-profile"
+                                                                              role="tabpanel"
+                                                                              aria-labelledby="pills-profile-tab">
+
+                                                                              <table id="bootstrap-data-table"
+                                                                                    class="table table-striped table-bordered">
+                                                                                    <thead>
+                                                                                          <tr>
+                                                                                                <th>No.</th>
+                                                                                                <th>Position</th>
+                                                                                                <th>Department</th>
+                                                                                                <th>Section</th>
+                                                                                                <th>Duration</th>
+                                                                                          </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+
+                                                                                          <tr>
+                                                                                                <td>1</td>
+                                                                                                <td>Staff</td>
+                                                                                                <td>Human Resourse</td>
+                                                                                                <td>6180</td>
+                                                                                                <td>02/01/2021 - 11/04/2022</td>
+                                                                                          </tr>
+                                                                                          <tr>
+                                                                                                <td>2</td>
+                                                                                                <td>Senior Staff</td>
+                                                                                                <td>Human Resourse</td>
+                                                                                                <td>6180</td>
+                                                                                                <td>11/04/2022 - Now</td>
+                                                                                          </tr>
+                                                                                         
+
+                                                                                    </tbody>
+                                                                              </table>
+                                                                        </div>
+
+                                                                  </div>
+
                                                             </div>
                                                       </div>
                                                 </div>
@@ -221,12 +399,13 @@
                               </div><!-- .content -->
 
                         </div>
-                        <div class="col-md-3">
+                        
+                  </div>
+                  <!-- Start col-lg-12 -->
+                  <div class="col-md-3">
                               <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
                                     <button type="button" class="btn btn-secondary">Back</button>
                               </a>
                         </div>
-                  </div>
-                  <!-- Start col-lg-12 -->
 
             </div> <!-- /.container-fluid -->
