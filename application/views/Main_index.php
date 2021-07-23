@@ -60,7 +60,7 @@
                                           <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
                                                       <div class="col mr-2">
-                                                            <div class="menu-icon fa fa-tasks" style="color: #4E73DF"
+                                                            <div class="menu-icon fa fa-tasks" 
                                                                   id="icon_main_menu"></div>
                                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Manage
                                                                   Training Configuration</div>
