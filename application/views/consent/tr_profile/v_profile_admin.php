@@ -75,9 +75,10 @@
                                     <div class="row">
 
                                           <div class="col-md-12">
-                                                <div class="card border border-primary">
+                                                <div class="card border border-success">
                                                       <div class="card-body">
 
+                                                          
 
                                                             <div class="row">
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; รหัสประจำตัวพนักงาน :
@@ -372,16 +373,18 @@
                                                                                                 <td>Staff</td>
                                                                                                 <td>Human Resourse</td>
                                                                                                 <td>6180</td>
-                                                                                                <td>02/01/2021 - 11/04/2022</td>
+                                                                                                <td>02/01/2021 -
+                                                                                                      11/04/2022</td>
                                                                                           </tr>
                                                                                           <tr>
                                                                                                 <td>2</td>
                                                                                                 <td>Senior Staff</td>
                                                                                                 <td>Human Resourse</td>
                                                                                                 <td>6180</td>
-                                                                                                <td>11/04/2022 - Now</td>
+                                                                                                <td>11/04/2022 - Now
+                                                                                                </td>
                                                                                           </tr>
-                                                                                         
+
 
                                                                                     </tbody>
                                                                               </table>
@@ -399,13 +402,13 @@
                               </div><!-- .content -->
 
                         </div>
-                        
+
                   </div>
                   <!-- Start col-lg-12 -->
                   <div class="col-md-3">
-                              <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
-                                    <button type="button" class="btn btn-secondary">Back</button>
-                              </a>
-                        </div>
+                        <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
+                              <button type="button" class="btn btn-secondary">Back</button>
+                        </a>
+                  </div>
 
             </div> <!-- /.container-fluid -->
