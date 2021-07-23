@@ -26,8 +26,8 @@
 <!--Start  side bar -->
 <aside id="left-panel" class="left-panel">
     <!-- Start tap navigator -->
-    <nav class="navbar navbar-expand-sm navbar-default">
-        <div id="main-menu" class="main-menu collapse navbar-collapse">
+    <nav class="navbar navbar-expand-sm navbar-default" id="main-menu">
+        <div  class="main-menu collapse navbar-collapse">
 
 
 

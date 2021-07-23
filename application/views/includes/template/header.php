@@ -23,14 +23,14 @@
     <!-- Start logo system  -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> EVS | SDM &SKD </title>
+    <title> Training Record System </title>
     <meta name="description" content="EVS - DENSO x TEAM 0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- End logo system  -->
 
     <!-- Start include stylesheet -->
-    <link rel="apple-touch-icon" href="<?php echo base_url();?>elaadmin/images/logo_EV-2.png">
-    <link rel="shortcut icon" href="<?php echo base_url();?>elaadmin/images/logo_EV-2.png">
+    <link rel="apple-touch-icon" href="<?php echo base_url();?>elaadmin/images/Logo_TR.png">
+    <link rel="shortcut icon" href="<?php echo base_url();?>elaadmin/images/Logo_TR.png">
 
     <link rel="stylesheet" href="<?php echo base_url();?>elaadmin/assets/css/normalize.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>elaadmin/assets/css/bootstrap.min.css">
