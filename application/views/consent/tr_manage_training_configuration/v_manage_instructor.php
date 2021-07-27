@@ -68,15 +68,13 @@
 
 function Edit_instructor(trainer_id) {
 
-         
-            var tr_fname = document.getElementById("tr_fname").value;
-            var tr_Sname = document.getElementById("tr_Sname").value;
-            var tr_Institution = document.getElementById("tr_Institution").value;
-
+            var tr_fname = document.getElementById("tr_fname" + trainer_id).value;
+            var tr_Sname = document.getElementById("tr_Sname" + trainer_id).value;
+            var tr_Institution = document.getElementById("tr_Institution" + trainer_id).value;
 
     $.ajax({
         type: "POST",
-        url: "<?php echo base_url(); ?>/ev_group/Evs_group/save_edit_sdm",
+        url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_instructor/edit_instructor",
         data: {
             "trainer_id": trainer_id,
             "tr_fname": tr_fname,
@@ -344,7 +342,7 @@ function Delete_instructor(trainer_id) {
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Firstname :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="tr_fname"
+                                          <input type="text" class="form-control" id="tr_fname<?php echo $row->trainer_id; ?>"
                                                 placeholder="FirstName" value="<?php echo $row->trainer_fname; ?>">
                                     </div>
 
@@ -353,15 +351,15 @@ function Delete_instructor(trainer_id) {
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Surname :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="tr_Sname" placeholder="Surname" value="<?php echo $row->trainer_Sname; ?>">
+                                          <input type="text" class="form-control" id="tr_Sname<?php echo $row->trainer_id; ?>" placeholder="Surname" value="<?php echo $row->trainer_Sname; ?>">
                                     </div>
                               </div>
                               <br>
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Institution :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="tr_Institution"
-                                                placeholder="Institution">
+                                          <input type="text" class="form-control" id="tr_Institution<?php echo $row->trainer_id; ?>"
+                                                placeholder="Institution" value="<?php echo $row->Institution; ?>">
                                     </div>
                               </div>
 

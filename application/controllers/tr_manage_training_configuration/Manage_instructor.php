@@ -71,13 +71,13 @@ class Manage_instructor extends MainController {
 	{
 		$trainer_id = $this->input->post('trainer_id');
 		// $trainer_titlename = $this->input->post("trainer_titlename");
-		$trainer_id = $this->input->post("trainer_id");
 		$tr_fname = $this->input->post("tr_fname");
 		$tr_Sname = $this->input->post("tr_Sname");
 		$tr_Institution = $this->input->post("tr_Institution");
 		
 		$this->load->model('M_trs_trainer_data','met');
 		// $this->mtt->trainer_titlename = 1;
+		$this->met->trainer_id = $trainer_id;
 		$this->met->trainer_fname = $tr_fname;
 		$this->met->trainer_Sname = $tr_Sname;
 		$this->met->Institution = $tr_Institution;
