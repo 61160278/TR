@@ -24,7 +24,7 @@ class trs_model extends CI_Model {
 
 	function __construct() {
 		parent::__construct();
-		$this->evs = $this->load->database('trs', TRUE);
+		$this->trs = $this->load->database('trs', TRUE);
 		
 		//$this->umsold = $this->load->database('umsold', TRUE);
 	}

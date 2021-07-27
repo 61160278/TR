@@ -34,7 +34,54 @@
       }
       </style>
       <!-- End style CSS  -->
+<script>
 
+function add_group() {
+
+var group = document.getElementById("grouptext").value;
+var Emp_id = document.getElementById("Emp_id_modol").value;
+
+$.ajax({
+    type: "POST",
+    url: "<?php echo base_url(); ?>/ev_group/Evs_group/add_group_sdm",
+    data: {
+        "group": group,
+        "Emp_id": Emp_id
+    },
+    dataType: "JSON",
+    success: function(status) {
+        // console.log(status)
+    }
+    // success function
+
+});
+
+// ajax 
+
+window.location.href = "<?php echo base_url();?>/ev_group/Evs_group/select_company_sdm";
+
+}
+//function add_group
+
+
+
+
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
       <!-- Begin Page Content -->
       <div class="container-fluid">
 

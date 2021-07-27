@@ -34,6 +34,97 @@
       }
       </style>
       <!-- End style CSS  -->
+      <script>
+
+      function add_instructor() {
+
+            var tr_fname = document.getElementById("tr_fname").value;
+            var tr_Sname = document.getElementById("tr_Sname").value;
+            var tr_Institution = document.getElementById("tr_Institution").value;
+
+
+            $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_instructor/add_instructor",
+                  data: {
+                        "tr_fname": tr_fname,
+                        "tr_Sname": tr_Sname,
+                        "tr_Institution": tr_Institution
+                  },
+                  dataType: "JSON",
+                  success: function(status) {
+                        // console.log(status)
+                  }
+                  // success function
+
+            });
+
+            // ajax 
+
+            window.location.href = "<?php echo base_url();?>/tr_manage_training_configuration/Manage_instructor/Instructor";
+
+
+      }
+
+function Edit_instructor(trainer_id) {
+
+         
+            var tr_fname = document.getElementById("tr_fname").value;
+            var tr_Sname = document.getElementById("tr_Sname").value;
+            var tr_Institution = document.getElementById("tr_Institution").value;
+
+
+    $.ajax({
+        type: "POST",
+        url: "<?php echo base_url(); ?>/ev_group/Evs_group/save_edit_sdm",
+        data: {
+            "trainer_id": trainer_id,
+            "tr_fname": tr_fname,
+            "tr_Sname": tr_Sname,
+            "tr_Institution": tr_Institution
+           
+
+        },
+        dataType: "JSON",
+        error: function(data) {
+            console.log(data)
+        }
+        // success function
+
+    });
+    // ajax 
+
+    window.location.href = "<?php echo base_url();?>/tr_manage_training_configuration/Manage_instructor/Instructor";
+
+}
+//function add_group
+function Delete_instructor(trainer_id) {
+
+    console.log(trainer_id);
+
+    $.ajax({
+        type: "post",
+        url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_instructor/delete_instructor",
+        data: {
+            "trainer_id": trainer_id
+        },
+        dataType: "JSON",
+        success: function(data, status) {
+            // console.log(status)
+
+        }
+
+    });
+
+    window.location.href = "<?php echo base_url();?>/tr_manage_training_configuration/Manage_instructor/Instructor";
+
+}
+//function Delete_data
+
+
+
+
+      </script>
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
@@ -99,79 +190,28 @@
                                                                         </tr>
                                                                   </thead>
                                                                   <tbody>
+                                                                        <?php  foreach($ins as $index=>$row ){
+
+                                                                        ?>
                                                                         <tr align="center">
-                                                                              <td>1.</td>
-                                                                              <td>Mr.Kenji Sleeptogether</td>
-                                                                              <td>DENSO</td>
+                                                                              <td><?php echo ($index+1) ?></td>
+                                                                              <td><?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?>
+                                                                              </td>
+                                                                              <td><?php echo $row->Institution; ?></td>
                                                                               <td>
                                                                                     <button type="button"
                                                                                           class="btn btn-warning"
                                                                                           data-toggle="modal"
-                                                                                          data-target="#EditModal"><i
+                                                                                          data-target="#EditModal<?php echo $row->trainer_id?>"><i
                                                                                                 class="fa fa-edit "></i></button>
                                                                                     <button type="button"
                                                                                           class="btn btn-danger"
                                                                                           data-toggle="modal"
-                                                                                          data-target="#DeleteModal"><i
+                                                                                          data-target="#DeleteModal<?php echo $row->trainer_id?>"><i
                                                                                                 class="ti ti-trash "></i></button>
                                                                               </td>
                                                                         </tr>
-                                                                        <tr align="center">
-                                                                              <td>2.</td>
-                                                                              <td>Mr.Denial Ok</td>
-                                                                              <td>DENSO</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"
-                                                                                          data-toggle="modal"
-                                                                                          data-target="#EditModal"><i
-                                                                                                class="fa fa-edit "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"
-                                                                                          data-toggle="modal"
-                                                                                          data-target="#DeleteModal"><i
-                                                                                                class="ti ti-trash "></i></button>
-                                                                              </td>
-                                                                        </tr>
-                                                                        <tr align="center">
-                                                                              <td>3.</td>
-                                                                              <td>Ms.Kate J.son</td>
-                                                                              <td>DENSO</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "></i></button>
-                                                                              </td>
-                                                                        </tr>
-                                                                        <tr align="center">
-                                                                              <td>4.</td>
-                                                                              <td>Mr.Tony Roger</td>
-                                                                              <td>DENSO</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "></i></button>
-                                                                              </td>
-                                                                        </tr>
-                                                                        <tr align="center">
-                                                                              <td>5.</td>
-                                                                              <td>Ms.Maria Del</td>
-                                                                              <td>DENSO</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "></i></button>
-                                                                              </td>
-                                                                        </tr>
+                                                                        <?php } ?>
 
                                                                   </tbody>
                                                             </table>
@@ -232,8 +272,7 @@
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Firstname :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext"
-                                                placeholder="FirstName">
+                                          <input type="text" class="form-control" id="tr_fname" placeholder="FirstName">
                                     </div>
 
                               </div>
@@ -241,14 +280,14 @@
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Surname :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext" placeholder="Surname">
+                                          <input type="text" class="form-control" id="tr_Sname" placeholder="Surname">
                                     </div>
                               </div>
                               <br>
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Institution :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext"
+                                          <input type="text" class="form-control" id="tr_Institution"
                                                 placeholder="Institution">
                                     </div>
                               </div>
@@ -258,15 +297,18 @@
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-primary" onclick="add_instructor()">Save</button>
                         </div>
                   </div>
             </div>
       </div>
       <!-- Create Modal -->
 
+      <?php
+	$num = 1;
+	foreach($ins as $index=>$row ) { ?>
 
-      <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
+      <div class="modal fade" id="EditModal<?php echo $row->trainer_id?>" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
@@ -302,8 +344,8 @@
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Firstname :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext"
-                                                placeholder="FirstName">
+                                          <input type="text" class="form-control" id="tr_fname"
+                                                placeholder="FirstName" value="<?php echo $row->trainer_fname; ?>">
                                     </div>
 
                               </div>
@@ -311,14 +353,14 @@
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Surname :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext" placeholder="Surname">
+                                          <input type="text" class="form-control" id="tr_Sname" placeholder="Surname" value="<?php echo $row->trainer_Sname; ?>">
                                     </div>
                               </div>
                               <br>
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Institution :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext"
+                                          <input type="text" class="form-control" id="tr_Institution"
                                                 placeholder="Institution">
                                     </div>
                               </div>
@@ -326,15 +368,17 @@
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-primary" onClick="Edit_instructor(<?php echo $row->trainer_id; ?>)">Save</button>
                         </div>
                   </div>
             </div>
       </div>
       <!-- Edit Modal -->
+      <?php 
+$num++;
+} //foreach?>
 
-
-      <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
+      <div class="modal fade" id="DeleteModal<?php echo $row->trainer_id?>" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-sm-5" role="document">
                   <div class="modal-content">
@@ -353,7 +397,7 @@
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary">Confirm</button>
+                              <button type="button" class="btn btn-primary" onClick="Delete_instructor(<?php echo $row->trainer_id; ?>)">Confirm</button>
                         </div>
                   </div>
             </div>
