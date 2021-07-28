@@ -71,20 +71,18 @@
       }
 
 function Edit_instructor(trainer_id) {
-
+            var tr_titlename = document.getElementById("tr_titlename" + trainer_id).value;
             var tr_fname = document.getElementById("tr_fname" + trainer_id).value;
             var tr_Sname = document.getElementById("tr_Sname" + trainer_id).value;
             var tr_Institution = document.getElementById("tr_Institution" + trainer_id).value;
-console.log(trainer_id)
-console.log(tr_fname)
-console.log(tr_Sname)
-console.log(tr_Institution)
+            console.log(tr_titlename);
 
     $.ajax({
         type: "POST",
         url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_instructor/edit_instructor",
         data: {
             "trainer_id": trainer_id,
+            "tr_titlename" : tr_titlename,
             "tr_fname": tr_fname,
             "tr_Sname": tr_Sname,
             "tr_Institution": tr_Institution
@@ -336,11 +334,15 @@ function Delete_instructor(trainer_id) {
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Category :</label>
                                     <div class="col-sm-2">
                                           <select name="example_length" class="form-control" aria-controls="example"
-                                                onChange="select_company(value)">
+                                          id="tr_titlename<?php echo $row->trainer_id; ?>">
                                                 <option value="0">Select</option>
-                                                <option value="1">Mr.</option>
-                                                <option value="2">Ms.</option>
-
+                                                <?php if($row->trainer_titlename = "Mr."){ ?>
+                                                      <option value="Mr." selected>Mr.</option>
+                                                      <option value="Ms." >Ms.</option>
+                                               <?php } else if($row->trainer_titlename = "Ms.") { ?>
+                                                <option value="Mr." >Mr.</option>
+                                                <option value="Ms." selected>Ms.</option>
+                                                <?php } ?>
                                           </select>
                                     </div>
 
