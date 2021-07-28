@@ -329,20 +329,22 @@ window.location.href = "<?php echo base_url();?>/ev_group/Evs_group/select_compa
                                     <label for="focusedinput" class="col-sm-3 control-label">Type :</label>
                                     <div class="col col-md-9">
 
-                                          <div class="checkbox">
+                                          <div class="radio">
                                                 <label for="checkbox1" class="form-check-label ">
-                                                      <div class="col-md-3">
-                                                            <input type="checkbox" id="checkbox1" name="checkbox1"
-                                                                  value="option1" class="form-check-input">Internal
-                                                      </div>
+                                                <div class="radio">
+                                                    <label for="radio1" class="form-check-label ">
+                                                        <input type="radio" id="radio1" name="radios"  class="form-check-input">Internal
+                                                    </label>
+                                                </div>
                                                 </label>
 
                                                 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
                                                 <label for="checkbox2" class="form-check-label ">
-                                                      <div class="col-md-3">
-                                                            <input type="checkbox" id="checkbox2" name="checkbox2"
-                                                                  value="option2" class="form-check-input">External
-                                                      </div>
+                                                     <div class="radio">
+                                                    <label for="radio1" class="form-check-label ">
+                                                        <input type="radio" id="radio1" name="radios"  class="form-check-input">External
+                                                    </label>
+                                                </div>
                                                 </label>
                                           </div>
 
@@ -441,10 +443,10 @@ window.location.href = "<?php echo base_url();?>/ev_group/Evs_group/select_compa
                                     <label for="focusedinput" class="col-sm-3 control-label">Type :</label>
                                     <div class="col col-md-9">
 
-                                          <div class="checkbox">
+                                          <div class="radio">
                                                 <label for="checkbox1" class="form-check-label ">
                                                       <div class="col-md-3">
-                                                            <input type="checkbox" id="checkbox1" name="checkbox1"
+                                                            <input type="radio" id="checkbox1" name="checkbox1"
                                                                   value="option1" class="form-check-input">Internal
                                                       </div>
                                                 </label>
@@ -452,7 +454,7 @@ window.location.href = "<?php echo base_url();?>/ev_group/Evs_group/select_compa
                                                 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
                                                 <label for="checkbox2" class="form-check-label ">
                                                       <div class="col-md-3">
-                                                            <input type="checkbox" id="checkbox2" name="checkbox2"
+                                                            <input type="radio" id="checkbox2" name="checkbox2"
                                                                   value="option2" class="form-check-input">External
                                                       </div>
                                                 </label>
