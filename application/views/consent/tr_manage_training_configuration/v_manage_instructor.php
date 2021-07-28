@@ -38,22 +38,26 @@
 
       function add_instructor() {
 
+            var tr_titlename = document.getElementById("tr_titlename").value;
             var tr_fname = document.getElementById("tr_fname").value;
             var tr_Sname = document.getElementById("tr_Sname").value;
             var tr_Institution = document.getElementById("tr_Institution").value;
 
+            
 
             $.ajax({
                   type: "POST",
                   url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_instructor/add_instructor",
                   data: {
+                        "tr_titlename" : tr_titlename,
                         "tr_fname": tr_fname,
                         "tr_Sname": tr_Sname,
                         "tr_Institution": tr_Institution
                   },
                   dataType: "JSON",
-                  success: function(status) {
+                  success: function(data) {
                         // console.log(status)
+                        window.location.href = "<?php echo base_url();?>/tr_manage_training_configuration/Manage_instructor/Instructor";
                   }
                   // success function
 
@@ -61,7 +65,7 @@
 
             // ajax 
 
-            window.location.href = "<?php echo base_url();?>/tr_manage_training_configuration/Manage_instructor/Instructor";
+           
 
 
       }
@@ -71,6 +75,10 @@ function Edit_instructor(trainer_id) {
             var tr_fname = document.getElementById("tr_fname" + trainer_id).value;
             var tr_Sname = document.getElementById("tr_Sname" + trainer_id).value;
             var tr_Institution = document.getElementById("tr_Institution" + trainer_id).value;
+console.log(trainer_id)
+console.log(tr_fname)
+console.log(tr_Sname)
+console.log(tr_Institution)
 
     $.ajax({
         type: "POST",
@@ -84,15 +92,16 @@ function Edit_instructor(trainer_id) {
 
         },
         dataType: "JSON",
-        error: function(data) {
+        success: function(data) {
             console.log(data)
+            window.location.href = "<?php echo base_url();?>/tr_manage_training_configuration/Manage_instructor/Instructor";
         }
         // success function
 
     });
     // ajax 
 
-    window.location.href = "<?php echo base_url();?>/tr_manage_training_configuration/Manage_instructor/Instructor";
+   
 
 }
 //function add_group
@@ -107,14 +116,14 @@ function Delete_instructor(trainer_id) {
             "trainer_id": trainer_id
         },
         dataType: "JSON",
-        success: function(data, status) {
+        success: function(data) {
             // console.log(status)
-
+            window.location.href = "<?php echo base_url();?>/tr_manage_training_configuration/Manage_instructor/Instructor";
         }
 
     });
 
-    window.location.href = "<?php echo base_url();?>/tr_manage_training_configuration/Manage_instructor/Instructor";
+   
 
 }
 //function Delete_data
@@ -255,10 +264,10 @@ function Delete_instructor(trainer_id) {
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Category :</label>
                                     <div class="col-sm-2">
                                           <select name="example_length" class="form-control" aria-controls="example"
-                                                onChange="select_company(value)">
+                                               id="tr_titlename">
                                                 <option value="0">Select</option>
-                                                <option value="1">Mr.</option>
-                                                <option value="2">Ms.</option>
+                                                <option value="Mr.">Mr.</option>
+                                                <option value="Ms.">Ms.</option>
 
                                           </select>
                                     </div>

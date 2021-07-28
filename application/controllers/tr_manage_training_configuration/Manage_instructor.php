@@ -51,18 +51,19 @@ class Manage_instructor extends MainController {
  
 	function add_instructor()
 	{
-		// $trainer_titlename = $this->input->post("trainer_titlename");
+		$tr_titlename = $this->input->post("tr_titlename");
 		$tr_fname = $this->input->post("tr_fname");
 		$tr_Sname = $this->input->post("tr_Sname");
 		$tr_Institution = $this->input->post("tr_Institution");
 		
 		$this->load->model('M_trs_trainer_data','mtt');
-		// $this->mtt->trainer_titlename = 1;
+		$this->mtt->trainer_titlename = $tr_titlename;
 		$this->mtt->trainer_fname = $tr_fname;
 		$this->mtt->trainer_Sname = $tr_Sname;
 		$this->mtt->Institution = $tr_Institution;
 		$this->mtt->insert();
-		$this->Instructor();
+		$data="add_ins";
+		echo json_encode($data);
 		
 	}
 	// function Instructor()
@@ -82,7 +83,8 @@ class Manage_instructor extends MainController {
 		$this->met->trainer_Sname = $tr_Sname;
 		$this->met->Institution = $tr_Institution;
 		$this->met->update();
-		$this->Instructor();
+		$data="edit_ins";
+		echo json_encode($data);
 		
 	}
 	// function edit_instructor()
@@ -95,8 +97,9 @@ class Manage_instructor extends MainController {
 		$this->load->model('M_trs_trainer_data','mtd');
 		$this->mtd->trainer_id = $trainer_id;
 		$this->mtd->delete();
-
-		echo json_encode($status);
+		$data="delete_ins";
+		echo json_encode($data);
+		
 	}
 	// function delete_instructor
 
