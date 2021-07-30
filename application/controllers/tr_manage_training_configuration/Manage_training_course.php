@@ -43,12 +43,11 @@ class Manage_training_course extends MainController {
 	{
 		$this->load->model('M_trs_course_data','mtcd');
 		$data['crs'] = $this->mtcd->get_all_crs()->result();
-		$this->output('/consent/tr_manage_training_configuration/v_manage_training_course');
+
+		$this->output('/consent/tr_manage_training_configuration/v_manage_training_course',$data);
 	}
 	// function index()
  
-
-
 
 	function add_course()
 	{
