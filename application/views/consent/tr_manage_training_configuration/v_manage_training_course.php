@@ -134,13 +134,13 @@ $.ajax({
                                                                   </thead>
                                                                   <tbody>
 
-                                                                 <!-- foreach($crs as $index=>$row ){  -->
+                                                                 <?php foreach($crs as $index=>$row ){  ?>
 
                                                                         <tr align="center">
-                                                                              <td>1.</td>
-                                                                              <td>IN-00001</td>
-                                                                              <td>General Safety</td>
-                                                                              <td>General Safety</td>
+                                                                              <td><?php echo ($index+1) ?></td>
+                                                                              <td><?php echo $row->Course_code; ?></td>
+                                                                              <td><?php echo $row->Course_name; ?></td>
+                                                                              <td><?php echo $row->Course_description; ?></td>
                                                                               <td>
                                                                                     <button type="button"
                                                                                           class="btn btn-warning"><i
@@ -154,7 +154,7 @@ $.ajax({
                                                                                                 data-target="#DeleteModal"></i></button>
                                                                               </td>
                                                                         </tr>
-                                                                        <!-- }   -->
+                                                                        <?php }   ?>
 
                                                                   </tbody>
                                                             </table>
