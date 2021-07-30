@@ -36,14 +36,16 @@
       <!-- End style CSS  -->
 <script>
 
-function add_course() {
+function add_courses() {
 
 var tr_course_code = document.getElementById("tr_course_code").value;
 var tr_course_name = document.getElementById("tr_course_name").value;
 var tr_course_des = document.getElementById("tr_course_des").value;
 // var Course_type = document.getElementById("Course_type").value;
 
-
+console.log(tr_course_code)
+console.log(tr_course_name)
+console.log(tr_course_des)
 $.ajax({
       type: "POST",
       url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_training_course/add_course",
@@ -131,6 +133,7 @@ $.ajax({
                                                                         </tr>
                                                                   </thead>
                                                                   <tbody>
+                                                                  <?php  foreach($crs as $index=>$row ){ ?> 
                                                                         <tr align="center">
                                                                               <td>1.</td>
                                                                               <td>IN-00001</td>
@@ -149,66 +152,7 @@ $.ajax({
                                                                                                 data-target="#DeleteModal"></i></button>
                                                                               </td>
                                                                         </tr>
-                                                                        <tr align="center">
-                                                                              <td>2.</td>
-                                                                              <td>IN-00002</td>
-                                                                              <td>Leader andd Management</td>
-                                                                              <td>Communication for Leader</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "
-                                                                                                data-toggle="modal"
-                                                                                                data-target="#EditModal"></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "
-                                                                                                data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button>
-                                                                              </td>
-                                                                        </tr>
-                                                                        <tr align="center">
-                                                                              <td>3.</td>
-                                                                              <td>IN-00003</td>
-                                                                              <td>Professional Golf Caddie</td>
-                                                                              <td>Communication Efficiency</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "></i></button>
-                                                                              </td>
-                                                                        </tr>
-                                                                        <tr align="center">
-                                                                              <td>4.</td>
-                                                                              <td>EX-00004</td>
-                                                                              <td>Building Good Attitude at Work</td>
-                                                                              <td>Self and Work Development</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit"></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "></i></button>
-                                                                              </td>
-                                                                        </tr>
-                                                                        <tr align="center">
-                                                                              <td>5.</td>
-                                                                              <td>EX-00005</td>
-                                                                              <td>Working as one team</td>
-                                                                              <td>Social skill for working together</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "></i></button>
-                                                                              </td>
-                                                                        </tr>
+                                                                       <?php  }   ?>
 
                                                                   </tbody>
                                                             </table>

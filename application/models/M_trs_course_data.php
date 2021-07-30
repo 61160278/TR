@@ -100,7 +100,7 @@ class M_trs_course_data extends trs_model {
 
 
 
-	function get_all_ins() {	
+	function get_all_crs() {	
 		$sql = "SELECT * 
 				FROM trs_database.trs_course_data";
 		$query = $this->db->query($sql);

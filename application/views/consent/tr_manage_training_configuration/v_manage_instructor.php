@@ -36,7 +36,7 @@
       <!-- End style CSS  -->
       <script>
 
-      function add_instructor() {
+      function add_instructors() {
 
             var tr_titlename = document.getElementById("tr_titlename").value;
             var tr_fname = document.getElementById("tr_fname").value;
@@ -302,7 +302,7 @@ function Delete_instructor(trainer_id) {
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary" onclick="add_instructor()">Save</button>
+                              <button type="button" class="btn btn-primary" onclick="add_instructors()">Save</button>
                         </div>
                   </div>
             </div>

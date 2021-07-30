@@ -42,7 +42,7 @@ class M_trs_trainer_data extends trs_model {
 	 	$sql = "INSERT INTO trs_database.trs_trainer_data (trainer_titlename ,trainer_fname,trainer_Sname,Institution)
 	 	VALUES(?, ?, ?, ?)";
 		 
-	 	$this->db->query($sql, array($this->trainer_id, $this->trainer_fname, $this->trainer_Sname, $this->Institution));
+	 	$this->db->query($sql, array($this->trainer_titlename, $this->trainer_fname, $this->trainer_Sname, $this->Institution));
 	 }
 	 
 	/*
