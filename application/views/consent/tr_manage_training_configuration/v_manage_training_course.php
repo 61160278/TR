@@ -133,7 +133,9 @@ $.ajax({
                                                                         </tr>
                                                                   </thead>
                                                                   <tbody>
-                                                                  <?php  foreach($crs as $index=>$row ){ ?> 
+
+                                                                 <!-- foreach($crs as $index=>$row ){  -->
+
                                                                         <tr align="center">
                                                                               <td>1.</td>
                                                                               <td>IN-00001</td>
@@ -152,7 +154,7 @@ $.ajax({
                                                                                                 data-target="#DeleteModal"></i></button>
                                                                               </td>
                                                                         </tr>
-                                                                       <?php  }   ?>
+                                                                        <!-- }   -->
 
                                                                   </tbody>
                                                             </table>
