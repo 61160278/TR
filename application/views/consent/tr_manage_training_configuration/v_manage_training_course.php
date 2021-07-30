@@ -36,52 +36,39 @@
       <!-- End style CSS  -->
 <script>
 
-function add_group() {
+function add_course() {
 
-var group = document.getElementById("grouptext").value;
-var Emp_id = document.getElementById("Emp_id_modol").value;
+var tr_course_code = document.getElementById("tr_course_code").value;
+var tr_course_name = document.getElementById("tr_course_name").value;
+var tr_course_des = document.getElementById("tr_course_des").value;
+// var Course_type = document.getElementById("Course_type").value;
+
 
 $.ajax({
-    type: "POST",
-    url: "<?php echo base_url(); ?>/ev_group/Evs_group/add_group_sdm",
-    data: {
-        "group": group,
-        "Emp_id": Emp_id
-    },
-    dataType: "JSON",
-    success: function(status) {
-        // console.log(status)
-    }
-    // success function
+      type: "POST",
+      url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_training_course/add_course",
+      data: {
+            "tr_course_code" : tr_course_code,
+            "tr_course_name": tr_course_name,
+            "tr_course_des": tr_course_des
+            // "Course_type": Course_type
+      },
+      dataType: "JSON",
+      success: function(data) {
+            // console.log(status)
+            window.location.href = "<?php echo base_url();?>/tr_manage_training_configuration/Manage_training_course/Course";
+      }
+      // success function
 
 });
 
 // ajax 
-
-window.location.href = "<?php echo base_url();?>/ev_group/Evs_group/select_company_sdm";
-
 }
-//function add_group
-
 
 
 
       </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
       <!-- Begin Page Content -->
       <div class="container-fluid">
 
@@ -269,7 +256,7 @@ window.location.href = "<?php echo base_url();?>/ev_group/Evs_group/select_compa
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Code :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext" placeholder="Code">
+                                          <input type="text" class="form-control" id="tr_course_code" placeholder="Code">
                                     </div>
 
                               </div>
@@ -277,14 +264,14 @@ window.location.href = "<?php echo base_url();?>/ev_group/Evs_group/select_compa
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Name :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext" placeholder="Name">
+                                          <input type="text" class="form-control" id="tr_course_name" placeholder="Name">
                                     </div>
                               </div>
                               <br>
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Description
                                           :</label>
-                                    <div class="col-10 col-md-6"><textarea name="textarea-input" id="textarea-input"
+                                    <div class="col-10 col-md-6"><textarea name="textarea-input" id="tr_course_des"
                                                 rows="9" placeholder="Description..." class="form-control"></textarea>
                                     </div>
                               </div>
@@ -355,7 +342,7 @@ window.location.href = "<?php echo base_url();?>/ev_group/Evs_group/select_compa
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-primary" onclick="add_courses()">Save</button>
                         </div>
                   </div>
             </div>
