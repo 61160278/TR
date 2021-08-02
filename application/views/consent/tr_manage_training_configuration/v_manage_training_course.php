@@ -213,12 +213,12 @@
                                                                                           class="btn btn-warning"><i
                                                                                                 class="fa fa-edit "
                                                                                                 data-toggle="modal"
-                                                                                                data-target="#EditModal"></i></button>
+                                                                                                data-target="#EditModal<?php echo $row->Course_id?>"></i></button>
                                                                                     <button type="button"
                                                                                           class="btn btn-danger"><i
                                                                                                 class="ti ti-trash "
                                                                                                 data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button>
+                                                                                                data-target="#DeleteModal<?php echo $row->Course_id?>"></i></button>
                                                                               </td>
                                                                         </tr>
                                                                         <?php }   ?>
@@ -372,7 +372,7 @@
 	$num = 1;
 	foreach($crs as $index=>$row ) { ?>
 
-      <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
+      <div class="modal fade" id="EditModal<?php echo $row->Course_id?>" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
