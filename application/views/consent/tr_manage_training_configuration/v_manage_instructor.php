@@ -103,6 +103,7 @@ function Edit_instructor(trainer_id) {
 
 }
 //function add_group
+
 function Delete_instructor(trainer_id) {
 
     console.log(trainer_id);

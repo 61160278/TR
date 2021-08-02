@@ -43,9 +43,7 @@ var tr_course_name = document.getElementById("tr_course_name").value;
 var tr_course_des = document.getElementById("tr_course_des").value;
 // var Course_type = document.getElementById("Course_type").value;
 
-console.log(tr_course_code)
-console.log(tr_course_name)
-console.log(tr_course_des)
+
 $.ajax({
       type: "POST",
       url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_training_course/add_course",
@@ -65,7 +63,44 @@ $.ajax({
 });
 
 // ajax 
+ } //function add_courses
+
+
+function Edit_course(Course_id) {
+            var tr_course_code = document.getElementById("tr_course_code" + Course_id).value;
+            var tr_course_name = document.getElementById("tr_course_name" + Course_id).value;
+            var tr_course_des = document.getElementById("tr_course_des" + Course_id).value;
+
+      
+
+    $.ajax({
+        type: "POST",
+        url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_instructor/edit_instructor",
+        data: {
+            "tr_course_code" : tr_course_code,
+            "tr_course_name": tr_course_name,
+            "tr_course_des": tr_course_des
+           
+
+        },
+        dataType: "JSON",
+        success: function(data) {
+            console.log(data)
+            window.location.href = "<?php echo base_url();?>/tr_manage_training_configuration/Manage_training_course/Course";
+        }
+        // success function
+
+    });
+    // ajax 
+
+   
+
 }
+//function Edit_course
+
+
+
+
 
 
 
@@ -90,7 +125,7 @@ $.ajax({
 
 
 }
-//function Delete_data
+//function Delete_course
 
 
 
@@ -319,7 +354,9 @@ $.ajax({
             </div>
       </div>
       <!-- Create Modal -->
-
+      <?php
+	$num = 1;
+	foreach($crs as $index=>$row ) { ?>
 
       <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
             aria-hidden="true">
@@ -341,7 +378,7 @@ $.ajax({
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Code :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext" placeholder="Code">
+                                          <input type="text" class="form-control" id="tr_course_code<?php echo $row->Course_id; ?>" placeholder="Code">
                                     </div>
 
                               </div>
@@ -349,14 +386,14 @@ $.ajax({
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Name :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="grouptext" placeholder="Name">
+                                          <input type="text" class="form-control" id="tr_course_name<?php echo $row->Course_id; ?>" placeholder="Name">
                                     </div>
                               </div>
                               <br>
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Description
                                           :</label>
-                                    <div class="col-10 col-md-6"><textarea name="textarea-input" id="textarea-input"
+                                    <div class="col-10 col-md-6"><textarea name="textarea-input" id="tr_course_des<?php echo $row->Course_id; ?>"
                                                 rows="9" placeholder="Description..." class="form-control"></textarea>
                                     </div>
                               </div>
@@ -425,13 +462,15 @@ $.ajax({
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-primary" onClick="Edit_course(<?php echo $row->Course_id; ?>)">Save</button>
                         </div>
                   </div>
             </div>
       </div>
       <!-- Edit Modal -->
-
+      <?php 
+$num++;
+} //foreach?>
 
       <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
             aria-hidden="true">

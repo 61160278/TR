@@ -69,20 +69,17 @@ class Manage_training_course extends MainController {
 
 	function edit_course()
 	{
-		$trainer_id = $this->input->post('trainer_id');
-		$tr_titlename = $this->input->post("tr_titlename");
-		$tr_fname = $this->input->post("tr_fname");
-		$tr_Sname = $this->input->post("tr_Sname");
-		$tr_Institution = $this->input->post("tr_Institution");
+		$Course_id = $this->input->post('Course_id');
+		$tr_course_code = $this->input->post("tr_course_code");
+		$tr_course_name = $this->input->post("tr_course_name");
+		$tr_course_des = $this->input->post("tr_course_des");
 		
-		$this->load->model('M_trs_trainer_data','met');
-		$this->met->trainer_titlename = $tr_titlename;
-		$this->met->trainer_id = $trainer_id;
-		$this->met->trainer_fname = $tr_fname;
-		$this->met->trainer_Sname = $tr_Sname;
-		$this->met->Institution = $tr_Institution;
-		$this->met->update();
-		$data="edit_ins";
+		$this->load->model('M_trs_course_data','medt');
+		$this->medt->Course_code = $tr_course_code;
+		$this->medt->Course_name = $tr_course_name;
+		$this->medt->Course_description = $tr_course_des;
+		$this->medt->update();
+		$data="edit_crs";
 		echo json_encode($data);
 		
 	}

@@ -58,10 +58,10 @@ class M_trs_course_data extends trs_model {
 	function update() {
 	
 		$sql = "UPDATE trs_database.trs_course_data 
-				SET	trainer_titlename = ?, trainer_fname = ?, trainer_Sname = ?, Institution = ? 
-				WHERE trainer_id = ?" ;
+				SET	Course_code = ?, Course_name = ?, Course_description = ?
+				WHERE Course_id = ?" ;
 	     
-	     $this->db->query($sql, array($this->trainer_titlename ,$this->trainer_fname ,$this->trainer_Sname ,$this->Institution ,$this->trainer_id));
+	     $this->db->query($sql, array($this->Course_code ,$this->Course_name ,$this->Course_description));
 		
 	}                       
 
