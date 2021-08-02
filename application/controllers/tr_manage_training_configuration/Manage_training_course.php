@@ -81,12 +81,19 @@ class Manage_training_course extends MainController {
 		$tr_course_code = $this->input->post("tr_course_code");
 		$tr_course_name = $this->input->post("tr_course_name");
 		$tr_course_des = $this->input->post("tr_course_des");
+		$tr_course_category1 = $this->input->post("tr_course_category1");
+		$tr_course_category2 = $this->input->post("tr_course_category2");
+		$tr_course_category3 = $this->input->post("tr_course_category3");
+		$tr_course_type = $this->input->post("tr_course_type");
 		
 		$this->load->model('M_trs_course_data','medt');
 		$this->medt->Course_id = $Course_id;
 		$this->medt->Course_code = $tr_course_code;
 		$this->medt->Course_name = $tr_course_name;
 		$this->medt->Course_description = $tr_course_des;
+		$this->medt->Course_category1 = $tr_course_category1;
+		$this->medt->Course_category2 = $tr_course_category2;
+		$this->medt->Course_category3 = $tr_course_category3;
 		$this->medt->Course_type = $tr_course_type;
 		$this->medt->update();
 		$data="edit_crs";
