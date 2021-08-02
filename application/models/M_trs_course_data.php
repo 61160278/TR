@@ -40,8 +40,8 @@ class M_trs_course_data extends trs_model {
 	
 	function insert() {
 	 
-	 	$sql = "INSERT INTO trs_database.trs_course_data (Course_code ,Course_name,Course_description)
-	 	VALUES(?, ?, ?)";
+	 	$sql = "INSERT INTO trs_database.trs_course_data (Course_code ,Course_name,Course_description,Course_type)
+	 	VALUES(?, ?, ?, ?)";
 		 
 	 	$this->db->query($sql, array($this->Course_code, $this->Course_name, $this->Course_description, $this->Course_type));
 	 }

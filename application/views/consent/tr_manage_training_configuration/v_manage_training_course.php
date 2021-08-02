@@ -50,8 +50,8 @@ $.ajax({
       data: {
             "tr_course_code" : tr_course_code,
             "tr_course_name": tr_course_name,
-            "tr_course_des": tr_course_des
-            // "Course_type": Course_type
+            "tr_course_des": tr_course_des,
+            "tr_course_type": tr_course_type
       },
       dataType: "JSON",
       success: function(data) {
@@ -327,7 +327,7 @@ $.ajax({
                                                 <label for="checkbox1" class="form-check-label ">
                                                 <div class="radio">
                                                     <label for="radio1" class="form-check-label ">
-                                                        <input type="radio" id="radio1" name="radios"  class="form-check-input">Internal
+                                                        <input type="radio" id="tr_course_type" name="radios"  class="form-check-input" value="Internal">Internal
                                                     </label>
                                                 </div>
                                                 </label>
@@ -336,7 +336,7 @@ $.ajax({
                                                 <label for="checkbox2" class="form-check-label ">
                                                      <div class="radio">
                                                     <label for="radio1" class="form-check-label ">
-                                                        <input type="radio" id="radio1" name="radios"  class="form-check-input">External
+                                                        <input type="radio" id="tr_course_type" name="radios"  class="form-check-input" value="External">External
                                                     </label>
                                                 </div>
                                                 </label>
