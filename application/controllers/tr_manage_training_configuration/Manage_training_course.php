@@ -60,6 +60,7 @@ class Manage_training_course extends MainController {
 		$this->mttc->Course_code = $tr_course_code;
 		$this->mttc->Course_name = $tr_course_name;
 		$this->mttc->Course_description = $tr_course_des;
+		$this->mttc->Course_type = $tr_course_type;
 		$this->mttc->insert();
 		$data="add_crs";
 		echo json_encode($data);
@@ -79,6 +80,7 @@ class Manage_training_course extends MainController {
 		$this->medt->Course_code = $tr_course_code;
 		$this->medt->Course_name = $tr_course_name;
 		$this->medt->Course_description = $tr_course_des;
+		$this->medt->Course_type = $tr_course_type;
 		$this->medt->update();
 		$data="edit_crs";
 		echo json_encode($data);

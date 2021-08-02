@@ -22,7 +22,7 @@ class M_trs_course_data extends trs_model {
 	public $Course_code; //
 	public $Course_name; //
 	public $Course_description; //
-	// public $Course_type; //
+	public $Course_type; //
 
 	function __construct() {
 		parent::__construct();
@@ -43,7 +43,7 @@ class M_trs_course_data extends trs_model {
 	 	$sql = "INSERT INTO trs_database.trs_course_data (Course_code ,Course_name,Course_description)
 	 	VALUES(?, ?, ?)";
 		 
-	 	$this->db->query($sql, array($this->Course_code, $this->Course_name, $this->Course_description));
+	 	$this->db->query($sql, array($this->Course_code, $this->Course_name, $this->Course_description, $this->Course_type));
 	 }
 	 
 	/*
@@ -61,7 +61,7 @@ class M_trs_course_data extends trs_model {
 				SET	Course_code = ?, Course_name = ?, Course_description = ?
 				WHERE Course_id = ?" ;
 	     
-	     $this->db->query($sql, array($this->Course_code ,$this->Course_name ,$this->Course_description ,$this->Course_id));
+	     $this->db->query($sql, array($this->Course_code ,$this->Course_name ,$this->Course_description ,$this->Course_type ,$this->Course_id));
 		
 	}                       
 

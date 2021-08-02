@@ -41,7 +41,7 @@ function add_courses() {
 var tr_course_code = document.getElementById("tr_course_code").value;
 var tr_course_name = document.getElementById("tr_course_name").value;
 var tr_course_des = document.getElementById("tr_course_des").value;
-// var Course_type = document.getElementById("Course_type").value;
+var tr_course_type = document.getElementById("tr_course_type").value;
 
 
 $.ajax({
@@ -70,7 +70,7 @@ function Edit_course(Course_id) {
             var tr_course_code = document.getElementById("tr_course_code" + Course_id).value;
             var tr_course_name = document.getElementById("tr_course_name" + Course_id).value;
             var tr_course_des = document.getElementById("tr_course_des" + Course_id).value;
-
+            var tr_course_type = document.getElementById("tr_course_type" + Course_id).value;
       
 
     $.ajax({
@@ -80,8 +80,8 @@ function Edit_course(Course_id) {
             "Course_id" : Course_id,
             "tr_course_code" : tr_course_code,
             "tr_course_name": tr_course_name,
-            "tr_course_des": tr_course_des
-           
+            "tr_course_des": tr_course_des,
+            "tr_course_type": tr_course_type
 
         },
         dataType: "JSON",
