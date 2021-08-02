@@ -61,7 +61,7 @@ class M_trs_course_data extends trs_model {
 				SET	Course_code = ?, Course_name = ?, Course_description = ?
 				WHERE Course_id = ?" ;
 	     
-	     $this->db->query($sql, array($this->Course_code ,$this->Course_name ,$this->Course_description));
+	     $this->db->query($sql, array($this->Course_code ,$this->Course_name ,$this->Course_description ,$this->Course_id));
 		
 	}                       
 

@@ -75,7 +75,7 @@ function Edit_course(Course_id) {
 
     $.ajax({
         type: "POST",
-        url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_instructor/edit_instructor",
+        url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_instructor/edit_course",
         data: {
             "tr_course_code" : tr_course_code,
             "tr_course_name": tr_course_name,
