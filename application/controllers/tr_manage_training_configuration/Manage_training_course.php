@@ -75,6 +75,7 @@ class Manage_training_course extends MainController {
 		$tr_course_des = $this->input->post("tr_course_des");
 		
 		$this->load->model('M_trs_course_data','medt');
+		$this->medt->Course_id = $Course_id;
 		$this->medt->Course_code = $tr_course_code;
 		$this->medt->Course_name = $tr_course_name;
 		$this->medt->Course_description = $tr_course_des;

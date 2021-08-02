@@ -75,8 +75,9 @@ function Edit_course(Course_id) {
 
     $.ajax({
         type: "POST",
-        url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_instructor/edit_course",
+        url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_training_course/edit_course",
         data: {
+            "Course_id" : Course_id,
             "tr_course_code" : tr_course_code,
             "tr_course_name": tr_course_name,
             "tr_course_des": tr_course_des
@@ -378,7 +379,7 @@ $.ajax({
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Code :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="tr_course_code<?php echo $row->Course_id; ?>" placeholder="Code">
+                                          <input type="text" class="form-control" id="tr_course_code<?php echo $row->Course_id; ?>" placeholder="Code" value="<?php echo $row->Course_code; ?>">
                                     </div>
 
                               </div>
@@ -386,15 +387,15 @@ $.ajax({
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Name :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="tr_course_name<?php echo $row->Course_id; ?>" placeholder="Name">
+                                          <input type="text" class="form-control" id="tr_course_name<?php echo $row->Course_id; ?>" placeholder="Name" value="<?php echo $row->Course_name; ?>">
                                     </div>
                               </div>
                               <br>
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Description
                                           :</label>
-                                    <div class="col-10 col-md-6"><textarea name="textarea-input" id="tr_course_des<?php echo $row->Course_id; ?>"
-                                                rows="9" placeholder="Description..." class="form-control"></textarea>
+                                    <div class="col-10 col-md-6"><textarea name="textarea-input" id="tr_course_des<?php echo $row->Course_id; ?>" 
+                                                rows="9" placeholder="Description..." class="form-control" ><?php echo $row->Course_description; ?></textarea>
                                     </div>
                               </div>
                               <br>
