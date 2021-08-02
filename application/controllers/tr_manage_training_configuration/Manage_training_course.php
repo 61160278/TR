@@ -92,11 +92,11 @@ class Manage_training_course extends MainController {
 	function delete_course()
 	{
 
-		$trainer_id = $this->input->post('trainer_id');
-		$this->load->model('M_trs_trainer_data','mtd');
-		$this->mtd->trainer_id = $trainer_id;
-		$this->mtd->delete();
-		$data="delete_ins";
+		$Course_id = $this->input->post('Course_id');
+		$this->load->model('M_trs_course_data','mtdd');
+		$this->mtdd->Course_id = $Course_id;
+		$this->mtdd->delete();
+		$data="delete_crs";
 		echo json_encode($data);
 		
 	}

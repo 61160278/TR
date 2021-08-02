@@ -69,6 +69,31 @@ $.ajax({
 
 
 
+function Delete_course(Course_id) {
+
+// console.log(Course_id);
+
+$.ajax({
+    type: "post",
+    url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_training_course/delete_course",
+    data: {
+        "Course_id": Course_id
+    },
+    dataType: "JSON",
+    success: function(data) {
+        // console.log(status)
+        window.location.href = "<?php echo base_url();?>/tr_manage_training_configuration/Manage_training_course/Course";
+    }
+
+});
+
+
+
+}
+//function Delete_data
+
+
+
       </script>
 
       <!-- Begin Page Content -->
@@ -427,7 +452,7 @@ $.ajax({
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary">Confirm</button>
+                              <button type="button" class="btn btn-primary" onClick="Delete_course(<?php echo $row->Course_id; ?>)">Confirm</button>
                         </div>
                   </div>
             </div>
