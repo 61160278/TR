@@ -384,9 +384,7 @@ function Delete_instructor(trainer_id) {
             </div>
       </div>
       <!-- Edit Modal -->
-      <?php 
-$num++;
-} //foreach?>
+
 
       <div class="modal fade" id="DeleteModal<?php echo $row->trainer_id?>" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
             aria-hidden="true">
@@ -413,3 +411,7 @@ $num++;
             </div>
       </div>
       <!-- Delete Modal -->
+
+      <?php 
+$num++;
+} //foreach?>

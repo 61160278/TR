@@ -34,108 +34,107 @@
       }
       </style>
       <!-- End style CSS  -->
-<script>
+      <script>
+      function add_courses() {
 
-function add_courses() {
-
-var tr_course_code = document.getElementById("tr_course_code").value;
-var tr_course_name = document.getElementById("tr_course_name").value;
-var tr_course_des = document.getElementById("tr_course_des").value;
-var tr_course_category1 = document.getElementById("tr_course_category1").value;
-var tr_course_category2 = document.getElementById("tr_course_category2").value;
-var tr_course_category3 = document.getElementById("tr_course_category3").value;
-var tr_course_type = document.getElementById("tr_course_type").value;
-
-
-$.ajax({
-      type: "POST",
-      url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_training_course/add_course",
-      data: {
-            "tr_course_code" : tr_course_code,
-            "tr_course_name": tr_course_name,
-            "tr_course_des": tr_course_des,
-            "tr_course_category1": tr_course_category1,
-            "tr_course_category2": tr_course_category2,
-            "tr_course_category3": tr_course_category3,
-            "tr_course_type": tr_course_type
-      },
-      dataType: "JSON",
-      success: function(data) {
-            // console.log(status)
-            window.location.href = "<?php echo base_url();?>/tr_manage_training_configuration/Manage_training_course/Course";
-      }
-      // success function
-
-});
-
-// ajax 
- } //function add_courses
+            var tr_course_code = document.getElementById("tr_course_code").value;
+            var tr_course_name = document.getElementById("tr_course_name").value;
+            var tr_course_des = document.getElementById("tr_course_des").value;
+            var tr_course_category1 = document.getElementById("tr_course_category1").value;
+            var tr_course_category2 = document.getElementById("tr_course_category2").value;
+            var tr_course_category3 = document.getElementById("tr_course_category3").value;
+            var tr_course_type = document.getElementById("tr_course_type").value;
 
 
-function Edit_course(Course_id) {
+            $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_training_course/add_course",
+                  data: {
+                        "tr_course_code": tr_course_code,
+                        "tr_course_name": tr_course_name,
+                        "tr_course_des": tr_course_des,
+                        "tr_course_category1": tr_course_category1,
+                        "tr_course_category2": tr_course_category2,
+                        "tr_course_category3": tr_course_category3,
+                        "tr_course_type": tr_course_type
+                  },
+                  dataType: "JSON",
+                  success: function(data) {
+                        // console.log(status)
+                        window.location.href =
+                              "<?php echo base_url();?>/tr_manage_training_configuration/Manage_training_course/Course";
+                  }
+                  // success function
+
+            });
+
+            // ajax 
+      } //function add_courses
+
+
+      function Edit_course(Course_id) {
             var tr_course_code = document.getElementById("tr_course_code" + Course_id).value;
             var tr_course_name = document.getElementById("tr_course_name" + Course_id).value;
             var tr_course_des = document.getElementById("tr_course_des" + Course_id).value;
             // var tr_course_type = document.getElementById("tr_course_type" + Course_id).value;
-      
 
-    $.ajax({
-        type: "POST",
-        url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_training_course/edit_course",
-        data: {
-            "Course_id" : Course_id,
-            "tr_course_code" : tr_course_code,
-            "tr_course_name": tr_course_name,
-            "tr_course_des": tr_course_des
-            // "tr_course_type": tr_course_type
 
-        },
-        dataType: "JSON",
-        success: function(data) {
-            console.log(data)
-            window.location.href = "<?php echo base_url();?>/tr_manage_training_configuration/Manage_training_course/Course";
-        }
-        // success function
+            $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_training_course/edit_course",
+                  data: {
+                        "Course_id": Course_id,
+                        "tr_course_code": tr_course_code,
+                        "tr_course_name": tr_course_name,
+                        "tr_course_des": tr_course_des
+                        // "tr_course_type": tr_course_type
 
-    });
-    // ajax 
+                  },
+                  dataType: "JSON",
+                  success: function(data) {
+                        console.log(data)
+                        window.location.href =
+                              "<?php echo base_url();?>/tr_manage_training_configuration/Manage_training_course/Course";
+                  }
+                  // success function
 
-   
-
-}
-//function Edit_course
+            });
+            // ajax 
 
 
 
+      }
+      //function Edit_course
 
 
 
 
-function Delete_course(Course_id) {
-
-// console.log(Course_id);
-
-$.ajax({
-    type: "post",
-    url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_training_course/delete_course",
-    data: {
-        "Course_id": Course_id
-    },
-    dataType: "JSON",
-    success: function(data) {
-        // console.log(status)
-        window.location.href = "<?php echo base_url();?>/tr_manage_training_configuration/Manage_training_course/Course";
-    }
-
-});
 
 
 
-}
-//function Delete_course
+      function Delete_course(Course_id) {
+
+            // console.log(Course_id);
+
+            $.ajax({
+                  type: "post",
+                  url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_training_course/delete_course",
+                  data: {
+                        "Course_id": Course_id
+                  },
+                  dataType: "JSON",
+                  success: function(data) {
+                        // console.log(status)
+                        window.location.href =
+                              "<?php echo base_url();?>/tr_manage_training_configuration/Manage_training_course/Course";
+                  }
+
+            });
 
 
 
+      }
+      //function Delete_course
       </script>
 
       <!-- Begin Page Content -->
@@ -201,13 +200,14 @@ $.ajax({
                                                                   </thead>
                                                                   <tbody>
 
-                                                                 <?php foreach($crs as $index=>$row ){  ?>
+                                                                        <?php foreach($crs as $index=>$row ){  ?>
 
                                                                         <tr align="center">
                                                                               <td><?php echo ($index+1) ?></td>
                                                                               <td><?php echo $row->Course_code; ?></td>
                                                                               <td><?php echo $row->Course_name; ?></td>
-                                                                              <td><?php echo $row->Course_description; ?></td>
+                                                                              <td><?php echo $row->Course_description; ?>
+                                                                              </td>
                                                                               <td>
                                                                                     <button type="button"
                                                                                           class="btn btn-warning"><i
@@ -269,7 +269,8 @@ $.ajax({
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Code :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="tr_course_code" placeholder="Code">
+                                          <input type="text" class="form-control" id="tr_course_code"
+                                                placeholder="Code">
                                     </div>
 
                               </div>
@@ -277,7 +278,8 @@ $.ajax({
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Name :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="tr_course_name" placeholder="Name">
+                                          <input type="text" class="form-control" id="tr_course_name"
+                                                placeholder="Name">
                                     </div>
                               </div>
                               <br>
@@ -293,7 +295,7 @@ $.ajax({
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Category :</label>
                                     <div class="col-sm-3">
                                           <select name="example_length" class="form-control" aria-controls="example"
-                                          id="tr_course_category1">
+                                                id="tr_course_category1">
                                                 <option value="0">Select</option>
                                                 <option value="General">General</option>
                                                 <option value="Technical">Technical</option>
@@ -303,7 +305,7 @@ $.ajax({
                                     </div>
                                     <div class="col-sm-3">
                                           <select name="example_length" class="form-control" aria-controls="example"
-                                          id="tr_course_category2">
+                                                id="tr_course_category2">
                                                 <option value="0">Select</option>
                                                 <option value="In-house">In-house</option>
                                                 <option value="External Training">External Training</option>
@@ -313,12 +315,13 @@ $.ajax({
                                     </div>
                                     <div class="col-sm-3">
                                           <select name="example_length" class="form-control" aria-controls="example"
-                                          id="tr_course_category3">
+                                                id="tr_course_category3">
                                                 <option value="0">Select</option>
                                                 <option value="Classroom">Classroom </option>
                                                 <option value="E-learning">E-learning</option>
                                                 <option value="Self study">Self study</option>
-                                                <option value="Both Classroom & On the job training">Both Classroom & On the job training</option>
+                                                <option value="Both Classroom & On the job training">Both Classroom & On
+                                                      the job training</option>
                                                 <option value="On the job training">On the job training</option>
                                           </select>
                                     </div>
@@ -331,20 +334,24 @@ $.ajax({
 
                                           <div class="radio">
                                                 <label for="checkbox1" class="form-check-label ">
-                                                <div class="radio">
-                                                    <label for="radio1" class="form-check-label ">
-                                                        <input type="radio" id="tr_course_type" name="radios"  class="form-check-input" value="Internal">Internal
-                                                    </label>
-                                                </div>
+                                                      <div class="radio">
+                                                            <label for="radio1" class="form-check-label ">
+                                                                  <input type="radio" id="tr_course_type" name="radios"
+                                                                        class="form-check-input"
+                                                                        value="Internal">Internal
+                                                            </label>
+                                                      </div>
                                                 </label>
 
                                                 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
                                                 <label for="checkbox2" class="form-check-label ">
-                                                     <div class="radio">
-                                                    <label for="radio1" class="form-check-label ">
-                                                        <input type="radio" id="tr_course_type" name="radios"  class="form-check-input" value="External">External
-                                                    </label>
-                                                </div>
+                                                      <div class="radio">
+                                                            <label for="radio1" class="form-check-label ">
+                                                                  <input type="radio" id="tr_course_type" name="radios"
+                                                                        class="form-check-input"
+                                                                        value="External">External
+                                                            </label>
+                                                      </div>
                                                 </label>
                                           </div>
 
@@ -382,7 +389,9 @@ $.ajax({
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Code :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="tr_course_code<?php echo $row->Course_id; ?>" placeholder="Code" value="<?php echo $row->Course_code; ?>">
+                                          <input type="text" class="form-control"
+                                                id="tr_course_code<?php echo $row->Course_id; ?>" placeholder="Code"
+                                                value="<?php echo $row->Course_code; ?>">
                                     </div>
 
                               </div>
@@ -390,15 +399,19 @@ $.ajax({
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Name :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="tr_course_name<?php echo $row->Course_id; ?>" placeholder="Name" value="<?php echo $row->Course_name; ?>">
+                                          <input type="text" class="form-control"
+                                                id="tr_course_name<?php echo $row->Course_id; ?>" placeholder="Name"
+                                                value="<?php echo $row->Course_name; ?>">
                                     </div>
                               </div>
                               <br>
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Description
                                           :</label>
-                                    <div class="col-10 col-md-6"><textarea name="textarea-input" id="tr_course_des<?php echo $row->Course_id; ?>" 
-                                                rows="9" placeholder="Description..." class="form-control" ><?php echo $row->Course_description; ?></textarea>
+                                    <div class="col-10 col-md-6"><textarea name="textarea-input"
+                                                id="tr_course_des<?php echo $row->Course_id; ?>" rows="9"
+                                                placeholder="Description..."
+                                                class="form-control"><?php echo $row->Course_description; ?></textarea>
                                     </div>
                               </div>
                               <br>
@@ -466,15 +479,14 @@ $.ajax({
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary" onClick="Edit_course(<?php echo $row->Course_id; ?>)">Save</button>
+                              <button type="button" class="btn btn-primary"
+                                    onClick="Edit_course(<?php echo $row->Course_id; ?>)">Save</button>
                         </div>
                   </div>
             </div>
       </div>
       <!-- Edit Modal -->
-      <?php 
-$num++;
-} //foreach?>
+
 
       <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
             aria-hidden="true">
@@ -495,9 +507,13 @@ $num++;
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary" onClick="Delete_course(<?php echo $row->Course_id; ?>)">Confirm</button>
+                              <button type="button" class="btn btn-primary"
+                                    onClick="Delete_course(<?php echo $row->Course_id; ?>)">Confirm</button>
                         </div>
                   </div>
             </div>
       </div>
       <!-- Delete Modal -->
+      <?php 
+$num++;
+} //foreach?>
