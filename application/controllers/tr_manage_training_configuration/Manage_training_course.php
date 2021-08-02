@@ -54,6 +54,9 @@ class Manage_training_course extends MainController {
 		$tr_course_code = $this->input->post("tr_course_code");
 		$tr_course_name = $this->input->post("tr_course_name");
 		$tr_course_des = $this->input->post("tr_course_des");
+		$tr_course_category1 = $this->input->post("tr_course_category1");
+		$tr_course_category2 = $this->input->post("tr_course_category2");
+		$tr_course_category3 = $this->input->post("tr_course_category3");
 		$tr_course_type = $this->input->post("tr_course_type");
 		
 		
@@ -61,6 +64,9 @@ class Manage_training_course extends MainController {
 		$this->mttc->Course_code = $tr_course_code;
 		$this->mttc->Course_name = $tr_course_name;
 		$this->mttc->Course_description = $tr_course_des;
+		$this->mttc->Course_category1 = $tr_course_category1;
+		$this->mttc->Course_category2 = $tr_course_category2;
+		$this->mttc->Course_category3 = $tr_course_category3;
 		$this->mttc->Course_type = $tr_course_type;
 		$this->mttc->insert();
 		$data="add_crs";

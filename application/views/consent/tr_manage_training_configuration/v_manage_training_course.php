@@ -41,6 +41,9 @@ function add_courses() {
 var tr_course_code = document.getElementById("tr_course_code").value;
 var tr_course_name = document.getElementById("tr_course_name").value;
 var tr_course_des = document.getElementById("tr_course_des").value;
+var tr_course_category1 = document.getElementById("tr_course_category1").value;
+var tr_course_category2 = document.getElementById("tr_course_category2").value;
+var tr_course_category3 = document.getElementById("tr_course_category3").value;
 var tr_course_type = document.getElementById("tr_course_type").value;
 
 
@@ -51,6 +54,9 @@ $.ajax({
             "tr_course_code" : tr_course_code,
             "tr_course_name": tr_course_name,
             "tr_course_des": tr_course_des,
+            "tr_course_category1": tr_course_category1,
+            "tr_course_category2": tr_course_category2,
+            "tr_course_category3": tr_course_category3,
             "tr_course_type": tr_course_type
       },
       dataType: "JSON",
@@ -70,7 +76,7 @@ function Edit_course(Course_id) {
             var tr_course_code = document.getElementById("tr_course_code" + Course_id).value;
             var tr_course_name = document.getElementById("tr_course_name" + Course_id).value;
             var tr_course_des = document.getElementById("tr_course_des" + Course_id).value;
-            var tr_course_type = document.getElementById("tr_course_type" + Course_id).value;
+            // var tr_course_type = document.getElementById("tr_course_type" + Course_id).value;
       
 
     $.ajax({
@@ -80,8 +86,8 @@ function Edit_course(Course_id) {
             "Course_id" : Course_id,
             "tr_course_code" : tr_course_code,
             "tr_course_name": tr_course_name,
-            "tr_course_des": tr_course_des,
-            "tr_course_type": tr_course_type
+            "tr_course_des": tr_course_des
+            // "tr_course_type": tr_course_type
 
         },
         dataType: "JSON",
@@ -287,33 +293,33 @@ $.ajax({
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Category :</label>
                                     <div class="col-sm-3">
                                           <select name="example_length" class="form-control" aria-controls="example"
-                                                onChange="select_company(value)">
+                                          id="tr_course_category1">
                                                 <option value="0">Select</option>
-                                                <option value="1">General</option>
-                                                <option value="2">Technical</option>
-                                                <option value="3">Requirement</option>
-                                                <option value="4">Instructor</option>
+                                                <option value="General">General</option>
+                                                <option value="Technical">Technical</option>
+                                                <option value="Requirement">Requirement</option>
+                                                <option value="Instructor">Instructor</option>
                                           </select>
                                     </div>
                                     <div class="col-sm-3">
                                           <select name="example_length" class="form-control" aria-controls="example"
-                                                onChange="select_company(value)">
+                                          id="tr_course_category2">
                                                 <option value="0">Select</option>
-                                                <option value="1">In-house</option>
-                                                <option value="2">External Training</option>
-                                                <option value="3">On the job training</option>
-                                                <option value="4">Seminar</option>
+                                                <option value="In-house">In-house</option>
+                                                <option value="External Training">External Training</option>
+                                                <option value="On the job training">On the job training</option>
+                                                <option value="Seminar">Seminar</option>
                                           </select>
                                     </div>
                                     <div class="col-sm-3">
                                           <select name="example_length" class="form-control" aria-controls="example"
-                                                onChange="select_company(value)">
+                                          id="tr_course_category3">
                                                 <option value="0">Select</option>
-                                                <option value="1">Classroom </option>
-                                                <option value="2">E-learning</option>
-                                                <option value="3">Self studyt</option>
-                                                <option value="4">Both Classroom & On the job training</option>
-                                                <option value="5">On the job training</option>
+                                                <option value="Classroom">Classroom </option>
+                                                <option value="E-learning">E-learning</option>
+                                                <option value="Self study">Self study</option>
+                                                <option value="Both Classroom & On the job training">Both Classroom & On the job training</option>
+                                                <option value="On the job training">On the job training</option>
                                           </select>
                                     </div>
 
@@ -372,9 +378,6 @@ $.ajax({
                               </button>
                         </div>
                         <div class="modal-body">
-
-
-
 
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Code :</label>
