@@ -408,10 +408,6 @@
                                           <select name="example_length" class="form-control" aria-controls="example"
                                                 id="tr_course_category1<?php echo $row->Course_id; ?>">
                                                 <option value="0">Select</option>
-                                                <option value="General">General</option>
-                                                <option value="Technical">Technical</option>
-                                                <option value="Requirement">Requirement</option>
-                                                <option value="Instructor">Instructor</option>
                                                 <?php if($row->Course_category1 == "General"){ ?>
                                                 <option value="General" selected>General</option>
                                                 <option value="Technical">Technical</option>
@@ -439,10 +435,6 @@
                                           <select name="example_length" class="form-control" aria-controls="example"
                                                 id="tr_course_category2<?php echo $row->Course_id; ?>">
                                                 <option value="0">Select</option>
-                                                <option value="In-house">In-house</option>
-                                                <option value="External Training">External Training</option>
-                                                <option value="On the job training">On the job training</option>
-                                                <option value="Seminar">Seminar</option>
                                                 <?php if($row->Course_category2 == "In-house"){ ?>
                                                 <option value="In-house" selected>In-house</option>
                                                 <option value="External Training">External Training</option>
@@ -471,12 +463,6 @@
                                           <select name="example_length" class="form-control" aria-controls="example"
                                                 id="tr_course_category3<?php echo $row->Course_id; ?>">
                                                 <option value="0">Select</option>
-                                                <option value="Classroom">Classroom </option>
-                                                <option value="E-learning">E-learning</option>
-                                                <option value="Self study">Self study</option>
-                                                <option value="Both Classroom & On the job training">Both Classroom & On
-                                                      the job training</option>
-                                                <option value="On the job training">On the job training</option>
                                                 <?php if($row->Course_category3 == "Classroom"){ ?>
                                                 <option value="Classroom" selected>Classroom </option>
                                                 <option value="E-learning">E-learning</option>
@@ -520,15 +506,15 @@
                               </div> <!-- row category -->
                               <br>
                               <div class="row">
-                                    <label for="focusedinput" class="col-sm-3 control-label">Course Category :</label>
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Type :</label>
                                     <div class="col-sm-3">
                                           <select name="example_length" class="form-control" aria-controls="example"
                                           id="tr_course_type<?php echo $row->Course_id; ?>">
                                                 <option value="0">Select</option>
-                                                <?php if($row->tr_course_type = "Internal"){ ?>
+                                                <?php if($row->Course_type == "Internal"){ ?>
                                                       <option value="Internal" selected>Internal</option>
-                                                      <option value="External" >Ms.</option>
-                                               <?php } else if($row->tr_course_type = "External") { ?>
+                                                      <option value="External" >External</option>
+                                               <?php } else if($row->Course_type == "External") { ?>
                                                 <option value="Internal" >Internal</option>
                                                 <option value="External" selected>External</option>
                                                 <?php } ?>
