@@ -79,7 +79,7 @@
             var tr_course_category1 = document.getElementById("tr_course_category1" + Course_id).value;
             var tr_course_category2 = document.getElementById("tr_course_category2" + Course_id).value;
             var tr_course_category3 = document.getElementById("tr_course_category3" + Course_id).value;
-            // var tr_course_type = document.getElementById("tr_course_type" + Course_id).value;
+            var tr_course_type = document.getElementById("tr_course_type" + Course_id).value;
 
 
             $.ajax({
@@ -92,8 +92,8 @@
                         "tr_course_des": tr_course_des,
                         "tr_course_category1": tr_course_category1,
                         "tr_course_category2": tr_course_category2,
-                        "tr_course_category3": tr_course_category3
-                        // "tr_course_type": tr_course_type
+                        "tr_course_category3": tr_course_category3,
+                        "tr_course_type": tr_course_type
 
                   },
                   dataType: "JSON",
@@ -336,32 +336,13 @@
                               <br>
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Type :</label>
-                                    <div class="col col-md-9">
-
-                                          <div class="radio">
-                                                <label for="checkbox1" class="form-check-label ">
-                                                      <div class="radio">
-                                                            <label for="radio1" class="form-check-label ">
-                                                                  <input type="radio" id="tr_course_type" name="radios"
-                                                                        class="form-check-input"
-                                                                        value="Internal">Internal
-                                                            </label>
-                                                      </div>
-                                                </label>
-
-                                                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-                                                <label for="checkbox2" class="form-check-label ">
-                                                      <div class="radio">
-                                                            <label for="radio1" class="form-check-label ">
-                                                                  <input type="radio" id="tr_course_type" name="radios"
-                                                                        class="form-check-input"
-                                                                        value="External">External
-                                                            </label>
-                                                      </div>
-                                                </label>
-                                          </div>
-
-
+                                    <div class="col-sm-3">
+                                          <select name="example_length" class="form-control" aria-controls="example"
+                                                id="tr_course_type">
+                                                <option value="0">Select</option>
+                                                <option value="Internal">Internal </option>
+                                                <option value="External">External</option>
+                                          </select>
                                     </div>
                               </div>
 
@@ -378,8 +359,8 @@
 	$num = 1;
 	foreach($crs as $index=>$row ) { ?>
 
-      <div class="modal fade" id="EditModal<?php echo $row->Course_id?>" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
-            aria-hidden="true">
+      <div class="modal fade" id="EditModal<?php echo $row->Course_id?>" tabindex="-1" role="dialog"
+            aria-labelledby="mediumModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                         <div class="modal-header" style="background-color:#FFC000;">
@@ -427,121 +408,136 @@
                                           <select name="example_length" class="form-control" aria-controls="example"
                                                 id="tr_course_category1<?php echo $row->Course_id; ?>">
                                                 <option value="0">Select</option>
+                                                <option value="General">General</option>
+                                                <option value="Technical">Technical</option>
+                                                <option value="Requirement">Requirement</option>
+                                                <option value="Instructor">Instructor</option>
                                                 <?php if($row->Course_category1 == "General"){ ?>
-                                                      <option value="General" selected>General</option>
-                                                      <option value="Technical">Technical</option>
-                                                      <option value="Requirement">Requirement</option>
-                                                      <option value="Instructor">Instructor</option>
-                                               <?php } else if($row->Course_category1 == "Technical") { ?>
-                                                      <option value="General">General</option>
-                                                      <option value="Technical" selected>Technical</option>
-                                                      <option value="Requirement">Requirement</option>
-                                                      <option value="Instructor">Instructor</option>
+                                                <option value="General" selected>General</option>
+                                                <option value="Technical">Technical</option>
+                                                <option value="Requirement">Requirement</option>
+                                                <option value="Instructor">Instructor</option>
+                                                <?php } else if($row->Course_category1 == "Technical") { ?>
+                                                <option value="General">General</option>
+                                                <option value="Technical" selected>Technical</option>
+                                                <option value="Requirement">Requirement</option>
+                                                <option value="Instructor">Instructor</option>
                                                 <?php } else if($row->Course_category1 == "Requirement") {  ?>
-                                                      <option value="General">General</option>
-                                                      <option value="Technical" >Technical</option>
-                                                      <option value="Requirement" selected>Requirement</option>
-                                                      <option value="Instructor">Instructor</option>
+                                                <option value="General">General</option>
+                                                <option value="Technical">Technical</option>
+                                                <option value="Requirement" selected>Requirement</option>
+                                                <option value="Instructor">Instructor</option>
                                                 <?php } else if($row->Course_category1 == "Instructor") {  ?>
-                                                      <option value="General">General</option>
-                                                      <option value="Technical" >Technical</option>
-                                                      <option value="Requirement" >Requirement</option>
-                                                      <option value="Instructor" selected>Instructor</option>
-                                                            <?php } ?>   
+                                                <option value="General">General</option>
+                                                <option value="Technical">Technical</option>
+                                                <option value="Requirement">Requirement</option>
+                                                <option value="Instructor" selected>Instructor</option>
+                                                <?php } ?>
                                           </select>
                                     </div>
                                     <div class="col-sm-3">
                                           <select name="example_length" class="form-control" aria-controls="example"
                                                 id="tr_course_category2<?php echo $row->Course_id; ?>">
                                                 <option value="0">Select</option>
+                                                <option value="In-house">In-house</option>
+                                                <option value="External Training">External Training</option>
+                                                <option value="On the job training">On the job training</option>
+                                                <option value="Seminar">Seminar</option>
                                                 <?php if($row->Course_category2 == "In-house"){ ?>
-                                                      <option value="In-house" selected>In-house</option>
-                                                      <option value="External Training">External Training</option>
-                                                      <option value="On the job training">On the job training</option>
-                                                      <option value="Seminar">Seminar</option>
-                                               <?php } else if($row->Course_category2 == "External Training") { ?>
-                                                      <option value="In-house">In-house</option>
-                                                      <option value="External Training" selected>External Training</option>
-                                                      <option value="On the job training">On the job training</option>
-                                                      <option value="Seminar">Seminar</option>
+                                                <option value="In-house" selected>In-house</option>
+                                                <option value="External Training">External Training</option>
+                                                <option value="On the job training">On the job training</option>
+                                                <option value="Seminar">Seminar</option>
+                                                <?php } else if($row->Course_category2 == "External Training") { ?>
+                                                <option value="In-house">In-house</option>
+                                                <option value="External Training" selected>External Training</option>
+                                                <option value="On the job training">On the job training</option>
+                                                <option value="Seminar">Seminar</option>
                                                 <?php } else if($row->Course_category2 == "On the job training") {  ?>
-                                                      <option value="In-house">In-house</option>
-                                                      <option value="External Training">External Training</option>
-                                                      <option value="On the job training" selected>On the job training</option>
-                                                      <option value="Seminar">Seminar</option>
+                                                <option value="In-house">In-house</option>
+                                                <option value="External Training">External Training</option>
+                                                <option value="On the job training" selected>On the job training
+                                                </option>
+                                                <option value="Seminar">Seminar</option>
                                                 <?php } else if($row->Course_category2 == "Seminar") {  ?>
-                                                      <option value="In-house">In-house</option>
-                                                      <option value="External Training">External Training</option>
-                                                      <option value="On the job training">On the job training</option>
-                                                      <option value="Seminar" selected>Seminar</option>
-                                                            <?php } ?>       
+                                                <option value="In-house">In-house</option>
+                                                <option value="External Training">External Training</option>
+                                                <option value="On the job training">On the job training</option>
+                                                <option value="Seminar" selected>Seminar</option>
+                                                <?php } ?>
                                           </select>
                                     </div>
                                     <div class="col-sm-3">
                                           <select name="example_length" class="form-control" aria-controls="example"
                                                 id="tr_course_category3<?php echo $row->Course_id; ?>">
                                                 <option value="0">Select</option>
+                                                <option value="Classroom">Classroom </option>
+                                                <option value="E-learning">E-learning</option>
+                                                <option value="Self study">Self study</option>
+                                                <option value="Both Classroom & On the job training">Both Classroom & On
+                                                      the job training</option>
+                                                <option value="On the job training">On the job training</option>
                                                 <?php if($row->Course_category3 == "Classroom"){ ?>
-                                                      <option value="Classroom" selected>Classroom </option>
-                                                      <option value="E-learning">E-learning</option>
-                                                      <option value="Self study">Self study</option>
-                                                      <option value="Both Classroom & On the job training">Both Classroom & On the job training</option>
-                                                      <option value="On the job training">On the job training</option>
-                                               <?php } else if($row->Course_category3 == "E-learning") { ?>
-                                                      <option value="Classroom">Classroom </option>
-                                                      <option value="E-learning" selected>E-learning</option>
-                                                      <option value="Self study">Self study</option>
-                                                      <option value="Both Classroom & On the job training">Both Classroom & On the job training</option>
-                                                      <option value="On the job training">On the job training</option>
+                                                <option value="Classroom" selected>Classroom </option>
+                                                <option value="E-learning">E-learning</option>
+                                                <option value="Self study">Self study</option>
+                                                <option value="Both Classroom & On the job training">Both Classroom & On
+                                                      the job training</option>
+                                                <option value="On the job training">On the job training</option>
+                                                <?php } else if($row->Course_category3 == "E-learning") { ?>
+                                                <option value="Classroom">Classroom </option>
+                                                <option value="E-learning" selected>E-learning</option>
+                                                <option value="Self study">Self study</option>
+                                                <option value="Both Classroom & On the job training">Both Classroom & On
+                                                      the job training</option>
+                                                <option value="On the job training">On the job training</option>
                                                 <?php } else if($row->Course_category3 == "Self study") {  ?>
-                                                      <option value="Classroom">Classroom </option>
-                                                      <option value="E-learning">E-learning</option>
-                                                      <option value="Self study" selected>Self study</option>
-                                                      <option value="Both Classroom & On the job training">Both Classroom & On the job training</option>
-                                                      <option value="On the job training">On the job training</option>
+                                                <option value="Classroom">Classroom </option>
+                                                <option value="E-learning">E-learning</option>
+                                                <option value="Self study" selected>Self study</option>
+                                                <option value="Both Classroom & On the job training">Both Classroom & On
+                                                      the job training</option>
+                                                <option value="On the job training">On the job training</option>
                                                 <?php } else if($row->Course_category3 == "Both Classroom & On the job training") {  ?>
-                                                      <option value="Classroom">Classroom </option>
-                                                      <option value="E-learning">E-learning</option>
-                                                      <option value="Self study">Self study</option>
-                                                      <option value="Both Classroom & On the job training" selected>Both Classroom & On the job training</option>
-                                                      <option value="On the job training">On the job training</option>
+                                                <option value="Classroom">Classroom </option>
+                                                <option value="E-learning">E-learning</option>
+                                                <option value="Self study">Self study</option>
+                                                <option value="Both Classroom & On the job training" selected>Both
+                                                      Classroom & On the job training</option>
+                                                <option value="On the job training">On the job training</option>
                                                 <?php } else if($row->Course_category3 == "On the job training") {  ?>
-                                                      <option value="Classroom">Classroom </option>
-                                                      <option value="E-learning">E-learning</option>
-                                                      <option value="Self study">Self study</option>
-                                                      <option value="Both Classroom & On the job training">Both Classroom & On the job training</option>
-                                                      <option value="On the job training" selected>On the job training</option>
-                                                            <?php } ?>   
+                                                <option value="Classroom">Classroom </option>
+                                                <option value="E-learning">E-learning</option>
+                                                <option value="Self study">Self study</option>
+                                                <option value="Both Classroom & On the job training">Both Classroom & On
+                                                      the job training</option>
+                                                <option value="On the job training" selected>On the job training
+                                                </option>
+                                                <?php } ?>
                                           </select>
                                     </div>
 
                               </div> <!-- row category -->
                               <br>
                               <div class="row">
-                                    <label for="focusedinput" class="col-sm-3 control-label">Type :</label>
-                                    <div class="col col-md-9">
-
-                                          <div class="radio">
-                                                <label for="checkbox1" class="form-check-label ">
-                                                      <div class="col-md-3">
-                                                            <input type="radio" id="checkbox1" name="checkbox1"
-                                                                  value="option1" class="form-check-input">Internal
-                                                      </div>
-                                                </label>
-
-                                                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-                                                <label for="checkbox2" class="form-check-label ">
-                                                      <div class="col-md-3">
-                                                            <input type="radio" id="checkbox2" name="checkbox2"
-                                                                  value="option2" class="form-check-input">External
-                                                      </div>
-                                                </label>
-                                          </div>
-                                          <!-- radio Internal and External -->
-
-
+                                    <label for="focusedinput" class="col-sm-3 control-label">Course Category :</label>
+                                    <div class="col-sm-3">
+                                          <select name="example_length" class="form-control" aria-controls="example"
+                                          id="tr_course_type<?php echo $row->Course_id; ?>">
+                                                <option value="0">Select</option>
+                                                <?php if($row->tr_course_type = "Internal"){ ?>
+                                                      <option value="Internal" selected>Internal</option>
+                                                      <option value="External" >Ms.</option>
+                                               <?php } else if($row->tr_course_type = "External") { ?>
+                                                <option value="Internal" >Internal</option>
+                                                <option value="External" selected>External</option>
+                                                <?php } ?>
+                                          </select>
                                     </div>
+
+
                               </div>
+
 
                         </div>
                         <div class="modal-footer">
@@ -555,8 +551,8 @@
       <!-- Edit Modal -->
 
 
-      <div class="modal fade" id="DeleteModal<?php echo $row->Course_id?>" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
-            aria-hidden="true">
+      <div class="modal fade" id="DeleteModal<?php echo $row->Course_id?>" tabindex="-1" role="dialog"
+            aria-labelledby="staticModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-sm-5" role="document">
                   <div class="modal-content">
                         <div class="modal-header" style="background-color:#E74A3B;">
