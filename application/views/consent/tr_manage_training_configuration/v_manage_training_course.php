@@ -555,7 +555,7 @@
       <!-- Edit Modal -->
 
 
-      <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
+      <div class="modal fade" id="DeleteModal<?php echo $row->Course_id?>" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-sm-5" role="document">
                   <div class="modal-content">
