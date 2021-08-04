@@ -103,7 +103,13 @@ class Manage_instructor extends MainController {
 	}
 	// function delete_instructor
 
-
+	function get_data()
+	{
+		$this->load->model('M_trs_trainer_data','mtda');
+		$data = $this->mtda->get_all_ins()->result();
+		echo json_encode($data);
+	}
+	// get_group_sdm
 
 
 }
