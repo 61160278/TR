@@ -182,6 +182,39 @@
 
       }
       //check_data
+
+      function check_edt_data(trainer_id) {
+            var tr_titlename = document.getElementById("tr_titlename" + trainer_id).value;
+            var tr_fname = document.getElementById("tr_fname" + trainer_id).value;
+            var tr_Sname = document.getElementById("tr_Sname" + trainer_id).value;
+            var tr_Institution = document.getElementById("tr_Institution" + trainer_id).value;
+
+
+            if (tr_titlename != "0" && tr_fname != "" && tr_Sname != "" && tr_Institution != "") {
+                  Edit_instructor(trainer_id);
+                  return true;
+
+             } else if (tr_titlename == "0" && tr_fname == "" && tr_Sname == "" && tr_Institution == "") {
+                  $("#alert_tr_fname").show();
+                  $("#alert_tr_Sname").show();
+                  $("#alert_tr_Ins").show();
+             }
+            else  if (tr_fname == "" ){
+                  $("#alert_tr_fname").show();
+                  
+            } else  if (tr_Sname == "" ){
+                  $("#alert_tr_Sname").show();
+                  
+            }else  if (tr_Institution == ""){
+                  $("#alert_tr_Ins").show();
+                  
+            }
+           
+
+      }
+      //check_data
+
+
       </script>
 
       <!-- Begin Page Content -->
@@ -417,6 +450,7 @@
                                           <input type="text" class="form-control"
                                                 id="tr_fname<?php echo $row->trainer_id; ?>" placeholder="FirstName"
                                                 value="<?php echo $row->trainer_fname; ?>">
+                                                
                                     </div>
 
                               </div>
@@ -443,7 +477,7 @@
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                               <button type="button" class="btn btn-primary"
-                                    onClick="Edit_instructor(<?php echo $row->trainer_id; ?>)">Save</button>
+                                    onClick="check_edt_data(<?php echo $row->trainer_id; ?>)">Save</button>
                         </div>
                   </div>
             </div>
