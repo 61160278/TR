@@ -35,6 +35,16 @@
       </style>
       <!-- End style CSS  -->
       <script>
+             $(document).ready(function() {
+            $("#alert_tr_course_name").hide();
+            $("#tr_course_name").keyup(function() {
+                  $("#alert_tr_course_name").hide();
+            });
+
+        
+
+      });
+      // document ready
       function add_courses() {
 
             var tr_course_code = document.getElementById("tr_course_code").value;
@@ -112,12 +122,6 @@
       }
       //function Edit_course
 
-
-
-
-
-
-
       function Delete_course(Course_id) {
 
             // console.log(Course_id);
@@ -137,10 +141,37 @@
 
             });
 
-
-
       }
       //function Delete_course
+
+
+      function check_course() {
+            var tr_course_code = document.getElementById("tr_course_code").value;
+            var tr_course_name = document.getElementById("tr_course_name").value;
+            var tr_course_des = document.getElementById("tr_course_des").value;
+            var tr_course_category1 = document.getElementById("tr_course_category1").value;
+            var tr_course_category2 = document.getElementById("tr_course_category2").value;
+            var tr_course_category3 = document.getElementById("tr_course_category3").value;
+            var tr_course_type = document.getElementById("tr_course_type").value;
+
+            if (tr_course_code != "0" && tr_course_name != "" && tr_course_category1 != "0" && tr_course_category2 != "0" && tr_course_category3 != "0" && tr_course_type != "0") {
+                  add_courses();
+                  return true;
+
+             } else if (tr_course_code == "0" && tr_course_name == "" && tr_course_category1 == "0" && tr_course_category2 == "0" && tr_course_category3 == "0" && tr_course_type == "0") {
+                  $("#alert_tr_course_name").show();
+             }
+            else  if (tr_course_name == "" ){
+                  $("#alert_tr_course_name").show();
+                  return false;
+                  
+            } 
+           
+
+      }
+      //check_data
+
+
       </script>
 
       <!-- Begin Page Content -->
@@ -286,6 +317,9 @@
                                     <div class="col-sm-6">
                                           <input type="text" class="form-control" id="tr_course_name"
                                                 placeholder="Name">
+                                                <p id="alert_tr_course_name">
+                                                <font color="red"><b>Please fill out the information completely. </b></font>
+                                          </p>
                                     </div>
                               </div>
                               <br>
@@ -349,7 +383,7 @@
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary" onclick="add_courses()">Save</button>
+                              <button type="button" class="btn btn-primary" onclick="check_course()">Save</button>
                         </div>
                   </div>
             </div>
