@@ -53,7 +53,7 @@
 
       });
       // document ready
-
+    
 
       
 
@@ -159,27 +159,26 @@
             var tr_Institution = document.getElementById("tr_Institution").value;
 
 
-            if (tr_titlename != "" && tr_fname != "" && tr_Sname != "" && tr_Institution != "") {
+            if (tr_titlename != "0" && tr_fname != "" && tr_Sname != "" && tr_Institution != "") {
                   add_instructors();
                   return true;
-            } else  if (tr_titlename == "" ){
-                  $("#alert_tr_titlename").show();
-                  return false;
-            }else  if (tr_fname == "" ){
+
+             } else if (tr_titlename == "0" && tr_fname == "" && tr_Sname == "" && tr_Institution == "") {
                   $("#alert_tr_fname").show();
-                  return false;
-            }else  if (tr_Sname == "" ){
                   $("#alert_tr_Sname").show();
-                  return false;
+                  $("#alert_tr_Ins").show();
+             }
+            else  if (tr_fname == "" ){
+                  $("#alert_tr_fname").show();
+                  
+            } else  if (tr_Sname == "" ){
+                  $("#alert_tr_Sname").show();
+                  
             }else  if (tr_Institution == ""){
                   $("#alert_tr_Ins").show();
-                  return false;
+                  
             }
-            // else{
-            //       // $("#alert_tr_fname").show();
-            //       // return false;
-            // }
-            //else
+           
 
       }
       //check_data
@@ -320,7 +319,6 @@
                                                 <option value="0">Select</option>
                                                 <option value="Mr.">Mr.</option>
                                                 <option value="Ms.">Ms.</option>
-
                                           </select>
                                     </div>
 
@@ -365,7 +363,7 @@
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary" onclick="check_data()">Save</button>
+                              <button type="button" class="btn btn-primary" id="btnadd" onclick="check_data()">Save</button>
                         </div>
                   </div>
             </div>
