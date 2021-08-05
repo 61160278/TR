@@ -210,6 +210,30 @@
                   $("#alert_tr_fname").show();
                   $("#alert_tr_Sname").show();
                   $("#alert_tr_Ins").show();
+            } else if (tr_titlename == "0" && tr_fname == "" && tr_Sname == "") {
+                  $("#alert_tr_title").show();
+                  $("#alert_tr_fname").show();
+                  $("#alert_tr_Sname").show();
+            } else if (tr_titlename == "0" && tr_fname == "" && tr_Institution == "") {
+                  $("#alert_tr_title").show();
+                  $("#alert_tr_fname").show();
+                  $("#alert_tr_Ins").show();
+            } else if (tr_titlename == "0" && tr_Sname == "" && tr_Institution == "") {
+                  $("#alert_tr_title").show();
+                  $("#alert_tr_Sname").show();
+                  $("#alert_tr_Ins").show();
+            } else if (tr_titlename == "0" && tr_fname == "") {
+                  $("#alert_tr_title").show();
+                  $("#alert_tr_fname").show();
+            } else if (tr_titlename == "0" && tr_Sname == "") {
+                  $("#alert_tr_title").show();
+                  $("#alert_tr_Sname").show();
+            } else if (tr_titlename == "0" && tr_Institution == "") {
+                  $("#alert_tr_title").show();
+                  $("#alert_tr_Ins").show();
+            } else if (tr_titlename == "0" && tr_Institution == "") {
+                  $("#alert_tr_title").show();
+                  $("#alert_tr_Ins").show();
             } else if (tr_fname == "" && tr_Sname == "") {
                   $("#alert_tr_fname").show();
                   $("#alert_tr_Sname").show();
@@ -252,6 +276,27 @@
                   $("#alert_tr_edttitle" + check).show();
                   $("#alert_tr_edtfname" + check).show();
                   $("#alert_tr_edtSname" + check).show();
+                  $("#alert_tr_edtIns" + check).show();
+            } else if (tr_titlename == "0" && tr_fname == "" && tr_Sname == "") {
+                  $("#alert_tr_edttitle" + check).show();
+                  $("#alert_tr_edtfname" + check).show();
+                  $("#alert_tr_edtSname" + check).show();
+            } else if (tr_titlename == "0" && tr_fname == "" && tr_Institution == "") {
+                  $("#alert_tr_edttitle" + check).show();
+                  $("#alert_tr_edtfname" + check).show();
+                  $("#alert_tr_edtIns" + check).show();
+            } else if (tr_titlename == "0" && tr_Sname == "" && tr_Institution == "") {
+                  $("#alert_tr_edttitle" + check).show();
+                  $("#alert_tr_edtSname" + check).show();
+                  $("#alert_tr_edtIns" + check).show();
+            } else if (tr_titlename == "0" && tr_fname == "") {
+                  $("#alert_tr_edttitle" + check).show();
+                  $("#alert_tr_edtfname" + check).show();
+            } else if (tr_titlename == "0" && tr_Sname == "") {
+                  $("#alert_tr_edttitle" + check).show();
+                  $("#alert_tr_edtSname" + check).show();
+            } else if (tr_titlename == "0" && tr_Institution == "") {
+                  $("#alert_tr_edttitle" + check).show();
                   $("#alert_tr_edtIns" + check).show();
             }else if (tr_fname == "" && tr_Sname == "") {
                   $("#alert_tr_edtfname" + check).show();
