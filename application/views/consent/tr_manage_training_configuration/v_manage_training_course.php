@@ -182,12 +182,17 @@
                   add_courses();
                   return true;
 
-             } else if (tr_course_code == "0" && tr_course_name == "" && tr_course_category1 == "0" && tr_course_category2 == "0" && tr_course_category3 == "0" && tr_course_type == "0") {
+             } else if (tr_course_code == "" && tr_course_name == "" && tr_course_category1 == "0" && tr_course_category2 == "0" && tr_course_category3 == "0" && tr_course_type == "0") {
+                  $("#alert_tr_course_code").show();
                   $("#alert_tr_course_name").show();
+                  $("#alert_tr_course_category1").show();
+                  $("#alert_tr_course_category2").show();
+                  $("#alert_tr_course_category3").show();
+                  $("#alert_tr_course_type").show();
              }
             else  if (tr_course_name == "" ){
                   $("#alert_tr_course_name").show();
-                  return false;
+                
                   
             } 
            
@@ -332,6 +337,9 @@
                                     <div class="col-sm-6">
                                           <input type="text" class="form-control" id="tr_course_code"
                                                 placeholder="Code" checked required>
+                                                <p id="alert_tr_course_code">
+                                                <font color="red"><b>Please fill out the information completely. </b></font>
+                                          </p>
                                     </div>
 
                               </div>
@@ -389,7 +397,9 @@
                                                 <option value="On the job training">On the job training</option>
                                           </select>
                                     </div>
-
+                                    <p id="alert_tr_course_category1">
+                                                <font color="red"><b>Please fill out the information completely. </b></font>
+                                          </p>
                               </div>
                               <br>
                               <div class="row">
@@ -402,8 +412,11 @@
                                                 <option value="External">External</option>
                                           </select>
                                     </div>
+                                    
                               </div>
-
+                              <p id="alert_tr_course_type">
+                                                <font color="red"><b>Please fill out the information completely. </b></font>
+                                          </p>
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>

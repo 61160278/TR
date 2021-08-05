@@ -462,12 +462,17 @@
                                                 <option value="Ms.">Ms.</option>
                                           </select>
                                     </div>
-                                    <p id="alert_tr_title">
-                                                <font color="red"><b>Please fill out the information completely. </b>
-                                                </font>
-                                          </p>
+                                   
 
                               </div>
+                             
+                              <p id="alert_tr_title">
+                              &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                              &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                              <font color="red"><b>Please fill out the information completely. </b>
+                                                </font>
+                                          </p>
+                                          
                               <br>
 
                               <div class="row">
@@ -554,12 +559,15 @@
                                                 <?php } ?>
                                           </select>
                                     </div>
-                                    <p id="alert_tr_edttitle<?php echo $row->trainer_id; ?>">
+                                    
+
+                              </div>
+                              <p id="alert_tr_edttitle<?php echo $row->trainer_id; ?>">
+                              &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                              &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                                                 <font color="red"><b>Please fill out the information completely. </b>
                                                 </font>
                                           </p>
-
-                              </div>
                               <br>
 
                               <div class="row">
