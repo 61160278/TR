@@ -38,7 +38,7 @@
       $(document).ready(function() {
 
             $("#alert_tr_title").hide();
-            $("#tr_titlename").keyup(function() {
+            $("#tr_titlename").change(function() {
                   $("#alert_tr_title").hide();
             });
 
@@ -58,9 +58,10 @@
             });
 
 //==========================================================
-            $("#alert_tr_edtfname").hide();
-            $("#tr_fname").keyup(function() {
-                  $("#alert_tr_edtfname").hide();
+<?php  foreach($ins as $index=>$row ){  ?>
+            $("#alert_tr_edtfname<?php echo $row->trainer_id; ?>").hide();
+            $("#tr_fname<?php echo $row->trainer_id; ?>").keyup(function() {
+                  $("#alert_tr_edtfname<?php echo $row->trainer_id; ?>").hide();
             });
 
             $("#alert_tr_edtSname").hide();
@@ -72,7 +73,7 @@
             $("#tr_Institution").keyup(function() {
                   $("#alert_tr_edtIns").hide();
             });
-
+<?php  } ?>
       });
       // document ready
 

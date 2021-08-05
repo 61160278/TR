@@ -307,7 +307,7 @@
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Code :</label>
                                     <div class="col-sm-6">
                                           <input type="text" class="form-control" id="tr_course_code"
-                                                placeholder="Code">
+                                                placeholder="Code" checked required>
                                     </div>
 
                               </div>
@@ -316,10 +316,10 @@
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Name :</label>
                                     <div class="col-sm-6">
                                           <input type="text" class="form-control" id="tr_course_name"
-                                                placeholder="Name">
-                                                <p id="alert_tr_course_name">
+                                                placeholder="Name" checked required>
+                                                <!-- <p id="alert_tr_course_name">
                                                 <font color="red"><b>Please fill out the information completely. </b></font>
-                                          </p>
+                                          </p> -->
                                     </div>
                               </div>
                               <br>
