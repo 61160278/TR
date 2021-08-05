@@ -59,19 +59,25 @@
 
 //==========================================================
 <?php  foreach($ins as $index=>$row ){  ?>
+
+            $("#alert_tr_edttitle<?php echo $row->trainer_id; ?>").hide();
+            $("#tr_titlename<?php echo $row->trainer_id; ?>").change(function() {
+                  $("#alert_tr_edttitle<?php echo $row->trainer_id; ?>").hide();
+            });
+
             $("#alert_tr_edtfname<?php echo $row->trainer_id; ?>").hide();
             $("#tr_fname<?php echo $row->trainer_id; ?>").keyup(function() {
                   $("#alert_tr_edtfname<?php echo $row->trainer_id; ?>").hide();
             });
 
-            $("#alert_tr_edtSname").hide();
-            $("#tr_Sname").keyup(function() {
-                  $("#alert_tr_edtSname").hide();
+            $("#alert_tr_edtSname<?php echo $row->trainer_id; ?>").hide();
+            $("#tr_Sname<?php echo $row->trainer_id; ?>").keyup(function() {
+                  $("#alert_tr_edtSname<?php echo $row->trainer_id; ?>").hide();
             });
 
-            $("#alert_tr_edtIns").hide();
-            $("#tr_Institution").keyup(function() {
-                  $("#alert_tr_edtIns").hide();
+            $("#alert_tr_edtIns<?php echo $row->trainer_id; ?>").hide();
+            $("#tr_Institution<?php echo $row->trainer_id; ?>").keyup(function() {
+                  $("#alert_tr_edtIns<?php echo $row->trainer_id; ?>").hide();
             });
 <?php  } ?>
       });
@@ -244,6 +250,15 @@
 
             } else if (tr_titlename == "0" && tr_fname == "" && tr_Sname == "" && tr_Institution == "") {
                   $("#alert_tr_edtfname" + check).show();
+                  $("#alert_tr_edtSname" + check).show();
+                  $("#alert_tr_edtIns" + check).show();
+            }else if (tr_fname == "" && tr_Sname == "") {
+                  $("#alert_tr_edtfname" + check).show();
+                  $("#alert_tr_edtSname" + check).show();
+            } else if (tr_fname == "" && tr_Institution == "") {
+                  $("#alert_tr_edtfname" + check).show();
+                  $("#alert_tr_edtIns" + check).show();
+            } else if (tr_Sname == "" && tr_Institution == "") {
                   $("#alert_tr_edtSname" + check).show();
                   $("#alert_tr_edtIns" + check).show();
             } else if (tr_fname == "") {
@@ -516,7 +531,7 @@
                                           <input type="text" class="form-control"
                                                 id="tr_Sname<?php echo $row->trainer_id; ?>" placeholder="Surname"
                                                 value="<?php echo $row->trainer_Sname; ?>">
-                                          <p id="alert_tr_edtSname<?php echo $row->trainer_id; ?>" hidden>
+                                          <p id="alert_tr_edtSname<?php echo $row->trainer_id; ?>">
                                                 <font color="red"><b>Please fill out the information completely. </b>
                                                 </font>
                                           </p>
@@ -529,7 +544,7 @@
                                           <input type="text" class="form-control"
                                                 id="tr_Institution<?php echo $row->trainer_id; ?>"
                                                 placeholder="Institution" value="<?php echo $row->Institution; ?>">
-                                          <p id="alert_tr_edtIns<?php echo $row->trainer_id; ?>" hidden>
+                                          <p id="alert_tr_edtIns<?php echo $row->trainer_id; ?>">
                                                 <font color="red"><b>Please fill out the information completely. </b>
                                                 </font>
                                           </p>
