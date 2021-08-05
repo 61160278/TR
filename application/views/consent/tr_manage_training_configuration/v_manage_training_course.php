@@ -219,10 +219,10 @@
             } else if (tr_course_type == "0" && tr_course_category1 == "0") {
                   $("#alert_tr_course_type").show();
                   $("#alert_tr_course_category").show();
-            } else if (tr_course_name == "0" && tr_course_category2 == "0") {
+            } else if (tr_course_type == "0" && tr_course_category2 == "0") {
                   $("#alert_tr_course_type").show();
                   $("#alert_tr_course_category").show();
-            } else if (tr_course_name == "0" && tr_course_category3 == "0") {
+            } else if (tr_course_type == "0" && tr_course_category3 == "0") {
                   $("#alert_tr_course_type").show();
                   $("#alert_tr_course_category").show();
             } else if (tr_course_code == "") {
