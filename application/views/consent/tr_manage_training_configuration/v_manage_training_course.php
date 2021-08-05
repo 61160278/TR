@@ -189,6 +189,26 @@
                   $("#alert_tr_course_name").show();
                   $("#alert_tr_course_category").show();
                   $("#alert_tr_course_type").show();
+            } else if (tr_course_code == "" && tr_course_name == "") {
+                  $("#alert_tr_course_code").show();
+                  $("#alert_tr_course_name").show();
+            } else if (tr_course_code == "" && tr_course_category1 == "0") {
+                  $("#alert_tr_course_code").show();
+                  $("#alert_tr_course_category").show();
+            } else if (tr_course_code == "" && tr_course_category2 == "0") {
+                  $("#alert_tr_course_code").show();
+                  $("#alert_tr_course_category").show();
+            } else if (tr_course_code == "" && tr_course_category3 == "0") {
+                  $("#alert_tr_course_code").show();
+                  $("#alert_tr_course_category").show();
+            } else if (tr_course_code == "" && tr_course_type == "0") {
+                  $("#alert_tr_course_code").show();
+                  $("#alert_tr_course_type").show();
+
+
+
+
+
             } else if (tr_course_code == "") {
                   $("#alert_tr_course_code").show();
             } else if (tr_course_name == "") {
