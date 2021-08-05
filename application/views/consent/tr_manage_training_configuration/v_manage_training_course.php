@@ -289,65 +289,64 @@
             var tr_course_category2 = document.getElementById("tr_course_category2" + check).value;
             var tr_course_category3 = document.getElementById("tr_course_category3" + check).value;
             var tr_course_type = document.getElementById("tr_course_type" + check).value;
-
-            if (tr_course_code != "0" && tr_course_name != "" && tr_course_category1 != "0" && tr_course_category2 !=
-                  "0" && tr_course_category3 != "0" && tr_course_type != "0") {
+console.log(tr_course_code)
+            if (tr_course_code != "0" && tr_course_name != "" && tr_course_category1 != "0" && tr_course_category2 !="0" && tr_course_category3 != "0" && tr_course_type != "0") {
                   Edit_course(check);
                   return true;
 
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_name == "" && tr_course_category1 == "0" && tr_course_category2 == "0" && tr_course_category3 == "0" && tr_course_type == "0") {
-                  $("#alert_tr_course_code" + check).show();
-                  $("#alert_tr_course_name" + check).show();
-                  $("#alert_tr_course_category" + check).show();
-                  $("#alert_tr_course_type" + check).show();
+                  $("#alert_tr_edtcourse_code" + check).show();
+                  $("#alert_tr_edtcourse_name" + check).show();
+                  $("#alert_tr_edtcourse_category" + check).show();
+                  $("#alert_tr_edtcourse_type" + check).show();
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_name == "") {
-                  $("#alert_tr_course_code" + check).show();
-                  $("#alert_tr_course_name" + check).show();
+                  $("#alert_tr_edtcourse_code" + check).show();
+                  $("#alert_tr_edtcourse_name" + check).show();
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_category1 == "0") {
-                  $("#alert_tr_course_code" + check).show();
-                  $("#alert_tr_course_category" + check).show();
+                  $("#alert_tr_edtcourse_code" + check).show();
+                  $("#alert_tr_edtcourse_category" + check).show();
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_category2 == "0") {
-                  $("#alert_tr_course_code" + check).show();
-                  $("#alert_tr_course_category" + check).show();
+                  $("#alert_tr_edtcourse_code" + check).show();
+                  $("#alert_tr_edtcourse_category" + check).show();
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_category3 == "0") {
-                  $("#alert_tr_course_code" + check).show();
-                  $("#alert_tr_course_category" + check).show();
+                  $("#alert_tr_edtcourse_code" + check).show();
+                  $("#alert_tr_edtcourse_category" + check).show();
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_type == "0") {
-                  $("#alert_tr_course_code" + check).show();
-                  $("#alert_tr_course_type" + check).show();
+                  $("#alert_tr_edtcourse_code" + check).show();
+                  $("#alert_tr_edtcourse_type" + check).show();
             } else if (tr_course_name == "" && tr_course_category1 == "0") {
-                  $("#alert_tr_course_name" + check).show();
-                  $("#alert_tr_course_category" + check).show();
+                  $("#alert_tr_edtcourse_name" + check).show();
+                  $("#alert_tr_edtcourse_category" + check).show();
             } else if (tr_course_name == "" && tr_course_category2 == "0") {
-                  $("#alert_tr_course_name" + check).show();
-                  $("#alert_tr_course_category" + check).show();
+                  $("#alert_tr_edtcourse_name" + check).show();
+                  $("#alert_tr_edtcourse_category" + check).show();
             } else if (tr_course_name == "" && tr_course_category3 == "0") {
-                  $("#alert_tr_course_name" + check).show();
-                  $("#alert_tr_course_category" + check).show();
+                  $("#alert_tr_edtcourse_name" + check).show();
+                  $("#alert_tr_edtcourse_category" + check).show();
             } else if (tr_course_name == "" && tr_course_type == "0") {
-                  $("#alert_tr_course_name" + check).show();
-                  $("#alert_tr_course_type" + check).show();
+                  $("#alert_tr_edtcourse_name" + check).show();
+                  $("#alert_tr_edtcourse_type" + check).show();
             } else if (tr_course_type == "0" && tr_course_category1 == "0") {
-                  $("#alert_tr_course_type" + check).show();
-                  $("#alert_tr_course_category" + check).show();
+                  $("#alert_tr_edtcourse_type" + check).show();
+                  $("#alert_tr_edtcourse_category" + check).show();
             } else if (tr_course_type == "0" && tr_course_category2 == "0") {
-                  $("#alert_tr_course_type" + check).show();
-                  $("#alert_tr_course_category" + check).show();
+                  $("#alert_tr_edtcourse_type" + check).show();
+                  $("#alert_tr_edtcourse_category" + check).show();
             } else if (tr_course_type == "0" && tr_course_category3 == "0") {
-                  $("#alert_tr_course_type" + check).show();
-                  $("#alert_tr_course_category" + check).show();
+                  $("#alert_tr_edtcourse_type" + check).show();
+                  $("#alert_tr_edtcourse_category" + check).show();
             } else if (tr_course_code == "0" || tr_course_code == "") {
-                  $("#alert_tr_course_code" + check).show();
+                  $("#alert_tr_edtcourse_code" + check).show();
             } else if (tr_course_name == "") {
-                  $("#alert_tr_course_name" + check).show();
+                  $("#alert_tr_edtcourse_name" + check).show();
             } else if (tr_course_category1 == "0") {
-                  $("#alert_tr_course_category" + check).show();
+                  $("#alert_tr_edtcourse_category" + check).show();
             } else if (tr_course_category2 == "0") {
-                  $("#alert_tr_course_category" + check).show();
+                  $("#alert_tr_edtcourse_category" + check).show();
             } else if (tr_course_category3 == "0") {
-                  $("#alert_tr_course_category" + check).show();
+                  $("#alert_tr_edtcourse_category" + check).show();
             } else if (tr_course_type == "0") {
-                  $("#alert_tr_course_type" + check).show();
+                  $("#alert_tr_edtcourse_type" + check).show();
             }
 
 
@@ -615,7 +614,10 @@
                                                 value="<?php echo $row->Course_code; ?>">
                                     </div>
                                     <p id="alert_tr_edtcourse_code<?php echo $row->Course_id; ?>">
-                                                <font color="red"><b>Please fill out the information completely. </b>
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    &nbsp; &nbsp; &nbsp;
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;            
+                                    <font color="red"><b>Please fill out the information completely. </b>
                                                 </font>
                                           </p>
 
@@ -629,7 +631,10 @@
                                                 value="<?php echo $row->Course_name; ?>">
                                     </div>
                                     <p id="alert_tr_edtcourse_name<?php echo $row->Course_id; ?>">
-                                                <font color="red"><b>Please fill out the information completely. </b>
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    &nbsp; &nbsp; &nbsp;
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;            
+                                    <font color="red"><b>Please fill out the information completely. </b>
                                                 </font>
                                           </p>
                               </div>
@@ -743,14 +748,16 @@
                                                 </option>
                                                 <?php } ?>
                                           </select>
-                                          <p id="alert_tr_edtcourse_category<?php echo $row->Course_id; ?>">
                                          
-                                          &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                          &nbsp; &nbsp; &nbsp;
-                                          <font color="red"><b>Please fill out the information completely. </b></font>
-                                    </p>
                                     </div>
-
+                                    <p id="alert_tr_edtcourse_category<?php echo $row->Course_id; ?>">
+                                         
+                                         &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                         &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;
+                                         &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                                         
+                                         <font color="red"><b>Please fill out the information completely. </b></font>
+                                   </p>
                               </div> <!-- row category -->
                               <br>
                               <div class="row">
@@ -770,7 +777,7 @@
                                     </div>
                                     <p id="alert_tr_edtcourse_type<?php echo $row->Course_id; ?>">
                                     &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                    &nbsp;
+                                    &nbsp; &nbsp; &nbsp;
                                     &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                                     <font color="red"><b>Please fill out the information completely. </b></font>
                               </p>
