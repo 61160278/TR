@@ -36,6 +36,12 @@
       <!-- End style CSS  -->
       <script>
       $(document).ready(function() {
+
+            $("#alert_tr_title").hide();
+            $("#tr_titlename").keyup(function() {
+                  $("#alert_tr_title").hide();
+            });
+
             $("#alert_tr_fname").hide();
             $("#tr_fname").keyup(function() {
                   $("#alert_tr_fname").hide();
@@ -51,11 +57,27 @@
                   $("#alert_tr_Ins").hide();
             });
 
+//==========================================================
+            $("#alert_tr_edtfname").hide();
+            $("#tr_fname").keyup(function() {
+                  $("#alert_tr_edtfname").hide();
+            });
+
+            $("#alert_tr_edtSname").hide();
+            $("#tr_Sname").keyup(function() {
+                  $("#alert_tr_edtSname").hide();
+            });
+
+            $("#alert_tr_edtIns").hide();
+            $("#tr_Institution").keyup(function() {
+                  $("#alert_tr_edtIns").hide();
+            });
+
       });
       // document ready
-    
 
-      
+
+
 
 
       function add_instructors() {
@@ -152,6 +174,19 @@
       }
       //function Delete_data
 
+
+      // function tr_clear_css(trainer_id) {
+      //       $("#alert_tr_edtfname" + trainer_id).hide();
+      //       $("#alert_tr_edtSname" + trainer_id).hide();
+      //       $("#alert_tr_edtIns" + trainer_id).hide();
+
+
+           
+      // }
+      //function tr_clear_css
+
+
+
       function check_data() {
             var tr_titlename = document.getElementById("tr_titlename").value;
             var tr_fname = document.getElementById("tr_fname").value;
@@ -163,67 +198,67 @@
                   add_instructors();
                   return true;
 
-             } else if (tr_titlename == "0" && tr_fname == "" && tr_Sname == "" && tr_Institution == "") {
+            } else if (tr_titlename == "0" && tr_fname == "" && tr_Sname == "" && tr_Institution == "") {
+                  $("#alert_tr_title").show();
                   $("#alert_tr_fname").show();
                   $("#alert_tr_Sname").show();
                   $("#alert_tr_Ins").show();
-             }else  if (tr_fname == "" && tr_Sname == ""){
+            } else if (tr_fname == "" && tr_Sname == "") {
                   $("#alert_tr_fname").show();
                   $("#alert_tr_Sname").show();
-            }else  if (tr_fname == "" && tr_Institution == ""){
+            } else if (tr_fname == "" && tr_Institution == "") {
                   $("#alert_tr_fname").show();
                   $("#alert_tr_Ins").show();
-            }else  if (tr_Sname == "" && tr_Institution == ""){
+            } else if (tr_Sname == "" && tr_Institution == "") {
                   $("#alert_tr_Sname").show();
                   $("#alert_tr_Ins").show();
+            } else if (tr_titlename == "0") {
+                  $("#alert_tr_title").show();
+
+            }else if (tr_fname == "") {
+                  $("#alert_tr_fname").show();
+
+            } else if (tr_Sname == "") {
+                  $("#alert_tr_Sname").show();
+
+            } else if (tr_Institution == "") {
+                  $("#alert_tr_Ins").show();
+
             }
-            else  if (tr_fname == "" ){
-                  $("#alert_tr_fname").show();
-                  
-            } else  if (tr_Sname == "" ){
-                  $("#alert_tr_Sname").show();
-                  
-            }else  if (tr_Institution == ""){
-                  $("#alert_tr_Ins").show();
-                  
-            }
-           
+
 
       }
       //check_data
 
-      function check_edt_data(trainer_id) {
-            var tr_titlename = document.getElementById("tr_titlename" + trainer_id).value;
-            var tr_fname = document.getElementById("tr_fname" + trainer_id).value;
-            var tr_Sname = document.getElementById("tr_Sname" + trainer_id).value;
-            var tr_Institution = document.getElementById("tr_Institution" + trainer_id).value;
+      function check_edt_data(check) {
+            var tr_titlename = document.getElementById("tr_titlename" + check).value;
+            var tr_fname = document.getElementById("tr_fname" + check).value;
+            var tr_Sname = document.getElementById("tr_Sname" + check).value;
+            var tr_Institution = document.getElementById("tr_Institution" + check).value;
 
 
             if (tr_titlename != "0" && tr_fname != "" && tr_Sname != "" && tr_Institution != "") {
-                  Edit_instructor(trainer_id);
+                  Edit_instructor(check);
                   return true;
 
-             } else if (tr_titlename == "0" && tr_fname == "" && tr_Sname == "" && tr_Institution == "") {
-                  $("#alert_tr_fname").show();
-                  $("#alert_tr_Sname").show();
-                  $("#alert_tr_Ins").show();
-             }
-            else  if (tr_fname == "" ){
-                  $("#alert_tr_fname").show();
-                  
-            } else  if (tr_Sname == "" ){
-                  $("#alert_tr_Sname").show();
-                  
-            }else  if (tr_Institution == ""){
-                  $("#alert_tr_Ins").show();
-                  
+            } else if (tr_titlename == "0" && tr_fname == "" && tr_Sname == "" && tr_Institution == "") {
+                  $("#alert_tr_edtfname" + check).show();
+                  $("#alert_tr_edtSname" + check).show();
+                  $("#alert_tr_edtIns" + check).show();
+            } else if (tr_fname == "") {
+                  $("#alert_tr_edtfname" + check).show();
+
+            } else if (tr_Sname == "") {
+                  $("#alert_tr_edtSname" + check).show();
+
+            } else if (tr_Institution == "") {
+                  $("#alert_tr_edtIns" + check).show();
+
             }
-           
+
 
       }
       //check_data
-
-
       </script>
 
       <!-- Begin Page Content -->
@@ -363,7 +398,10 @@
                                                 <option value="Ms.">Ms.</option>
                                           </select>
                                     </div>
-
+                                    <p id="alert_tr_title">
+                                                <font color="red"><b>Please fill out the information completely. </b>
+                                                </font>
+                                          </p>
 
                               </div>
                               <br>
@@ -373,7 +411,8 @@
                                     <div class="col-sm-6">
                                           <input type="text" class="form-control" id="tr_fname" placeholder="FirstName">
                                           <p id="alert_tr_fname">
-                                                <font color="red"><b>Please fill out the information completely. </b></font>
+                                                <font color="red"><b>Please fill out the information completely. </b>
+                                                </font>
                                           </p>
                                     </div>
 
@@ -384,7 +423,8 @@
                                     <div class="col-sm-6">
                                           <input type="text" class="form-control" id="tr_Sname" placeholder="Surname">
                                           <p id="alert_tr_Sname">
-                                                <font color="red"><b>Please fill out the information completely. </b></font>
+                                                <font color="red"><b>Please fill out the information completely. </b>
+                                                </font>
                                           </p>
                                     </div>
                               </div>
@@ -394,8 +434,9 @@
                                     <div class="col-sm-6">
                                           <input type="text" class="form-control" id="tr_Institution"
                                                 placeholder="Institution">
-                                                <p id="alert_tr_Ins">
-                                                <font color="red"><b>Please fill out the information completely. </b></font>
+                                          <p id="alert_tr_Ins">
+                                                <font color="red"><b>Please fill out the information completely. </b>
+                                                </font>
                                           </p>
                                     </div>
                               </div>
@@ -405,7 +446,8 @@
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary" id="btnadd" onclick="check_data()">Save</button>
+                              <button type="button" class="btn btn-primary" id="btnadd"
+                                    onclick="check_data()">Save</button>
                         </div>
                   </div>
             </div>
@@ -459,7 +501,10 @@
                                           <input type="text" class="form-control"
                                                 id="tr_fname<?php echo $row->trainer_id; ?>" placeholder="FirstName"
                                                 value="<?php echo $row->trainer_fname; ?>">
-                                                
+                                          <p id="alert_tr_edtfname<?php echo $row->trainer_id; ?>">
+                                                <font color="red"><b>Please fill out the information completely. </b>
+                                                </font>
+                                          </p>
                                     </div>
 
                               </div>
@@ -470,6 +515,10 @@
                                           <input type="text" class="form-control"
                                                 id="tr_Sname<?php echo $row->trainer_id; ?>" placeholder="Surname"
                                                 value="<?php echo $row->trainer_Sname; ?>">
+                                          <p id="alert_tr_edtSname<?php echo $row->trainer_id; ?>" hidden>
+                                                <font color="red"><b>Please fill out the information completely. </b>
+                                                </font>
+                                          </p>
                                     </div>
                               </div>
                               <br>
@@ -479,6 +528,10 @@
                                           <input type="text" class="form-control"
                                                 id="tr_Institution<?php echo $row->trainer_id; ?>"
                                                 placeholder="Institution" value="<?php echo $row->Institution; ?>">
+                                          <p id="alert_tr_edtIns<?php echo $row->trainer_id; ?>" hidden>
+                                                <font color="red"><b>Please fill out the information completely. </b>
+                                                </font>
+                                          </p>
                                     </div>
                               </div>
 
