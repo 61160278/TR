@@ -36,12 +36,36 @@
       <!-- End style CSS  -->
       <script>
              $(document).ready(function() {
+
+            $("#alert_tr_course_code").hide();
+            $("#tr_course_code").keyup(function() {
+                  $("#alert_tr_course_code").hide();
+            });
+
             $("#alert_tr_course_name").hide();
             $("#tr_course_name").keyup(function() {
                   $("#alert_tr_course_name").hide();
             });
 
+            $("#alert_tr_course_category1").hide();
+            $("#tr_course_category1").change(function() {
+                  $("#alert_tr_course_category1").hide();
+            });
         
+            $("#alert_tr_course_category2").hide();
+            $("#tr_course_category2").change(function() {
+                  $("#alert_tr_course_category2").hide();
+            });
+
+            $("#alert_tr_course_category3").hide();
+            $("#tr_course_category3").change(function() {
+                  $("#alert_tr_course_category3").hide();
+            });
+
+            $("#alert_tr_course_type").hide();
+            $("#tr_course_type").change(function() {
+                  $("#alert_tr_course_type").hide();
+            });
 
       });
       // document ready
@@ -317,9 +341,9 @@
                                     <div class="col-sm-6">
                                           <input type="text" class="form-control" id="tr_course_name"
                                                 placeholder="Name" checked required>
-                                                <!-- <p id="alert_tr_course_name">
+                                                <p id="alert_tr_course_name">
                                                 <font color="red"><b>Please fill out the information completely. </b></font>
-                                          </p> -->
+                                          </p>
                                     </div>
                               </div>
                               <br>
