@@ -47,19 +47,19 @@
                   $("#alert_tr_course_name").hide();
             });
 
-            $("#alert_tr_course_category1").hide();
+            $("#alert_tr_course_category").hide();
             $("#tr_course_category1").change(function() {
-                  $("#alert_tr_course_category1").hide();
+                  $("#alert_tr_course_category").hide();
             });
 
-            $("#alert_tr_course_category2").hide();
+            $("#alert_tr_course_category").hide();
             $("#tr_course_category2").change(function() {
-                  $("#alert_tr_course_category2").hide();
+                  $("#alert_tr_course_category").hide();
             });
 
-            $("#alert_tr_course_category3").hide();
+            $("#alert_tr_course_category").hide();
             $("#tr_course_category3").change(function() {
-                  $("#alert_tr_course_category3").hide();
+                  $("#alert_tr_course_category").hide();
             });
 
             $("#alert_tr_course_type").hide();
@@ -187,16 +187,18 @@
                   tr_course_category2 == "0" && tr_course_category3 == "0" && tr_course_type == "0") {
                   $("#alert_tr_course_code").show();
                   $("#alert_tr_course_name").show();
-                  $("#alert_tr_course_category1").show();
-                  $("#alert_tr_course_category2").show();
-                  $("#alert_tr_course_category3").show();
+                  $("#alert_tr_course_category").show();
                   $("#alert_tr_course_type").show();
             } else if (tr_course_code == "") {
                   $("#alert_tr_course_code").show();
             } else if (tr_course_name == "") {
                   $("#alert_tr_course_name").show();
             } else if (tr_course_category1 == "0") {
-                  $("#alert_tr_course_category1").show();
+                  $("#alert_tr_course_category").show();
+            } else if (tr_course_category2 == "0") {
+                  $("#alert_tr_course_category").show();
+            } else if (tr_course_category3 == "0") {
+                  $("#alert_tr_course_category").show();
             } else if (tr_course_type == "0") {
                   $("#alert_tr_course_type").show();
             }
@@ -404,17 +406,14 @@
                                                 <option value="On the job training">On the job training</option>
                                           </select>
                                     </div>
-                                    <p id="alert_tr_course_category1">
-                                    <!-- <p id="alert_tr_course_category2">
-                                    <p id="alert_tr_course_category3"> -->
+                                    <p id="alert_tr_course_category">
                                           &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                                           &nbsp; &nbsp;
                                           &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                                           &nbsp; &nbsp; &nbsp;
                                           <font color="red"><b>Please fill out the information completely. </b></font>
                                     </p>    
-                                    <!-- </p>
-                                    </p> -->
+                                 
                               </div>
                               <br>
                               <div class="row">
