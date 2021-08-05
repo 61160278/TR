@@ -67,6 +67,49 @@
                   $("#alert_tr_course_type").hide();
             });
 
+            //=================================================================
+
+            <?php  foreach($crs as $index=>$row ){  ?>
+
+                  $("#alert_tr_edtcourse_code").hide();
+            $("#tr_course_code").keyup(function() {
+                  $("#alert_tr_edtcourse_code").hide();
+            });
+
+            $("#alert_tr_edtcourse_name").hide();
+            $("#tr_course_name").keyup(function() {
+                  $("#alert_tr_edtcourse_name").hide();
+            });
+
+            $("#alert_tr_edtcourse_category").hide();
+            $("#tr_course_category1").change(function() {
+                  $("#alert_tr_edtcourse_category").hide();
+            });
+
+            $("#alert_tr_edtcourse_category").hide();
+            $("#tr_course_category2").change(function() {
+                  $("#alert_tr_edtcourse_category").hide();
+            });
+
+            $("#alert_tr_edtcourse_category").hide();
+            $("#tr_course_category3").change(function() {
+                  $("#alert_tr_edtcourse_category").hide();
+            });
+
+            $("#alert_tr_edtcourse_type").hide();
+            $("#tr_course_type").change(function() {
+                  $("#alert_tr_edtcourse_type").hide();
+            });
+            <?php  } ?>
+
+
+
+
+
+
+
+
+
       });
       // document ready
       function add_courses() {
@@ -183,7 +226,8 @@
                   add_courses();
                   return true;
 
-            } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_name == "" && tr_course_category1 == "0" &&
+            } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_name == "" && tr_course_category1 ==
+                  "0" &&
                   tr_course_category2 == "0" && tr_course_category3 == "0" && tr_course_type == "0") {
                   $("#alert_tr_course_code").show();
                   $("#alert_tr_course_name").show();
@@ -239,7 +283,7 @@
                   $("#alert_tr_course_type").show();
             }
 
-      
+
       }
       //check_data
 
@@ -257,7 +301,8 @@
                   Edit_course(checkc);
                   return true;
 
-            } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_name == "" && tr_course_category1 == "0" &&
+            } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_name == "" && tr_course_category1 ==
+                  "0" &&
                   tr_course_category2 == "0" && tr_course_category3 == "0" && tr_course_type == "0") {
                   $("#alert_tr_course_code" + checkc).show();
                   $("#alert_tr_course_name" + checkc).show();
@@ -297,7 +342,7 @@
                   $("#alert_tr_course_type" + checkc).show();
                   $("#alert_tr_course_category" + checkc).show();
             } else if (tr_course_type == "0" && tr_course_category3 == "0") {
-                  $("#alert_tr_course_type"+ checkc).show();
+                  $("#alert_tr_course_type" + checkc).show();
                   $("#alert_tr_course_category" + checkc).show();
             } else if (tr_course_code == "0" || tr_course_code == "") {
                   $("#alert_tr_course_code" + checkc).show();
@@ -317,8 +362,6 @@
 
       }
       //check_data
-
-
       </script>
 
       <!-- Begin Page Content -->
@@ -523,8 +566,8 @@
                                           &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                                           &nbsp; &nbsp; &nbsp;
                                           <font color="red"><b>Please fill out the information completely. </b></font>
-                                    </p>    
-                                 
+                                    </p>
+
                               </div>
                               <br>
                               <div class="row">
