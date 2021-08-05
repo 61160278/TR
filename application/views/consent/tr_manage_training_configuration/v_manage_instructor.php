@@ -249,6 +249,7 @@
                   return true;
 
             } else if (tr_titlename == "0" && tr_fname == "" && tr_Sname == "" && tr_Institution == "") {
+                  $("#alert_tr_edttitle" + check).show();
                   $("#alert_tr_edtfname" + check).show();
                   $("#alert_tr_edtSname" + check).show();
                   $("#alert_tr_edtIns" + check).show();
@@ -261,6 +262,8 @@
             } else if (tr_Sname == "" && tr_Institution == "") {
                   $("#alert_tr_edtSname" + check).show();
                   $("#alert_tr_edtIns" + check).show();
+            }else if (tr_titlename == "0") {
+                  $("#alert_tr_edttitle" + check).show();
             } else if (tr_fname == "") {
                   $("#alert_tr_edtfname" + check).show();
 
@@ -506,7 +509,10 @@
                                                 <?php } ?>
                                           </select>
                                     </div>
-
+                                    <p id="alert_tr_edttitle<?php echo $row->trainer_id; ?>">
+                                                <font color="red"><b>Please fill out the information completely. </b>
+                                                </font>
+                                          </p>
 
                               </div>
                               <br>
