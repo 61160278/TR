@@ -71,42 +71,36 @@
 
             <?php  foreach($crs as $index=>$row ){  ?>
 
-                  $("#alert_tr_edtcourse_code").hide();
-            $("#tr_course_code").keyup(function() {
-                  $("#alert_tr_edtcourse_code").hide();
+                  $("#alert_tr_edtcourse_code<?php echo $row->Course_id; ?>").hide();
+            $("#tr_course_code<?php echo $row->Course_id; ?>").keyup(function() {
+                  $("#alert_tr_edtcourse_code<?php echo $row->Course_id; ?>").hide();
             });
 
-            $("#alert_tr_edtcourse_name").hide();
-            $("#tr_course_name").keyup(function() {
-                  $("#alert_tr_edtcourse_name").hide();
+            $("#alert_tr_edtcourse_name<?php echo $row->Course_id; ?>").hide();
+            $("#tr_course_name<?php echo $row->Course_id; ?>").keyup(function() {
+                  $("#alert_tr_edtcourse_name<?php echo $row->Course_id; ?>").hide();
             });
 
-            $("#alert_tr_edtcourse_category").hide();
-            $("#tr_course_category1").change(function() {
-                  $("#alert_tr_edtcourse_category").hide();
+            $("#alert_tr_edtcourse_category<?php echo $row->Course_id; ?>").hide();
+            $("#tr_course_category1<?php echo $row->Course_id; ?>").change(function() {
+                  $("#alert_tr_edtcourse_category<?php echo $row->Course_id; ?>").hide();
             });
 
-            $("#alert_tr_edtcourse_category").hide();
-            $("#tr_course_category2").change(function() {
-                  $("#alert_tr_edtcourse_category").hide();
+            $("#alert_tr_edtcourse_category<?php echo $row->Course_id; ?>").hide();
+            $("#tr_course_category2<?php echo $row->Course_id; ?>").change(function() {
+                  $("#alert_tr_edtcourse_category<?php echo $row->Course_id; ?>").hide();
             });
 
-            $("#alert_tr_edtcourse_category").hide();
-            $("#tr_course_category3").change(function() {
-                  $("#alert_tr_edtcourse_category").hide();
+            $("#alert_tr_edtcourse_category<?php echo $row->Course_id; ?>").hide();
+            $("#tr_course_category3<?php echo $row->Course_id; ?>").change(function() {
+                  $("#alert_tr_edtcourse_category<?php echo $row->Course_id; ?>").hide();
             });
 
-            $("#alert_tr_edtcourse_type").hide();
-            $("#tr_course_type").change(function() {
-                  $("#alert_tr_edtcourse_type").hide();
+            $("#alert_tr_edtcourse_type<?php echo $row->Course_id; ?>").hide();
+            $("#tr_course_type<?php echo $row->Course_id; ?>").change(function() {
+                  $("#alert_tr_edtcourse_type<?php echo $row->Course_id; ?>").hide();
             });
             <?php  } ?>
-
-
-
-
-
-
 
 
 
