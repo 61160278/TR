@@ -243,74 +243,74 @@
       }
       //check_data
 
-      function check_edt_course(check) {
-            var tr_course_code = document.getElementById("tr_course_code").value;
-            var tr_course_name = document.getElementById("tr_course_name").value;
-            var tr_course_des = document.getElementById("tr_course_des").value;
-            var tr_course_category1 = document.getElementById("tr_course_category1").value;
-            var tr_course_category2 = document.getElementById("tr_course_category2").value;
-            var tr_course_category3 = document.getElementById("tr_course_category3").value;
-            var tr_course_type = document.getElementById("tr_course_type").value;
+      function check_edt_course(checkc) {
+            var tr_course_code = document.getElementById("tr_course_code" + checkc).value;
+            var tr_course_name = document.getElementById("tr_course_name" + checkc).value;
+            var tr_course_des = document.getElementById("tr_course_des" + checkc).value;
+            var tr_course_category1 = document.getElementById("tr_course_category1" + checkc).value;
+            var tr_course_category2 = document.getElementById("tr_course_category2" + checkc).value;
+            var tr_course_category3 = document.getElementById("tr_course_category3" + checkc).value;
+            var tr_course_type = document.getElementById("tr_course_type" + checkc).value;
 
             if (tr_course_code != "0" && tr_course_name != "" && tr_course_category1 != "0" && tr_course_category2 !=
                   "0" && tr_course_category3 != "0" && tr_course_type != "0") {
-                  add_courses();
+                  Edit_course(checkc);
                   return true;
 
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_name == "" && tr_course_category1 == "0" &&
                   tr_course_category2 == "0" && tr_course_category3 == "0" && tr_course_type == "0") {
-                  $("#alert_tr_course_code").show();
-                  $("#alert_tr_course_name").show();
-                  $("#alert_tr_course_category").show();
-                  $("#alert_tr_course_type").show();
+                  $("#alert_tr_course_code" + checkc).show();
+                  $("#alert_tr_course_name" + checkc).show();
+                  $("#alert_tr_course_category" + checkc).show();
+                  $("#alert_tr_course_type" + checkc).show();
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_name == "") {
-                  $("#alert_tr_course_code").show();
-                  $("#alert_tr_course_name").show();
+                  $("#alert_tr_course_code" + checkc).show();
+                  $("#alert_tr_course_name" + checkc).show();
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_category1 == "0") {
-                  $("#alert_tr_course_code").show();
-                  $("#alert_tr_course_category").show();
+                  $("#alert_tr_course_code" + checkc).show();
+                  $("#alert_tr_course_category" + checkc).show();
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_category2 == "0") {
-                  $("#alert_tr_course_code").show();
-                  $("#alert_tr_course_category").show();
+                  $("#alert_tr_course_code" + checkc).show();
+                  $("#alert_tr_course_category" + checkc).show();
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_category3 == "0") {
-                  $("#alert_tr_course_code").show();
-                  $("#alert_tr_course_category").show();
+                  $("#alert_tr_course_code" + checkc).show();
+                  $("#alert_tr_course_category" + checkc).show();
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_type == "0") {
-                  $("#alert_tr_course_code").show();
-                  $("#alert_tr_course_type").show();
+                  $("#alert_tr_course_code" + checkc).show();
+                  $("#alert_tr_course_type" + checkc).show();
             } else if (tr_course_name == "" && tr_course_category1 == "0") {
-                  $("#alert_tr_course_name").show();
-                  $("#alert_tr_course_category").show();
+                  $("#alert_tr_course_name" + checkc).show();
+                  $("#alert_tr_course_category" + checkc).show();
             } else if (tr_course_name == "" && tr_course_category2 == "0") {
-                  $("#alert_tr_course_name").show();
-                  $("#alert_tr_course_category").show();
+                  $("#alert_tr_course_name" + checkc).show();
+                  $("#alert_tr_course_category") + checkc.show();
             } else if (tr_course_name == "" && tr_course_category3 == "0") {
-                  $("#alert_tr_course_name").show();
-                  $("#alert_tr_course_category").show();
+                  $("#alert_tr_course_name" + checkc).show();
+                  $("#alert_tr_course_category" + checkc).show();
             } else if (tr_course_name == "" && tr_course_type == "0") {
-                  $("#alert_tr_course_name").show();
-                  $("#alert_tr_course_type").show();
+                  $("#alert_tr_course_name" + checkc).show();
+                  $("#alert_tr_course_type" + checkc).show();
             } else if (tr_course_type == "0" && tr_course_category1 == "0") {
-                  $("#alert_tr_course_type").show();
-                  $("#alert_tr_course_category").show();
+                  $("#alert_tr_course_type" + checkc).show();
+                  $("#alert_tr_course_category" + checkc).show();
             } else if (tr_course_type == "0" && tr_course_category2 == "0") {
-                  $("#alert_tr_course_type").show();
-                  $("#alert_tr_course_category").show();
+                  $("#alert_tr_course_type" + checkc).show();
+                  $("#alert_tr_course_category" + checkc).show();
             } else if (tr_course_type == "0" && tr_course_category3 == "0") {
-                  $("#alert_tr_course_type").show();
-                  $("#alert_tr_course_category").show();
+                  $("#alert_tr_course_type"+ checkc).show();
+                  $("#alert_tr_course_category" + checkc).show();
             } else if (tr_course_code == "0" || tr_course_code == "") {
-                  $("#alert_tr_course_code").show();
+                  $("#alert_tr_course_code" + checkc).show();
             } else if (tr_course_name == "") {
-                  $("#alert_tr_course_name").show();
+                  $("#alert_tr_course_name" + checkc).show();
             } else if (tr_course_category1 == "0") {
-                  $("#alert_tr_course_category").show();
+                  $("#alert_tr_course_category" + checkc).show();
             } else if (tr_course_category2 == "0") {
-                  $("#alert_tr_course_category").show();
+                  $("#alert_tr_course_category" + checkc).show();
             } else if (tr_course_category3 == "0") {
-                  $("#alert_tr_course_category").show();
+                  $("#alert_tr_course_category" + checkc).show();
             } else if (tr_course_type == "0") {
-                  $("#alert_tr_course_type").show();
+                  $("#alert_tr_course_type" + checkc).show();
             }
 
 
