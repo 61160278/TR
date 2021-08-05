@@ -281,75 +281,73 @@
       }
       //check_data
 
-      function check_edt_course(checkc) {
-            var tr_course_code = document.getElementById("tr_course_code" + checkc).value;
-            var tr_course_name = document.getElementById("tr_course_name" + checkc).value;
-            var tr_course_des = document.getElementById("tr_course_des" + checkc).value;
-            var tr_course_category1 = document.getElementById("tr_course_category1" + checkc).value;
-            var tr_course_category2 = document.getElementById("tr_course_category2" + checkc).value;
-            var tr_course_category3 = document.getElementById("tr_course_category3" + checkc).value;
-            var tr_course_type = document.getElementById("tr_course_type" + checkc).value;
+      function check_edt_course(check) {
+            var tr_course_code = document.getElementById("tr_course_code" + check).value;
+            var tr_course_name = document.getElementById("tr_course_name" + check).value;
+            var tr_course_des = document.getElementById("tr_course_des" + check).value;
+            var tr_course_category1 = document.getElementById("tr_course_category1" + check).value;
+            var tr_course_category2 = document.getElementById("tr_course_category2" + check).value;
+            var tr_course_category3 = document.getElementById("tr_course_category3" + check).value;
+            var tr_course_type = document.getElementById("tr_course_type" + check).value;
 
             if (tr_course_code != "0" && tr_course_name != "" && tr_course_category1 != "0" && tr_course_category2 !=
                   "0" && tr_course_category3 != "0" && tr_course_type != "0") {
-                  Edit_course(checkc);
+                  Edit_course(check);
                   return true;
 
-            } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_name == "" && tr_course_category1 ==
-                  "0" &&
-                  tr_course_category2 == "0" && tr_course_category3 == "0" && tr_course_type == "0") {
-                  $("#alert_tr_course_code" + checkc).show();
-                  $("#alert_tr_course_name" + checkc).show();
-                  $("#alert_tr_course_category" + checkc).show();
-                  $("#alert_tr_course_type" + checkc).show();
+            } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_name == "" && tr_course_category1 == "0" && tr_course_category2 == "0" && tr_course_category3 == "0" && tr_course_type == "0") {
+                  $("#alert_tr_course_code" + check).show();
+                  $("#alert_tr_course_name" + check).show();
+                  $("#alert_tr_course_category" + check).show();
+                  $("#alert_tr_course_type" + check).show();
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_name == "") {
-                  $("#alert_tr_course_code" + checkc).show();
-                  $("#alert_tr_course_name" + checkc).show();
+                  $("#alert_tr_course_code" + check).show();
+                  $("#alert_tr_course_name" + check).show();
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_category1 == "0") {
-                  $("#alert_tr_course_code" + checkc).show();
-                  $("#alert_tr_course_category" + checkc).show();
+                  $("#alert_tr_course_code" + check).show();
+                  $("#alert_tr_course_category" + check).show();
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_category2 == "0") {
-                  $("#alert_tr_course_code" + checkc).show();
-                  $("#alert_tr_course_category" + checkc).show();
+                  $("#alert_tr_course_code" + check).show();
+                  $("#alert_tr_course_category" + check).show();
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_category3 == "0") {
-                  $("#alert_tr_course_code" + checkc).show();
-                  $("#alert_tr_course_category" + checkc).show();
+                  $("#alert_tr_course_code" + check).show();
+                  $("#alert_tr_course_category" + check).show();
             } else if (tr_course_code == "0" || tr_course_code == "" && tr_course_type == "0") {
-                  $("#alert_tr_course_code" + checkc).show();
-                  $("#alert_tr_course_type" + checkc).show();
+                  $("#alert_tr_course_code" + check).show();
+                  $("#alert_tr_course_type" + check).show();
             } else if (tr_course_name == "" && tr_course_category1 == "0") {
-                  $("#alert_tr_course_name" + checkc).show();
-                  $("#alert_tr_course_category" + checkc).show();
+                  $("#alert_tr_course_name" + check).show();
+                  $("#alert_tr_course_category" + check).show();
             } else if (tr_course_name == "" && tr_course_category2 == "0") {
-                  $("#alert_tr_course_name" + checkc).show();
-                  $("#alert_tr_course_category") + checkc.show();
+                  $("#alert_tr_course_name" + check).show();
+                  $("#alert_tr_course_category" + check).show();
             } else if (tr_course_name == "" && tr_course_category3 == "0") {
-                  $("#alert_tr_course_name" + checkc).show();
-                  $("#alert_tr_course_category" + checkc).show();
+                  $("#alert_tr_course_name" + check).show();
+                  $("#alert_tr_course_category" + check).show();
             } else if (tr_course_name == "" && tr_course_type == "0") {
-                  $("#alert_tr_course_name" + checkc).show();
-                  $("#alert_tr_course_type" + checkc).show();
+                  $("#alert_tr_course_name" + check).show();
+                  $("#alert_tr_course_type" + check).show();
             } else if (tr_course_type == "0" && tr_course_category1 == "0") {
-                  $("#alert_tr_course_type" + checkc).show();
-                  $("#alert_tr_course_category" + checkc).show();
+                  $("#alert_tr_course_type" + check).show();
+                  $("#alert_tr_course_category" + check).show();
             } else if (tr_course_type == "0" && tr_course_category2 == "0") {
-                  $("#alert_tr_course_type" + checkc).show();
-                  $("#alert_tr_course_category" + checkc).show();
+                  $("#alert_tr_course_type" + check).show();
+                  $("#alert_tr_course_category" + check).show();
             } else if (tr_course_type == "0" && tr_course_category3 == "0") {
-                  $("#alert_tr_course_type" + checkc).show();
-                  $("#alert_tr_course_category" + checkc).show();
+                  $("#alert_tr_course_type" + check).show();
+                  $("#alert_tr_course_category" + check).show();
             } else if (tr_course_code == "0" || tr_course_code == "") {
-                  $("#alert_tr_course_code" + checkc).show();
+                  $("#alert_tr_course_code" + check).show();
             } else if (tr_course_name == "") {
-                  $("#alert_tr_course_name" + checkc).show();
+                  $("#alert_tr_course_name" + check).show();
             } else if (tr_course_category1 == "0") {
-                  $("#alert_tr_course_category" + checkc).show();
+                  $("#alert_tr_course_category" + check).show();
             } else if (tr_course_category2 == "0") {
-                  $("#alert_tr_course_category" + checkc).show();
+                  $("#alert_tr_course_category" + check).show();
             } else if (tr_course_category3 == "0") {
-                  $("#alert_tr_course_category" + checkc).show();
+                  $("#alert_tr_course_category" + check).show();
             } else if (tr_course_type == "0") {
-                  $("#alert_tr_course_type" + checkc).show();
+                  $("#alert_tr_course_type" + check).show();
             }
 
 
@@ -616,6 +614,10 @@
                                                 id="tr_course_code<?php echo $row->Course_id; ?>" placeholder="Code"
                                                 value="<?php echo $row->Course_code; ?>">
                                     </div>
+                                    <p id="alert_tr_edtcourse_code<?php echo $row->Course_id; ?>">
+                                                <font color="red"><b>Please fill out the information completely. </b>
+                                                </font>
+                                          </p>
 
                               </div>
                               <br>
@@ -626,6 +628,10 @@
                                                 id="tr_course_name<?php echo $row->Course_id; ?>" placeholder="Name"
                                                 value="<?php echo $row->Course_name; ?>">
                                     </div>
+                                    <p id="alert_tr_edtcourse_name<?php echo $row->Course_id; ?>">
+                                                <font color="red"><b>Please fill out the information completely. </b>
+                                                </font>
+                                          </p>
                               </div>
                               <br>
                               <div class="row">
@@ -737,6 +743,12 @@
                                                 </option>
                                                 <?php } ?>
                                           </select>
+                                          <p id="alert_tr_edtcourse_category<?php echo $row->Course_id; ?>">
+                                         
+                                          &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                          &nbsp; &nbsp; &nbsp;
+                                          <font color="red"><b>Please fill out the information completely. </b></font>
+                                    </p>
                                     </div>
 
                               </div> <!-- row category -->
@@ -756,7 +768,12 @@
                                                 <?php } ?>
                                           </select>
                                     </div>
-
+                                    <p id="alert_tr_edtcourse_type<?php echo $row->Course_id; ?>">
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    &nbsp;
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    <font color="red"><b>Please fill out the information completely. </b></font>
+                              </p>
 
                               </div>
 
@@ -765,7 +782,7 @@
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                               <button type="button" class="btn btn-primary"
-                                    onClick="Edit_course(<?php echo $row->Course_id; ?>)">Save</button>
+                                    onClick="check_edt_course(<?php echo $row->Course_id; ?>)">Save</button>
                         </div>
                   </div>
             </div>

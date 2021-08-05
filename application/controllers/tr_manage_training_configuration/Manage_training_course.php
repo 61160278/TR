@@ -117,7 +117,13 @@ class Manage_training_course extends MainController {
 	// function delete_instructor
 
 
-
+	function get_data_course()
+	{
+		$this->load->model('M_trs_trainer_data','mdda');
+		$data = $this->mdda->get_all_crs()->result();
+		echo json_encode($data);
+	}
+	// get_data
 
 
 
