@@ -575,7 +575,7 @@
                                     <div class="col-sm-6">
                                           <input type="text" class="form-control"
                                                 id="tr_fname<?php echo $row->trainer_id; ?>" placeholder="FirstName"
-                                                value="<?php echo $row->trainer_fname; ?>">
+                                                value="<?php echo $row->trainer_fname; ?>" checked required>
                                           <p id="alert_tr_edtfname<?php echo $row->trainer_id; ?>">
                                                 <font color="red"><b>Please fill out the information completely. </b>
                                                 </font>
@@ -589,7 +589,7 @@
                                     <div class="col-sm-6">
                                           <input type="text" class="form-control"
                                                 id="tr_Sname<?php echo $row->trainer_id; ?>" placeholder="Surname"
-                                                value="<?php echo $row->trainer_Sname; ?>">
+                                                value="<?php echo $row->trainer_Sname; ?>" checked required>
                                           <p id="alert_tr_edtSname<?php echo $row->trainer_id; ?>">
                                                 <font color="red"><b>Please fill out the information completely. </b>
                                                 </font>
@@ -602,7 +602,7 @@
                                     <div class="col-sm-6">
                                           <input type="text" class="form-control"
                                                 id="tr_Institution<?php echo $row->trainer_id; ?>"
-                                                placeholder="Institution" value="<?php echo $row->Institution; ?>">
+                                                placeholder="Institution" value="<?php echo $row->Institution; ?>" checked required>
                                           <p id="alert_tr_edtIns<?php echo $row->trainer_id; ?>">
                                                 <font color="red"><b>Please fill out the information completely. </b>
                                                 </font>
