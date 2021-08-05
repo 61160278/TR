@@ -1,20 +1,13 @@
 <?php
 /*
-* Da_evs_group
+* M_trs_trainer_data
 * C
-* @author Jakkarin Pimpaeng
-* @Create Date 2564-04-8
+* @author Jirayu Jaravichit
+* @Create Date 2564-07-29
 */ 
 
 
 include_once("trs_model.php");
-
-/*
-* Da_evs_group
-* 
-* @author Jakkarin Pimpaeng
-* @Create Date 2564-04-8
-*/ 
  
 class M_trs_trainer_data extends trs_model {		
 	
@@ -33,8 +26,8 @@ class M_trs_trainer_data extends trs_model {
 	* Insert  to database
 	* @input 
 	* @output -
-	* @author Jakkarin Pimpaeng
-	* @Create Date 2564-04-8
+	* @author Jirayu Jaravichit
+	* @Create Date 2564-07-29
 	*/
 	
 	function insert() {
@@ -50,8 +43,8 @@ class M_trs_trainer_data extends trs_model {
 	* Update  into database
 	* @input 
 	* @output -
-	* @author Jakkarin Pimpaeng
-	* @Create Date 2564-04-8
+	* @author Jirayu Jaravichit
+	* @Create Date 2564-07-29
 	*/
 
 	function update() {
@@ -69,8 +62,8 @@ class M_trs_trainer_data extends trs_model {
 	* Delete from database
 	* @input 
 	* @output -
-	* @author Tippawan Aiemsaad
-	* @Create Date 2564-04-8
+	* @author Jirayu Jaravichit
+	* @Create Date 2564-07-29
 	*/
 
 	function delete() {
@@ -85,8 +78,8 @@ class M_trs_trainer_data extends trs_model {
 	* Get  from database
 	* @input 
 	* @output -
-	* @author Jakkarin Pimpaeng
-	* @Create Date 2564-04-8
+	* @author Jirayu Jaravichit
+	* @Create Date 2564-08-3
 	*/
 	function get_by_key() {	
 		$sql = "SELECT * 

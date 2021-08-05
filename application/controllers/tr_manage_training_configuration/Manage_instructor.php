@@ -109,7 +109,7 @@ class Manage_instructor extends MainController {
 		$data = $this->mtda->get_all_ins()->result();
 		echo json_encode($data);
 	}
-	// get_group_sdm
+	// get_data
 
 
 }

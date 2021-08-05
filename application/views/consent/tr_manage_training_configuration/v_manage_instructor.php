@@ -1,11 +1,11 @@
 <?php
 /*
-* v_main_group.php
+* v_manage_instructor.php
 * Display v_main_group
 * @input    
 * @output
 * @author Jirayu Jaravichit
-* @Create Date 2564-07-12
+* @Create Date 2564-07-18
 */  
 ?>
 
