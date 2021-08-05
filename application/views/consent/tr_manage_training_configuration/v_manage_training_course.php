@@ -35,7 +35,7 @@
       </style>
       <!-- End style CSS  -->
       <script>
-             $(document).ready(function() {
+      $(document).ready(function() {
 
             $("#alert_tr_course_code").hide();
             $("#tr_course_code").keyup(function() {
@@ -51,7 +51,7 @@
             $("#tr_course_category1").change(function() {
                   $("#alert_tr_course_category1").hide();
             });
-        
+
             $("#alert_tr_course_category2").hide();
             $("#tr_course_category2").change(function() {
                   $("#alert_tr_course_category2").hide();
@@ -178,29 +178,34 @@
             var tr_course_category3 = document.getElementById("tr_course_category3").value;
             var tr_course_type = document.getElementById("tr_course_type").value;
 
-            if (tr_course_code != "0" && tr_course_name != "" && tr_course_category1 != "0" && tr_course_category2 != "0" && tr_course_category3 != "0" && tr_course_type != "0") {
+            if (tr_course_code != "0" && tr_course_name != "" && tr_course_category1 != "0" && tr_course_category2 !=
+                  "0" && tr_course_category3 != "0" && tr_course_type != "0") {
                   add_courses();
                   return true;
 
-             } else if (tr_course_code == "" && tr_course_name == "" && tr_course_category1 == "0" && tr_course_category2 == "0" && tr_course_category3 == "0" && tr_course_type == "0") {
+            } else if (tr_course_code == "" && tr_course_name == "" && tr_course_category1 == "0" &&
+                  tr_course_category2 == "0" && tr_course_category3 == "0" && tr_course_type == "0") {
                   $("#alert_tr_course_code").show();
                   $("#alert_tr_course_name").show();
                   $("#alert_tr_course_category1").show();
                   $("#alert_tr_course_category2").show();
                   $("#alert_tr_course_category3").show();
                   $("#alert_tr_course_type").show();
-             }
-            else  if (tr_course_name == "" ){
+            } else if (tr_course_code == "") {
+                  $("#alert_tr_course_code").show();
+            } else if (tr_course_name == "") {
                   $("#alert_tr_course_name").show();
-                
-                  
-            } 
-           
+            } else if (tr_course_category1 == "0") {
+                  $("#alert_tr_course_category1").show();
+            } else if (tr_course_type == "0") {
+                  $("#alert_tr_course_type").show();
+            }
+
+            
+
 
       }
       //check_data
-
-
       </script>
 
       <!-- Begin Page Content -->
@@ -335,10 +340,11 @@
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Code :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="tr_course_code"
-                                                placeholder="Code" checked required>
-                                                <p id="alert_tr_course_code">
-                                                <font color="red"><b>Please fill out the information completely. </b></font>
+                                          <input type="text" class="form-control" id="tr_course_code" placeholder="Code"
+                                                checked required>
+                                          <p id="alert_tr_course_code">
+                                                <font color="red"><b>Please fill out the information completely. </b>
+                                                </font>
                                           </p>
                                     </div>
 
@@ -347,10 +353,11 @@
                               <div class="row">
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Name :</label>
                                     <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="tr_course_name"
-                                                placeholder="Name" checked required>
-                                                <p id="alert_tr_course_name">
-                                                <font color="red"><b>Please fill out the information completely. </b></font>
+                                          <input type="text" class="form-control" id="tr_course_name" placeholder="Name"
+                                                checked required>
+                                          <p id="alert_tr_course_name">
+                                                <font color="red"><b>Please fill out the information completely. </b>
+                                                </font>
                                           </p>
                                     </div>
                               </div>
@@ -398,8 +405,16 @@
                                           </select>
                                     </div>
                                     <p id="alert_tr_course_category1">
-                                                <font color="red"><b>Please fill out the information completely. </b></font>
-                                          </p>
+                                    <!-- <p id="alert_tr_course_category2">
+                                    <p id="alert_tr_course_category3"> -->
+                                          &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                          &nbsp; &nbsp;
+                                          &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                          &nbsp; &nbsp; &nbsp;
+                                          <font color="red"><b>Please fill out the information completely. </b></font>
+                                    </p>    
+                                    <!-- </p>
+                                    </p> -->
                               </div>
                               <br>
                               <div class="row">
@@ -412,11 +427,14 @@
                                                 <option value="External">External</option>
                                           </select>
                                     </div>
-                                    
+
                               </div>
                               <p id="alert_tr_course_type">
-                                                <font color="red"><b>Please fill out the information completely. </b></font>
-                                          </p>
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    &nbsp;
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    <font color="red"><b>Please fill out the information completely. </b></font>
+                              </p>
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -580,13 +598,13 @@
                                     <label for="focusedinput" class="col-sm-3 control-label">Course Type :</label>
                                     <div class="col-sm-3">
                                           <select name="example_length" class="form-control" aria-controls="example"
-                                          id="tr_course_type<?php echo $row->Course_id; ?>">
+                                                id="tr_course_type<?php echo $row->Course_id; ?>">
                                                 <option value="0">Select</option>
                                                 <?php if($row->Course_type == "Internal"){ ?>
-                                                      <option value="Internal" selected>Internal</option>
-                                                      <option value="External" >External</option>
-                                               <?php } else if($row->Course_type == "External") { ?>
-                                                <option value="Internal" >Internal</option>
+                                                <option value="Internal" selected>Internal</option>
+                                                <option value="External">External</option>
+                                                <?php } else if($row->Course_type == "External") { ?>
+                                                <option value="Internal">Internal</option>
                                                 <option value="External" selected>External</option>
                                                 <?php } ?>
                                           </select>
