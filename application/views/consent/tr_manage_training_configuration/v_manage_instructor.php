@@ -167,7 +167,16 @@
                   $("#alert_tr_fname").show();
                   $("#alert_tr_Sname").show();
                   $("#alert_tr_Ins").show();
-             }
+             }else  if (tr_fname == "" && tr_Sname == ""){
+                  $("#alert_tr_fname").show();
+                  $("#alert_tr_Sname").show();
+            }else  if (tr_fname == "" && tr_Institution == ""){
+                  $("#alert_tr_fname").show();
+                  $("#alert_tr_Ins").show();
+            }else  if (tr_Sname == "" && tr_Institution == ""){
+                  $("#alert_tr_Sname").show();
+                  $("#alert_tr_Ins").show();
+            }
             else  if (tr_fname == "" ){
                   $("#alert_tr_fname").show();
                   
