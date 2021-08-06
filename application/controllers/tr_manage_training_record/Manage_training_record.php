@@ -67,7 +67,7 @@ class Manage_training_record extends MainController {
 		$tr_course_code = $this->input->post("tr_course_code");
 	
 		$this->load->model('M_trs_training_record','mttr');
-		$this->mttr->Course_code = $tr_course_code;
+		$this->mttr->Course_code_id = $tr_course_code;
 		$this->mttr->insert();
 		$data="add_tr";
 		echo json_encode($data);

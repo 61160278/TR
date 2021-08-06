@@ -45,7 +45,7 @@ var tr_course_code = document.getElementById("tr_course_code").value;
 
 $.ajax({
       type: "POST",
-      url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_training_record/add_training",
+      url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/add_training",
       data: {
             "tr_course_code": tr_course_code
             
@@ -54,7 +54,7 @@ $.ajax({
       success: function(data) {
             // console.log(status)
             window.location.href =
-                  "<?php echo base_url();?>/tr_manage_training_configuration/Manage_training_course/Course";
+                  "<?php echo base_url();?>/tr_manage_training_record/Manage_training_record/create_training_data";
       }
       // success function
 
@@ -62,14 +62,6 @@ $.ajax({
 
 // ajax 
 } //function add_courses
-
-
-
-
-
-
-
-
 
 
 
@@ -312,7 +304,8 @@ function get_course() {
 
                                                             </div>
                                                             <!-- row 5 -->
-
+                                                            <br>
+                                                            <button type="button" class="btn btn-primary" onclick="add_training_recrod()">Save</button>
                                                       </div>
                                                       <!-- card-body -->
 
