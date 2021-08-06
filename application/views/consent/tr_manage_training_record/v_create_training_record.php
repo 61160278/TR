@@ -55,6 +55,10 @@ function get_course() {
             if (data.length == 0) {
 
                 document.getElementById("Show_course_name").value = "ไม่พบข้อมูลดังกล่าวข้อมูล";
+                document.getElementById("Show_course_type").value = "-";
+                document.getElementById("Show_course_category1").value = "-";
+                document.getElementById("Show_course_category2").value = "-";
+                document.getElementById("Show_course_category3").value = "-";
 
             } else {
                   coursename = data[0].Course_name 
@@ -81,17 +85,6 @@ function get_course() {
     });
     // ajax
 }
-
-
-
-
-
-
-
-
-
-
-
 
       </script>
 
@@ -134,7 +127,7 @@ function get_course() {
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Type of Training :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="Show_course_type" placeholder="Type"
+                                                                              id="Show_course_type" 
                                                                               disabled>
                                                                   </div>
 
