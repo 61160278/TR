@@ -59,6 +59,14 @@ class Manage_training_record extends MainController {
 		$this->output('/consent/tr_manage_training_record/v_edit_training_record');
 	}
 	// function create_training_data()
+
+	function search_by_course_code(){
+		$tr_course_code = $this->input->post('tr_course_code');
+		$this->load->model('M_trs_course_data','mtcd');
+		$this->mtcd->Course_code = $tr_course_code;
+		$data = $this->mtcd->get_data_course();
+		echo json_encode($data);
+	}
  
 }
 // 

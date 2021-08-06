@@ -110,6 +110,13 @@ class M_trs_course_data extends trs_model {
 		return $query;
 	}
 
+	function get_data_course(){	
+		$sql = "SELECT *
+				FROM trs_database.trs_course_data
+				WHERE trs_course_data.Course_code = ?";
+		$query = $this->db->query($sql, array($this->Course_code));
+		return $query->result();
+	}//for get data from database course
 
 
 
