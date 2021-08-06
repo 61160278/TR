@@ -79,6 +79,14 @@ class Manage_training_record extends MainController {
 		$this->load->model('M_trs_training_record','mttr');
 		$this->mttr->Course_code_id = $tr_course_code;
 		$this->mttr->Place_training = $place_training;
+		$this->mttr->Start_date = $start_date;
+		$this->mttr->Start_time = $start_time;
+		$this->mttr->End_date = $end_date;
+		$this->mttr->End_time = $end_time;
+		$this->mttr->Total_hours = $total_h;
+		$this->mttr->Cost = $cost;
+		$this->mttr->Pre_test_score = $pre_score;
+		$this->mttr->Post_test_score = $post_score;
 		$this->mttr->insert();
 		$data="add_tr";
 		echo json_encode($data);
