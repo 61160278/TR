@@ -176,7 +176,7 @@ function get_course() {
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Place :
                                                                   <div class="col-sm-3">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Place">
+                                                                              id="place_training" placeholder="Place">
                                                                   </div>
 
                                                             </div>
@@ -186,26 +186,26 @@ function get_course() {
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Start-Date :
                                                                   <div class="col-sm-2">
                                                                         <input type="date" class="form-control"
-                                                                              id="grouptext" placeholder="Type">
+                                                                              id="start_date" >
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Start-Time :
                                                                   <div class="col-sm-2">
                                                                         <input type="time" class="form-control"
-                                                                              id="grouptext" placeholder="Code">
+                                                                              id="start_time" >
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; End-Date :
                                                                   <div class="col-sm-2">
                                                                         <input type="date" class="form-control"
-                                                                              id="grouptext">
+                                                                              id="end_date">
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; End-Time :
                                                                   <div class="col-sm-2">
                                                                         <input type="time" class="form-control"
-                                                                              id="grouptext"
-                                                                              placeholder="Training Name">
+                                                                              id="end_time"
+                                                                              >
                                                                   </div>
 
                                                             </div>
