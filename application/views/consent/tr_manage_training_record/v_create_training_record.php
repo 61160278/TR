@@ -43,9 +43,6 @@ function add_training_recrod() {
 
 var tr_course_code = document.getElementById("tr_course_code").value;
 
-
-
-
 $.ajax({
       type: "POST",
       url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_training_record/add_training",
