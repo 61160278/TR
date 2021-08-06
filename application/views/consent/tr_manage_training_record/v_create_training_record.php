@@ -251,11 +251,7 @@
 
                                                                   </div>
 
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Number of people :
-                                                                  <div class="col-1">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext" disabled>
-                                                                  </div>
+                                                                 
 
                                                             </div>
                                                             <!-- row 5 -->
