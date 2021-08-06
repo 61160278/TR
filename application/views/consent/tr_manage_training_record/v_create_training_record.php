@@ -54,11 +54,11 @@ function get_course() {
 
             if (data.length == 0) {
 
-                document.getElementById("Showname_modol").value = "ไม่มีข้อมูล";
+                document.getElementById("Show_course_name").value = "ไม่พบข้อมูลดังกล่าวข้อมูล";
 
             } else {
                   coursename = data[0].Course_name 
-                document.getElementById("Showname_modol").value = coursename;
+                document.getElementById("Show_course_name").value = coursename;
 
                 console.log(999)
                 console.log(coursename)
@@ -136,7 +136,7 @@ function get_course() {
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Course Code :
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Code">
+                                                                              id="tr_course_code" placeholder="Code" onkeyup="get_course()">
                                                                   </div>
 
 
@@ -144,7 +144,7 @@ function get_course() {
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Training Name :
                                                                   <div class="col-sm-3">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext"
+                                                                              id="Show_course_name"
                                                                               placeholder="Training Name">
                                                                   </div>
 
