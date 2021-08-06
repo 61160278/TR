@@ -103,14 +103,17 @@
                                                                         </tr>
                                                                   </thead>
                                                                   <tbody>
+                                                                  <?php foreach($trc as $index=>$row ){  ?>
                                                                         <tr align="center">
-                                                                              <td>1.</td>
-                                                                              <td>IN-00001</td>
-                                                                              <td>General Safety</td>
-                                                                              <td>General Safety</td>
-                                                                              <td>02/01/2021</td>
-                                                                              <td>02/01/2021</td>
-                                                                              <td>Mr.Kenji Sleeptogether</td>
+                                                                              <td><?php echo ($index+1) ?></td>
+                                                                              <td><?php echo $row->Course_code_id; ?></td>
+                                                                              <td></td>
+                                                                              <td></td>
+                                                                              <td></td>
+                                                                              <td></td>
+                                                                              <td></td>
+                                                                             
+                                                                              <!-- <td>Mr.Kenji Sleeptogether</td> -->
                                                                               <td>
                                                                                     <a
                                                                                           href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/info_training_data">
@@ -129,90 +132,8 @@
                                                                                                 data-target="#DeleteModal"></i></button>
                                                                               </td>
                                                                         </tr>
-                                                                        <tr align="center">
-                                                                              <td>2.</td>
-                                                                              <td>IN-00002</td>
-                                                                              <td>Leader andd Management</td>
-                                                                              <td>Communication for Leader</td>
-                                                                              <td>21/01/2021</td>
-                                                                              <td>21/01/2021</td>
-                                                                              <td>Mr.Denial Ok</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-info"><i
-                                                                                                class="fa fa-info-circle "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "
-                                                                                                data-toggle="modal"
-                                                                                                data-target="#EditModal"></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "
-                                                                                                data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button>
-                                                                              </td>
-                                                                        </tr>
-                                                                        <tr align="center">
-                                                                              <td>3.</td>
-                                                                              <td>IN-00003</td>
-                                                                              <td>Professional Golf Caddie</td>
-                                                                              <td>Communication Efficiency</td>
-                                                                              <td>05/08/2021</td>
-                                                                              <td>05/08/2021</td>
-                                                                              <td>Mr.Kate J.son</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-info"><i
-                                                                                                class="fa fa-info-circle "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "></i></button>
-                                                                              </td>
-                                                                        </tr>
-                                                                        <tr align="center">
-                                                                              <td>4.</td>
-                                                                              <td>EX-00004</td>
-                                                                              <td>Building Good Attitude at Work</td>
-                                                                              <td>Self and Work Development</td>
-                                                                              <td>25/02/2022</td>
-                                                                              <td>25/02/2022</td>
-                                                                              <td>Mr.Tony Roger</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-info"><i
-                                                                                                class="fa fa-info-circle "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit"></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "></i></button>
-                                                                              </td>
-                                                                        </tr>
-                                                                        <tr align="center">
-                                                                              <td>5.</td>
-                                                                              <td>EX-00005</td>
-                                                                              <td>Working as one team</td>
-                                                                              <td>Social skill for working together</td>
-                                                                              <td>07/03/2022</td>
-                                                                              <td>07/03/2022</td>
-                                                                              <td>Mr.Kenji Sleeptogether</td>
-                                                                              <td>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-info"><i
-                                                                                                class="fa fa-info-circle "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-warning"><i
-                                                                                                class="fa fa-edit "></i></button>
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "></i></button>
-                                                                              </td>
-                                                                        </tr>
+                                                                        <?php }   ?>
+                                                                       
 
                                                                   </tbody>
                                                             </table>

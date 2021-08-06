@@ -18,14 +18,17 @@ include_once("trs_model.php");
  
 class M_trs_training_record extends trs_model {		
 	
-	public $Course_id; //
-	public $Course_code; //
-	public $Course_name; //
-	public $Course_description; //
-	public $Course_category1; //
-	public $Course_category2; //
-	public $Course_category3; //
-	public $Course_type; //
+	public $Course_code_id; //
+	public $Place_training; //
+	public $Start_date; //
+	public $Start_time; //
+	public $End_date; //
+	public $End_time; //
+	public $Total_hours; //
+	public $Cost; //
+	public $Pre_test_score; //
+	public $Post_test_score; //
+	
 
 	function __construct() {
 		parent::__construct();
