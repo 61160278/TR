@@ -42,12 +42,31 @@
 function add_training_recrod() {
 
 var tr_course_code = document.getElementById("tr_course_code").value;
+var place_training = document.getElementById("place_training").value;
+var start_date = document.getElementById("start_date").value;
+var start_time = document.getElementById("start_time").value;
+var end_date = document.getElementById("end_date").value;
+var end_time = document.getElementById("end_time").value;
+var total_h = document.getElementById("total_h").value;
+var cost = document.getElementById("cost").value;
+var pre_score = document.getElementById("pre_score").value;
+var post_score = document.getElementById("post_score").value;
+
 
 $.ajax({
       type: "POST",
       url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/add_training",
       data: {
-            "tr_course_code": tr_course_code
+            "tr_course_code": tr_course_code,
+            "place_training": place_training,
+            "start_date": start_date,
+            "start_time": start_time,
+            "end_date" : end_date,
+            "end_time" : end_time,
+            "total_h" : total_h,
+            "cost" : cost,
+            "pre_score" : pre_score,
+            "post_score" : post_score
             
       },
       dataType: "JSON",
@@ -242,7 +261,7 @@ function get_course() {
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Total Hours :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" disabled>
+                                                                              id="total_h" disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Trainer :
@@ -266,19 +285,19 @@ function get_course() {
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Cost :
                                                                   <div class="col-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext">
+                                                                              id="cost">
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Pre-test Score:
                                                                   <div class="col-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext">
+                                                                              id="pre_score">
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Post-test Score :
                                                                   <div class="col-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext">
+                                                                              id="post_score">
                                                                   </div>
 
                                                             </div>
