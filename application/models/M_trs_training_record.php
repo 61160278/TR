@@ -43,10 +43,10 @@ class M_trs_training_record extends trs_model {
 	
 	function insert() {
 	 
-	 	$sql = "INSERT INTO trs_database.trs_course_data (Course_code ,Course_name ,Course_description ,Course_category1 ,Course_category2 ,Course_category3 ,Course_type)
-	 	VALUES(?, ?, ?, ?, ?, ?, ?)";
+	 	$sql = "INSERT INTO trs_database.trs_training_record (Course_code_id)
+	 	VALUES(?)";
 		 
-	 	$this->db->query($sql, array($this->Course_code, $this->Course_name, $this->Course_description, $this->Course_category1, $this->Course_category2, $this->Course_category3, $this->Course_type));
+	 	$this->db->query($sql, array($this->Course_code_id));
 	 }
 	 
 	/*

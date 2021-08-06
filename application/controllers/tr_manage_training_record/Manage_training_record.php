@@ -60,6 +60,22 @@ class Manage_training_record extends MainController {
 	}
 	// function create_training_data()
 
+
+
+	function add_training()
+	{
+		$tr_course_code = $this->input->post("tr_course_code");
+	
+		$this->load->model('M_trs_training_record','mttr');
+		$this->mttr->Course_code = $tr_course_code;
+		$this->mttr->insert();
+		$data="add_tr";
+		echo json_encode($data);
+		
+	}
+	// function Instructor()
+
+
 	function search_by_course_code(){
 		$tr_course_code = $this->input->post('tr_course_code');
 		$this->load->model('M_trs_training_record','mtcd');

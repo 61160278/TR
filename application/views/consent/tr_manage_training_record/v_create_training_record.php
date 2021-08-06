@@ -37,6 +37,45 @@
       <!-- End style CSS  -->
 <script>
 
+
+
+function add_training_recrod() {
+
+var tr_course_code = document.getElementById("tr_course_code").value;
+
+
+
+
+$.ajax({
+      type: "POST",
+      url: "<?php echo base_url(); ?>/tr_manage_training_configuration/Manage_training_record/add_training",
+      data: {
+            "tr_course_code": tr_course_code
+            
+      },
+      dataType: "JSON",
+      success: function(data) {
+            // console.log(status)
+            window.location.href =
+                  "<?php echo base_url();?>/tr_manage_training_configuration/Manage_training_course/Course";
+      }
+      // success function
+
+});
+
+// ajax 
+} //function add_courses
+
+
+
+
+
+
+
+
+
+
+
 function get_course() {
     tr_course_code = document.getElementById("tr_course_code").value;
     var coursename = "";
@@ -49,8 +88,6 @@ function get_course() {
         },
         dataType: "JSON",
         success: function(data, status) {
-            // console.log(status)
-            // console.log(data)
 
             if (data.length == 0) {
 
