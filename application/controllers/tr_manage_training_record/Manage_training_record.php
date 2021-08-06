@@ -42,7 +42,7 @@ class Manage_training_record extends MainController {
 	function index()
 	{
 		$this->load->model('M_trs_training_record','mtrr');
-		$data['trc'] = $this->mtrr->get_all_training()->result();
+		$data['trc'] = $this->mtrr->connect_tb()->result();
 		$this->output('/consent/tr_manage_training_record/v_manage_training_record',$data);
 	}
 	// function index()

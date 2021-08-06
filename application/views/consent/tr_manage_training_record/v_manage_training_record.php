@@ -107,8 +107,8 @@
                                                                         <tr align="center">
                                                                               <td><?php echo ($index+1) ?></td>
                                                                               <td><?php echo $row->Course_code_id; ?></td>
-                                                                              <td></td>
-                                                                              <td></td>
+                                                                              <td><?php echo $row->Course_name; ?></td>
+                                                                              <td><?php echo $row->Course_description; ?></td>
                                                                               <td><?php echo $row->Start_date; ?></td>
                                                                               <td><?php echo $row->End_date; ?></td>
                                                                               <td></td>
