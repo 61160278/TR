@@ -35,6 +35,53 @@
       }
       </style>
       <!-- End style CSS  -->
+<script>
+
+function get_course() {
+    tr_course_code = document.getElementById("tr_course_code").value;
+    var coursename = "";
+
+    $.ajax({
+        type: "POST",
+        url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/search_by_course_code",
+        data: {
+            "tr_course_code": tr_course_code
+        },
+        dataType: "JSON",
+        success: function(data, status) {
+            // console.log(status)
+            // console.log(data)
+
+            if (data.length == 0) {
+
+                document.getElementById("Showname_modol").value = "ไม่มีข้อมูล";
+
+            } else {
+                  coursename = data[0].Course_name 
+                document.getElementById("Showname_modol").value = coursename;
+
+                console.log(999)
+                console.log(coursename)
+            }
+
+            // if-else
+        }
+    });
+    // ajax
+}
+
+
+
+
+
+
+
+
+
+
+
+
+      </script>
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
