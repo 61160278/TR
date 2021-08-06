@@ -63,6 +63,14 @@ function get_course() {
                 coursename = data[0].Course_type 
                 document.getElementById("Show_course_type").value = coursename;
 
+                coursename = data[0].Course_category1 
+                document.getElementById("Show_course_category1").value = coursename;
+
+                coursename = data[0].Course_category2 
+                document.getElementById("Show_course_category2").value = coursename;
+
+                coursename = data[0].Course_category3 
+                document.getElementById("Show_course_category3").value = coursename;
 
                 console.log(999)
                 console.log(coursename)
@@ -159,45 +167,16 @@ function get_course() {
                                                             <div class="row">
                                                                   &nbsp;&nbsp;&nbsp;&nbsp;Course Category :
                                                                   <div class="col-sm-2">
-                                                                        <select name="example_length"
-                                                                              class="form-control"
-                                                                              aria-controls="example"
-                                                                              onChange="select_company(value)">
-                                                                              <option value="0">Select</option>
-                                                                              <option value="1">General</option>
-                                                                              <option value="2">Technical</option>
-                                                                              <option value="3">Requirement</option>
-                                                                              <option value="4">Instructor</option>
-                                                                        </select>
+                                                                  <input type="text" class="form-control"
+                                                                              id="Show_course_category1" disabled>
                                                                   </div>
                                                                   <div class="col-sm-2">
-                                                                        <select name="example_length"
-                                                                              class="form-control"
-                                                                              aria-controls="example"
-                                                                              onChange="select_company(value)">
-                                                                              <option value="0">Select</option>
-                                                                              <option value="1">In-house</option>
-                                                                              <option value="2">External Training
-                                                                              </option>
-                                                                              <option value="3">On the job training
-                                                                              </option>
-                                                                              <option value="4">Seminar</option>
-                                                                        </select>
+                                                                  <input type="text" class="form-control"
+                                                                              id="Show_course_category2" disabled>
                                                                   </div>
                                                                   <div class="col-sm-2">
-                                                                        <select name="example_length"
-                                                                              class="form-control"
-                                                                              aria-controls="example"
-                                                                              onChange="select_company(value)">
-                                                                              <option value="0">Select</option>
-                                                                              <option value="1">Classroom </option>
-                                                                              <option value="2">E-learning</option>
-                                                                              <option value="3">Self studyt</option>
-                                                                              <option value="4">Both Classroom & On the
-                                                                                    job training</option>
-                                                                              <option value="5">On the job training
-                                                                              </option>
-                                                                        </select>
+                                                                  <input type="text" class="form-control"
+                                                                              id="Show_course_category3" disabled>
                                                                   </div>
 
 
