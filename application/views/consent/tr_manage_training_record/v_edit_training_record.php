@@ -220,13 +220,13 @@
                                                                               id="grouptext">
                                                                   </div>
 
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Pre-test :
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Pre-test Score :
                                                                   <div class="col-1">
                                                                         <input type="text" class="form-control"
                                                                               id="grouptext">
                                                                   </div>
 
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Post-test :
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Post-test Score :
                                                                   <div class="col-1">
                                                                         <input type="text" class="form-control"
                                                                               id="grouptext">
