@@ -60,6 +60,10 @@ function get_course() {
                   coursename = data[0].Course_name 
                 document.getElementById("Show_course_name").value = coursename;
 
+                coursename = data[0].Course_type 
+                document.getElementById("Show_course_type").value = coursename;
+
+
                 console.log(999)
                 console.log(coursename)
             }
@@ -122,7 +126,7 @@ function get_course() {
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Type of Training :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Type"
+                                                                              id="Show_course_type" placeholder="Type"
                                                                               disabled>
                                                                   </div>
 
