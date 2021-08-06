@@ -62,7 +62,7 @@ class Manage_training_record extends MainController {
 
 	function search_by_course_code(){
 		$tr_course_code = $this->input->post('tr_course_code');
-		$this->load->model('M_trs_course_data','mtcd');
+		$this->load->model('M_trs_training_record','mtcd');
 		$this->mtcd->Course_code = $tr_course_code;
 		$data = $this->mtcd->get_data_course();
 		echo json_encode($data);
