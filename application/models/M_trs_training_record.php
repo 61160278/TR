@@ -103,9 +103,9 @@ class M_trs_training_record extends trs_model {
 
 
 
-	function get_all_crs() {	
+	function get_all_training() {	
 		$sql = "SELECT * 
-				FROM trs_database.trs_course_data";
+				FROM trs_database.trs_training_record";
 		$query = $this->db->query($sql);
 		return $query;
 	}
