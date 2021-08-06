@@ -121,7 +121,15 @@ class M_trs_training_record extends trs_model {
 		return $query->result();
 	}//for get data from database course
 
-
+	function connect_tb(){	
+		$sql = "SELECT *
+				FROM trs_database.trs_training_record as ttr
+				LEFT JOIN trs_database.trs_course_data as tcd
+				ON tcd.Course_code = ttr.Course_code_id";
+		$query = $this->db->query($sql);
+		return $query;
+	
+	}//get_group
 
 }		 
 ?>
