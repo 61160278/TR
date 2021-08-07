@@ -453,7 +453,7 @@
                         <div class="modal-body">
 
                               <div class="row">
-                                    <label for="focusedinput" class="col-sm-3 control-label">Course Category :</label>
+                                    <label for="focusedinput" class="col-sm-3 control-label">Title Name :</label>
                                     <div class="col-sm-2">
                                           <select name="example_length" class="form-control" aria-controls="example"
                                                 id="tr_titlename">
@@ -545,7 +545,7 @@
 
 
                               <div class="row">
-                                    <label for="focusedinput" class="col-sm-3 control-label">Course Category :</label>
+                                    <label for="focusedinput" class="col-sm-3 control-label">Title Name :</label>
                                     <div class="col-sm-2">
                                           <select name="example_length" class="form-control" aria-controls="example"
                                                 id="tr_titlename<?php echo $row->trainer_id; ?>">
