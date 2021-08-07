@@ -34,6 +34,33 @@
       }
       </style>
       <!-- End style CSS  -->
+      <script>
+
+function Delete_training(Training_id) {
+
+ console.log(Training_id);
+
+$.ajax({
+      type: "post",
+      url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/delete_training_data",
+      data: {
+            "Training_id": Training_id
+      },
+      dataType: "JSON",
+      success: function(data) {
+            // console.log(status)
+            window.location.href =
+                  "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/index";
+      }
+
+});
+
+}
+//function Delete_training
+
+
+
+            </script>
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
@@ -113,7 +140,7 @@
                                                                               <td><?php echo $row->End_date; ?></td>
                                                                               <td></td>
                                                                              
-                                                                              <!-- <td>Mr.Kenji Sleeptogether</td> -->
+                                                                              
                                                                               <td>
                                                                                     <a
                                                                                           href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/info_training_data">
@@ -129,7 +156,7 @@
                                                                                           class="btn btn-danger"><i
                                                                                                 class="ti ti-trash "
                                                                                                 data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button>
+                                                                                                data-target="#DeleteModal<?php echo $row->Training_id; ?>"></i></button>
                                                                               </td>
                                                                         </tr>
                                                                         <?php }   ?>
@@ -159,7 +186,7 @@
 
 
       <!-- Modal -->
-      <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
+      <div class="modal fade" id="DeleteModal<?php echo $row->Training_id?>" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-sm-5" role="document">
                   <div class="modal-content">
@@ -178,7 +205,7 @@
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary">Confirm</button>
+                              <button type="button" class="btn btn-primary" onClick="Delete_training(<?php echo $row->Training_id; ?>)">Confirm</button>
                         </div>
                   </div>
             </div>

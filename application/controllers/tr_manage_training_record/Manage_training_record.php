@@ -96,6 +96,18 @@ class Manage_training_record extends MainController {
 	}
 	// function Instructor()
 
+	function delete_training_data()
+	{
+
+		$Training_id = $this->input->post('Training_id');
+		$this->load->model('M_trs_training_record','mddd');
+		$this->mddd->Training_id = $Training_id;
+		$this->mddd->delete();
+		$data="delete_tr";
+		echo json_encode($data);
+		
+	}
+	// function delete_instructor
 
 	function search_by_course_code(){
 		$tr_course_code = $this->input->post('tr_course_code');

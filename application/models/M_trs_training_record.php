@@ -82,9 +82,9 @@ class M_trs_training_record extends trs_model {
 
 	function delete() {
 	 	
-	 	$sql = "DELETE FROM trs_database.trs_course_data
-		WHERE  Course_id = ? ";
-	 	$this->db->query($sql, array($this->Course_id));
+	 	$sql = "DELETE FROM trs_database.trs_training_record
+		WHERE  Training_id = ? ";
+	 	$this->db->query($sql, array($this->Training_id));
 	 }
 
 	/*
