@@ -35,102 +35,99 @@
       }
       </style>
       <!-- End style CSS  -->
-<script>
+      <script>
+      function add_training_recrod() {
+
+            var tr_course_code = document.getElementById("tr_course_code").value;
+            var place_training = document.getElementById("place_training").value;
+            var start_date = document.getElementById("start_date").value;
+            var start_time = document.getElementById("start_time").value;
+            var end_date = document.getElementById("end_date").value;
+            var end_time = document.getElementById("end_time").value;
+            var total_h = document.getElementById("total_h").value;
+            var cost = document.getElementById("cost").value;
+            var pre_score = document.getElementById("pre_score").value;
+            var post_score = document.getElementById("post_score").value;
+
+
+            $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/add_training",
+                  data: {
+                        "tr_course_code": tr_course_code,
+                        "place_training": place_training,
+                        "start_date": start_date,
+                        "start_time": start_time,
+                        "end_date": end_date,
+                        "end_time": end_time,
+                        "total_h": total_h,
+                        "cost": cost,
+                        "pre_score": pre_score,
+                        "post_score": post_score
+
+                  },
+                  dataType: "JSON",
+                  success: function(data) {
+                        // console.log(status)
+                        window.location.href =
+                              "<?php echo base_url();?>/tr_manage_training_record/Manage_training_record/create_training_data";
+                  }
+                  // success function
+
+            });
+
+            // ajax 
+      } //function add_courses
 
 
 
-function add_training_recrod() {
+      function get_course() {
+            tr_course_code = document.getElementById("tr_course_code").value;
+            var coursename = "";
 
-var tr_course_code = document.getElementById("tr_course_code").value;
-var place_training = document.getElementById("place_training").value;
-var start_date = document.getElementById("start_date").value;
-var start_time = document.getElementById("start_time").value;
-var end_date = document.getElementById("end_date").value;
-var end_time = document.getElementById("end_time").value;
-var total_h = document.getElementById("total_h").value;
-var cost = document.getElementById("cost").value;
-var pre_score = document.getElementById("pre_score").value;
-var post_score = document.getElementById("post_score").value;
+            $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/search_by_course_code",
+                  data: {
+                        "tr_course_code": tr_course_code
+                  },
+                  dataType: "JSON",
+                  success: function(data, status) {
 
+                        if (data.length == 0) {
 
-$.ajax({
-      type: "POST",
-      url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/add_training",
-      data: {
-            "tr_course_code": tr_course_code,
-            "place_training": place_training,
-            "start_date": start_date,
-            "start_time": start_time,
-            "end_date" : end_date,
-            "end_time" : end_time,
-            "total_h" : total_h,
-            "cost" : cost,
-            "pre_score" : pre_score,
-            "post_score" : post_score
-            
-      },
-      dataType: "JSON",
-      success: function(data) {
-            // console.log(status)
-            window.location.href =
-                  "<?php echo base_url();?>/tr_manage_training_record/Manage_training_record/create_training_data";
+                              document.getElementById("Show_course_name").value =
+                                    "ไม่พบข้อมูลดังกล่าวข้อมูล";
+                              document.getElementById("Show_course_type").value = "-";
+                              document.getElementById("Show_course_category1").value = "-";
+                              document.getElementById("Show_course_category2").value = "-";
+                              document.getElementById("Show_course_category3").value = "-";
+
+                        } else {
+                              coursename = data[0].Course_name
+                              document.getElementById("Show_course_name").value = coursename;
+
+                              coursename = data[0].Course_type
+                              document.getElementById("Show_course_type").value = coursename;
+
+                              coursename = data[0].Course_category1
+                              document.getElementById("Show_course_category1").value = coursename;
+
+                              coursename = data[0].Course_category2
+                              document.getElementById("Show_course_category2").value = coursename;
+
+                              coursename = data[0].Course_category3
+                              document.getElementById("Show_course_category3").value = coursename;
+
+                              console.log(999)
+                              console.log(coursename)
+                        }
+
+                        // if-else
+                  }
+            });
+            // ajax
       }
-      // success function
-
-});
-
-// ajax 
-} //function add_courses
-
-
-
-function get_course() {
-    tr_course_code = document.getElementById("tr_course_code").value;
-    var coursename = "";
-
-    $.ajax({
-        type: "POST",
-        url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/search_by_course_code",
-        data: {
-            "tr_course_code": tr_course_code
-        },
-        dataType: "JSON",
-        success: function(data, status) {
-
-            if (data.length == 0) {
-
-                document.getElementById("Show_course_name").value = "ไม่พบข้อมูลดังกล่าวข้อมูล";
-                document.getElementById("Show_course_type").value = "-";
-                document.getElementById("Show_course_category1").value = "-";
-                document.getElementById("Show_course_category2").value = "-";
-                document.getElementById("Show_course_category3").value = "-";
-
-            } else {
-                  coursename = data[0].Course_name 
-                document.getElementById("Show_course_name").value = coursename;
-
-                coursename = data[0].Course_type 
-                document.getElementById("Show_course_type").value = coursename;
-
-                coursename = data[0].Course_category1 
-                document.getElementById("Show_course_category1").value = coursename;
-
-                coursename = data[0].Course_category2 
-                document.getElementById("Show_course_category2").value = coursename;
-
-                coursename = data[0].Course_category3 
-                document.getElementById("Show_course_category3").value = coursename;
-
-                console.log(999)
-                console.log(coursename)
-            }
-
-            // if-else
-        }
-    });
-    // ajax
-}
-
       </script>
 
       <!-- Begin Page Content -->
@@ -172,8 +169,7 @@ function get_course() {
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Type of Training :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="Show_course_type" 
-                                                                              disabled>
+                                                                              id="Show_course_type" disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; ครั้งที่ :
@@ -186,7 +182,8 @@ function get_course() {
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Course Code :
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="tr_course_code" placeholder="Code" onkeyup="get_course()">
+                                                                              id="tr_course_code" placeholder="Code"
+                                                                              onkeyup="get_course()">
                                                                   </div>
 
 
@@ -205,15 +202,15 @@ function get_course() {
                                                             <div class="row">
                                                                   &nbsp;&nbsp;&nbsp;&nbsp;Course Category :
                                                                   <div class="col-sm-2">
-                                                                  <input type="text" class="form-control"
+                                                                        <input type="text" class="form-control"
                                                                               id="Show_course_category1" disabled>
                                                                   </div>
                                                                   <div class="col-sm-2">
-                                                                  <input type="text" class="form-control"
+                                                                        <input type="text" class="form-control"
                                                                               id="Show_course_category2" disabled>
                                                                   </div>
                                                                   <div class="col-sm-2">
-                                                                  <input type="text" class="form-control"
+                                                                        <input type="text" class="form-control"
                                                                               id="Show_course_category3" disabled>
                                                                   </div>
 
@@ -231,13 +228,13 @@ function get_course() {
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Start-Date :
                                                                   <div class="col-sm-2">
                                                                         <input type="date" class="form-control"
-                                                                              id="start_date" >
+                                                                              id="start_date">
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Start-Time :
                                                                   <div class="col-sm-2">
                                                                         <input type="time" class="form-control"
-                                                                              id="start_time" >
+                                                                              id="start_time">
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; End-Date :
@@ -249,8 +246,7 @@ function get_course() {
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; End-Time :
                                                                   <div class="col-sm-2">
                                                                         <input type="time" class="form-control"
-                                                                              id="end_time"
-                                                                              >
+                                                                              id="end_time">
                                                                   </div>
 
                                                             </div>
@@ -266,18 +262,17 @@ function get_course() {
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Trainer :
                                                                   <div class="col-sm-2">
+                                                                       
                                                                         <select name="example_length"
                                                                               class="form-control"
-                                                                              aria-controls="example"
-                                                                              onChange="select_company(value)">
+                                                                              aria-controls="example">
                                                                               <option value="0">Select Trainer</option>
-                                                                              <option value="1">Mr.Kenji Sleeptogether
+                                                                              <?php foreach($ins as $row) {?>
+                                                                              <option
+                                                                                    value="<?php echo $row->trainer_id; ?>">
+                                                                                    <?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?>
                                                                               </option>
-                                                                              <option value="2">Mr.Denial Ok
-                                                                              </option>
-                                                                              <option value="3">Mr.Kate J.son
-                                                                              </option>
-                                                                              <option value="4">Mr.Tony Roger</option>
+                                                                              <?php } ?>
                                                                         </select>
                                                                   </div>
 
@@ -319,12 +314,13 @@ function get_course() {
 
                                                                   </div>
 
-                                                                 
+
 
                                                             </div>
                                                             <!-- row 5 -->
                                                             <br>
-                                                            <button type="button" class="btn btn-primary" onclick="add_training_recrod()">Save</button>
+                                                            <button type="button" class="btn btn-primary"
+                                                                  onclick="add_training_recrod()">Save</button>
                                                       </div>
                                                       <!-- card-body -->
 
