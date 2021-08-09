@@ -48,6 +48,7 @@
             var cost = document.getElementById("cost").value;
             var pre_score = document.getElementById("pre_score").value;
             var post_score = document.getElementById("post_score").value;
+            var trainer = document.getElementById("trainer").value;
 
 
             $.ajax({
@@ -63,7 +64,8 @@
                         "total_h": total_h,
                         "cost": cost,
                         "pre_score": pre_score,
-                        "post_score": post_score
+                        "post_score": post_score,
+                        "trainer" : trainer
 
                   },
                   dataType: "JSON",
@@ -265,7 +267,7 @@
                                                                        
                                                                         <select name="example_length"
                                                                               class="form-control"
-                                                                              aria-controls="example">
+                                                                              aria-controls="example" id="trainer">
                                                                               <option value="0">Select Trainer</option>
                                                                               <?php foreach($ins as $row) {?>
                                                                               <option
