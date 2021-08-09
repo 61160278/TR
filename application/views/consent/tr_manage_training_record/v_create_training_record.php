@@ -305,9 +305,6 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Certificate
                                                                   :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                   <div class="checkbox">
-
-
-
                                                                         <div class="col-md-3">
                                                                               <input type="checkbox" id="checkbox2"
                                                                                     name="checkbox2" value="option2"
