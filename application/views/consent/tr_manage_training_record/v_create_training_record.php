@@ -55,7 +55,8 @@
             }else{
                   checkboxs = 0;  
             }
-console.log(checkboxs)
+           
+// console.log(checkboxs)
 
             $.ajax({
                   type: "POST",
@@ -137,6 +138,25 @@ console.log(checkboxs)
             });
             // ajax
       }
+
+
+      function check_training() {
+            var tr_course_code = document.getElementById("tr_course_code").value;
+            var Show_course_name = document.getElementById("Show_course_name").value;
+console.log(5)
+            if (tr_course_code != "0" && tr_course_code != "" && Show_course_name != "ไม่พบข้อมูลดังกล่าวข้อมูล") {
+                  add_training_recrod();
+                  return true;
+
+            } else {
+                  alert("Hello! I am an alert box!!");
+            }
+
+
+      }
+      //check_data
+
+
       </script>
 
       <!-- Begin Page Content -->
@@ -325,7 +345,7 @@ console.log(checkboxs)
                                                             <!-- row 5 -->
                                                             <br>
                                                             <button type="button" class="btn btn-primary"
-                                                                  onclick="add_training_recrod()">Save</button>
+                                                                  onclick="check_training()">Save</button>
                                                       </div>
                                                       <!-- card-body -->
 
