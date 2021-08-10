@@ -126,8 +126,8 @@ class M_trs_training_record extends trs_model {
 				FROM trs_database.trs_training_record as ttr
 				LEFT JOIN trs_database.trs_course_data as tcd
 				ON tcd.Course_code = ttr.Course_code_id
-				-- RIGHT JOIN trs_database.trs_trainer_data as ttd
-				-- ON ttd.trainer_id = ttr.Trainer_id
+				LEFT JOIN trs_database.trs_trainer_data as ttd
+				ON ttd.trainer_id = ttr.Trainer_id
 				";
 				
 		$query = $this->db->query($sql);

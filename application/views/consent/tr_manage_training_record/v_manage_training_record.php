@@ -138,7 +138,7 @@ $.ajax({
                                                                               <td><?php echo $row->Course_description; ?></td>
                                                                               <td><?php echo $row->Start_date; ?></td>
                                                                               <td><?php echo $row->End_date; ?></td>
-                                                                              <td></td>
+                                                                              <td> <?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?></td>
                                                                              
                                                                               
                                                                               <td>
