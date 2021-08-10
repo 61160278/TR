@@ -49,7 +49,13 @@
             var pre_score = document.getElementById("pre_score").value;
             var post_score = document.getElementById("post_score").value;
             var trainer = document.getElementById("trainer").value;
-
+            var checkbox = document.getElementById("checkbox");
+            if(checkbox.checked == true){
+                  checkboxs = 1;  
+            }else{
+                  checkboxs = 0;  
+            }
+console.log(checkboxs)
 
             $.ajax({
                   type: "POST",
@@ -65,7 +71,8 @@
                         "cost": cost,
                         "pre_score": pre_score,
                         "post_score": post_score,
-                        "trainer" : trainer
+                        "trainer" : trainer,
+                        "checkboxs" : checkboxs
 
                   },
                   dataType: "JSON",
@@ -306,8 +313,7 @@
                                                                   :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                   <div class="checkbox">
                                                                         <div class="col-md-3">
-                                                                              <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" value="option2"
+                                                                              <input type="checkbox" id="checkbox"
                                                                                     class="form-check-input">
                                                                         </div>
 

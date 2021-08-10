@@ -80,6 +80,8 @@ class Manage_training_record extends MainController {
 		$pre_score = $this->input->post("pre_score");
 		$post_score = $this->input->post("post_score");
 		$trainer = $this->input->post("trainer");
+		$checkboxs = $this->input->post("checkboxs");
+		
 		
 	
 		$this->load->model('M_trs_training_record','mttr');
@@ -94,6 +96,7 @@ class Manage_training_record extends MainController {
 		$this->mttr->Pre_test_score = $pre_score;
 		$this->mttr->Post_test_score = $post_score;
 		$this->mttr->Trainer_id = $trainer;
+		$this->mttr->Certificate = $checkboxs;
 		$this->mttr->insert();
 		$data="add_tr";
 		echo json_encode($data);
