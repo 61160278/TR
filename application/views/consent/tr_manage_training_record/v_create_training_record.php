@@ -56,6 +56,9 @@ $('#warningModal').modal('show');
             var post_score = document.getElementById("post_score").value;
             var trainer = document.getElementById("trainer").value;
             var checkbox = document.getElementById("checkbox");
+            var Show_count = document.getElementById("Show_count").value;
+            var Show_course_id = document.getElementById("Show_course_id").value;
+
             if(checkbox.checked == true){
                   checkboxs = 1;  
             }else{
@@ -79,7 +82,9 @@ $('#warningModal').modal('show');
                         "pre_score": pre_score,
                         "post_score": post_score,
                         "trainer" : trainer,
-                        "checkboxs" : checkboxs
+                        "checkboxs" : checkboxs,
+                        "Show_count" : Show_count,
+                        "Show_course_id" : Show_course_id
 
                   },
                   dataType: "JSON",
@@ -120,6 +125,10 @@ $('#warningModal').modal('show');
                               document.getElementById("Show_course_category3").value = "-";
 
                         } else {
+                              coursename = data[0].Course_id
+                              document.getElementById("Show_course_id").value = coursename;
+
+
                               coursename = data[0].Course_name
                               document.getElementById("Show_course_name").value = coursename;
 
@@ -134,6 +143,9 @@ $('#warningModal').modal('show');
 
                               coursename = data[0].Course_category3
                               document.getElementById("Show_course_category3").value = coursename;
+
+                              coursename = data[0].Course_count
+                              document.getElementById("Show_count").value = coursename;
 
                               console.log(999)
                               console.log(coursename)
@@ -215,12 +227,14 @@ console.log(start_date)
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
                                                                               id="Show_course_type" disabled>
+                                                                              <input type="text" class="form-control"
+                                                                              id="Show_course_id" hidden>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; ครั้งที่ :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" disabled>
+                                                                              id="Show_count" disabled>
                                                                   </div>
 
 

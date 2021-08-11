@@ -81,7 +81,8 @@ class Manage_training_record extends MainController {
 		$post_score = $this->input->post("post_score");
 		$trainer = $this->input->post("trainer");
 		$checkboxs = $this->input->post("checkboxs");
-		
+		$Show_count = $this->input->post("Show_count");
+		$Show_course_id = $this->input->post("Show_course_id");
 		
 	
 		$this->load->model('M_trs_training_record','mttr');
@@ -98,8 +99,15 @@ class Manage_training_record extends MainController {
 		$this->mttr->Trainer_id = $trainer;
 		$this->mttr->Certificate = $checkboxs;
 		$this->mttr->insert();
+		
+
+		$this->load->model('M_trs_course_data','mtcd');
+		$this->mtcd->Course_count = $Show_count+1;
+		$this->mtcd->Course_id = $Show_course_id;
+		$this->mtcd->upstatus();
 		$data="add_tr";
 		echo json_encode($data);
+		
 		
 	}
 	// function Instructor()
