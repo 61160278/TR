@@ -156,7 +156,7 @@ console.log(5)
 
             } else {
                  
-                  waringCourse();
+                  alert("Please fill in the correct information.");
                   return false;
             }
 
