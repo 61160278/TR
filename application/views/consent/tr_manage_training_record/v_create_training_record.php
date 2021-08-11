@@ -85,8 +85,8 @@ $('#warningModal').modal('show');
                   dataType: "JSON",
                   success: function(data) {
                         // console.log(status)
-                        window.location.href =
-                              "<?php echo base_url();?>/tr_manage_training_record/Manage_training_record/create_training_data";
+                        // window.location.href =
+                        //       "<?php echo base_url();?>/tr_manage_training_record/Manage_training_record/create_training_data";
                   }
                   // success function
 
@@ -156,8 +156,8 @@ $('#warningModal').modal('show');
             var end_time = document.getElementById("end_time").value;
             var trainer = document.getElementById("trainer").value;
            
-console.log(5)
-            if (tr_course_code != "0" && tr_course_code != "" && Show_course_name != "ไม่พบข้อมูลดังกล่าวข้อมูล" && Show_course_name != "" && place_training != "" && start_date != "0000-00-00" && start_date != "mm/dd/yyyy" && start_time != "00:00:00" && end_date != "0000-00-00" && end_time != "00:00:00"  && trainer != "0" && trainer != "") {
+console.log(start_date)
+            if (tr_course_code != "0" && tr_course_code != "" && Show_course_name != "ไม่พบข้อมูลดังกล่าวข้อมูล" && Show_course_name != "" && place_training != "" && start_date != ""  && start_date != "mm/dd/yyyy" && start_time != "" && end_date != "" && end_time != ""  && trainer != "0" && trainer != "") {
                   add_training_recrod();
                   return true;
 
