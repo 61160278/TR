@@ -184,7 +184,7 @@ $.ajax({
       </div>
       <!-- /.container-fluid -->
 
-
+      <?php foreach($trc as $index=>$row ){  ?>
       <!-- Modal -->
       <div class="modal fade" id="DeleteModal<?php echo $row->Training_id?>" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
             aria-hidden="true">
@@ -211,3 +211,4 @@ $.ajax({
             </div>
       </div>
       <!-- Delete Modal -->
+      <?php  } ?>

@@ -149,8 +149,15 @@ $('#warningModal').modal('show');
       function check_training() {
             var tr_course_code = document.getElementById("tr_course_code").value;
             var Show_course_name = document.getElementById("Show_course_name").value;
+            var place_training = document.getElementById("place_training").value;
+            var start_date = document.getElementById("start_date").value;
+            var start_time = document.getElementById("start_time").value;
+            var end_date = document.getElementById("end_date").value;
+            var end_time = document.getElementById("end_time").value;
+            var trainer = document.getElementById("trainer").value;
+           
 console.log(5)
-            if (tr_course_code != "0" && tr_course_code != "" && Show_course_name != "ไม่พบข้อมูลดังกล่าวข้อมูล") {
+            if (tr_course_code != "0" && tr_course_code != "" && Show_course_name != "ไม่พบข้อมูลดังกล่าวข้อมูล" && Show_course_name != "" && place_training != "" && start_date != "0000-00-00" && start_date != "mm/dd/yyyy" && start_time != "00:00:00" && end_date != "0000-00-00" && end_time != "00:00:00"  && trainer != "0" && trainer != "") {
                   add_training_recrod();
                   return true;
 
