@@ -27,7 +27,7 @@
     <meta name="description" content="EVS - DENSO x TEAM 0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- End logo system  -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Start include stylesheet -->
     <link rel="apple-touch-icon" href="<?php echo base_url();?>elaadmin/images/Logo_TR.png">
     <link rel="shortcut icon" href="<?php echo base_url();?>elaadmin/images/Logo_TR.png">
@@ -45,7 +45,6 @@
 
     <link href="<?php echo base_url();?>elaadmin/assets/css/chartist.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>elaadmin/assets/css/jqvmap.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- End include stylesheet -->
     <?php date_default_timezone_set("Asia/Bangkok"); ?>
