@@ -174,8 +174,8 @@ console.log(start_date)
                   return true;
 
             } else {
-                 
-                  $('#warningModal').modal("show");
+                  console.log("show")
+                  $("#warningModal").modal("show");
                   return false;
             }
 
