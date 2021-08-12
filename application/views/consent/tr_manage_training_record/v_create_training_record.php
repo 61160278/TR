@@ -303,7 +303,7 @@
                                         <div class="row">
                                             &nbsp;&nbsp;&nbsp;&nbsp; Total Hours :
                                             <div class="col-sm-1">
-                                                <input type="text" class="form-control" id="total_h" disabled>
+                                                <input type="text" class="form-control" id="total_h" >
                                             </div>
 
                                             &nbsp;&nbsp;&nbsp;&nbsp; Trainer :
@@ -442,7 +442,7 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header" style="background-color:#FFC000;">
-                    <h5 class="modal-title" id="mediumModalLabel"> <font color="white" size="5px"><i
+                    <h5 class="modal-title" id="mediumModalLabel"> <font color="white" size="6px"><i
                                                                                     class="fa fa-exclamation-triangle">
                           Warning</i></font></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -451,12 +451,11 @@
                 </div>
                 <div class="modal-body">
                     <p>
-                        Please fill in the correct information.
+                       <b> Please fill in the correct information. </b>
                     </p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Confirm</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
                 </div>
             </div>
         </div>
