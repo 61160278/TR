@@ -133,5 +133,31 @@ class Manage_training_record extends MainController {
 		echo json_encode($data);
 	}
  
+	function search_emp(){
+		$emp_id = $this->input->post('emp_id');
+		$this->load->model('M_trs_training_record','mtrr');
+		$this->mtrr->Emp_ID = $emp_id;
+		
+		$data = $this->mtrr->get_emp();
+		echo json_encode($data);
+	}
+	// function search_emp
+
+	function search_get_emp(){
+		$emp_id = $this->input->post('emp_id');
+		$this->load->model('M_trs_training_record','mtrr');
+		$this->mtrr->Emp_ID = $emp_id;
+		
+		$data = $this->mtrr->get_data_emp()->row();
+		echo json_encode($data);
+	}
+	// function search_get_emp
+
+
+
+
+
+
+
 }
 // 

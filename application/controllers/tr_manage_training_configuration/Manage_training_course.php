@@ -125,7 +125,7 @@ class Manage_training_course extends MainController {
 	}
 	// get_data
 
-
+	
 
 
 
