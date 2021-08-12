@@ -174,8 +174,8 @@ console.log(start_date)
                   return true;
 
             } else {
-                 
-                  alert("Please fill in the correct information.");
+                  console.log("show")
+                  $("#warningModal").modal("show");
                   return false;
             }
 
