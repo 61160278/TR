@@ -441,8 +441,10 @@
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="mediumModalLabel">Medium Modal</h5>
+                <div class="modal-header" style="background-color:#FFC000;">
+                    <h5 class="modal-title" id="mediumModalLabel"> <font color="white" size="5px"><i
+                                                                                    class="fa fa-exclamation-triangle">
+                          Warning</i></font></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
