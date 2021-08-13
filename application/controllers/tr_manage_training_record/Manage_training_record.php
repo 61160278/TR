@@ -152,8 +152,28 @@ class Manage_training_record extends MainController {
 		echo json_encode($data);
 	}
 	// function search_get_emp
+function get_course(){
+	$this->load->model('M_trs_training_record','mtcr');
+	$data = $this->mtcr->get_training()->row();
+	echo json_encode($data);
+}
+function save_member(){
+	
+	$training = $this->input->post('training'); 
+	$count = $this->input->post('count'); 
+	$empid = $this->input->post('empid'); 
+for($i=0;$i<$count;$i++){
+	$this->load->model('M_trs_training_record','mtcc');
+	$this->mtcc->Training_ID = $training;
+	$this->mtcc->Employee_Code = $empid[$i];
+	$this->mtcc->Training_Status = "PASS";
+	$this->mtcc->insert_member();
+	
+}
 
-
+$data="save_member";
+echo json_encode($data);
+}
 
 
 

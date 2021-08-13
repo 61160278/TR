@@ -169,9 +169,21 @@ class M_trs_training_record extends trs_model {
         return $query;
 	}
 
+	function get_training() {	
+		$sql = "SELECT * 
+				FROM trs_database.trs_training_record
+				ORDER BY Training_id DESC LIMIT 1";
+		$query = $this->db->query($sql);
+		return $query;
+	}
 
-
-
+	function insert_member() {
+	 
+		$sql = "INSERT INTO trs_database.trs_member_course (Training_ID ,Employee_Code ,Training_Status)
+		VALUES(?,? ,?)";
+		
+		$this->db->query($sql, array($this->Training_ID ,$this->Employee_Code ,$this->Training_Status));
+	}
 
 
 }		 

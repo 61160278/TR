@@ -119,7 +119,7 @@ class M_trs_course_data extends trs_model {
 
 
 	}
-
+	
 
 
 }		 

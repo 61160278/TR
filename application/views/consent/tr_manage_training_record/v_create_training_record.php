@@ -36,6 +36,10 @@
       </style>
       <!-- End style CSS  -->
       <script>
+            $( document ).ready(function() {
+                  $("#add_m").attr("disabled", true);
+});
+            
       var member = [];
 
       function waringCourse() {
@@ -226,16 +230,16 @@
 
                               if (member.lenght != 0) {
                                     member.forEach((row, index) => {
-                                         if(row == data[0].Emp_ID){
+                                          if (row == data[0].Emp_ID) {
                                                 check++;
-                                         }
+                                          }
                                     });
                                     // forEach
-                                    if(check == 0){
+                                    if (check == 0) {
                                           $("#add_m").attr("disabled", false);
 
 
-                                    }else{
+                                    } else {
 
                                           $("#add_m").attr("disabled", true);
                                     }
@@ -277,7 +281,7 @@
                         member.push(obj.Emp_ID)
                         data_table += "<tr>"
                         data_table += "<td>" + count + "</td>"
-                        data_table += "<td>" + obj.Emp_ID + "</td>"
+                        data_table += "<td id='emp_id_" + count + "'>" + obj.Emp_ID + "</td>"
                         data_table += "<td>" + obj.Empname_eng + " " + obj.Empsurname_eng +
                               "</td>"
                         data_table += "<td>" + obj.Position_name + "</td>"
@@ -297,6 +301,7 @@
                         $("#show_data").append(data_table);
                         $("#emp_id").val('');
                         $("#nameEmp").val('');
+                        $("#add_m").attr("disabled", true);
                   }
 
             });
@@ -311,51 +316,51 @@
 
 
       function add_member_db() {
+            var training = "";
+            var empid = [];
+            var check = 0;
+            $.get("<?php echo base_url(); ?>tr_manage_training_record/Manage_training_record/get_course", function(
+                  data) {
+                  var obj = JSON.parse(data);
+                  training = obj.Training_id;
+                  console.log(obj);
+                  check++;
+                  if(check != 0){
+            for (i = 1; i <= count; i++) {
+                  document.getElementById("emp_id_" + i).innerHTML;
+                  empid.push(document.getElementById("emp_id_" + i).innerHTML)
+            }//for
+            
+console.log(empid)
+            
+            $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/save_member",
+                  data: {
+                        "training": training,
+                        "count": count,
+                        "empid": empid
+                  },
+                  dataType: "JSON",
+                  success: function(data) {
 
-var tr_course_code = document.getElementById("tr_course_code").value;
-var place_training = document.getElementById("place_training").value;
-var start_date = document.getElementById("start_date").value;
-var start_time = document.getElementById("start_time").value;
-var end_date = document.getElementById("end_date").value;
-var end_time = document.getElementById("end_time").value;
-var total_h = document.getElementById("total_h").value;
-var cost = document.getElementById("cost").value;
-var pre_score = document.getElementById("pre_score").value;
-var post_score = document.getElementById("post_score").value;
+                        window.location.href = "<?php echo base_url();?>/tr_manage_training_record/Manage_training_record/index";
+                  }
+
+            });
+            // ajax
+
+
+            }
+            });
+            
 
 
 
-// console.log(checkboxs)
 
-$.ajax({
-      type: "POST",
-      url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/add_training",
-      data: {
-            "tr_course_code": tr_course_code,
-            "place_training": place_training,
-            "start_date": start_date,
-            "start_time": start_time,
-            "end_date": end_date,
-            "end_time": end_time,
-            "total_h": total_h,
-            "cost": cost,
-            "pre_score": pre_score,
-            "post_score": post_score,
-         
 
-      },
-      dataType: "JSON",
-      success: function(data) {
-            // console.log(status)
-            // window.location.href =
-            //       "<?php echo base_url();?>/tr_manage_training_record/Manage_training_record/create_training_data";
-      }
-      // success function
 
-});
-
-// ajax 
-} //function add_courses
+      } //function add_member_db
       </script>
 
       <!-- Begin Page Content -->
@@ -636,7 +641,7 @@ $.ajax({
                         </div>
                         <div class="col-md-1">
                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="button"
-                                    class="btn btn-primary" id="save_member">Save</button>
+                                    class="btn btn-primary" id="save_member" onclick="add_member_db()">Save</button>
 
                         </div>
                   </div>
