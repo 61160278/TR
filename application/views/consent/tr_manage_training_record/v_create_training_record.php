@@ -36,6 +36,8 @@
       </style>
       <!-- End style CSS  -->
       <script>
+      var member = [];
+
       function waringCourse() {
             $('#warningModal').modal('show');
       }
@@ -185,7 +187,7 @@
                   $("#pre_score").attr("disabled", true);
                   $("#post_score").attr("disabled", true);
                   $("#save_data").hide();
-                  
+
                   return true;
 
             } else {
@@ -220,7 +222,27 @@
                         else {
                               empname = data[0].Empname_eng + " " + data[0].Empsurname_eng
                               document.getElementById("nameEmp").value = empname;
-                              $("#add_m").attr("disabled", false);
+                              var check = 0;
+
+                              if (member.lenght != 0) {
+                                    member.forEach((row, index) => {
+                                         if(row == data[0].Emp_ID){
+                                                check++;
+                                         }
+                                    });
+                                    // forEach
+                                    if(check == 0){
+                                          $("#add_m").attr("disabled", false);
+
+
+                                    }else{
+
+                                          $("#add_m").attr("disabled", true);
+                                    }
+                              } else {
+                                    $("#add_m").attr("disabled", false);
+                              }
+
                         }
                         // else
                   }
@@ -252,7 +274,7 @@
                         console.log(data)
                         count++;
                         var obj = data;
-
+                        member.push(obj.Emp_ID)
                         data_table += "<tr>"
                         data_table += "<td>" + count + "</td>"
                         data_table += "<td>" + obj.Emp_ID + "</td>"
@@ -273,6 +295,8 @@
 
                         data_table += "</tr>"
                         $("#show_data").append(data_table);
+                        $("#emp_id").val('');
+                        $("#nameEmp").val('');
                   }
 
             });
