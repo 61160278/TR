@@ -172,7 +172,7 @@
                   start_time != "" && end_date != "" && end_time != "" && trainer != "0" && trainer != "") {
                   add_training_recrod();
                   $("#addmember").collapse('show');
-                  
+
                   return true;
 
             } else {
@@ -257,7 +257,7 @@
                               checkboxs = 0;
                               data_table += "<td>" + checkboxs + "</td>"
                         }
-                       
+
                         data_table += "</tr>"
                         $("#show_data").append(data_table);
                   }
@@ -460,7 +460,7 @@
                                                             <!-- row 5 -->
                                                             <br>
                                                             <button type="button" class="btn btn-primary" id="save_data"
-                                                                  onclick="check_training()">Save</button>
+                                                                  onclick="check_training()">Confirm</button>
                                                       </div>
                                                       <!-- card-body -->
 
@@ -475,76 +475,87 @@
                         </div>
                         <!-- content 1 -->
                         <div class="collapse" id="addmember">
-                        <div class="content">
-                              <div class="animated fadeIn">
-                                    <div class="row">
+                              <div class="content">
+                                    <div class="animated fadeIn">
+                                          <div class="row">
 
-                                          <div class="col-md-12">
-                                                <div class="card">
+                                                <div class="col-md-12">
+                                                      <div class="card">
 
 
-                                                      <div class="card-body">
-                                                            <div class="row">
-                                                                  <!-- <div class="col-md-1"></div> -->
-                                                                  <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                  <div class="row">
+                                                                        <!-- <div class="col-md-1"></div> -->
+                                                                        <div class="col-md-2">
 
-                                                                        <input class="form-control" type="text"
-                                                                              placeholder="Employee ID" id="emp_id"
-                                                                              onkeyup="search_emp()">
+                                                                              <input class="form-control" type="text"
+                                                                                    placeholder="Employee ID"
+                                                                                    id="emp_id" onkeyup="search_emp()">
+                                                                        </div>
+                                                                        <div class="col-md-2">
+                                                                              <input class="form-control" type="text"
+                                                                                    id="nameEmp" disabled>
+                                                                              &nbsp;&nbsp;
+                                                                        </div>
+                                                                        <div class="col-md-2">
+                                                                              <button type="button"
+                                                                                    class="btn btn-success" id="add_m"
+                                                                                    onclick="add_member()">Add
+                                                                                    Member
+                                                                                    <i
+                                                                                          class="fa fa-plus text-black"></i></button>
+                                                                        </div>
+
                                                                   </div>
-                                                                  <div class="col-md-2">
-                                                                        <input class="form-control" type="text"
-                                                                              id="nameEmp" disabled>
-                                                                        &nbsp;&nbsp;
-                                                                  </div>
-                                                                  <div class="col-md-2">
-                                                                        <button type="button" class="btn btn-success"
-                                                                              id="add_m" onclick="add_member()">Add
-                                                                              Member
-                                                                              <i
-                                                                                    class="fa fa-plus text-black"></i></button>
-                                                                  </div>
+                                                                  <table id="bootstrap-data-table"
+                                                                        class="table table-striped table-bordered">
+                                                                        <thead>
+                                                                              <tr align="center">
 
+                                                                                    <th>No.</th>
+                                                                                    <th>Employee Code</th>
+                                                                                    <th>Firstname-Surname</th>
+                                                                                    <th>Position</th>
+                                                                                    <th>Department</th>
+                                                                                    <th>Section</th>
+                                                                                    <th>Hours</th>
+                                                                                    <th>Status</th>
+                                                                                    <th>Certificate</th>
+
+                                                                              </tr>
+                                                                        </thead>
+                                                                        <tbody id="show_data">
+
+
+                                                                        </tbody>
+                                                                  </table>
                                                             </div>
-                                                            <table id="bootstrap-data-table"
-                                                                  class="table table-striped table-bordered">
-                                                                  <thead>
-                                                                        <tr align="center">
-
-                                                                              <th>No.</th>
-                                                                              <th>Employee Code</th>
-                                                                              <th>Firstname-Surname</th>
-                                                                              <th>Position</th>
-                                                                              <th>Department</th>
-                                                                              <th>Section</th>
-                                                                              <th>Hours</th>
-                                                                              <th>Status</th>
-                                                                              <th>Certificate</th>
-
-                                                                        </tr>
-                                                                  </thead>
-                                                                  <tbody id="show_data">
-
-
-                                                                  </tbody>
-                                                            </table>
                                                       </div>
                                                 </div>
+
+
                                           </div>
-
-
-                                    </div>
-                              </div><!-- .animated 2 -->
-                        </div><!-- .content 2 -->
+                                    </div><!-- .animated 2 -->
+                                   
+                              </div><!-- .content 2 -->
                         </div>
                         <!-- collapse -->
                   </div>
 
-                  <div class="col-md-3">
-                        <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
-                              <button type="button" class="btn btn-secondary">Back</button>
-                        </a>
-                  </div>
+                  <div class="row">
+                                          <div class="col-md-11">
+                                                <a
+                                                      href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
+                                                      <button type="button" class="btn btn-secondary">Back</button>
+                                                </a>
+                                          </div>
+                                          <div class="col-md-1">
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <button type="button" class="btn btn-primary"
+                                                      id="save_member">Save</button>
+
+                                          </div>
+                                    </div>
+
             </div>
             <!-- Start col-lg-12 -->
 
