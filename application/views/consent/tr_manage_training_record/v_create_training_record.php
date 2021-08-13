@@ -172,7 +172,20 @@
                   start_time != "" && end_date != "" && end_time != "" && trainer != "0" && trainer != "") {
                   add_training_recrod();
                   $("#addmember").collapse('show');
-
+                  $("#tr_course_code").attr("disabled", true);
+                  $("#Show_course_name").attr("disabled", true);
+                  $("#place_training").attr("disabled", true);
+                  $("#start_date").attr("disabled", true);
+                  $("#start_time").attr("disabled", true);
+                  $("#end_date").attr("disabled", true);
+                  $("#end_time").attr("disabled", true);
+                  $("#total_h").attr("disabled", true);
+                  $("#trainer").attr("disabled", true);
+                  $("#cost").attr("disabled", true);
+                  $("#pre_score").attr("disabled", true);
+                  $("#post_score").attr("disabled", true);
+                  $("#save_data").hide();
+                  
                   return true;
 
             } else {
@@ -536,25 +549,24 @@
 
                                           </div>
                                     </div><!-- .animated 2 -->
-                                   
+
                               </div><!-- .content 2 -->
                         </div>
                         <!-- collapse -->
                   </div>
 
                   <div class="row">
-                                          <div class="col-md-11">
-                                                <a
-                                                      href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
-                                                      <button type="button" class="btn btn-secondary">Back</button>
-                                                </a>
-                                          </div>
-                                          <div class="col-md-1">
-                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <button type="button" class="btn btn-primary"
-                                                      id="save_member">Save</button>
+                        <div class="col-md-11">
+                              <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
+                                    <button type="button" class="btn btn-secondary">Back</button>
+                              </a>
+                        </div>
+                        <div class="col-md-1">
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="button"
+                                    class="btn btn-primary" id="save_member">Save</button>
 
-                                          </div>
-                                    </div>
+                        </div>
+                  </div>
 
             </div>
             <!-- Start col-lg-12 -->
