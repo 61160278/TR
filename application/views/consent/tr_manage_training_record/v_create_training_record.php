@@ -122,7 +122,7 @@
                         if (data.length == 0) {
 
                               document.getElementById("Show_course_name").value =
-                                    "ไม่พบข้อมูลดังกล่าวข้อมูล";
+                                    "";
                               document.getElementById("Show_course_type").value = "-";
                               document.getElementById("Show_course_category1").value = "-";
                               document.getElementById("Show_course_category2").value = "-";
@@ -161,7 +161,60 @@
             // ajax
       }
 
+      function get_name() {
+            Show_course_name = document.getElementById("Show_course_name").value;
+            var coursename = "";
 
+            $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/search_by_course_name",
+                  data: {
+                        "Show_course_name": Show_course_name
+                  },
+                  dataType: "JSON",
+                  success: function(data, status) {
+
+                        if (data.length == 0) {
+
+                              document.getElementById("tr_course_code").value =
+                                    "";
+                              document.getElementById("Show_course_type").value = "-";
+                              document.getElementById("Show_course_category1").value = "-";
+                              document.getElementById("Show_course_category2").value = "-";
+                              document.getElementById("Show_course_category3").value = "-";
+
+                        } else {
+                              coursename = data[0].Course_id
+                              document.getElementById("Show_course_id").value = coursename;
+
+
+                              coursename = data[0].Course_code
+                              document.getElementById("tr_course_code").value = coursename;
+
+                              coursename = data[0].Course_type
+                              document.getElementById("Show_course_type").value = coursename;
+
+                              coursename = data[0].Course_category1
+                              document.getElementById("Show_course_category1").value = coursename;
+
+                              coursename = data[0].Course_category2
+                              document.getElementById("Show_course_category2").value = coursename;
+
+                              coursename = data[0].Course_category3
+                              document.getElementById("Show_course_category3").value = coursename;
+
+                              coursename = data[0].Course_count
+                              document.getElementById("Show_count").value = coursename;
+
+                              console.log(999)
+                              console.log(coursename)
+                        }
+
+                        // if-else
+                  }
+            });
+            // ajax
+      }
       function check_training() {
             var tr_course_code = document.getElementById("tr_course_code").value;
             var Show_course_name = document.getElementById("Show_course_name").value;
@@ -427,7 +480,7 @@ console.log(empid)
                                                                   <div class="col-sm-3">
                                                                         <input type="text" class="form-control"
                                                                               id="Show_course_name"
-                                                                              placeholder="Training Name">
+                                                                              placeholder="Training Name" onkeyup="get_name()">
                                                                   </div>
 
                                                             </div>
