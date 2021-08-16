@@ -280,16 +280,8 @@
                                                                               <td><?php echo $row->Position_name; ?></td>
                                                                               <td><?php echo $row->Department; ?></td>
                                                                               <td><?php echo $row->Sectioncode; ?></td>
+                                                                              <td><?php echo $row->Total_hours; ?></td>
                                                                               <td><?php echo $row->Training_Status; ?></td>
-                                                                              <td>
-                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                                    <input type="checkbox"
-                                                                                          id="checkbox2"
-                                                                                          name="checkbox2"
-                                                                                          value="select"
-                                                                                          class="form-check-input">
-
-                                                                              </td>
                                                                               <td>
                                                                                     &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
                                                                                     <input type="checkbox"

@@ -211,6 +211,8 @@ class M_trs_training_record extends trs_model {
 	function get_member() {	
 		$sql = "SELECT * 
 				FROM trs_database.trs_member_course AS tmc
+				INNER JOIN trs_database.trs_training_record AS ttr
+                		ON ttr.Training_id = tmc.Training_ID
 				INNER JOIN dbmc.employee AS emp
                 		ON emp.Emp_ID = tmc.Employee_Code
 				INNER JOIN dbmc.position AS pos
