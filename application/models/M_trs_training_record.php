@@ -197,8 +197,12 @@ class M_trs_training_record extends trs_model {
 
 	function get_training_data() {	
 		$sql = "SELECT * 
-				FROM trs_database.trs_training_record
-				WHERE Training_id = ?";
+				FROM trs_database.trs_training_record AS ttr
+				INNER JOIN trs_database.trs_course_data AS tcd
+                		ON tcd.Course_code = ttr.Course_code_id
+				INNER JOIN trs_database.trs_trainer_data AS ttd
+                		ON ttd.trainer_id = ttr.Trainer_id
+				WHERE ttr.Training_id = ?";
 				
 		$query = $this->db->query($sql ,array($this->Training_id));
 		return $query;
