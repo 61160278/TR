@@ -207,9 +207,15 @@
 
                                                                   
                                                                         <div class="col-md-3">
+                                                                        <?php if($row->Certificate == "1"){ ?>
                                                                               <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" value="<?php echo $row->Certificate; ?>"
+                                                                                    name="checkbox2" checked
                                                                                     class="form-check-input" disabled>
+                                                                                    <?php } else{?>
+                                                                                          <input type="checkbox" id="checkbox2"
+                                                                                    name="checkbox2" 
+                                                                                    class="form-check-input" disabled>
+<?php } ?>
                                                                         </div>
 
                                                                   </div>
