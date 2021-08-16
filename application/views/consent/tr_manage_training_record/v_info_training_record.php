@@ -69,20 +69,20 @@
                                           <div class="col-md-12">
                                                 <div class="card border border-primary">
                                                       <div class="card-body">
-
+                                                     <?php foreach($trd as $row ) { ?>
 
                                                             <div class="row">
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Type of Training :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Type"
+                                                                              id="grouptext" placeholder="Type" value="Internal"
                                                                               disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; ครั้งที่ :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" disabled>
+                                                                              id="grouptext" disabled  value="1">
                                                                   </div>
 
 
@@ -90,7 +90,7 @@
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
                                                                               id="grouptext" placeholder="Code"
-                                                                              disabled>
+                                                                              disabled value="<?php echo $row->Course_code_id; ?>">
                                                                   </div>
 
 
@@ -259,7 +259,7 @@
 
                                                             </div>
                                                             <!-- row 5 -->
-
+<?php  } ?>
                                                       </div>
                                                       <!-- card-body -->
 
@@ -307,19 +307,15 @@
                                                                         </tr>
                                                                   </thead>
                                                                   <tbody>
+                                                                        <?php foreach($mtr as $index=>$row){ ?>
                                                                         <tr align="center">
-                                                                              <td>1.</td>
-                                                                              <td>TN00035</td>
-                                                                              <td>Kanchanaphitcha Meesuk</td>
-                                                                              <td>Board of Directors</td>
-                                                                              <td>Human Resource</td>
-                                                                              <td>6180</td>
-                                                                              <td>
-                                                                                    <input type="text"
-                                                                                          class="form-control"
-                                                                                          id="grouptext" value=""
-                                                                                          disabled>
-                                                                              </td>
+                                                                              <td><?php echo ($index+1) ?></td>
+                                                                              <td><?php echo $row->Employee_Code; ?></td>
+                                                                              <td><?php echo $row->Empname_engTitle.$row->Empname_eng."  ".$row->Empsurname_eng ?></td>
+                                                                              <td><?php echo $row->Position_name; ?></td>
+                                                                              <td><?php echo $row->Department; ?></td>
+                                                                              <td><?php echo $row->Sectioncode; ?></td>
+                                                                              <td><?php echo $row->Training_Status; ?></td>
                                                                               <td>
                                                                                     &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
                                                                                     <input type="checkbox"
@@ -341,69 +337,8 @@
 
 
                                                                         </tr>
-                                                                        <tr align="center">
-                                                                              <td>2.</td>
-                                                                              <td>TN00036</td>
-                                                                              <td>Lapatrada Puttamongkol</td>
-                                                                              <td>Board of Directors</td>
-                                                                              <td>Human Resource</td>
-                                                                              <td>6180</td>
-                                                                              <td> <input type="text"
-                                                                                          class="form-control"
-                                                                                          id="grouptext" disabled></td>
-                                                                              <td>
-                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                                    <input type="checkbox"
-                                                                                          id="checkbox2"
-                                                                                          name="checkbox2"
-                                                                                          value="option2"
-                                                                                          class="form-check-input">
-
-                                                                              </td>
-                                                                              <td>
-                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                                    <input type="checkbox"
-                                                                                          id="checkbox2"
-                                                                                          name="checkbox2"
-                                                                                          value="option2"
-                                                                                          class="form-check-input">
-
-                                                                              </td>
-
-
-                                                                        </tr>
-                                                                        <tr align="center">
-                                                                              <td>3.</td>
-                                                                              <td>TN00037</td>
-                                                                              <td>Jirayu Jaravichit</td>
-                                                                              <td>Board of Directors</td>
-                                                                              <td>Human Resource</td>
-                                                                              <td>6180</td>
-                                                                              <td> <input type="text"
-                                                                                          class="form-control"
-                                                                                          id="grouptext" disabled></td>
-                                                                              <td>
-                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                                    <input type="checkbox"
-                                                                                          id="checkbox2"
-                                                                                          name="checkbox2"
-                                                                                          value="option2"
-                                                                                          class="form-check-input">
-
-                                                                              </td>
-                                                                              <td>
-                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                                    <input type="checkbox"
-                                                                                          id="checkbox2"
-                                                                                          name="checkbox2"
-                                                                                          value="option2"
-                                                                                          class="form-check-input">
-
-                                                                              </td>
-
-
-                                                                        </tr>
-
+                                                                      
+<?php } ?>
 
                                                                   </tbody>
                                                             </table>

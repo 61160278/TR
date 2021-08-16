@@ -47,9 +47,16 @@ class Manage_training_record extends MainController {
 		$this->output('/consent/tr_manage_training_record/v_manage_training_record',$data);
 	}
 	// function index()
-	function info_training_data()
+	function info_training_data($Training_id)
 	{
-		$this->output('/consent/tr_manage_training_record/v_info_training_record');
+		$this->load->model('M_trs_training_record','mtdr');
+		$this->mtdr->Training_id = $Training_id;
+		$data['trd'] = $this->mtdr->get_training_data()->result();
+
+		$this->load->model('M_trs_training_record','mtrs');
+		$this->mtrs->Training_ID = $Training_id;
+		$data['mtr'] = $this->mtrs->get_member()->result();
+		$this->output('/consent/tr_manage_training_record/v_info_training_record' ,$data);
 	}
 	// function create_training_data()
 	function create_training_data()
@@ -61,7 +68,7 @@ class Manage_training_record extends MainController {
 	// function create_training_data()
 	function edit_training_data()
 	{
-		$this->output('/consent/tr_manage_training_record/v_edit_training_record');
+		$this->output('/consent/tr_manage_training_record/v_edit_training_record' ,$data);
 	}
 	// function create_training_data()
 

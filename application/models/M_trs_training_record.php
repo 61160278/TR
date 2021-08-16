@@ -194,5 +194,34 @@ class M_trs_training_record extends trs_model {
 	}
 
 
+
+	function get_training_data() {	
+		$sql = "SELECT * 
+				FROM trs_database.trs_training_record
+				WHERE Training_id = ?";
+				
+		$query = $this->db->query($sql ,array($this->Training_id));
+		return $query;
+	}
+
+	function get_member() {	
+		$sql = "SELECT * 
+				FROM trs_database.trs_member_course AS tmc
+				INNER JOIN dbmc.employee AS emp
+                		ON emp.Emp_ID = tmc.Employee_Code
+				INNER JOIN dbmc.position AS pos
+                		ON pos.Position_ID = emp.Position_ID
+				INNER JOIN dbmc.sectioncode AS sec
+                		ON sec.Sectioncode = emp.Sectioncode_ID
+				WHERE tmc.Training_ID = ?";
+				
+		$query = $this->db->query($sql ,array($this->Training_ID));
+		return $query;
+	}
+
+
+
+
+
 }		 
 ?>

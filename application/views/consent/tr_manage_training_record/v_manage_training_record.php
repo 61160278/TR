@@ -35,32 +35,36 @@
       </style>
       <!-- End style CSS  -->
       <script>
+      function Delete_training(Training_id) {
 
-function Delete_training(Training_id) {
+            console.log(Training_id);
 
- console.log(Training_id);
+            $.ajax({
+                  type: "post",
+                  url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/delete_training_data",
+                  data: {
+                        "Training_id": Training_id
+                  },
+                  dataType: "JSON",
+                  success: function(data) {
+                        // console.log(status)
+                        window.location.href =
+                              "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/index";
+                  }
 
-$.ajax({
-      type: "post",
-      url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/delete_training_data",
-      data: {
-            "Training_id": Training_id
-      },
-      dataType: "JSON",
-      success: function(data) {
-            // console.log(status)
-            window.location.href =
-                  "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/index";
+            });
+
       }
+      //function Delete_training
 
-});
+      function info_data(Training_id) {
 
-}
-//function Delete_training
-
-
-
-            </script>
+            console.log(Training_id);
+            window.location.href =
+                  "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/info_training_data/" + Training_id;
+      }
+      //function info_data
+      </script>
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
@@ -130,23 +134,26 @@ $.ajax({
                                                                         </tr>
                                                                   </thead>
                                                                   <tbody>
-                                                                  <?php foreach($trc as $index=>$row ){  ?>
+                                                                        <?php foreach($trc as $index=>$row ){  ?>
                                                                         <tr align="center">
                                                                               <td><?php echo ($index+1) ?></td>
-                                                                              <td><?php echo $row->Course_code_id; ?></td>
+                                                                              <td><?php echo $row->Course_code_id; ?>
+                                                                              </td>
                                                                               <td><?php echo $row->Course_name; ?></td>
-                                                                              <td><?php echo $row->Course_description; ?></td>
+                                                                              <td><?php echo $row->Course_description; ?>
+                                                                              </td>
                                                                               <td><?php echo $row->Start_date; ?></td>
                                                                               <td><?php echo $row->End_date; ?></td>
-                                                                              <td> <?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?></td>
-                                                                             
-                                                                              
+                                                                              <td> <?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?>
+                                                                              </td>
+
+
                                                                               <td>
-                                                                                    <a
-                                                                                          href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/info_training_data">
+                                                                                    
                                                                                           <button type="button"
-                                                                                                class="btn btn-info"><i
-                                                                                                      class="fa fa-info-circle "></i></button></a>
+                                                                                                class="btn btn-info"
+                                                                                                onClick="info_data(<?php echo $row->Training_id; ?>)"><i
+                                                                                                      class="fa fa-info-circle "></i></button>
                                                                                     <a
                                                                                           href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/edit_training_data">
                                                                                           <button type="button"
@@ -160,7 +167,7 @@ $.ajax({
                                                                               </td>
                                                                         </tr>
                                                                         <?php }   ?>
-                                                                       
+
 
                                                                   </tbody>
                                                             </table>
@@ -186,8 +193,8 @@ $.ajax({
 
       <?php foreach($trc as $index=>$row ){  ?>
       <!-- Modal -->
-      <div class="modal fade" id="DeleteModal<?php echo $row->Training_id?>" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
-            aria-hidden="true">
+      <div class="modal fade" id="DeleteModal<?php echo $row->Training_id?>" tabindex="-1" role="dialog"
+            aria-labelledby="staticModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-sm-5" role="document">
                   <div class="modal-content">
                         <div class="modal-header" style="background-color:#E74A3B;">
@@ -205,7 +212,8 @@ $.ajax({
                         </div>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button" class="btn btn-primary" onClick="Delete_training(<?php echo $row->Training_id; ?>)">Confirm</button>
+                              <button type="button" class="btn btn-primary"
+                                    onClick="Delete_training(<?php echo $row->Training_id; ?>)">Confirm</button>
                         </div>
                   </div>
             </div>
