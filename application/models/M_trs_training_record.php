@@ -64,10 +64,10 @@ class M_trs_training_record extends trs_model {
 	function update() {
 	
 		$sql = "UPDATE trs_database.trs_course_data 
-				SET	Course_code = ?, Course_name = ?, Course_description = ?, Course_category1 = ? ,Course_category2 = ? ,Course_category3 = ? , Course_type = ?
-				WHERE Course_id = ?" ;
+				SET	Place_training = ? ,Start_date = ? ,Start_time = ?,End_date = ?,End_time = ? ,Total_hours = ? ,Cost = ? ,Pre_test_score = ? ,Post_test_score = ?,Trainer_id = ? ,Certificate = ?
+				WHERE  Training_id = ? ";
 	     
-	     $this->db->query($sql, array($this->Course_code, $this->Course_name, $this->Course_description, $this->Course_category1, $this->Course_category2, $this->Course_category3, $this->Course_type ,$this->Course_id));
+	     $this->db->query($sql, array($this->Place_training, $this->Start_date, $this->Start_time, $this->End_date, $this->End_time, $this->Total_hours, $this->Cost , $this->Pre_test_score, $this->Post_test_score ,$this->Trainer_id ,$this->Certificate ,$this->Training_id));
 		
 	}                       
 

@@ -69,27 +69,28 @@
                                           <div class="col-md-12">
                                                 <div class="card border border-primary">
                                                       <div class="card-body">
-
+                                                     <?php foreach($trr as $row) { ?>
 
                                                             <div class="row">
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Type of Training :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Type"
+                                                                              id="grouptext" placeholder="Type" value="<?php echo $row->Course_type; ?>"
                                                                               disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; ครั้งที่ :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" disabled>
+                                                                              id="grouptext" disabled  value="<?php echo $row->Course_count; ?>">
                                                                   </div>
 
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Course Code :
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Code">
+                                                                              id="grouptext" placeholder="Code"
+                                                                              disabled value="<?php echo $row->Course_code_id; ?>">
                                                                   </div>
 
 
@@ -97,8 +98,8 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Training Name :
                                                                   <div class="col-sm-3">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext"
-                                                                              placeholder="Training Name">
+                                                                              id="grouptext" placeholder="Training Name"
+                                                                              disabled value="<?php echo $row->Course_name; ?>">
                                                                   </div>
 
                                                             </div>
@@ -108,52 +109,23 @@
                                                             <div class="row">
                                                                   &nbsp;&nbsp;&nbsp;&nbsp;Course Category :
                                                                   <div class="col-sm-2">
-                                                                        <select name="example_length"
-                                                                              class="form-control"
-                                                                              aria-controls="example"
-                                                                              onChange="select_company(value)">
-                                                                              <option value="0">Select</option>
-                                                                              <option value="1">General</option>
-                                                                              <option value="2">Technical</option>
-                                                                              <option value="3">Requirement</option>
-                                                                              <option value="4">Instructor</option>
-                                                                        </select>
+                                                                        <input type="text" class="form-control"
+                                                                        value="<?php echo $row->Course_category1; ?>" disabled>
                                                                   </div>
                                                                   <div class="col-sm-2">
-                                                                        <select name="example_length"
-                                                                              class="form-control"
-                                                                              aria-controls="example"
-                                                                              onChange="select_company(value)">
-                                                                              <option value="0">Select</option>
-                                                                              <option value="1">In-house</option>
-                                                                              <option value="2">External Training
-                                                                              </option>
-                                                                              <option value="3">On the job training
-                                                                              </option>
-                                                                              <option value="4">Seminar</option>
-                                                                        </select>
+                                                                        <input type="text" class="form-control"
+                                                                        value="<?php echo $row->Course_category2; ?>" disabled>
                                                                   </div>
                                                                   <div class="col-sm-2">
-                                                                        <select name="example_length"
-                                                                              class="form-control"
-                                                                              aria-controls="example"
-                                                                              onChange="select_company(value)">
-                                                                              <option value="0">Select</option>
-                                                                              <option value="1">Classroom </option>
-                                                                              <option value="2">E-learning</option>
-                                                                              <option value="3">Self studyt</option>
-                                                                              <option value="4">Both Classroom & On the
-                                                                                    job training</option>
-                                                                              <option value="5">On the job training
-                                                                              </option>
-                                                                        </select>
+                                                                        <input type="text" class="form-control"
+                                                                        value="<?php echo $row->Course_category3; ?>" disabled>
                                                                   </div>
 
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Place :
                                                                   <div class="col-sm-3">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Place">
+                                                                              id="place_training" disabled value="<?php echo $row->Place_training; ?>" >
                                                                   </div>
 
                                                             </div>
@@ -163,26 +135,28 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Start-Date :
                                                                   <div class="col-sm-2">
                                                                         <input type="date" class="form-control"
-                                                                              id="grouptext" placeholder="Type">
+                                                                        value="<?php echo $row->Start_date; ?>"
+                                                                              disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Start-Time :
                                                                   <div class="col-sm-2">
                                                                         <input type="time" class="form-control"
-                                                                              id="grouptext" placeholder="Code">
+                                                                        value="<?php echo $row->Start_time; ?>"
+                                                                              disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; End-Date :
                                                                   <div class="col-sm-2">
                                                                         <input type="date" class="form-control"
-                                                                              id="grouptext">
+                                                                               disabled value="<?php echo $row->End_date; ?>">
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; End-Time :
                                                                   <div class="col-sm-2">
                                                                         <input type="time" class="form-control"
-                                                                              id="grouptext"
-                                                                              placeholder="Training Name">
+                                                                              
+                                                                              disabled value="<?php echo $row->End_time; ?>">
                                                                   </div>
 
                                                             </div>
@@ -193,43 +167,32 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Total Hours :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" disabled>
+                                                                        value="<?php echo $row->Total_hours; ?>" disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Trainer :
                                                                   <div class="col-sm-2">
-                                                                        <select name="example_length"
-                                                                              class="form-control"
-                                                                              aria-controls="example"
-                                                                              onChange="select_company(value)">
-                                                                              <option value="0">Select Trainer</option>
-                                                                              <option value="1">Mr.Kenji Sleeptogether
-                                                                              </option>
-                                                                              <option value="2">Mr.Denial Ok
-                                                                              </option>
-                                                                              <option value="3">Mr.Kate J.son
-                                                                              </option>
-                                                                              <option value="4">Mr.Tony Roger</option>
-                                                                        </select>
+                                                                  <input type="text" class="form-control"
+                                                                  value="<?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?>"  disabled>
                                                                   </div>
 
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Cost :
                                                                   <div class="col-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext">
+                                                                        value="<?php echo $row->Cost; ?>"  disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Pre-test Score :
                                                                   <div class="col-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext">
+                                                                        value="<?php echo $row->Pre_test_score; ?>" disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Post-test Score :
                                                                   <div class="col-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext">
+                                                                        value="<?php echo $row->Post_test_score; ?>" disabled>
                                                                   </div>
 
                                                             </div>
@@ -242,20 +205,26 @@
                                                                   <div class="checkbox">
 
 
-
+                                                                  
                                                                         <div class="col-md-3">
+                                                                        <?php if($row->Certificate == "1"){ ?>
                                                                               <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" value="option2"
-                                                                                    class="form-check-input">
+                                                                                    name="checkbox2" checked
+                                                                                    class="form-check-input" disabled>
+                                                                                    <?php } else{?>
+                                                                                          <input type="checkbox" id="checkbox2"
+                                                                                    name="checkbox2" 
+                                                                                    class="form-check-input" disabled>
+<?php } ?>
                                                                         </div>
 
                                                                   </div>
 
-                                                                  
+                                                               
 
                                                             </div>
                                                             <!-- row 5 -->
-
+<?php  } ?>
                                                       </div>
                                                       <!-- card-body -->
 
@@ -280,14 +249,7 @@
                                                       <div class="row">
                                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                             <input class="form-control col-md-2" type="text"
-                                                                  placeholder="Employee ID" aria-label="Search">
-
-
-                                                            &nbsp;&nbsp;
-
-                                                            <button type="button" class="btn btn-success">Add Member
-                                                                  <i class="fa fa-plus text-black"></i></button>
-
+                                                                  placeholder="Search.." aria-label="Search">
 
                                                       </div>
                                                       <div class="card-body">
@@ -305,33 +267,21 @@
                                                                               <th>Hours</th>
                                                                               <th>Status</th>
                                                                               <th>Certificate</th>
-                                                                              <th>Action</th>
+
 
                                                                         </tr>
                                                                   </thead>
                                                                   <tbody>
+                                                                        <?php foreach($mtn as $index=>$row){ ?>
                                                                         <tr align="center">
-                                                                              <td>1.</td>
-                                                                              <td>TN00035</td>
-                                                                              <td>Kanchanaphitcha Meesuk</td>
-                                                                              <td>Board of Directors</td>
-                                                                              <td>Human Resource</td>
-                                                                              <td>6180</td>
-                                                                              <td>
-                                                                                    <input type="text"
-                                                                                          class="form-control"
-                                                                                          id="grouptext" value=""
-                                                                                          disabled>
-                                                                              </td>
-                                                                              <td>
-                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                                    <input type="checkbox"
-                                                                                          id="checkbox2"
-                                                                                          name="checkbox2"
-                                                                                          value="select"
-                                                                                          class="form-check-input">
-
-                                                                              </td>
+                                                                              <td><?php echo ($index+1) ?></td>
+                                                                              <td><?php echo $row->Employee_Code; ?></td>
+                                                                              <td><?php echo $row->Empname_engTitle.$row->Empname_eng."  ".$row->Empsurname_eng ?></td>
+                                                                              <td><?php echo $row->Position_name; ?></td>
+                                                                              <td><?php echo $row->Department; ?></td>
+                                                                              <td><?php echo $row->Sectioncode; ?></td>
+                                                                              <td><?php echo $row->Total_hours; ?></td>
+                                                                              <td><font color="green"><?php echo $row->Training_Status; ?></font></td>
                                                                               <td>
                                                                                     &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
                                                                                     <input type="checkbox"
@@ -341,89 +291,11 @@
                                                                                           class="form-check-input">
 
                                                                               </td>
-                                                                              <td>
 
-                                                                                    <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "
-                                                                                                data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button>
-                                                                              </td>
 
                                                                         </tr>
-                                                                        <tr align="center">
-                                                                              <td>2.</td>
-                                                                              <td>TN00036</td>
-                                                                              <td>Lapatrada Puttamongkol</td>
-                                                                              <td>Board of Directors</td>
-                                                                              <td>Human Resource</td>
-                                                                              <td>6180</td>
-                                                                              <td> <input type="text"
-                                                                                          class="form-control"
-                                                                                          id="grouptext" disabled></td>
-                                                                              <td>
-                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                                    <input type="checkbox"
-                                                                                          id="checkbox2"
-                                                                                          name="checkbox2"
-                                                                                          value="option2"
-                                                                                          class="form-check-input">
-
-                                                                              </td>
-                                                                              <td>
-                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                                    <input type="checkbox"
-                                                                                          id="checkbox2"
-                                                                                          name="checkbox2"
-                                                                                          value="option2"
-                                                                                          class="form-check-input">
-
-                                                                              </td>
-                                                                              <td> <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "
-                                                                                                data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button>
-                                                                              </td>
-
-                                                                        </tr>
-                                                                        <tr align="center">
-                                                                              <td>3.</td>
-                                                                              <td>TN00037</td>
-                                                                              <td>Jirayu Jaravichit</td>
-                                                                              <td>Board of Directors</td>
-                                                                              <td>Human Resource</td>
-                                                                              <td>6180</td>
-                                                                              <td> <input type="text"
-                                                                                          class="form-control"
-                                                                                          id="grouptext" disabled></td>
-                                                                              <td>
-                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                                    <input type="checkbox"
-                                                                                          id="checkbox2"
-                                                                                          name="checkbox2"
-                                                                                          value="option2"
-                                                                                          class="form-check-input">
-
-                                                                              </td>
-                                                                              <td>
-                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                                    <input type="checkbox"
-                                                                                          id="checkbox2"
-                                                                                          name="checkbox2"
-                                                                                          value="option2"
-                                                                                          class="form-check-input">
-
-                                                                              </td>
-                                                                              <td> <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "
-                                                                                                data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button>
-                                                                              </td>
-
-                                                                        </tr>
-
+                                                                      
+<?php } ?>
 
                                                                   </tbody>
                                                             </table>

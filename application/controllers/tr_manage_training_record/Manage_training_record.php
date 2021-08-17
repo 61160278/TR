@@ -66,8 +66,15 @@ class Manage_training_record extends MainController {
 		$this->output('/consent/tr_manage_training_record/v_create_training_record',$data);
 	}
 	// function create_training_data()
-	function edit_training_data()
+	function edit_training_data($Training_id)
 	{
+		$this->load->model('M_trs_training_record','mtdd');
+		$this->mtdd->Training_id = $Training_id;
+		$data['trr'] = $this->mtdd->get_training_data()->result();
+
+		$this->load->model('M_trs_training_record','mtrr');
+		$this->mtrr->Training_ID = $Training_id;
+		$data['mtn'] = $this->mtrr->get_member()->result();
 		$this->output('/consent/tr_manage_training_record/v_edit_training_record' ,$data);
 	}
 	// function create_training_data()
@@ -117,7 +124,48 @@ class Manage_training_record extends MainController {
 		
 		
 	}
-	// function Instructor()
+	// function add_training()
+
+
+	function edit_training()
+	{
+		$Training_id = $this->input->post('Training_id');
+		$place_training = $this->input->post("place_training");
+		$start_date = $this->input->post("start_date");
+		$start_time = $this->input->post("start_time");
+		$end_date = $this->input->post("end_date");
+		$end_time = $this->input->post("end_time");
+		$total_h = $this->input->post("total_h");
+		$cost = $this->input->post("cost");
+		$pre_score = $this->input->post("pre_score");
+		$post_score = $this->input->post("post_score");
+		$trainer = $this->input->post("trainer");
+		$checkboxs = $this->input->post("checkboxs");
+		$Show_count = $this->input->post("Show_count");
+		$Show_course_id = $this->input->post("Show_course_id");
+		
+	
+		$this->load->model('M_trs_training_record','mtrt');
+		$this->mddd->Training_id = $Training_id;
+		$this->mtrt->Place_training = $place_training;
+		$this->mtrt->Start_date = $start_date;
+		$this->mtrt->Start_time = $start_time;
+		$this->mtrt->End_date = $end_date;
+		$this->mtrt->End_time = $end_time;
+		$this->mtrt->Total_hours = $total_h;
+		$this->mtrt->Cost = $cost;
+		$this->mtrt->Pre_test_score = $pre_score;
+		$this->mtrt->Post_test_score = $post_score;
+		$this->mtrt->Trainer_id = $trainer;
+		$this->mtrt->Certificate = $checkboxs;
+		$this->mtrt->update();
+		$data="edt_tr";
+		echo json_encode($data);
+		
+		
+	}
+	// function edit_training()
+
 
 	function delete_training_data()
 	{

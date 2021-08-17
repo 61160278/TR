@@ -61,7 +61,17 @@
 
             console.log(Training_id);
             window.location.href =
-                  "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/info_training_data/" + Training_id;
+                  "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/info_training_data/" +
+                  Training_id;
+      }
+      //function info_data
+
+      function edit_data(Training_id) {
+
+            console.log(Training_id);
+            window.location.href =
+                  "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/edit_training_data/" +
+                  Training_id;
       }
       //function info_data
       </script>
@@ -149,16 +159,16 @@
 
 
                                                                               <td>
-                                                                                    
-                                                                                          <button type="button"
-                                                                                                class="btn btn-info"
-                                                                                                onClick="info_data(<?php echo $row->Training_id; ?>)"><i
-                                                                                                      class="fa fa-info-circle "></i></button>
-                                                                                    <a
-                                                                                          href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/edit_training_data">
-                                                                                          <button type="button"
-                                                                                                class="btn btn-warning"><i
-                                                                                                      class="fa fa-edit "></i></button></a>
+
+                                                                                    <button type="button"
+                                                                                          class="btn btn-info"
+                                                                                          onClick="info_data(<?php echo $row->Training_id; ?>)"><i
+                                                                                                class="fa fa-info-circle "></i></button>
+
+                                                                                    <button type="button"
+                                                                                          class="btn btn-warning"
+                                                                                          onClick="edit_data(<?php echo $row->Training_id; ?>)"><i
+                                                                                                class="fa fa-edit "></i></button>
                                                                                     <button type="button"
                                                                                           class="btn btn-danger"><i
                                                                                                 class="ti ti-trash "
