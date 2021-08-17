@@ -125,7 +125,7 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Place :
                                                                   <div class="col-sm-3">
                                                                         <input type="text" class="form-control"
-                                                                              id="place_training" disabled value="<?php echo $row->Place_training; ?>" >
+                                                                              id="place_training"  value="<?php echo $row->Place_training; ?>" >
                                                                   </div>
 
                                                             </div>
@@ -136,27 +136,27 @@
                                                                   <div class="col-sm-2">
                                                                         <input type="date" class="form-control"
                                                                         value="<?php echo $row->Start_date; ?>"
-                                                                              disabled>
+                                                                              >
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Start-Time :
                                                                   <div class="col-sm-2">
                                                                         <input type="time" class="form-control"
                                                                         value="<?php echo $row->Start_time; ?>"
-                                                                              disabled>
+                                                                              >
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; End-Date :
                                                                   <div class="col-sm-2">
                                                                         <input type="date" class="form-control"
-                                                                               disabled value="<?php echo $row->End_date; ?>">
+                                                                                value="<?php echo $row->End_date; ?>">
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; End-Time :
                                                                   <div class="col-sm-2">
                                                                         <input type="time" class="form-control"
                                                                               
-                                                                              disabled value="<?php echo $row->End_time; ?>">
+                                                                               value="<?php echo $row->End_time; ?>">
                                                                   </div>
 
                                                             </div>
@@ -167,32 +167,32 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Total Hours :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                        value="<?php echo $row->Total_hours; ?>" disabled>
+                                                                        value="<?php echo $row->Total_hours; ?>" >
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Trainer :
                                                                   <div class="col-sm-2">
                                                                   <input type="text" class="form-control"
-                                                                  value="<?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?>"  disabled>
+                                                                  value="<?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?>"  >
                                                                   </div>
 
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Cost :
                                                                   <div class="col-2">
                                                                         <input type="text" class="form-control"
-                                                                        value="<?php echo $row->Cost; ?>"  disabled>
+                                                                        value="<?php echo $row->Cost; ?>"  >
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Pre-test Score :
                                                                   <div class="col-1">
                                                                         <input type="text" class="form-control"
-                                                                        value="<?php echo $row->Pre_test_score; ?>" disabled>
+                                                                        value="<?php echo $row->Pre_test_score; ?>" >
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Post-test Score :
                                                                   <div class="col-1">
                                                                         <input type="text" class="form-control"
-                                                                        value="<?php echo $row->Post_test_score; ?>" disabled>
+                                                                        value="<?php echo $row->Post_test_score; ?>" >
                                                                   </div>
 
                                                             </div>
@@ -214,7 +214,7 @@
                                                                                     <?php } else{?>
                                                                                           <input type="checkbox" id="checkbox2"
                                                                                     name="checkbox2" 
-                                                                                    class="form-check-input" disabled>
+                                                                                    class="form-check-input" >
 <?php } ?>
                                                                         </div>
 
