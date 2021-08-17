@@ -354,7 +354,7 @@
                                                                               <th>Hours</th>
                                                                               <th>Status</th>
                                                                               <th>Certificate</th>
-
+                                                                              <th>Action</th>
 
                                                                         </tr>
                                                                   </thead>
@@ -385,7 +385,13 @@
                                                                                           class="form-check-input">
 
                                                                               </td>
-
+                                                                              <td>
+                                                                              <button type="button"
+                                                                                          class="btn btn-danger"><i
+                                                                                                class="ti ti-trash "
+                                                                                                data-toggle="modal"
+                                                                                                data-target="#DeleteModal"></i></button>
+                                                                              </td>
 
                                                                         </tr>
 
