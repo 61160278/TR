@@ -118,7 +118,7 @@
                   },
                   dataType: "JSON",
                   success: function(data, status) {
-
+                        console.log(data)
                         if (data.length == 0) {
 
                               document.getElementById("Show_course_name").value =
@@ -341,7 +341,7 @@
                         data_table += "<td>" + obj.Department + "</td>"
                         data_table += "<td>" + obj.Sectioncode + "</td>"
                         data_table += "<td>" + total_h + "</td>"
-                        data_table += "<td><font color="green">Pass</font></td>"
+                        data_table += "<td><font color='green'>Pass</font></td>"
                         if (checkbox == "on") {
                               checkboxs = 1;
                               data_table += "<td>" + checkboxs + "</td>"
