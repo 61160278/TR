@@ -63,7 +63,7 @@ class M_trs_training_record extends trs_model {
 
 	function update() {
 	
-		$sql = "UPDATE trs_database.trs_course_data 
+		$sql = "UPDATE trs_database.trs_training_record 
 				SET	Place_training = ? ,Start_date = ? ,Start_time = ?,End_date = ?,End_time = ? ,Total_hours = ? ,Cost = ? ,Pre_test_score = ? ,Post_test_score = ?,Trainer_id = ? ,Certificate = ?
 				WHERE  Training_id = ? ";
 	     

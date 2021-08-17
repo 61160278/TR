@@ -35,7 +35,64 @@
       }
       </style>
       <!-- End style CSS  -->
+      <script>
 
+      function edt_training_recrod(Training_id) {
+
+            var edt_place_training = document.getElementById("edt_place_training" + Training_id).value;
+            var edt_start_date = document.getElementById("edt_start_date" + Training_id).value;
+            var edt_start_time = document.getElementById("edt_start_time" + Training_id).value;
+            var edt_end_date = document.getElementById("edt_end_date" + Training_id).value;
+            var edt_end_time = document.getElementById("edt_end_time" + Training_id).value;
+            var edt_total_h = document.getElementById("edt_total_h" + Training_id).value;
+            var edt_cost = document.getElementById("edt_cost" + Training_id).value;
+            var edt_pre_score = document.getElementById("edt_pre_score" + Training_id).value;
+            var edt_post_score = document.getElementById("edt_post_score" + Training_id).value;
+            // var edt_trainer = document.getElementById("edt_trainer" + Training_id).value;
+            // var edt_checkbox = document.getElementById("edt_checkbox" + Training_id);
+            // var edt_Show_count = document.getElementById("edt_Show_count" + Training_id).value;
+            // var edt_Show_course_id = document.getElementById("edt_Show_course_id" + Training_id).value;
+
+            // if (checkbox.checked == true) {
+            //       checkboxs = 1;
+            // } else {
+            //       checkboxs = 0;
+            // }
+
+            // console.log(checkboxs)
+
+            $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/edit_training",
+                  data: {
+                        "Training_id" : Training_id,
+                        "edt_place_training": edt_place_training,
+                        "edt_start_date": edt_start_date,
+                        "edt_start_time": edt_start_time,
+                        "edt_end_date": edt_end_date,
+                        "edt_end_time": edt_end_time,
+                        "edt_total_h": edt_total_h,
+                        "edt_cost": edt_cost,
+                        "edt_pre_score": edt_pre_score,
+                        "edt_post_score": edt_post_score,
+                        // "edt_trainer": edt_trainer,
+                        // "edt_checkboxs": edt_checkboxs
+                        // "edt_Show_count": edt_Show_count,
+                        // "edt_Show_course_id": edt_Show_course_id
+
+                  },
+                  dataType: "JSON",
+                  success: function(data) {
+                        
+                  }
+                  // success function
+
+            });
+
+            // ajax 
+      } //function add_courses
+     
+      </script>
       <!-- Begin Page Content -->
       <div class="container-fluid">
 
@@ -69,28 +126,30 @@
                                           <div class="col-md-12">
                                                 <div class="card border border-primary">
                                                       <div class="card-body">
-                                                     <?php foreach($trr as $row) { ?>
+                                                            <?php foreach($trr as $row) { ?>
 
                                                             <div class="row">
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Type of Training :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Type" value="<?php echo $row->Course_type; ?>"
+                                                                              id="grouptext" placeholder="Type"
+                                                                              value="<?php echo $row->Course_type; ?>"
                                                                               disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; ครั้งที่ :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" disabled  value="<?php echo $row->Course_count; ?>">
+                                                                              id="grouptext" disabled
+                                                                              value="<?php echo $row->Course_count; ?>">
                                                                   </div>
 
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Course Code :
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Code"
-                                                                              disabled value="<?php echo $row->Course_code_id; ?>">
+                                                                              id="grouptext" placeholder="Code" disabled
+                                                                              value="<?php echo $row->Course_code_id; ?>">
                                                                   </div>
 
 
@@ -99,7 +158,8 @@
                                                                   <div class="col-sm-3">
                                                                         <input type="text" class="form-control"
                                                                               id="grouptext" placeholder="Training Name"
-                                                                              disabled value="<?php echo $row->Course_name; ?>">
+                                                                              disabled
+                                                                              value="<?php echo $row->Course_name; ?>">
                                                                   </div>
 
                                                             </div>
@@ -110,22 +170,26 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp;Course Category :
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
-                                                                        value="<?php echo $row->Course_category1; ?>" disabled>
+                                                                              value="<?php echo $row->Course_category1; ?>"
+                                                                              disabled>
                                                                   </div>
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
-                                                                        value="<?php echo $row->Course_category2; ?>" disabled>
+                                                                              value="<?php echo $row->Course_category2; ?>"
+                                                                              disabled>
                                                                   </div>
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
-                                                                        value="<?php echo $row->Course_category3; ?>" disabled>
+                                                                              value="<?php echo $row->Course_category3; ?>"
+                                                                              disabled>
                                                                   </div>
 
-                                                                 
+
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Place :
                                                                   <div class="col-sm-3">
                                                                         <input type="text" class="form-control"
-                                                                              id="edt_place_training<?php echo $row->Training_id; ?>"  value="<?php echo $row->Place_training; ?>" >
+                                                                              id="edt_place_training<?php echo $row->Training_id; ?>"
+                                                                              value="<?php echo $row->Place_training; ?>">
                                                                   </div>
 
                                                             </div>
@@ -135,28 +199,29 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Start-Date :
                                                                   <div class="col-sm-2">
                                                                         <input type="date" class="form-control"
-                                                                        value="<?php echo $row->Start_date; ?>" id="edt_start_date<?php echo $row->Training_id; ?>"
-                                                                              >
+                                                                              value="<?php echo $row->Start_date; ?>"
+                                                                              id="edt_start_date<?php echo $row->Training_id; ?>">
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Start-Time :
                                                                   <div class="col-sm-2">
                                                                         <input type="time" class="form-control"
-                                                                        value="<?php echo $row->Start_time; ?>" id="edt_start_time<?php echo $row->Training_id; ?>"
-                                                                              >
+                                                                              value="<?php echo $row->Start_time; ?>"
+                                                                              id="edt_start_time<?php echo $row->Training_id; ?>">
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; End-Date :
                                                                   <div class="col-sm-2">
-                                                                        <input type="date" class="form-control" id="edt_end_date<?php echo $row->Training_id; ?>"
-                                                                                value="<?php echo $row->End_date; ?>">
+                                                                        <input type="date" class="form-control"
+                                                                              id="edt_end_date<?php echo $row->Training_id; ?>"
+                                                                              value="<?php echo $row->End_date; ?>">
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; End-Time :
                                                                   <div class="col-sm-2">
-                                                                        <input type="time" class="form-control" id="edt_end_time<?php echo $row->Training_id; ?>"
-                                                                              
-                                                                               value="<?php echo $row->End_time; ?>">
+                                                                        <input type="time" class="form-control"
+                                                                              id="edt_end_time<?php echo $row->Training_id; ?>"
+                                                                              value="<?php echo $row->End_time; ?>">
                                                                   </div>
 
                                                             </div>
@@ -166,33 +231,37 @@
                                                             <div class="row">
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Total Hours :
                                                                   <div class="col-sm-1">
-                                                                        <input type="text" class="form-control" id="edt_total_h<?php echo $row->Training_id; ?>"
-                                                                        value="<?php echo $row->Total_hours; ?>" >
+                                                                        <input type="text" class="form-control"
+                                                                              id="edt_total_h<?php echo $row->Training_id; ?>"
+                                                                              value="<?php echo $row->Total_hours; ?>">
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Trainer :
                                                                   <div class="col-sm-2">
-                                                                  <input type="text" class="form-control"
-                                                                  value="<?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?>"  >
+                                                                        <input type="text" class="form-control"
+                                                                              value="<?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?>">
                                                                   </div>
 
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Cost :
                                                                   <div class="col-2">
-                                                                        <input type="text" class="form-control" id="edt_cost<?php echo $row->Training_id; ?>"
-                                                                        value="<?php echo $row->Cost; ?>"  >
+                                                                        <input type="text" class="form-control"
+                                                                              id="edt_cost<?php echo $row->Training_id; ?>"
+                                                                              value="<?php echo $row->Cost; ?>">
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Pre-test Score :
                                                                   <div class="col-1">
-                                                                        <input type="text" class="form-control" id="edt_pre_score<?php echo $row->Training_id; ?>"
-                                                                        value="<?php echo $row->Pre_test_score; ?>" >
+                                                                        <input type="text" class="form-control"
+                                                                              id="edt_pre_score<?php echo $row->Training_id; ?>"
+                                                                              value="<?php echo $row->Pre_test_score; ?>">
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Post-test Score :
                                                                   <div class="col-1">
-                                                                        <input type="text" class="form-control" id="edt_post_score<?php echo $row->Training_id; ?>"
-                                                                        value="<?php echo $row->Post_test_score; ?>" >
+                                                                        <input type="text" class="form-control"
+                                                                              id="edt_post_score<?php echo $row->Training_id; ?>"
+                                                                              value="<?php echo $row->Post_test_score; ?>">
                                                                   </div>
 
                                                             </div>
@@ -205,26 +274,29 @@
                                                                   <div class="checkbox">
 
 
-                                                                  
+
                                                                         <div class="col-md-3">
-                                                                        <?php if($row->Certificate == "1"){ ?>
+                                                                              <?php if($row->Certificate == "1"){ ?>
                                                                               <input type="checkbox" id="checkbox2"
                                                                                     name="checkbox2" checked
-                                                                                    class="form-check-input" >
-                                                                                    <?php } else{?>
-                                                                                          <input type="checkbox" id="checkbox2"
-                                                                                    name="checkbox2" 
-                                                                                    class="form-check-input" >
-<?php } ?>
+                                                                                    class="form-check-input">
+                                                                              <?php } else{?>
+                                                                              <input type="checkbox" id="checkbox2"
+                                                                                    name="checkbox2"
+                                                                                    class="form-check-input">
+                                                                              <?php } ?>
                                                                         </div>
 
                                                                   </div>
 
-                                                               
+
 
                                                             </div>
                                                             <!-- row 5 -->
-<?php  } ?>
+                                                            <?php  } ?>
+                                                            <br>
+                                                            <button type="button" class="btn btn-primary" id="save_data"
+                                                                  onclick="edt_training_recrod(<?php echo $row->Training_id; ?>)">Confirm</button>
                                                       </div>
                                                       <!-- card-body -->
 
@@ -275,13 +347,20 @@
                                                                         <?php foreach($mtn as $index=>$row){ ?>
                                                                         <tr align="center">
                                                                               <td><?php echo ($index+1) ?></td>
-                                                                              <td><?php echo $row->Employee_Code; ?></td>
-                                                                              <td><?php echo $row->Empname_engTitle.$row->Empname_eng."  ".$row->Empsurname_eng ?></td>
-                                                                              <td><?php echo $row->Position_name; ?></td>
+                                                                              <td><?php echo $row->Employee_Code; ?>
+                                                                              </td>
+                                                                              <td><?php echo $row->Empname_engTitle.$row->Empname_eng."  ".$row->Empsurname_eng ?>
+                                                                              </td>
+                                                                              <td><?php echo $row->Position_name; ?>
+                                                                              </td>
                                                                               <td><?php echo $row->Department; ?></td>
                                                                               <td><?php echo $row->Sectioncode; ?></td>
                                                                               <td><?php echo $row->Total_hours; ?></td>
-                                                                              <td><font color="green"><?php echo $row->Training_Status; ?></font></td>
+                                                                              <td>
+                                                                                    <font color="green">
+                                                                                          <?php echo $row->Training_Status; ?>
+                                                                                    </font>
+                                                                              </td>
                                                                               <td>
                                                                                     &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
                                                                                     <input type="checkbox"
@@ -294,8 +373,8 @@
 
 
                                                                         </tr>
-                                                                      
-<?php } ?>
+
+                                                                        <?php } ?>
 
                                                                   </tbody>
                                                             </table>
