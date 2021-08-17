@@ -143,7 +143,7 @@ class Manage_training_record extends MainController {
 		$edt_pre_score = $this->input->post("edt_pre_score");
 		$edt_post_score = $this->input->post("edt_post_score");
 		$edt_trainer = $this->input->post("edt_trainer");
-		$edt_checkboxs = $this->input->post("edt_checkboxs");
+		$checkboxs = $this->input->post("checkboxs");
 		$edt_Show_count = $this->input->post("edt_Show_count");
 		$edt_Show_course_id = $this->input->post("edt_Show_course_id");
 		
@@ -160,7 +160,7 @@ class Manage_training_record extends MainController {
 		$this->mtrt->Pre_test_score = $edt_pre_score;
 		$this->mtrt->Post_test_score = $edt_post_score;
 		$this->mtrt->Trainer_id = $edt_trainer;
-		$this->mtrt->Certificate = $edt_checkboxs;
+		$this->mtrt->Certificate = $checkboxs;
 		$this->mtrt->update();
 		$data="edt_tr";
 		echo json_encode($data);

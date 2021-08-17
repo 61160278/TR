@@ -48,15 +48,15 @@
             var edt_pre_score = document.getElementById("edt_pre_score" + Training_id).value;
             var edt_post_score = document.getElementById("edt_post_score" + Training_id).value;
             var edt_trainer = document.getElementById("edt_trainer" + Training_id).value;
-            // var edt_checkbox = document.getElementById("edt_checkbox" + Training_id);
+            var edt_checkbox = document.getElementById("edt_checkbox" + Training_id);
             // var edt_Show_count = document.getElementById("edt_Show_count" + Training_id).value;
             // var edt_Show_course_id = document.getElementById("edt_Show_course_id" + Training_id).value;
 
-            // if (checkbox.checked == true) {
-            //       checkboxs = 1;
-            // } else {
-            //       checkboxs = 0;
-            // }
+            if (edt_checkbox.checked == true) {
+                  checkboxs = 1;
+            } else {
+                  checkboxs = 0;
+            }
 
             // console.log(checkboxs)
 
@@ -74,8 +74,8 @@
                         "edt_cost": edt_cost,
                         "edt_pre_score": edt_pre_score,
                         "edt_post_score": edt_post_score,
-                        "edt_trainer": edt_trainer
-                        // "edt_checkboxs": edt_checkboxs
+                        "edt_trainer": edt_trainer,
+                        "checkboxs": checkboxs
                         // "edt_Show_count": edt_Show_count,
                         // "edt_Show_course_id": edt_Show_course_id
 
@@ -292,11 +292,11 @@
 
                                                                         <div class="col-md-3">
                                                                               <?php if($row->Certificate == "1"){ ?>
-                                                                              <input type="checkbox" id="checkbox2"
+                                                                              <input type="checkbox" id="edt_checkbox<?php echo $row->Training_id; ?>"
                                                                                     name="checkbox2" checked
                                                                                     class="form-check-input">
                                                                               <?php } else{?>
-                                                                              <input type="checkbox" id="checkbox2"
+                                                                              <input type="checkbox" id="edt_checkbox<?php echo $row->Training_id; ?>"
                                                                                     name="checkbox2"
                                                                                     class="form-check-input">
                                                                               <?php } ?>
