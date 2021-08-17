@@ -75,6 +75,9 @@ class Manage_training_record extends MainController {
 		$this->load->model('M_trs_training_record','mtrr');
 		$this->mtrr->Training_ID = $Training_id;
 		$data['mtn'] = $this->mtrr->get_member()->result();
+
+		$this->load->model('M_trs_trainer_data','mttd');
+		$data['ins'] = $this->mttd->get_all_ins()->result();
 		$this->output('/consent/tr_manage_training_record/v_edit_training_record' ,$data);
 	}
 	// function create_training_data()

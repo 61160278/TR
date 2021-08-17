@@ -36,9 +36,8 @@
       </style>
       <!-- End style CSS  -->
       <script>
-
       function edt_training_recrod(Training_id) {
-
+            console.log(Training_id)
             var edt_place_training = document.getElementById("edt_place_training" + Training_id).value;
             var edt_start_date = document.getElementById("edt_start_date" + Training_id).value;
             var edt_start_time = document.getElementById("edt_start_time" + Training_id).value;
@@ -48,7 +47,7 @@
             var edt_cost = document.getElementById("edt_cost" + Training_id).value;
             var edt_pre_score = document.getElementById("edt_pre_score" + Training_id).value;
             var edt_post_score = document.getElementById("edt_post_score" + Training_id).value;
-            // var edt_trainer = document.getElementById("edt_trainer" + Training_id).value;
+            var edt_trainer = document.getElementById("edt_trainer" + Training_id).value;
             // var edt_checkbox = document.getElementById("edt_checkbox" + Training_id);
             // var edt_Show_count = document.getElementById("edt_Show_count" + Training_id).value;
             // var edt_Show_course_id = document.getElementById("edt_Show_course_id" + Training_id).value;
@@ -65,7 +64,7 @@
                   type: "POST",
                   url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/edit_training",
                   data: {
-                        "Training_id" : Training_id,
+                        "Training_id": Training_id,
                         "edt_place_training": edt_place_training,
                         "edt_start_date": edt_start_date,
                         "edt_start_time": edt_start_time,
@@ -75,7 +74,7 @@
                         "edt_cost": edt_cost,
                         "edt_pre_score": edt_pre_score,
                         "edt_post_score": edt_post_score,
-                        // "edt_trainer": edt_trainer,
+                        "edt_trainer": edt_trainer
                         // "edt_checkboxs": edt_checkboxs
                         // "edt_Show_count": edt_Show_count,
                         // "edt_Show_course_id": edt_Show_course_id
@@ -83,7 +82,7 @@
                   },
                   dataType: "JSON",
                   success: function(data) {
-                        
+
                   }
                   // success function
 
@@ -91,7 +90,6 @@
 
             // ajax 
       } //function add_courses
-     
       </script>
       <!-- Begin Page Content -->
       <div class="container-fluid">
@@ -238,8 +236,25 @@
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Trainer :
                                                                   <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              value="<?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?>">
+
+                                                                        <select name="example_length"
+                                                                              class="form-control"
+                                                                              aria-controls="example" id="edt_trainer<?php echo $row->Training_id; ?>">
+                                                                              <option value="0">Select Trainer</option>
+                                                                              <?php foreach($ins as $row_ins) { 
+                                                                                    if($row_ins ->trainer_id == $row->Trainer_id){  ?>
+                                                                              <option
+                                                                                    value="<?php echo $row_ins->trainer_id; ?>" selected>
+                                                                                    <?php echo $row_ins->trainer_titlename.$row_ins->trainer_fname."  ".$row_ins->trainer_Sname ?>
+                                                                              </option>
+                                                                              <?php  }  else{?>
+                                                                              <option
+                                                                                    value="<?php echo $row_ins->trainer_id; ?>">
+                                                                                    <?php echo $row_ins->trainer_titlename.$row_ins->trainer_fname."  ".$row_ins->trainer_Sname ?>
+                                                                              </option>
+                                                                              <?php } ?>
+                                                                              <?php } ?>
+                                                                        </select>
                                                                   </div>
 
 
