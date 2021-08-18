@@ -90,6 +90,47 @@
 
             // ajax 
       } //function add_courses
+
+
+      function edt_check_training(check) {
+            var edt_place_training = document.getElementById("edt_place_training" + check).value;
+            var edt_start_date = document.getElementById("edt_start_date" + check).value;
+            var edt_start_time = document.getElementById("edt_start_time" + check).value;
+            var edt_end_date = document.getElementById("edt_end_date" + check).value;
+            var edt_end_time = document.getElementById("edt_end_time" + check).value;
+            var edt_total_h = document.getElementById("edt_total_h" + check).value;
+            var edt_trainer = document.getElementById("edt_trainer" + check).value;
+       
+
+            
+            if (edt_place_training != "" &&  edt_start_date != "" && edt_start_time != "" && edt_end_date != "" && edt_end_time != "" && edt_trainer != "0" && edt_trainer != "") {
+                  edt_training_recrod(check);
+                  $("#addmember").collapse('show');
+                  $("#save_data").hide();
+
+                  return true;
+
+            } else {
+                  console.log("show")
+                  $("#warningModal").modal('show');
+                  return false;
+            }
+
+
+      }
+      //check_data
+
+
+
+
+
+
+
+
+
+
+
+
       </script>
       <!-- Begin Page Content -->
       <div class="container-fluid">
@@ -311,7 +352,7 @@
                                                             <?php  } ?>
                                                             <br>
                                                             <button type="button" class="btn btn-primary" id="save_data"
-                                                                  onclick="edt_training_recrod(<?php echo $row->Training_id; ?>)">Confirm</button>
+                                                                  onclick="edt_check_training(<?php echo $row->Training_id; ?>)">Confirm</button>
                                                       </div>
                                                       <!-- card-body -->
 
@@ -420,7 +461,32 @@
       </div> <!-- /.container-fluid -->
 
 
-
+ <!-- Modal Warning -->
+ <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                        <div class="modal-header" style="background-color:#FFC000;">
+                              <h5 class="modal-title" id="mediumModalLabel">
+                                    <font color="white" size="6px"><i class="fa fa-exclamation-triangle">
+                                                Warning</i></font>
+                              </h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                              </button>
+                        </div>
+                        <div class="modal-body">
+                              <p>
+                                    <b> Please fill in the correct information. </b>
+                              </p>
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <!-- End Modal Warning -->
 
 
       <!-- Modal -->
