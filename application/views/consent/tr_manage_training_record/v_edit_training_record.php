@@ -36,7 +36,9 @@
       </style>
       <!-- End style CSS  -->
       <script>
+      var count = 0;
       var member = [];
+      var member_count = [];
       $(document).ready(function() {
             add_member_table();
       });
@@ -211,11 +213,12 @@
                   success: function(data, status) {
 
                         console.log(data)
-                        count++;
+
                         var obj = data;
                         member.push(obj.Emp_ID)
-                        data_table += "<tr>"
-                        data_table += "<td>" + count + "</td>"
+                        member_count.push(count)
+                        data_table += "<tr id='row_member"+count+"'>"
+                        data_table += "<td>" + (count + 1) + "</td>"
                         data_table += "<td id='emp_id_" + count + "'>" + obj.Emp_ID + "</td>"
                         data_table += "<td>" + obj.Empname_eng + " " + obj.Empsurname_eng +
                               "</td>"
@@ -231,12 +234,14 @@
                               checkboxs = 0;
                               data_table += "<td>" + checkboxs + "</td>"
                         }
-
+                        data_table += "<td>   <button type='button' class = 'btn btn-danger' onclick = 'remove_member("+count+")' > <i class = 'ti ti-trash'> </i></button ></td>"
                         data_table += "</tr>"
+                        count++;
                         $("#show_member").append(data_table);
                         $("#emp_id").val('');
                         $("#nameEmp").val('');
                         $("#add_m").attr("disabled", true);
+                        console.log(member)
                   }
 
             });
@@ -263,14 +268,15 @@
                   success: function(data, status) {
 
                         console.log(data)
-                        count++;
+                        count = 0;
 
                         data.forEach((row, index) => {
 
                               var checkbox = 0;
+                              member_count.push(count)
                               member.push(row.Emp_ID)
-                              data_table += "<tr>"
-                              data_table += "<td>" + count + "</td>"
+                              data_table += "<tr id='row_member"+count+"'>"
+                              data_table += "<td>" + (count + 1) + "</td>"
                               data_table += "<td id='emp_id_" + count + "'>" + row
                                     .Emp_ID + "</td>"
                               data_table += "<td>" + row.Empname_eng + " " + row
@@ -288,8 +294,9 @@
                                     checkboxs = 0;
                                     data_table += "<td>" + checkboxs + "</td>"
                               }
-
+                              data_table += "<td>   <button type='button' class = 'btn btn-danger' onclick = 'remove_member("+count+")' > <i class = 'ti ti-trash'> </i></button ></td>"
                               data_table += "</tr>"
+                              count++;
                         });
                         // forEach
                         $("#show_member").html(data_table);
@@ -306,52 +313,47 @@
 
 
       function add_member_db() {
-            var training = "";
+
             var empid = [];
-            var check = 0;
-            $.get("<?php echo base_url(); ?>tr_manage_training_record/Manage_training_record/get_course", function(
-                  data) {
-                  var obj = JSON.parse(data);
-                  training = obj.Training_id;
-                  console.log(obj);
-                  check++;
-                  if (check != 0) {
-                        for (i = 1; i <= count; i++) {
-                              document.getElementById("emp_id_" + i).innerHTML;
-                              empid.push(document.getElementById("emp_id_" + i).innerHTML)
+            var training = document.getElementById("Training_id").value;
+              console.log(member_count)
+                        for (i = 0; i <= member_count.lenght; i++) {
+                              empid.push(document.getElementById("emp_id_" + member_count[i]).innerHTML)
                         } //for
 
                         console.log(empid)
 
-                        $.ajax({
-                              type: "POST",
-                              url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/save_member",
-                              data: {
-                                    "training": training,
-                                    "count": count,
-                                    "empid": empid
-                              },
-                              dataType: "JSON",
-                              success: function(data) {
+                        // $.ajax({
+                        //       type: "POST",
+                        //       url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/save_member",
+                        //       data: {
+                        //             "training": training,
+                                   
+                        //             "empid": empid
+                        //       },
+                        //       dataType: "JSON",
+                        //       success: function(data) {
 
-                                    window.location.href =
-                                          "<?php echo base_url();?>/tr_manage_training_record/Manage_training_record/index";
-                              }
+                        //             window.location.href =
+                        //                   "<?php echo base_url();?>/tr_manage_training_record/Manage_training_record/index";
+                        //       }
 
-                        });
+                        // });
                         // ajax
 
-
-                  }
-            });
-
-
-
-
-
-
-
       } //function add_member_db
+
+function remove_member(row_index){
+console.log(row_index)
+$("#row_member" +row_index).remove();
+var index = member_count.indexOf(row_index);
+if (index > -1){
+member_count.splice(index,1);
+
+}
+
+}
+
       </script>
       <!-- Begin Page Content -->
       <div class="container-fluid">
@@ -660,7 +662,13 @@
                         <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
                               <button type="button" class="btn btn-secondary">Back</button>
                         </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="button"
+                                    class="btn btn-primary" id="save_member" onclick="add_member_db()">Save</button>
                   </div>
+                  
+                              
+
+                        
             </div>
             <!-- Start col-lg-12 -->
 
