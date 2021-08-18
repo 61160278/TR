@@ -36,7 +36,7 @@
       </style>
       <!-- End style CSS  -->
       <script>
-            var member = [];
+      var member = [];
       $(document).ready(function() {
             add_member_table();
       });
@@ -87,7 +87,19 @@
                   },
                   dataType: "JSON",
                   success: function(data) {
-
+                        $("#addmember").collapse('show');
+                        $("#edt_place_training" + Training_id).attr("disabled", true);
+                        $("#edt_start_date" + Training_id).attr("disabled", true);
+                        $("#edt_start_time" + Training_id).attr("disabled", true);
+                        $("#edt_end_date" + Training_id).attr("disabled", true);
+                        $("#edt_end_time" + Training_id).attr("disabled", true);
+                        $("#edt_total_h" + Training_id).attr("disabled", true);
+                        $("#edt_trainer" + Training_id).attr("disabled", true);
+                        $("#edt_cost" + Training_id).attr("disabled", true);
+                        $("#edt_pre_score" + Training_id).attr("disabled", true);
+                        $("#edt_post_score" + Training_id).attr("disabled", true);
+                        $("#save_data").hide();
+                        console.log(data)
                   }
                   // success function
 
@@ -111,8 +123,6 @@
             if (edt_place_training != "" && edt_start_date != "" && edt_start_time != "" && edt_end_date != "" &&
                   edt_end_time != "" && edt_trainer != "0" && edt_trainer != "") {
                   edt_training_recrod(check);
-                  // $("#addmember").collapse('show');
-                  // $("#save_data").hide();
 
                   return true;
 
@@ -189,7 +199,7 @@
             var emp_id = document.getElementById("emp_id").value;
             var total_h = document.getElementById("edt_total_h" + Training_id).value;
             var checkbox = document.getElementById("edt_checkbox" + Training_id).checked;
-console.log(checkbox)
+            console.log(checkbox)
             var data_table = "";
             $.ajax({
                   type: "POST",
@@ -240,9 +250,7 @@ console.log(checkbox)
 
       function add_member_table() {
             var Training_id = document.getElementById("Training_id").value;
-            // var emp_id = document.getElementById("emp_id").value;
-            // var total_h = document.getElementById("total_h").value;
-            // var checkbox = document.getElementById("checkbox").value;
+
 
             var data_table = "";
             $.ajax({
@@ -256,10 +264,10 @@ console.log(checkbox)
 
                         console.log(data)
                         count++;
-                       
+
                         data.forEach((row, index) => {
 
-var checkbox = 0;
+                              var checkbox = 0;
                               member.push(row.Emp_ID)
                               data_table += "<tr>"
                               data_table += "<td>" + count + "</td>"
@@ -586,66 +594,67 @@ var checkbox = 0;
                               </div>
                         </div>
                         <!-- content 1 -->
+                        <div class="collapse" id="addmember">
+                              <div class="content">
+                                    <div class="animated fadeIn">
+                                          <div class="row">
 
-                        <div class="content">
-                              <div class="animated fadeIn">
-                                    <div class="row">
+                                                <div class="col-md-12">
+                                                      <div class="card">
 
-                                          <div class="col-md-12">
-                                                <div class="card">
+                                                            <div class="row">
 
-                                                      <div class="row">
+                                                                  <div class="col-md-2">
 
-                                                            <div class="col-md-2">
+                                                                        <input class="form-control" type="text"
+                                                                              placeholder="Employee ID" id="emp_id"
+                                                                              onkeyup="search_emp()">
+                                                                  </div>
+                                                                  <div class="col-md-2">
+                                                                        <input class="form-control" type="text"
+                                                                              id="nameEmp" disabled>
+                                                                        &nbsp;&nbsp;
+                                                                  </div>
+                                                                  <div class="col-md-2">
+                                                                        <button type="button" class="btn btn-success"
+                                                                              id="add_m" onclick="add_member()">Add
+                                                                              Member
+                                                                              <i
+                                                                                    class="fa fa-plus text-black"></i></button>
+                                                                  </div>
 
-                                                                  <input class="form-control" type="text"
-                                                                        placeholder="Employee ID" id="emp_id"
-                                                                        onkeyup="search_emp()">
                                                             </div>
-                                                            <div class="col-md-2">
-                                                                  <input class="form-control" type="text" id="nameEmp"
-                                                                        disabled>
-                                                                  &nbsp;&nbsp;
+                                                            <div class="card-body">
+                                                                  <table id="bootstrap-data-table"
+                                                                        class="table table-striped table-bordered">
+                                                                        <thead>
+                                                                              <tr align="center">
+
+                                                                                    <th>No.</th>
+                                                                                    <th>Employee Code</th>
+                                                                                    <th>Firstname-Surname</th>
+                                                                                    <th>Position</th>
+                                                                                    <th>Department</th>
+                                                                                    <th>Section</th>
+                                                                                    <th>Hours</th>
+                                                                                    <th>Status</th>
+                                                                                    <th>Certificate</th>
+                                                                                    <th>Action</th>
+
+                                                                              </tr>
+                                                                        </thead>
+                                                                        <tbody id="show_member">
+                                                                        </tbody>
+                                                                  </table>
                                                             </div>
-                                                            <div class="col-md-2">
-                                                                  <button type="button" class="btn btn-success"
-                                                                        id="add_m" onclick="add_member()">Add
-                                                                        Member
-                                                                        <i class="fa fa-plus text-black"></i></button>
-                                                            </div>
-
-                                                      </div>
-                                                      <div class="card-body">
-                                                            <table id="bootstrap-data-table"
-                                                                  class="table table-striped table-bordered">
-                                                                  <thead>
-                                                                        <tr align="center">
-
-                                                                              <th>No.</th>
-                                                                              <th>Employee Code</th>
-                                                                              <th>Firstname-Surname</th>
-                                                                              <th>Position</th>
-                                                                              <th>Department</th>
-                                                                              <th>Section</th>
-                                                                              <th>Hours</th>
-                                                                              <th>Status</th>
-                                                                              <th>Certificate</th>
-                                                                              <th>Action</th>
-
-                                                                        </tr>
-                                                                  </thead>
-                                                                  <tbody id="show_member">
-                                                                  </tbody>
-                                                            </table>
                                                       </div>
                                                 </div>
+
+
                                           </div>
-
-
-                                    </div>
-                              </div><!-- .animated 2 -->
-                        </div><!-- .content 2 -->
-
+                                    </div><!-- .animated 2 -->
+                              </div><!-- .content 2 -->
+                        </div>
                   </div>
                   <div class="col-md-3">
                         <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
