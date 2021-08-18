@@ -204,7 +204,7 @@
                               document.getElementById("Show_course_category3").value = coursename;
 
                               coursename = data[0].Course_count
-                              document.getElementById("Show_count").value = (parseInt(coursename+1));
+                              document.getElementById("Show_count").value = (parseInt(coursename)+1);
 
                               console.log(999)
                               console.log(coursename)
