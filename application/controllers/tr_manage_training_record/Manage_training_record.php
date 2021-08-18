@@ -122,11 +122,12 @@ function edt_get_member(){
 		$this->mttr->Post_test_score = $post_score;
 		$this->mttr->Trainer_id = $trainer;
 		$this->mttr->Certificate = $checkboxs;
+		$this->mttr->No_training = $Show_count;
 		$this->mttr->insert();
 		
 
 		$this->load->model('M_trs_course_data','mtcd');
-		$this->mtcd->Course_count = $Show_count+1;
+		$this->mtcd->Course_count = $Show_count;
 		$this->mtcd->Course_id = $Show_course_id;
 		$this->mtcd->upstatus();
 		$data="add_tr";
