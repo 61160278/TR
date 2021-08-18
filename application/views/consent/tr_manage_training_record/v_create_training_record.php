@@ -316,7 +316,7 @@
 
             var emp_id = document.getElementById("emp_id").value;
             var total_h = document.getElementById("total_h").value;
-            var checkbox = document.getElementById("checkbox").value;
+            var checkbox = document.getElementById("checkbox").checked;
 
             var data_table = "";
             $.ajax({
@@ -342,7 +342,7 @@
                         data_table += "<td>" + obj.Sectioncode + "</td>"
                         data_table += "<td>" + total_h + "</td>"
                         data_table += "<td><font color='green'>Pass</font></td>"
-                        if (checkbox == "on") {
+                        if (checkbox == true) {
                               checkboxs = 1;
                               data_table += "<td>" + checkboxs + "</td>"
                         } else {

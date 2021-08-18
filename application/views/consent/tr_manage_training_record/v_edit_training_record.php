@@ -36,6 +36,11 @@
       </style>
       <!-- End style CSS  -->
       <script>
+            var member = [];
+      $(document).ready(function() {
+            add_member_table();
+      });
+
       function edt_training_recrod(Training_id) {
             console.log(Training_id)
             var edt_place_training = document.getElementById("edt_place_training" + Training_id).value;
@@ -100,13 +105,14 @@
             var edt_end_time = document.getElementById("edt_end_time" + check).value;
             var edt_total_h = document.getElementById("edt_total_h" + check).value;
             var edt_trainer = document.getElementById("edt_trainer" + check).value;
-       
 
-            
-            if (edt_place_training != "" &&  edt_start_date != "" && edt_start_time != "" && edt_end_date != "" && edt_end_time != "" && edt_trainer != "0" && edt_trainer != "") {
+
+
+            if (edt_place_training != "" && edt_start_date != "" && edt_start_time != "" && edt_end_date != "" &&
+                  edt_end_time != "" && edt_trainer != "0" && edt_trainer != "") {
                   edt_training_recrod(check);
-                  $("#addmember").collapse('show');
-                  $("#save_data").hide();
+                  // $("#addmember").collapse('show');
+                  // $("#save_data").hide();
 
                   return true;
 
@@ -122,6 +128,214 @@
 
 
 
+      function search_emp() {
+            var emp_id = document.getElementById("emp_id").value;
+
+            $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/search_emp",
+                  data: {
+                        "emp_id": emp_id
+                  },
+                  dataType: "JSON",
+                  success: function(data, status) {
+                        // console.log(status)
+                        // console.log(data)
+
+                        if (data.length == 0) {
+
+                              document.getElementById("nameEmp").value = "ไม่มีข้อมูล";
+                              $("#add_m").attr("disabled", true);
+                        }
+                        // if
+                        else {
+                              empname = data[0].Empname_eng + " " + data[0].Empsurname_eng
+                              document.getElementById("nameEmp").value = empname;
+                              var check = 0;
+
+                              if (member.lenght != 0) {
+                                    member.forEach((row, index) => {
+                                          if (row == data[0].Emp_ID) {
+                                                check++;
+                                          }
+                                    });
+                                    // forEach
+                                    if (check == 0) {
+                                          $("#add_m").attr("disabled", false);
+
+
+                                    } else {
+
+                                          $("#add_m").attr("disabled", true);
+                                    }
+                              } else {
+                                    $("#add_m").attr("disabled", false);
+                              }
+
+                        }
+                        // else
+                  }
+            });
+            // ajax
+
+
+
+
+      } //search_emp
+      var count = 0;
+
+      function add_member() {
+            var Training_id = document.getElementById("Training_id").value;
+            var emp_id = document.getElementById("emp_id").value;
+            var total_h = document.getElementById("edt_total_h" + Training_id).value;
+            var checkbox = document.getElementById("edt_checkbox" + Training_id).checked;
+console.log(checkbox)
+            var data_table = "";
+            $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/search_get_emp",
+                  data: {
+                        "emp_id": emp_id
+                  },
+                  dataType: "JSON",
+                  success: function(data, status) {
+
+                        console.log(data)
+                        count++;
+                        var obj = data;
+                        member.push(obj.Emp_ID)
+                        data_table += "<tr>"
+                        data_table += "<td>" + count + "</td>"
+                        data_table += "<td id='emp_id_" + count + "'>" + obj.Emp_ID + "</td>"
+                        data_table += "<td>" + obj.Empname_eng + " " + obj.Empsurname_eng +
+                              "</td>"
+                        data_table += "<td>" + obj.Position_name + "</td>"
+                        data_table += "<td>" + obj.Department + "</td>"
+                        data_table += "<td>" + obj.Sectioncode + "</td>"
+                        data_table += "<td>" + total_h + "</td>"
+                        data_table += "<td><font color='green'>Pass</font></td>"
+                        if (checkbox == true) {
+                              checkboxs = 1;
+                              data_table += "<td>" + checkboxs + "</td>"
+                        } else {
+                              checkboxs = 0;
+                              data_table += "<td>" + checkboxs + "</td>"
+                        }
+
+                        data_table += "</tr>"
+                        $("#show_member").append(data_table);
+                        $("#emp_id").val('');
+                        $("#nameEmp").val('');
+                        $("#add_m").attr("disabled", true);
+                  }
+
+            });
+            // ajax
+
+
+
+
+
+      }
+
+      function add_member_table() {
+            var Training_id = document.getElementById("Training_id").value;
+            // var emp_id = document.getElementById("emp_id").value;
+            // var total_h = document.getElementById("total_h").value;
+            // var checkbox = document.getElementById("checkbox").value;
+
+            var data_table = "";
+            $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/edt_get_member",
+                  data: {
+                        "Training_id": Training_id
+                  },
+                  dataType: "JSON",
+                  success: function(data, status) {
+
+                        console.log(data)
+                        count++;
+                       
+                        data.forEach((row, index) => {
+
+var checkbox = 0;
+                              member.push(row.Emp_ID)
+                              data_table += "<tr>"
+                              data_table += "<td>" + count + "</td>"
+                              data_table += "<td id='emp_id_" + count + "'>" + row
+                                    .Emp_ID + "</td>"
+                              data_table += "<td>" + row.Empname_eng + " " + row
+                                    .Empsurname_eng +
+                                    "</td>"
+                              data_table += "<td>" + row.Position_name + "</td>"
+                              data_table += "<td>" + row.Department + "</td>"
+                              data_table += "<td>" + row.Sectioncode + "</td>"
+                              data_table += "<td>" + row.Total_hours + "</td>"
+                              data_table += "<td><font color='green'>Pass</font></td>"
+                              if (row.Certificate == "1") {
+                                    checkboxs = 1;
+                                    data_table += "<td>" + checkboxs + "</td>"
+                              } else {
+                                    checkboxs = 0;
+                                    data_table += "<td>" + checkboxs + "</td>"
+                              }
+
+                              data_table += "</tr>"
+                        });
+                        // forEach
+                        $("#show_member").html(data_table);
+                        $("#emp_id").val('');
+                        $("#nameEmp").val('');
+                        $("#add_m").attr("disabled", true);
+                  }
+
+            });
+            // ajax
+
+
+      }
+
+
+      function add_member_db() {
+            var training = "";
+            var empid = [];
+            var check = 0;
+            $.get("<?php echo base_url(); ?>tr_manage_training_record/Manage_training_record/get_course", function(
+                  data) {
+                  var obj = JSON.parse(data);
+                  training = obj.Training_id;
+                  console.log(obj);
+                  check++;
+                  if (check != 0) {
+                        for (i = 1; i <= count; i++) {
+                              document.getElementById("emp_id_" + i).innerHTML;
+                              empid.push(document.getElementById("emp_id_" + i).innerHTML)
+                        } //for
+
+                        console.log(empid)
+
+                        $.ajax({
+                              type: "POST",
+                              url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/save_member",
+                              data: {
+                                    "training": training,
+                                    "count": count,
+                                    "empid": empid
+                              },
+                              dataType: "JSON",
+                              success: function(data) {
+
+                                    window.location.href =
+                                          "<?php echo base_url();?>/tr_manage_training_record/Manage_training_record/index";
+                              }
+
+                        });
+                        // ajax
+
+
+                  }
+            });
 
 
 
@@ -129,8 +343,7 @@
 
 
 
-
-
+      } //function add_member_db
       </script>
       <!-- Begin Page Content -->
       <div class="container-fluid">
@@ -199,6 +412,9 @@
                                                                               id="grouptext" placeholder="Training Name"
                                                                               disabled
                                                                               value="<?php echo $row->Course_name; ?>">
+                                                                        <input type="text" id="Training_id" disabled
+                                                                              value="<?php echo $row->Training_id; ?>"
+                                                                              hidden>
                                                                   </div>
 
                                                             </div>
@@ -280,12 +496,14 @@
 
                                                                         <select name="example_length"
                                                                               class="form-control"
-                                                                              aria-controls="example" id="edt_trainer<?php echo $row->Training_id; ?>">
+                                                                              aria-controls="example"
+                                                                              id="edt_trainer<?php echo $row->Training_id; ?>">
                                                                               <option value="0">Select Trainer</option>
                                                                               <?php foreach($ins as $row_ins) { 
                                                                                     if($row_ins ->trainer_id == $row->Trainer_id){  ?>
                                                                               <option
-                                                                                    value="<?php echo $row_ins->trainer_id; ?>" selected>
+                                                                                    value="<?php echo $row_ins->trainer_id; ?>"
+                                                                                    selected>
                                                                                     <?php echo $row_ins->trainer_titlename.$row_ins->trainer_fname."  ".$row_ins->trainer_Sname ?>
                                                                               </option>
                                                                               <?php  }  else{?>
@@ -333,11 +551,13 @@
 
                                                                         <div class="col-md-3">
                                                                               <?php if($row->Certificate == "1"){ ?>
-                                                                              <input type="checkbox" id="edt_checkbox<?php echo $row->Training_id; ?>"
+                                                                              <input type="checkbox"
+                                                                                    id="edt_checkbox<?php echo $row->Training_id; ?>"
                                                                                     name="checkbox2" checked
                                                                                     class="form-check-input">
                                                                               <?php } else{?>
-                                                                              <input type="checkbox" id="edt_checkbox<?php echo $row->Training_id; ?>"
+                                                                              <input type="checkbox"
+                                                                                    id="edt_checkbox<?php echo $row->Training_id; ?>"
                                                                                     name="checkbox2"
                                                                                     class="form-check-input">
                                                                               <?php } ?>
@@ -375,9 +595,24 @@
                                                 <div class="card">
 
                                                       <div class="row">
-                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                            <input class="form-control col-md-2" type="text"
-                                                                  placeholder="Search.." aria-label="Search">
+
+                                                            <div class="col-md-2">
+
+                                                                  <input class="form-control" type="text"
+                                                                        placeholder="Employee ID" id="emp_id"
+                                                                        onkeyup="search_emp()">
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                  <input class="form-control" type="text" id="nameEmp"
+                                                                        disabled>
+                                                                  &nbsp;&nbsp;
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                  <button type="button" class="btn btn-success"
+                                                                        id="add_m" onclick="add_member()">Add
+                                                                        Member
+                                                                        <i class="fa fa-plus text-black"></i></button>
+                                                            </div>
 
                                                       </div>
                                                       <div class="card-body">
@@ -399,45 +634,7 @@
 
                                                                         </tr>
                                                                   </thead>
-                                                                  <tbody>
-                                                                        <?php foreach($mtn as $index=>$row){ ?>
-                                                                        <tr align="center">
-                                                                              <td><?php echo ($index+1) ?></td>
-                                                                              <td><?php echo $row->Employee_Code; ?>
-                                                                              </td>
-                                                                              <td><?php echo $row->Empname_engTitle.$row->Empname_eng."  ".$row->Empsurname_eng ?>
-                                                                              </td>
-                                                                              <td><?php echo $row->Position_name; ?>
-                                                                              </td>
-                                                                              <td><?php echo $row->Department; ?></td>
-                                                                              <td><?php echo $row->Sectioncode; ?></td>
-                                                                              <td><?php echo $row->Total_hours; ?></td>
-                                                                              <td>
-                                                                                    <font color="green">
-                                                                                          <?php echo $row->Training_Status; ?>
-                                                                                    </font>
-                                                                              </td>
-                                                                              <td>
-                                                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                                    <input type="checkbox"
-                                                                                          id="checkbox2"
-                                                                                          name="checkbox2"
-                                                                                          value="option2"
-                                                                                          class="form-check-input">
-
-                                                                              </td>
-                                                                              <td>
-                                                                              <button type="button"
-                                                                                          class="btn btn-danger"><i
-                                                                                                class="ti ti-trash "
-                                                                                                data-toggle="modal"
-                                                                                                data-target="#DeleteModal"></i></button>
-                                                                              </td>
-
-                                                                        </tr>
-
-                                                                        <?php } ?>
-
+                                                                  <tbody id="show_member">
                                                                   </tbody>
                                                             </table>
                                                       </div>
@@ -461,8 +658,8 @@
       </div> <!-- /.container-fluid -->
 
 
- <!-- Modal Warning -->
- <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
+      <!-- Modal Warning -->
+      <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
