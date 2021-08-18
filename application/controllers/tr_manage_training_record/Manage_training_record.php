@@ -250,7 +250,28 @@ $data="save_member";
 echo json_encode($data);
 }
 
+function save_member_edt(){
+	
+	$training = $this->input->post('training'); 
+	$count = $this->input->post('count'); 
+	$empid = $this->input->post('empid'); 
+	$this->load->model('M_trs_training_record','mtc');
+	$this->mtc->Training_ID = $training;
+	$this->mtc->delete_member();
+	
 
+for($i=0;$i<$count;$i++){
+	$this->load->model('M_trs_training_record','mtcc');
+	$this->mtcc->Training_ID = $training;
+	$this->mtcc->Employee_Code = $empid[$i];
+	$this->mtcc->Training_Status = "PASS";
+	$this->mtcc->insert_member();
+	
+}
+
+$data="save_member";
+echo json_encode($data);
+}
 
 
 

@@ -225,7 +225,12 @@ class M_trs_training_record extends trs_model {
 		return $query;
 	}
 
+function delete_member(){
+	$sql = "DELETE FROM trs_database.trs_member_course
+                 WHERE Training_ID=?";
+         $this->db->query($sql, array($this->Training_ID));
 
+}
 
 
 

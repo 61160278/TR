@@ -316,29 +316,29 @@
 
             var empid = [];
             var training = document.getElementById("Training_id").value;
-              console.log(member_count)
-                        for (i = 0; i <= member_count.lenght; i++) {
+              console.log(member_count.length)
+                        for (i = 0; i < member_count.length; i++) {
                               empid.push(document.getElementById("emp_id_" + member_count[i]).innerHTML)
                         } //for
 
                         console.log(empid)
 
-                        // $.ajax({
-                        //       type: "POST",
-                        //       url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/save_member",
-                        //       data: {
-                        //             "training": training,
-                                   
-                        //             "empid": empid
-                        //       },
-                        //       dataType: "JSON",
-                        //       success: function(data) {
+                        $.ajax({
+                              type: "POST",
+                              url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/save_member_edt",
+                              data: {
+                                    "training": training,
+                                   "count" : member_count.length,
+                                    "empid": empid
+                              },
+                              dataType: "JSON",
+                              success: function(data) {
 
-                        //             window.location.href =
-                        //                   "<?php echo base_url();?>/tr_manage_training_record/Manage_training_record/index";
-                        //       }
+                                    window.location.href =
+                                          "<?php echo base_url();?>/tr_manage_training_record/Manage_training_record/index";
+                              }
 
-                        // });
+                        });
                         // ajax
 
       } //function add_member_db
