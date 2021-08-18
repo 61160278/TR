@@ -120,7 +120,7 @@
                   success: function(data, status) {
                         console.log(data)
                         if (data.length == 0) {
-
+                              document.getElementById("Show_count").value = "";
                               document.getElementById("Show_course_name").value =
                                     "";
                               document.getElementById("Show_course_type").value = "-";
@@ -149,7 +149,7 @@
                               document.getElementById("Show_course_category3").value = coursename;
 
                               coursename = data[0].Course_count
-                              document.getElementById("Show_count").value = coursename;
+                              document.getElementById("Show_count").value = (parseInt(coursename)+1);
 
                               console.log(999)
                               console.log(coursename)
@@ -175,7 +175,7 @@
                   success: function(data, status) {
 
                         if (data.length == 0) {
-
+                              document.getElementById("Show_count").value = "";
                               document.getElementById("tr_course_code").value =
                                     "";
                               document.getElementById("Show_course_type").value = "-";
@@ -204,7 +204,7 @@
                               document.getElementById("Show_course_category3").value = coursename;
 
                               coursename = data[0].Course_count
-                              document.getElementById("Show_count").value = coursename;
+                              document.getElementById("Show_count").value = (parseInt(coursename+1));
 
                               console.log(999)
                               console.log(coursename)
