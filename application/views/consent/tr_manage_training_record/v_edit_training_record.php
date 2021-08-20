@@ -231,13 +231,13 @@
                         if (checkbox == true) {
                              
                               data_table += '<td align="center">'
-                                    data_table += '<div>  <input type="checkbox" checked class="form-check-input"> '
-                                    data_table += "<input type='text' id='cer_"+count+"' value='1' hidden></div>"
+                                    data_table += '<div>  <input type="checkbox" checked class="form-check-input"> </div>'
+                                    // data_table += "<input type='text' id='cer_"+count+"' value='1' hidden></div>"
                                     data_table += '</td>'
                         } else {
                               data_table += '<td align="center">'
-                                    data_table += '<div>  <input type="checkbox" class="form-check-input"> '
-                                    data_table += "<input type='text' id='cer_"+count+"' value='0' hidden></div>"
+                                    data_table += '<div>  <input type="checkbox" class="form-check-input"> </div>'
+                                    // data_table += "<input type='text' id='cer_"+count+"' value='0' hidden></div>"
                                     data_table += '</td>'
                         }
                         data_table +=
@@ -263,7 +263,7 @@
 
       function add_member_table() {
             var Training_id = document.getElementById("Training_id").value;
-            var checkbox = document.getElementById("checkbox").checked;
+            // var checkbox = document.getElementById("checkbox").checked;
 
             var data_table = "";
             $.ajax({
@@ -297,13 +297,13 @@
                               data_table += "<td><font color='green'>Pass</font></td>"
                               if (row.Certificate == "1") {
                                     data_table += '<td align="center">'
-                                    data_table += '<div>  <input type="checkbox" checked class="form-check-input"> '
-                                    data_table += "<input type='text' id='cer_"+count+"' value='1' hidden></div>"
+                                    data_table += '<div>  <input type="checkbox" checked class="form-check-input"></div> '
+                                    // data_table += "<input type='text' id='cer_"+count+"' value='1' hidden></div>"
                                     data_table += '</td>'
                               } else {
                                     data_table += '<td align="center">'
-                                    data_table += '<div>  <input type="checkbox" class="form-check-input"> '
-                                    data_table += "<input type='text' id='cer_"+count+"' value='0' hidden></div>"
+                                    data_table += '<div>  <input type="checkbox" class="form-check-input"> </div>'
+                                    // data_table += "<input type='text' id='cer_"+count+"' value='0' hidden></div>"
                                     data_table += '</td>'
                               }
                               data_table +=
@@ -346,8 +346,8 @@
                   data: {
                         "training": training,
                         "count": member_count.length,
-                        "empid": empid,
-                        "cer" : cer
+                        "empid": empid
+                        // "cer" : cer
                   },
                   dataType: "JSON",
                   success: function(data) {
