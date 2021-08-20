@@ -56,9 +56,9 @@
             var edt_post_score = document.getElementById("edt_post_score" + Training_id).value;
             var edt_trainer = document.getElementById("edt_trainer" + Training_id).value;
             var edt_checkbox = document.getElementById("edt_checkbox" + Training_id);
-            // var edt_Show_count = document.getElementById("edt_Show_count" + Training_id).value;
+            var edt_Show_count = document.getElementById("edt_Show_count").value;
             // var edt_Show_course_id = document.getElementById("edt_Show_course_id" + Training_id).value;
-
+            console.log(edt_place_training)
             if (edt_checkbox.checked == true) {
                   checkboxs = 1;
             } else {
@@ -82,8 +82,8 @@
                         "edt_pre_score": edt_pre_score,
                         "edt_post_score": edt_post_score,
                         "edt_trainer": edt_trainer,
-                        "checkboxs": checkboxs
-                        // "edt_Show_count": edt_Show_count,
+                        "checkboxs": checkboxs,
+                        "edt_Show_count": edt_Show_count
                         // "edt_Show_course_id": edt_Show_course_id
 
                   },
@@ -406,7 +406,7 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; ครั้งที่ :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" disabled
+                                                                              id="edt_Show_count" disabled
                                                                               value="<?php echo $row->Course_count; ?>">
                                                                   </div>
 

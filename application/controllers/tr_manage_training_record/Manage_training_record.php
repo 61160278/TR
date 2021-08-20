@@ -153,8 +153,8 @@ function edt_get_member(){
 		$edt_trainer = $this->input->post("edt_trainer");
 		$checkboxs = $this->input->post("checkboxs");
 		$edt_Show_count = $this->input->post("edt_Show_count");
-		$edt_Show_course_id = $this->input->post("edt_Show_course_id");
 		
+	
 	
 		$this->load->model('M_trs_training_record','mtrt');
 		$this->mtrt->Training_id = $Training_id;
@@ -169,6 +169,7 @@ function edt_get_member(){
 		$this->mtrt->Post_test_score = $edt_post_score;
 		$this->mtrt->Trainer_id = $edt_trainer;
 		$this->mtrt->Certificate = $checkboxs;
+		$this->mtrt->No_training = $edt_Show_count;
 		$this->mtrt->update();
 		$data="edt_tr";
 		echo json_encode($data);
