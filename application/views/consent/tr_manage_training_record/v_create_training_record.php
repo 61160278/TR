@@ -242,6 +242,7 @@
                   $("#cost").attr("disabled", true);
                   $("#pre_score").attr("disabled", true);
                   $("#post_score").attr("disabled", true);
+                  $("#checkbox").attr("disabled", true);
                   $("#save_member").show();
 
                   return true;
@@ -342,11 +343,13 @@
                         data_table += "<td>" + total_h + "</td>"
                         data_table += "<td><font color='green'>Pass</font></td>"
                         if (checkbox == true) {
-                              checkboxs = 1;
-                              data_table += "<td>" + checkboxs + "</td>"
+                              data_table += '<td align="center">'
+                                    data_table += '<div>  <input type="checkbox" checked class="form-check-input"> </div>'
+                                    data_table += '</td>'
                         } else {
-                              checkboxs = 0;
-                              data_table += "<td>" + checkboxs + "</td>"
+                              data_table += '<td align="center">'
+                                    data_table += '<div>  <input type="checkbox" class="form-check-input"> </div>'
+                                    data_table += '</td>'
                         }
 
                         data_table += "</tr>"
