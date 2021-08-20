@@ -217,7 +217,7 @@
                         var obj = data;
                         member.push(obj.Emp_ID)
                         member_count.push(count)
-                        data_table += "<tr id='row_member"+count+"'>"
+                        data_table += "<tr id='row_member" + count + "'>"
                         data_table += "<td>" + (count + 1) + "</td>"
                         data_table += "<td id='emp_id_" + count + "'>" + obj.Emp_ID + "</td>"
                         data_table += "<td>" + obj.Empname_eng + " " + obj.Empsurname_eng +
@@ -234,7 +234,9 @@
                               checkboxs = 0;
                               data_table += "<td>" + checkboxs + "</td>"
                         }
-                        data_table += "<td>   <button type='button' class = 'btn btn-danger' onclick = 'remove_member("+count+")' > <i class = 'ti ti-trash'> </i></button ></td>"
+                        data_table +=
+                              "<td>   <button type='button' class = 'btn btn-danger' onclick = 'remove_member(" +
+                              count + ")' > <i class = 'ti ti-trash'> </i></button ></td>"
                         data_table += "</tr>"
                         count++;
                         $("#show_member").append(data_table);
@@ -275,7 +277,7 @@
                               var checkbox = 0;
                               member_count.push(count)
                               member.push(row.Emp_ID)
-                              data_table += "<tr id='row_member"+count+"'>"
+                              data_table += "<tr id='row_member" + count + "'>"
                               data_table += "<td>" + (count + 1) + "</td>"
                               data_table += "<td id='emp_id_" + count + "'>" + row
                                     .Emp_ID + "</td>"
@@ -294,7 +296,10 @@
                                     checkboxs = 0;
                                     data_table += "<td>" + checkboxs + "</td>"
                               }
-                              data_table += "<td>   <button type='button' class = 'btn btn-danger' onclick = 'remove_member("+count+")' > <i class = 'ti ti-trash'> </i></button ></td>"
+                              data_table +=
+                                    "<td>   <button type='button' class = 'btn btn-danger' onclick = 'remove_member(" +
+                                    count +
+                                    ")' > <i class = 'ti ti-trash'> </i></button ></td>"
                               data_table += "</tr>"
                               count++;
                         });
@@ -316,44 +321,43 @@
 
             var empid = [];
             var training = document.getElementById("Training_id").value;
-              console.log(member_count.length)
-                        for (i = 0; i < member_count.length; i++) {
-                              empid.push(document.getElementById("emp_id_" + member_count[i]).innerHTML)
-                        } //for
+            console.log(member_count.length)
+            for (i = 0; i < member_count.length; i++) {
+                  empid.push(document.getElementById("emp_id_" + member_count[i]).innerHTML)
+            } //for
 
-                        console.log(empid)
+            console.log(empid)
 
-                        $.ajax({
-                              type: "POST",
-                              url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/save_member_edt",
-                              data: {
-                                    "training": training,
-                                   "count" : member_count.length,
-                                    "empid": empid
-                              },
-                              dataType: "JSON",
-                              success: function(data) {
+            $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/save_member_edt",
+                  data: {
+                        "training": training,
+                        "count": member_count.length,
+                        "empid": empid
+                  },
+                  dataType: "JSON",
+                  success: function(data) {
 
-                                    window.location.href =
-                                          "<?php echo base_url();?>/tr_manage_training_record/Manage_training_record/index";
-                              }
+                        window.location.href =
+                              "<?php echo base_url();?>/tr_manage_training_record/Manage_training_record/index";
+                  }
 
-                        });
-                        // ajax
+            });
+            // ajax
 
       } //function add_member_db
 
-function remove_member(row_index){
-console.log(row_index)
-$("#row_member" +row_index).remove();
-var index = member_count.indexOf(row_index);
-if (index > -1){
-member_count.splice(index,1);
+      function remove_member(row_index) {
+            console.log(row_index)
+            $("#row_member" + row_index).remove();
+            var index = member_count.indexOf(row_index);
+            if (index > -1) {
+                  member_count.splice(index, 1);
 
-}
+            }
 
-}
-
+      }
       </script>
       <!-- Begin Page Content -->
       <div class="container-fluid">
@@ -658,17 +662,20 @@ member_count.splice(index,1);
                               </div><!-- .content 2 -->
                         </div>
                   </div>
-                  <div class="col-md-3">
-                        <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
-                              <button type="button" class="btn btn-secondary">Back</button>
-                        </a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="button"
-                                    class="btn btn-primary" id="save_member" onclick="add_member_db()">Save</button>
-                  </div>
-                  
-                              
+                  <div class="row">
+                        <div class="col-md-11">
+                              <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
+                                    <button type="button" class="btn btn-secondary">Back</button>
+                              </a>
 
-                        
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       
+                              <button type="button" class="btn btn-primary" id="save_member"
+                                    onclick="add_member_db()">Save</button>
+                      
+                  </div>
+
             </div>
             <!-- Start col-lg-12 -->
 
