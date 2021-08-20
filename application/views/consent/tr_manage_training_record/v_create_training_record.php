@@ -228,7 +228,7 @@
             console.log(start_date)
             if (tr_course_code != "0" && tr_course_code != "" && Show_course_name != "ไม่พบข้อมูลดังกล่าวข้อมูล" &&
                   Show_course_name != "" && place_training != "" && start_date != "" && start_date != "mm/dd/yyyy" &&
-                  start_time != "" && end_date != "" && end_time != "" && trainer != "0" && trainer != "") {
+                  start_time != "" && end_date != "" && end_time != "" && trainer != "0" && trainer != "" && total_h !="") {
                   add_training_recrod();
                   $("#addmember").collapse('show');
                   $("#tr_course_code").attr("disabled", true);
