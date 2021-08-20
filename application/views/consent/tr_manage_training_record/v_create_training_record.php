@@ -38,6 +38,7 @@
       <script>
             $( document ).ready(function() {
                   $("#add_m").attr("disabled", true);
+                  $("#save_member").hide();
 });
             
       var member = [];
@@ -48,7 +49,7 @@
 
       function add_training_recrod() {
 
-            var tr_course_code = document.getElementById("tr_course_code").value;
+            
             var place_training = document.getElementById("place_training").value;
             var start_date = document.getElementById("start_date").value;
             var start_time = document.getElementById("start_time").value;
@@ -75,7 +76,7 @@
                   type: "POST",
                   url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/add_training",
                   data: {
-                        "tr_course_code": tr_course_code,
+                     
                         "place_training": place_training,
                         "start_date": start_date,
                         "start_time": start_time,
@@ -241,7 +242,7 @@
                   $("#cost").attr("disabled", true);
                   $("#pre_score").attr("disabled", true);
                   $("#post_score").attr("disabled", true);
-                  $("#save_member").hide();
+                  $("#save_member").show();
 
                   return true;
 

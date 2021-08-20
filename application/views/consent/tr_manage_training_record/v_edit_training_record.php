@@ -229,11 +229,14 @@
                         data_table += "<td>" + total_h + "</td>"
                         data_table += "<td><font color='green'>Pass</font></td>"
                         if (checkbox == true) {
-                              checkboxs = 1;
-                              data_table += "<td>" + checkboxs + "</td>"
+                             
+                              data_table += '<td align="center">'
+                                    data_table += '<div>  <input type="checkbox" checked class="form-check-input"> </div>'
+                                    data_table += '</td>'
                         } else {
-                              checkboxs = 0;
-                              data_table += "<td>" + checkboxs + "</td>"
+                              data_table += '<td align="center">'
+                                    data_table += '<div>  <input type="checkbox" class="form-check-input"> </div>'
+                                    data_table += '</td>'
                         }
                         data_table +=
                               "<td>   <button type='button' class = 'btn btn-danger' onclick = 'remove_member(" +
@@ -291,11 +294,13 @@
                               data_table += "<td>" + row.Total_hours + "</td>"
                               data_table += "<td><font color='green'>Pass</font></td>"
                               if (row.Certificate == "1") {
-                                    checkboxs = 1;
-                                    data_table += "<td>" + checkboxs + "</td>"
+                                    data_table += '<td align="center">'
+                                    data_table += '<div>  <input type="checkbox" checked class="form-check-input"> </div>'
+                                    data_table += '</td>'
                               } else {
-                                    checkboxs = 0;
-                                    data_table += "<td>" + checkboxs + "</td>"
+                                    data_table += '<td align="center">'
+                                    data_table += '<div>  <input type="checkbox" class="form-check-input"> </div>'
+                                    data_table += '</td>'
                               }
                               data_table +=
                                     "<td>   <button type='button' class = 'btn btn-danger' onclick = 'remove_member(" +
@@ -416,7 +421,7 @@
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
                                                                               id="grouptext" placeholder="Code" disabled
-                                                                              value="<?php echo $row->Course_code_id; ?>">
+                                                                              value="<?php echo $row->Course_code; ?>">
                                                                   </div>
 
 

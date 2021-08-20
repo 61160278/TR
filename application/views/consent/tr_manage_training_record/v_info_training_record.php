@@ -90,7 +90,7 @@
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
                                                                               id="grouptext" placeholder="Code"
-                                                                              disabled value="<?php echo $row->Course_code_id; ?>">
+                                                                              disabled value="<?php echo $row->Course_code; ?>">
                                                                   </div>
 
 

@@ -133,7 +133,7 @@ class M_trs_training_record extends trs_model {
 		$sql = "SELECT *
 				FROM trs_database.trs_training_record as ttr
 				LEFT JOIN trs_database.trs_course_data as tcd
-				ON tcd.Course_code = ttr.Course_code_id
+				ON tcd.Course_id = ttr.Course_code_id
 				LEFT JOIN trs_database.trs_trainer_data as ttd
 				ON ttd.trainer_id = ttr.Trainer_id
 				";
@@ -199,7 +199,7 @@ class M_trs_training_record extends trs_model {
 		$sql = "SELECT * 
 				FROM trs_database.trs_training_record AS ttr
 				INNER JOIN trs_database.trs_course_data AS tcd
-                		ON tcd.Course_code = ttr.Course_code_id
+                		ON tcd.Course_id = ttr.Course_code_id
 				INNER JOIN trs_database.trs_trainer_data AS ttd
                 		ON ttd.trainer_id = ttr.Trainer_id
 				WHERE ttr.Training_id = ?";
@@ -232,7 +232,13 @@ function delete_member(){
 
 }
 
-
+function get_course_id(){	
+	$sql = "SELECT *
+			FROM trs_database.trs_course_data
+			WHERE trs_course_data.Course_id = ?";
+	$query = $this->db->query($sql, array($this->Course_id));
+	return $query;
+}
 
 }		 
 ?>

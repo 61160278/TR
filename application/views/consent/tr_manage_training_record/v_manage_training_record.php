@@ -35,7 +35,7 @@
       </style>
       <!-- End style CSS  -->
       <script>
-      function Delete_training(Training_id) {
+      function Delete_training(Training_id,Course_code_id) {
 
             console.log(Training_id);
 
@@ -43,7 +43,8 @@
                   type: "post",
                   url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/delete_training_data",
                   data: {
-                        "Training_id": Training_id
+                        "Training_id": Training_id,
+                        "Course_code_id" : Course_code_id
                   },
                   dataType: "JSON",
                   success: function(data) {
@@ -147,7 +148,7 @@
                                                                         <?php foreach($trc as $index=>$row ){  ?>
                                                                         <tr align="center">
                                                                               <td><?php echo ($index+1) ?></td>
-                                                                              <td><?php echo $row->Course_code_id; ?>
+                                                                              <td><?php echo $row->Course_code; ?>
                                                                               </td>
                                                                               <td><?php echo $row->Course_name; ?></td>
                                                                               <td><?php echo $row->Course_description; ?>
@@ -223,7 +224,7 @@
                         <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                               <button type="button" class="btn btn-primary"
-                                    onClick="Delete_training(<?php echo $row->Training_id; ?>)">Confirm</button>
+                                    onClick="Delete_training(<?php echo $row->Training_id; ?>,<?php echo $row->Course_code_id; ?>)">Confirm</button>
                         </div>
                   </div>
             </div>

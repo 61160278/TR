@@ -93,7 +93,7 @@ function edt_get_member(){
 
 	function add_training()
 	{
-		$tr_course_code = $this->input->post("tr_course_code");
+		
 		$place_training = $this->input->post("place_training");
 		$start_date = $this->input->post("start_date");
 		$start_time = $this->input->post("start_time");
@@ -110,7 +110,7 @@ function edt_get_member(){
 		
 	
 		$this->load->model('M_trs_training_record','mttr');
-		$this->mttr->Course_code_id = $tr_course_code;
+		$this->mttr->Course_code_id = $Show_course_id;
 		$this->mttr->Place_training = $place_training;
 		$this->mttr->Start_date = $start_date;
 		$this->mttr->Start_time = $start_time;
@@ -183,6 +183,16 @@ function edt_get_member(){
 	{
 
 		$Training_id = $this->input->post('Training_id');
+		$Course_id = $this->input->post('Course_code_id');
+		$this->load->model('M_trs_training_record','mdd');
+		$this->mdd->Course_id = $Course_id;
+		$data["course"] = $this->mdd->get_course_id();
+		$temp = $data["course"]->row();
+		$this->load->model('M_trs_course_data','mtcd');
+		$this->mtcd->Course_count = (intval($temp->Course_count)-1);
+		$this->mtcd->Course_id = $Course_id;
+		$this->mtcd->upstatus();
+
 		$this->load->model('M_trs_training_record','mddd');
 		$this->mddd->Training_id = $Training_id;
 		$this->mddd->delete();
