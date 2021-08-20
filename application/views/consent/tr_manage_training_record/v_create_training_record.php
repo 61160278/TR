@@ -344,13 +344,17 @@
                         data_table += "<td><font color='green'>Pass</font></td>"
                         if (checkbox == true) {
                               data_table += '<td align="center">'
-                                    data_table += '<div>  <input type="checkbox" checked class="form-check-input"> </div>'
+                                    data_table += '<div>  <input type="checkbox" checked class="form-check-input"> '
+                                    data_table += "<input type='text' id='cer_"+count+"' value='1' hidden></div>"
                                     data_table += '</td>'
                         } else {
                               data_table += '<td align="center">'
-                                    data_table += '<div>  <input type="checkbox" class="form-check-input"> </div>'
+                                    data_table += '<div>  <input type="checkbox" class="form-check-input">'
+                                    data_table += "<input type='text' id='cer_"+count+"' value='0' hidden> </div>" 
                                     data_table += '</td>'
+                                    
                         }
+                      
 
                         data_table += "</tr>"
                         $("#show_data").append(data_table);
@@ -366,6 +370,7 @@
       function add_member_db() {
             var training = "";
             var empid = [];
+            var cer = [];
             var check = 0;
             $.get("<?php echo base_url(); ?>tr_manage_training_record/Manage_training_record/get_course", function(
                   data) {
@@ -377,17 +382,19 @@
             for (i = 1; i <= count; i++) {
                   document.getElementById("emp_id_" + i).innerHTML;
                   empid.push(document.getElementById("emp_id_" + i).innerHTML)
+                  cer.push(document.getElementById("cer_" + i).value)
             }//for
             
 console.log(empid)
-            
+console.log(cer)
             $.ajax({
                   type: "POST",
                   url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/save_member",
                   data: {
                         "training": training,
                         "count": count,
-                        "empid": empid
+                        "empid": empid,
+                        "cer" : cer
                   },
                   dataType: "JSON",
                   success: function(data) {

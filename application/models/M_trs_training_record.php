@@ -187,10 +187,10 @@ class M_trs_training_record extends trs_model {
 
 	function insert_member() {
 	 
-		$sql = "INSERT INTO trs_database.trs_member_course (Training_ID ,Employee_Code ,Training_Status)
-		VALUES(?,? ,?)";
+		$sql = "INSERT INTO trs_database.trs_member_course (Training_ID ,Employee_Code ,Training_Status ,Certificate_member)
+		VALUES(?,? ,? , ?)";
 		
-		$this->db->query($sql, array($this->Training_ID ,$this->Employee_Code ,$this->Training_Status));
+		$this->db->query($sql, array($this->Training_ID ,$this->Employee_Code ,$this->Training_Status ,$this->Certificate_member));
 	}
 
 

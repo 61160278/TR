@@ -249,11 +249,13 @@ function save_member(){
 	$training = $this->input->post('training'); 
 	$count = $this->input->post('count'); 
 	$empid = $this->input->post('empid'); 
+	$cer = $this->input->post('cer'); 
 for($i=0;$i<$count;$i++){
 	$this->load->model('M_trs_training_record','mtcc');
 	$this->mtcc->Training_ID = $training;
 	$this->mtcc->Employee_Code = $empid[$i];
 	$this->mtcc->Training_Status = "PASS";
+	$this->mtcc->Certificate_member = $cer[$i];
 	$this->mtcc->insert_member();
 	
 }
