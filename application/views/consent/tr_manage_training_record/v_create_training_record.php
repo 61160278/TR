@@ -1,7 +1,7 @@
 <?php
 /*
-* v_main_group.php
-* Display v_main_group
+* v_create_training_record.php
+* Display v_create_training_record
 * @input    
 * @output
 * @author Jirayu Jaravichit
@@ -93,9 +93,7 @@
                   },
                   dataType: "JSON",
                   success: function(data) {
-                        // console.log(status)
-                        // window.location.href =
-                        //       "<?php echo base_url();?>/tr_manage_training_record/Manage_training_record/create_training_data";
+                        
                   }
                   // success function
 
@@ -243,7 +241,7 @@
                   $("#cost").attr("disabled", true);
                   $("#pre_score").attr("disabled", true);
                   $("#post_score").attr("disabled", true);
-                  $("#save_data").hide();
+                  $("#save_member").hide();
 
                   return true;
 
@@ -359,14 +357,7 @@
 
             });
             // ajax
-
-
-
-
-
       }
-
-
 
       function add_member_db() {
             var training = "";
@@ -406,13 +397,7 @@ console.log(empid)
 
             }
             });
-            
-
-
-
-
-
-
+      
       } //function add_member_db
       </script>
 
