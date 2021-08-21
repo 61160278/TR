@@ -55,7 +55,7 @@
             var edt_pre_score = document.getElementById("edt_pre_score" + Training_id).value;
             var edt_post_score = document.getElementById("edt_post_score" + Training_id).value;
             var edt_trainer = document.getElementById("edt_trainer" + Training_id).value;
-            var edt_checkbox = document.getElementById("edt_checkbox" + Training_id);
+            var edt_checkbox = document.getElementById("edt_checkbox");
             var edt_Show_count = document.getElementById("edt_Show_count").value;
             // var edt_Show_course_id = document.getElementById("edt_Show_course_id" + Training_id).value;
             console.log(edt_place_training)
@@ -201,7 +201,7 @@
             var Training_id = document.getElementById("Training_id").value;
             var emp_id = document.getElementById("emp_id").value;
             var total_h = document.getElementById("edt_total_h" + Training_id).value;
-            var checkbox = document.getElementById("edt_checkbox" + Training_id).checked;
+            var checkbox = document.getElementById("edt_checkbox").checked;
             console.log(checkbox)
             var data_table = "";
             $.ajax({
@@ -231,13 +231,11 @@
                         if (checkbox == true) {
                              
                               data_table += '<td align="center">'
-                                    data_table += '<div>  <input type="checkbox" checked class="form-check-input"> </div>'
-                                    // data_table += "<input type='text' id='cer_"+count+"' value='1' hidden></div>"
+                                    data_table += '<div>  <input type="checkbox" checked class="form-check-input" id="cer_'+count+'"> '
                                     data_table += '</td>'
                         } else {
                               data_table += '<td align="center">'
-                                    data_table += '<div>  <input type="checkbox" class="form-check-input"> </div>'
-                                    // data_table += "<input type='text' id='cer_"+count+"' value='0' hidden></div>"
+                                    data_table += '<div>  <input type="checkbox"  class="form-check-input" id="cer_'+count+'"> '
                                     data_table += '</td>'
                         }
                         data_table +=
@@ -263,7 +261,7 @@
 
       function add_member_table() {
             var Training_id = document.getElementById("Training_id").value;
-            // var checkbox = document.getElementById("checkbox").checked;
+            var edt_checkbox = document.getElementById("edt_checkbox").checked;
 
             var data_table = "";
             $.ajax({
@@ -280,7 +278,7 @@
 
                         data.forEach((row, index) => {
 
-                              var checkbox = 0;
+                              
                               member_count.push(count)
                               member.push(row.Emp_ID)
                               data_table += "<tr id='row_member" + count + "'>"
@@ -295,15 +293,13 @@
                               data_table += "<td>" + row.Sectioncode + "</td>"
                               data_table += "<td>" + row.Total_hours + "</td>"
                               data_table += "<td><font color='green'>Pass</font></td>"
-                              if (row.Certificate == "1") {
+                              if (row.Certificate_member == "1") {
                                     data_table += '<td align="center">'
-                                    data_table += '<div>  <input type="checkbox" checked class="form-check-input"></div> '
-                                    // data_table += "<input type='text' id='cer_"+count+"' value='1' hidden></div>"
+                                    data_table += '<div>  <input type="checkbox" checked class="form-check-input" id="cer_'+count+'"> '
                                     data_table += '</td>'
                               } else {
                                     data_table += '<td align="center">'
-                                    data_table += '<div>  <input type="checkbox" class="form-check-input"> </div>'
-                                    // data_table += "<input type='text' id='cer_"+count+"' value='0' hidden></div>"
+                                    data_table += '<div>  <input type="checkbox" class="form-check-input" id="cer_'+count+'"> '
                                     data_table += '</td>'
                               }
                               data_table +=
@@ -331,14 +327,25 @@
 
             var empid = [];
             var cer = [];
+            var check_status = "";
             var training = document.getElementById("Training_id").value;
             console.log(member_count.length)
             for (i = 0; i < member_count.length; i++) {
+
                   empid.push(document.getElementById("emp_id_" + member_count[i]).innerHTML)
-                  cer.push(document.getElementById("cer_" + i).value)
+                 check_status = document.getElementById("cer_" + member_count[i]).checked
+                 if(check_status==true){
+                  cer.push(1)
+                       
+                 }else{
+                  cer.push(0)
+
+                 }
+                  
             } //for
 
             console.log(empid)
+            console.log(cer)
 
             $.ajax({
                   type: "POST",
@@ -346,8 +353,8 @@
                   data: {
                         "training": training,
                         "count": member_count.length,
-                        "empid": empid
-                        // "cer" : cer
+                        "empid": empid,
+                        "cer" : cer
                   },
                   dataType: "JSON",
                   success: function(data) {
@@ -579,12 +586,12 @@
                                                                         <div class="col-md-3">
                                                                               <?php if($row->Certificate == "1"){ ?>
                                                                               <input type="checkbox"
-                                                                                    id="edt_checkbox<?php echo $row->Training_id; ?>"
-                                                                                    name="checkbox2" checked
+                                                                                    id="edt_checkbox"
+                                                                                    name="checkbox1" checked
                                                                                     class="form-check-input">
                                                                               <?php } else{?>
                                                                               <input type="checkbox"
-                                                                                    id="edt_checkbox<?php echo $row->Training_id; ?>"
+                                                                                    id="edt_checkbox"
                                                                                     name="checkbox2"
                                                                                     class="form-check-input">
                                                                               <?php } ?>
@@ -682,7 +689,7 @@
                               </a>
 
                         </div>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                        
                               <button type="button" class="btn btn-primary" id="save_member"
                                     onclick="add_member_db()">Save</button>

@@ -269,7 +269,7 @@ function save_member_edt(){
 	$training = $this->input->post('training'); 
 	$count = $this->input->post('count'); 
 	$empid = $this->input->post('empid'); 
-	// $cer = $this->input->post('cer'); 
+	$cer = $this->input->post('cer'); 
 	$this->load->model('M_trs_training_record','mtc');
 	$this->mtc->Training_ID = $training;
 	$this->mtc->delete_member();
@@ -280,7 +280,7 @@ for($i=0;$i<$count;$i++){
 	$this->mtcs->Training_ID = $training;
 	$this->mtcs->Employee_Code = $empid[$i];
 	$this->mtcs->Training_Status = "PASS";
-	// $this->mtcs->Certificate_member = $cer[$i];
+	$this->mtcs->Certificate_member = $cer[$i];
 	$this->mtcs->insert_member();
 	
 }
