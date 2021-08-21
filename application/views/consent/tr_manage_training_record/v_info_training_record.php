@@ -284,15 +284,14 @@
                                                                               <td><font color="green"><?php echo $row->Training_Status; ?></font></td>
                                                                               <td>
                                                                                     &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                                                                                    <input type="checkbox"
-                                                                                          id="checkbox2"
-                                                                                          name="checkbox2"
-                                                                                          value="option2"
-                                                                                          class="form-check-input">
+                                                                                    <?php if($row->Certificate_member == "1"){ ?>
+                                                                                    <input type="checkbox" id="checkbox1" class="form-check-input" checked disabled>
+                                                                                    <?php }else{ ?>
+                                                                                          <input type="checkbox" id="checkbox1" class="form-check-input" disabled>
 
+                                                                                          <?php  } ?>
                                                                               </td>
-
-
+                                                
                                                                         </tr>
                                                                       
 <?php } ?>
