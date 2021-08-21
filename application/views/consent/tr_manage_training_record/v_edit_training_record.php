@@ -100,7 +100,7 @@
                         $("#edt_cost" + Training_id).attr("disabled", true);
                         $("#edt_pre_score" + Training_id).attr("disabled", true);
                         $("#edt_post_score" + Training_id).attr("disabled", true);
-                        $("#edt_checkbox" + Training_id).attr("disabled", true);
+                        $("#edt_checkbox").attr("disabled", true);
                         $("#save_data").hide();
                         console.log(data)
                   }
