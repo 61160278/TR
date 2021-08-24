@@ -87,7 +87,7 @@
                                                             <div class="menu-icon fa fa-pencil-square"
                                                                   style="color: gray-800" id="icon_main_menu"></div>
                                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Manage
-                                                                  Training Record</div>
+                                                                  Training Class</div>
                                                       </div>
                                                       <!-- col-2 -->
                                                 </div>

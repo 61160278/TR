@@ -93,7 +93,7 @@
                               <div class="col-xl-12">
                                     <h1 class="m-0 font-weight-bold text-primary"><i
                                                 class="fa  fa-pencil-square text-white" id="Home"></i>
-                                          <font color="white">Manage Training Record</font>
+                                          <font color="white">Manage Training Class</font>
                                     </h1>
                               </div>
                               <!-- End panel  -->
