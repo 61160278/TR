@@ -427,7 +427,7 @@
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
                                                                               id="edt_Show_count" disabled
-                                                                              value="<?php echo $row->Course_count; ?>">
+                                                                              value="<?php echo $row->No_training; ?>">
                                                                   </div>
 
 

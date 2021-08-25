@@ -82,7 +82,7 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; ครั้งที่ :
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" disabled  value="<?php echo $row->Course_count; ?>">
+                                                                              id="grouptext" disabled  value="<?php echo $row->No_training; ?>">
                                                                   </div>
 
 
