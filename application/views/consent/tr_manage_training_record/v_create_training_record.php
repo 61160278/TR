@@ -61,7 +61,8 @@
             var post_score = document.getElementById("post_score").value;
             var trainer = document.getElementById("trainer").value;
             var checkbox = document.getElementById("checkbox");
-            var Show_count = document.getElementById("Show_count").value;
+            var Show_count = document.getElementById("Count_record").value;
+            var Number_record = document.getElementById("Show_count").value;
             var Show_course_id = document.getElementById("Show_course_id").value;
 
             if (checkbox.checked == true) {
@@ -89,7 +90,8 @@
                         "trainer": trainer,
                         "checkboxs": checkboxs,
                         "Show_count": Show_count,
-                        "Show_course_id": Show_course_id
+                        "Show_course_id": Show_course_id,
+                        "Number_record" : Number_record
 
                   },
                   dataType: "JSON",
@@ -147,8 +149,11 @@
                               coursename = data[0].Course_category3
                               document.getElementById("Show_course_category3").value = coursename;
 
-                              coursename = data[0].Course_count
+                              coursename = data[0].Number_Record
                               document.getElementById("Show_count").value = (parseInt(coursename)+1);
+
+                              coursename = data[0].Course_count
+                              document.getElementById("Count_record").value = (parseInt(coursename)+1);
 
                               console.log(999)
                               console.log(coursename)
@@ -202,9 +207,12 @@
                               coursename = data[0].Course_category3
                               document.getElementById("Show_course_category3").value = coursename;
 
-                              coursename = data[0].Course_count
+                              coursename = data[0].Number_Record
                               document.getElementById("Show_count").value = (parseInt(coursename)+1);
 
+                              coursename = data[0].Course_count
+                              document.getElementById("Count_record").value = (parseInt(coursename)+1);
+                              
                               console.log(999)
                               console.log(coursename)
                         }
@@ -464,7 +472,11 @@ console.log(cer)
                                                                   <div class="col-sm-1">
                                                                         <input type="text" class="form-control"
                                                                               id="Show_count" disabled>
+                                                                        <input type="text" class="form-control"
+                                                                              id="Count_record" hidden>
+
                                                                   </div>
+
 
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Course Code :

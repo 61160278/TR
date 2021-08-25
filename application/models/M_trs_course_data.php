@@ -112,14 +112,22 @@ class M_trs_course_data extends trs_model {
 
 	function upstatus(){
 		$sql = "UPDATE trs_database.trs_course_data 
-				SET	Course_count = ?
+				SET	Course_count = ? , Number_record =?
+				WHERE Course_id = ?" ;
+	     
+	     $this->db->query($sql, array($this->Course_count ,$this->Number_record,$this->Course_id));
+
+
+	}
+	function upstatus_del(){
+		$sql = "UPDATE trs_database.trs_course_data 
+				SET	Course_count = ? 
 				WHERE Course_id = ?" ;
 	     
 	     $this->db->query($sql, array($this->Course_count ,$this->Course_id));
 
 
 	}
-	
 
 
 }		 

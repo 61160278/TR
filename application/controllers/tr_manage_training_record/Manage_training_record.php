@@ -107,6 +107,8 @@ function edt_get_member(){
 		$checkboxs = $this->input->post("checkboxs");
 		$Show_count = $this->input->post("Show_count");
 		$Show_course_id = $this->input->post("Show_course_id");
+		$Number_record = $this->input->post("Number_record");
+		
 		
 	
 		$this->load->model('M_trs_training_record','mttr');
@@ -122,12 +124,13 @@ function edt_get_member(){
 		$this->mttr->Post_test_score = $post_score;
 		$this->mttr->Trainer_id = $trainer;
 		$this->mttr->Certificate = $checkboxs;
-		$this->mttr->No_training = $Show_count;
+		$this->mttr->No_training = $Number_record;
 		$this->mttr->insert();
 		
 
 		$this->load->model('M_trs_course_data','mtcd');
 		$this->mtcd->Course_count = $Show_count;
+		$this->mtcd->Number_record = $Number_record;
 		$this->mtcd->Course_id = $Show_course_id;
 		$this->mtcd->upstatus();
 		$data="add_tr";
@@ -191,7 +194,7 @@ function edt_get_member(){
 		$this->load->model('M_trs_course_data','mtcd');
 		$this->mtcd->Course_count = (intval($temp->Course_count)-1);
 		$this->mtcd->Course_id = $Course_id;
-		$this->mtcd->upstatus();
+		$this->mtcd->upstatus_del();
 
 		$this->load->model('M_trs_training_record','mddd');
 		$this->mddd->Training_id = $Training_id;
