@@ -344,14 +344,12 @@
                         data_table += "<td><font color='green'>Pass</font></td>"
                         if (checkbox == true) {
                               data_table += '<td align="center">'
-                                    data_table += '<div>  <input type="checkbox" checked class="form-check-input"> '
-                                    data_table += "<input type='text' id='cer_"+count+"' value='1' hidden></div>"
+                                    data_table += '<div>  <input type="checkbox" id="cer_'+count+'" checked class="form-check-input"> '
                                     data_table += '</td>'
                         } else {
                               data_table += '<td align="center">'
-                                    data_table += '<div>  <input type="checkbox" class="form-check-input">'
-                                    data_table += "<input type='text' id='cer_"+count+"' value='0' hidden> </div>" 
-                                    data_table += '</td>'
+                              data_table += '<div>  <input type="checkbox" id="cer_'+count+'"  class="form-check-input"> '
+                              data_table += '</td>'
                                     
                         }
                       
@@ -382,7 +380,13 @@
             for (i = 1; i <= count; i++) {
                   document.getElementById("emp_id_" + i).innerHTML;
                   empid.push(document.getElementById("emp_id_" + i).innerHTML)
-                  cer.push(document.getElementById("cer_" + i).value)
+                  if(document.getElementById("cer_" + i).checked){
+                        cer.push(1);
+                  }else{
+
+                        cer.push(0);
+                  }
+                 
             }//for
             
 console.log(empid)
