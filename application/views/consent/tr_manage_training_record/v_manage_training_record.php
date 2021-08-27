@@ -135,9 +135,8 @@
 
                                                                               <th>No.</th>
                                                                               <th>Course Code</th>
-                                                                              <th>No.training</th>
-            
                                                                               <th>Training Name</th>
+                                                                              <th>No.training</th>
                                                                               <th>Training Description</th>
                                                                               <th>Start-Date</th>
                                                                               <th>End-Date</th>
@@ -152,10 +151,9 @@
                                                                               <td><?php echo ($index+1) ?></td>
                                                                               <td><?php echo $row->Course_code; ?>
                                                                               </td>
+                                                                              <td><?php echo $row->Course_name; ?></td>
                                                                               <td><?php echo $row->No_training; ?>
                                                                               </td>
-                                                      
-                                                                              <td><?php echo $row->Course_name; ?></td>
                                                                               <td><?php echo $row->Course_description; ?>
                                                                               </td>
                                                                               <td><?php echo $row->Start_date; ?></td>
