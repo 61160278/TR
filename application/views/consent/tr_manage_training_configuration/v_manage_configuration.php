@@ -51,7 +51,7 @@
                               <div class="col-xl-12">
                                     <h1 class="m-0 font-weight-bold text-primary"><i class="fa  fa-tasks text-white"
                                                 id="Home"></i>
-                                          <font color="white">Manage Training Configuration</font>
+                                          <font color="white">Manage Training Data</font>
                                     </h1>
                               </div>
                               <!-- End panel  -->
