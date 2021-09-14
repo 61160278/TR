@@ -57,7 +57,7 @@
 
                 <li class="menu-item">
                     <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index"><i
-                            class="menu-icon fa fa-pencil-square" style="color: white" id="icon_sidebar"></i>Manage Training Record</a>
+                            class="menu-icon fa fa-pencil-square" style="color: white" id="icon_sidebar"></i>Manage Training Class</a>
                 </li>
                 <!-- อิอิ  -->
 
