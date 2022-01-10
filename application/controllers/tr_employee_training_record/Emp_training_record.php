@@ -48,6 +48,14 @@ class Emp_training_record extends MainController {
 	{
 		$this->output('/consent/tr_employee_training_record/v_profile_show');
 	}
+	function search_employee_id(){
+		$Emp_id = $this->input->post('Emp_id');
+		$this->load->model('M_trs_training_Search','mtts');
+		$this->mtts->Emp_ID = $Emp_id;
+		
+		$data = $this->mtts->get_data_emp();
+		echo json_encode($data);
+	}
  
 }
 // 
