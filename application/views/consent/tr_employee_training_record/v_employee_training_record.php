@@ -77,11 +77,11 @@
 
                                                                   <div class="col col-md-3">
                                                                         <div class="input-group">
-                                                                              <input type="text" class="form-control"
-                                                                                    id="grouptext"
-                                                                                    placeholder="Search"><button
+                                                                        <input class="form-control" type="text"
+                                                                                    placeholder="Search"
+                                                                                    id="emp_id" > <a href="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Show_Profile"><font color="white"><button
                                                                                     class="btn btn-primary"><i
-                                                                                          class="fa  fa-search"></i>
+                                                                                          class="fa  fa-search"></i></font></a>
                                                                         </div>
                                                                   </div>
                                                             </div>

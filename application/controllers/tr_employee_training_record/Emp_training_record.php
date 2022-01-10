@@ -44,6 +44,10 @@ class Emp_training_record extends MainController {
 		$this->output('/consent/tr_employee_training_record/v_employee_training_record');
 	}
 	// function Employee_training()
+	function Show_Profile()
+	{
+		$this->output('/consent/tr_employee_training_record/v_profile_show');
+	}
  
 }
 // 
