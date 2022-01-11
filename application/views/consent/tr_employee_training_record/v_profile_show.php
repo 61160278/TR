@@ -78,18 +78,20 @@
                                                 <div class="card border border-secondary">
                                                       <div class="card-body">
                                                             <div class="row">
-                                                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <img src="<?php echo base_url();?>elaadmin/images/1.jpg" width="200" height="200" class="rounded-circle"/>
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <img
+                                                                        src="<?php echo base_url();?>elaadmin/images/1.jpg"
+                                                                        width="200" height="200"
+                                                                        class="rounded-circle" />
 
                                                             </div>
                                                             <br>
                                                             <br>
-
+                                                            <?php foreach($data_id->result() as $row){ ?>
                                                             <div class="row">
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; รหัสประจำตัวพนักงาน :
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" 
-                                                                              disabled>
+                                                                              id="grouptext" value ="<?php echo $row->Emp_ID; ?>" disabled>
                                                                   </div>
 
 
@@ -163,7 +165,7 @@
                                                       </div>
                                                 </div>
                                           </div>
-
+                                          <?php } ?>
 
 
                                     </div>
@@ -180,10 +182,11 @@
                                                             <div class="card-header" id="headdata">
                                                                   <strong class="card-title">History</strong>
                                                                   <div class="pull-right margin">
-                                                                  <input class="form-control col-md-12" type="text"
-                                                                        placeholder="Search ..." aria-label="Search">
+                                                                        <input class="form-control col-md-12"
+                                                                              type="text" placeholder="Search ..."
+                                                                              aria-label="Search">
 
-                                                            </div>
+                                                                  </div>
                                                             </div>
                                                             <div class="card-body">
                                                                   <ul class="nav nav-pills mb-3" id="pills-tab"
@@ -231,6 +234,7 @@
                                                                                           </tr>
                                                                                     </thead>
                                                                                     <tbody>
+                                                                                          <!-- foreach -->
                                                                                           <tr align="center">
                                                                                                 <td>1.</td>
                                                                                                 <td>IN-00001</td>
@@ -254,106 +258,8 @@
 
                                                                                                 </td>
                                                                                           </tr>
-                                                                                          <tr align="center">
-                                                                                                <td>2.</td>
-                                                                                                <td>IN-00002</td>
-                                                                                                <td>Leader andd
-                                                                                                      Management</td>
-                                                                                                <td>Communication for
-                                                                                                      Leader</td>
-                                                                                                <td>21/01/2021</td>
-                                                                                                <td>21/01/2021</td>
-                                                                                                <td>Mr.Denial Ok</td>
-                                                                                                <td>
-
-
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;
-                                                                                                      <input type="checkbox"
-                                                                                                            id="checkbox2"
-                                                                                                            name="checkbox2"
-                                                                                                            value="option2"
-                                                                                                            class="form-check-input">
-
-                                                                                                </td>
-                                                                                          </tr>
-                                                                                          <tr align="center">
-                                                                                                <td>3.</td>
-                                                                                                <td>IN-00003</td>
-                                                                                                <td>Professional Golf
-                                                                                                      Caddie</td>
-                                                                                                <td>Communication
-                                                                                                      Efficiency</td>
-                                                                                                <td>05/08/2021</td>
-                                                                                                <td>05/08/2021</td>
-                                                                                                <td>Mr.Kate J.son</td>
-                                                                                                <td>
-
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;
-                                                                                                      <input type="checkbox"
-                                                                                                            id="checkbox2"
-                                                                                                            name="checkbox2"
-                                                                                                            value="option2"
-                                                                                                            class="form-check-input">
-
-
-                                                                                                </td>
-                                                                                          </tr>
-                                                                                          <tr align="center">
-                                                                                                <td>4.</td>
-                                                                                                <td>EX-00004</td>
-                                                                                                <td>Building Good
-                                                                                                      Attitude at Work
-                                                                                                </td>
-                                                                                                <td>Self and Work
-                                                                                                      Development</td>
-                                                                                                <td>25/02/2022</td>
-                                                                                                <td>25/02/2022</td>
-                                                                                                <td>Mr.Tony Roger</td>
-                                                                                                <td>
-
-
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;
-                                                                                                      <input type="checkbox"
-                                                                                                            id="checkbox2"
-                                                                                                            name="checkbox2"
-                                                                                                            value="option2"
-                                                                                                            class="form-check-input">
-
-
-                                                                                                </td>
-                                                                                          </tr>
-                                                                                          <tr align="center">
-                                                                                                <td>5.</td>
-                                                                                                <td>EX-00005</td>
-                                                                                                <td>Working as one team
-                                                                                                </td>
-                                                                                                <td>Social skill for
-                                                                                                      working together
-                                                                                                </td>
-                                                                                                <td>07/03/2022</td>
-                                                                                                <td>07/03/2022</td>
-                                                                                                <td>Mr.Kenji
-                                                                                                      Sleeptogether</td>
-                                                                                                <td>
-
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;
-                                                                                                      <input type="checkbox"
-                                                                                                            id="checkbox2"
-                                                                                                            name="checkbox2"
-                                                                                                            value="option2"
-                                                                                                            class="form-check-input">
-
-
-                                                                                                </td>
-                                                                                          </tr>
+                                                                                          <!-- ปิด foreach -->
+                                                                                         
 
                                                                                     </tbody>
                                                                               </table>

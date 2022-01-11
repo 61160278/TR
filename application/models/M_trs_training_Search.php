@@ -115,7 +115,7 @@ class M_trs_training_Search extends trs_model {
 				FROM dbmc.employee
 				WHERE employee.Emp_ID = ? ";
 		$query = $this->db->query($sql, array($this->Emp_ID));
-		return $query->result();
+		return $query;
 	}
 
 }		 

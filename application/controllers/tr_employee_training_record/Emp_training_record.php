@@ -46,16 +46,21 @@ class Emp_training_record extends MainController {
 	// function Employee_training()
 	function Show_Profile()
 	{
-		$this->output('/consent/tr_employee_training_record/v_profile_show');
-	}
-	function search_employee_id(){
-		$Emp_id = $this->input->post('Emp_id');
+		$Emp_id = $this->input->post('emp_id');
 		$this->load->model('M_trs_training_Search','mtts');
 		$this->mtts->Emp_ID = $Emp_id;
+		$data["data_id"] = $this->mtts->get_data_emp();
+		if(sizeof($data["data_id"]->result()) != 0){
+		// 	$this->load->model('M_trs_training_Search','mtts');
+		// $this->mtts->Emp_ID = $Emp_id;
+		// $data["data_id"] = $this->mtts->get_data_emp();
+			$this->output('/consent/tr_employee_training_record/v_profile_show', $data);
+		}else{
+			redirect("tr_employee_training_record/Emp_training_record/Employee_training");
+		}
 		
-		$data = $this->mtts->get_data_emp();
-		echo json_encode($data);
 	}
+	
  
 }
 // 

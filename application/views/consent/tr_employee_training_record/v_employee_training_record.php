@@ -34,53 +34,47 @@
       }
       </style>
       <!-- End style CSS  -->
-<script>
+      <script>
+      function get_Emp_id() {
+            Emp_id = document.getElementById("emp_id").value;
 
 
-function get_Emp_id() {
-    Emp_id = document.getElementById("emp_id").value;
- 
+            $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url(); ?>/tr_employee_training_record/Emp_training_record/search_employee_id",
+                  data: {
+                        "Emp_id": Emp_id
+                  },
+                  dataType: "JSON",
+                  success: function(data, status) {
+                        // console.log(status)
+                        // console.log(data)
 
-    $.ajax({
-        type: "POST",
-        url: "<?php echo base_url(); ?>/tr_employee_training_record/Emp_training_record/search_employee_id",
-        data: {
-            "Emp_id": Emp_id
-        },
-        dataType: "JSON",
-        success: function(data, status) {
-            // console.log(status)
-            // console.log(data)
+                        if (data.length == 0) {
 
-            if (data.length == 0) {
+                              document.getElementById("Showname_modol").value = "ไม่มีข้อมูล";
 
-                document.getElementById("Showname_modol").value = "ไม่มีข้อมูล";
+                        } else {
+                              empname = data[0].Empname_eng + " " + data[0].Empsurname_eng
+                              document.getElementById("Showname_modol").value = empname;
 
-            } else {
-                empname = data[0].Empname_eng + " " + data[0].Empsurname_eng
-                document.getElementById("Showname_modol").value = empname;
+                              console.log(999)
+                              console.log(empname)
+                        }
 
-                console.log(999)
-                console.log(empname)
-            }
-
-            // if-else
-        }
-    });
-    // ajax
-}
-// function get_Emp
+                        // if-else
+                  }
+            });
+            // ajax
+      }
+      // function get_Emp
 
 
-function shown_profile(emp_id) {
+      function shown_profile(emp_id) {
 
-console.log(emp_id);
-// window.location.href = "<?php echo base_url(); ?>/tr_employee_training_record/Emp_training_record/Show_Profile/" + emp_id;
-}
-
-
-
-
+            console.log(emp_id);
+            // window.location.href = "<?php echo base_url(); ?>/tr_employee_training_record/Emp_training_record/Show_Profile/" + emp_id;
+      }
       </script>
       <!-- Begin Page Content -->
       <div class="container-fluid">
@@ -124,16 +118,23 @@ console.log(emp_id);
 
                                                                   <div class="col col-md-3">
                                                                         <div class="input-group">
-                                                                        <input class="form-control" type="text"
-                                                                                    placeholder="Search"
-                                                                                    id="emp_id" > <!--<a href="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Show_Profile">--> <font color="white"><button
-                                                                                    class="btn btn-primary">
-                                                                                    <i class="fa  fa-search" onClick="get_Emp_id()"></i></font> <!--</a>-->
+                                                                              <form action="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Show_Profile" method = "post">
+                                                                                    <input class="form-control"
+                                                                                          type="text"
+                                                                                          placeholder="Search"
+                                                                                          name="emp_id"> 
+                                                                                          <font color="white">
+                                                                                                <button class="btn btn-primary" type="submit">
+                                                                                                      <i
+                                                                                                            class="fa  fa-search"></i>
+                                                                                          </font>
+                                                                                   
+                                                                                    <!-- onClick="get_Emp_id()" -->
                                                                         </div>
                                                                   </div>
                                                             </div>
                                                       </div>
-
+                                                      </form>
 
 
 
