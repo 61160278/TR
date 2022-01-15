@@ -99,8 +99,7 @@
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
                                                                               id="grouptext"
-                                                                              placeholder="นาย แอดมิน จัดการได้หมด"
-                                                                              disabled>
+                                                                              value ="<?php echo $row->Emp_nametitle.$row->Empname_th." ".$row->Empsurname_th; ?>" disabled>
                                                                   </div>
 
 
@@ -109,7 +108,7 @@
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
                                                                               id="grouptext"
-                                                                              placeholder="13 ปี 1 เดือน 5 วัน"
+                                                                              placeholder="-----"
                                                                               disabled>
                                                                   </div>
 
@@ -129,16 +128,16 @@
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
                                                                               id="grouptext"
-                                                                              placeholder="Mr. Admin Jatkandaimod"
-                                                                              disabled>
+                                                                              value ="<?php echo $row->Empname_engTitle.".".$row->Empname_eng." ".$row->Empsurname_eng; ?>" disabled>
                                                                   </div>
 
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; ตำแหน่ง :
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Administrator"
+                                                                              id="grouptext" value ="<?php echo $row->Position_ID; ?>"
                                                                               disabled>
+                                                                              
                                                                   </div>
 
 
@@ -153,7 +152,7 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Section :
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="6180"
+                                                                              id="grouptext" value ="<?php echo $row->Sectioncode_ID; ?>"
                                                                               disabled>
                                                                   </div>
                                                                   <!-- row 2 -->
