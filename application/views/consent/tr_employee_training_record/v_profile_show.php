@@ -233,16 +233,15 @@
                                                                                           </tr>
                                                                                     </thead>
                                                                                     <tbody>
-                                                                                          <!-- foreach -->
+                                                                                    <?php foreach($training_data->result() as $row){ ?>
                                                                                           <tr align="center">
-                                                                                                <td>1.</td>
-                                                                                                <td>IN-00001</td>
-                                                                                                <td>General Safety</td>
-                                                                                                <td>General Safety</td>
-                                                                                                <td>02/01/2021</td>
-                                                                                                <td>02/01/2021</td>
-                                                                                                <td>Mr.Kenji
-                                                                                                      Sleeptogether</td>
+                                                                                                
+                                                                                                <td><?php echo $row->Course_code; ?></td>
+                                                                                                <td><?php echo $row->Course_name; ?></td>
+                                                                                                <td><?php echo $row->Course_description; ?></td>
+                                                                                                <td><?php echo $row->Start_date; ?></td>
+                                                                                                <td><?php echo $row->End_date; ?></td>
+                                                                                                <td><?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?></td>
                                                                                                 <td>
 
                                                                                                       &nbsp;&nbsp;
@@ -257,7 +256,7 @@
 
                                                                                                 </td>
                                                                                           </tr>
-                                                                                          <!-- ปิด foreach -->
+                                                                                          <?php }   ?>
                                                                                          
 
                                                                                     </tbody>

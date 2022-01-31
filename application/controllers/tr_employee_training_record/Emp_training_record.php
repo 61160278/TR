@@ -51,9 +51,9 @@ class Emp_training_record extends MainController {
 		$this->mtts->Emp_ID = $Emp_id;
 		$data["data_id"] = $this->mtts->get_data_emp();
 		if(sizeof($data["data_id"]->result()) != 0){
-		// 	$this->load->model('M_trs_training_Search','mtts');
-		// $this->mtts->Emp_ID = $Emp_id;
-		// $data["data_id"] = $this->mtts->get_data_emp();
+		   $this->load->model('M_trs_training_Search','mttt');
+		   $this->mttt->Emp_ID = $Emp_id;
+		   $data["training_data"] = $this->mttt->training_table();
 			$this->output('/consent/tr_employee_training_record/v_profile_show', $data);
 		}else{
 			redirect("tr_employee_training_record/Emp_training_record/Employee_training");
