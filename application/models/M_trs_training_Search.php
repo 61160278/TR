@@ -124,12 +124,18 @@ class M_trs_training_Search extends trs_model {
 				ON tcd.Course_id = ttr.Course_code_id
 				LEFT JOIN trs_database.trs_trainer_data as ttd
 				ON ttd.trainer_id = ttr.Trainer_id
+				LEFT JOIN trs_database.trs_member_course as tmc
+				ON tmc.Training_ID = ttr.Training_id
+				
 				";
 				
 		$query = $this->db->query($sql);
 		return $query;
 	
 	}//get_group
+
+
+
 
 }		 
 ?>
