@@ -52,7 +52,7 @@ class Emp_training_record extends MainController {
 		$data["data_id"] = $this->mtts->get_data_emp();
 		if(sizeof($data["data_id"]->result()) != 0){
 		   $this->load->model('M_trs_training_Search','mttt');
-		   $this->mttt->Emp_ID = $Emp_id;
+		   $this->mttt->Employee_Code = $Emp_id;
 		   $data["training_data"] = $this->mttt->training_table();
 			$this->output('/consent/tr_employee_training_record/v_profile_show', $data);
 		}else{
