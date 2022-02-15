@@ -112,21 +112,23 @@
                                                       <div class="card-body">
 
                                                             <div class="row form-group">
-                                                                  <div class="col-sm-2">
+                                                                  <div class="col-1">
                                                                         Employee ID :
                                                                   </div>
 
-                                                                  <div class="col col-md-3">
+                                                                  <div class="col-3">
                                                                         <div class="input-group">
                                                                               <form action="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Show_Profile" method = "post">
                                                                                     <input class="form-control" type="text" placeholder="Search" name="emp_id"> 
-                                                                                                <button class="btn btn-primary" type="submit"> <i class="fa  fa-search"></i>
+                                                                                               
                                                                                           
-                                                                                   
+                                                                                  
+                                                                  <button class="btn btn-primary" type="submit"> <i class="fa  fa-search"></i>
+                                                                  
                                                                                     
                                                                         </div>
                                                                   </div> <!--col3-->
-                                                                  
+                                                                 
                                                             </div>
                                                       </div>
                                                       </form>
