@@ -233,9 +233,9 @@
                                                                                           </tr>
                                                                                     </thead>
                                                                                     <tbody>
-                                                                                    <?php foreach($training_data->result() as $row){ ?>
+                                                                                    <?php foreach($training_data->result() as $index => $row){ ?>
                                                                                           <tr align="center">
-                                                                                                
+                                                                                                <td><?php echo $index+1 ?></td>
                                                                                                 <td><?php echo $row->Course_code; ?></td>
                                                                                                 <td><?php echo $row->Course_name; ?></td>
                                                                                                 <td><?php echo $row->Course_description; ?></td>
