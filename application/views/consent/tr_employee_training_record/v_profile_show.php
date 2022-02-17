@@ -115,7 +115,7 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; วุฒิการศึกษา :
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="ปริญญาโท"
+                                                                              id="grouptext" placeholder="-----"
                                                                               disabled>
                                                                   </div>
 
@@ -146,8 +146,9 @@
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
                                                                               id="grouptext"
-                                                                              placeholder="Human Resourse" disabled>
+                                                                              placeholder="-----" disabled>
                                                                   </div>
+                                                                  <!-- fix -->
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; Section :
                                                                   <div class="col-sm-2">

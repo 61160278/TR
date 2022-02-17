@@ -168,8 +168,45 @@ class M_trs_training_record extends trs_model {
 	function get_data_emp(){	
 		$sql = "SELECT * 
                 FROM dbmc.employee AS emp
-                INNER JOIN dbmc.group_secname AS gsec 
-                ON gsec.Sectioncode = emp.Sectioncode_ID
+                INNER JOIN dbmc.position AS pos
+                ON pos.Position_ID = emp.Position_ID
+                WHERE emp.Emp_ID=? " ;
+        $query = $this->db->query($sql,array($this->Emp_ID));
+        return $query;
+	}
+
+	function get_emp_department($sec_id){	
+		$temp = substr($sec_id,4);
+        $temp_sec = substr($temp,0,2);
+        $sec = "";
+        if($temp_sec == "DP"){
+            $sec = "Department_id";
+        }
+        // if 
+        else if($temp_sec == "SC"){
+            $sec = "Section_id";
+        }
+        // else if
+        else if($temp_sec == "SB"){
+            $sec = "SubSection_id";
+        }
+        // else if 
+        else if($temp_sec == "LN"){
+            $sec = "Line_id";
+        }
+        // else if
+        else if($temp_sec == "DV"){
+            $sec = "Division_id";
+        }
+        // else if
+        else if($temp_sec == "GR"){
+            $sec = "Group_id";
+        }
+        // else if
+		$sql = "SELECT * 
+                FROM dbmc.employee AS emp
+		    INNER JOIN dbmc.master_mapping AS map
+                ON map.".$sec." = emp.Sectioncode_ID
                 INNER JOIN dbmc.position AS pos
                 ON pos.Position_ID = emp.Position_ID
                 WHERE emp.Emp_ID=? " ;
@@ -217,13 +254,51 @@ class M_trs_training_record extends trs_model {
                 		ON emp.Emp_ID = tmc.Employee_Code
 				INNER JOIN dbmc.position AS pos
                 		ON pos.Position_ID = emp.Position_ID
-				INNER JOIN dbmc.sectioncode AS sec
-                		ON sec.Sectioncode = emp.Sectioncode_ID
+				-- INNER JOIN dbmc.sectioncode AS sec
+                		-- ON sec.Sectioncode = emp.Sectioncode_ID
 				WHERE tmc.Training_ID = ?";
 				
 		$query = $this->db->query($sql ,array($this->Training_ID));
 		return $query;
 	}
+
+	function get_member_dpartment($sec_id){
+
+		$temp = substr($sec_id,4);
+		$temp_sec = substr($temp,0,2);
+		$sec = "";
+		if($temp_sec == "DP"){
+		    $sec = "Department_id";
+		}
+		// if 
+		else if($temp_sec == "SC"){
+		    $sec = "Section_id";
+		}
+		// else if
+		else if($temp_sec == "SB"){
+		    $sec = "SubSection_id";
+		}
+		// else if 
+		else if($temp_sec == "LN"){
+		    $sec = "Line_id";
+		}
+		// else if
+		else if($temp_sec == "DV"){
+		    $sec = "Division_id";
+		}
+		// else if
+		else if($temp_sec == "GR"){
+		    $sec = "Group_id";
+		}
+		// else if 
+    
+		$sql = "SELECT * 
+			  FROM dbmc.master_mapping AS map
+			  WHERE map.".$sec."='".$sec_id."'";
+		$query = $this->db->query($sql);
+		return $query;
+	  }
+	  // get_dpartment
 
 function delete_member(){
 	$sql = "DELETE FROM trs_database.trs_member_course

@@ -75,6 +75,7 @@ class Manage_training_record extends MainController {
 		$this->load->model('M_trs_training_record','mtrr');
 		$this->mtrr->Training_ID = $Training_id;
 		$data['mtn'] = $this->mtrr->get_member()->result();
+		
 
 		$this->load->model('M_trs_trainer_data','mttd');
 		$data['ins'] = $this->mttd->get_all_ins()->result();
@@ -86,8 +87,19 @@ function edt_get_member(){
 
 	$this->load->model('M_trs_training_record','mtrr');
 		$this->mtrr->Training_ID = $this->input->post("Training_id");
-		$data = $this->mtrr->get_member()->result();
-		echo json_encode($data);
+		$member = $this->mtrr->get_member()->result();
+		
+		$temp = $member;
+		$dep_info = [];
+		$datas = [];
+		foreach($temp as $row){
+			$data['dep'] = $this->mtrr->get_member_dpartment($row->Sectioncode_ID)->row();
+			array_push($dep_info,$data['dep']);
+		}
+			array_push($datas,$member);
+			array_push($datas,$dep_info);
+			$data = $datas;
+			echo json_encode($data);
 }
 
 
@@ -238,7 +250,10 @@ function edt_get_member(){
 		$this->load->model('M_trs_training_record','mtrr');
 		$this->mtrr->Emp_ID = $emp_id;
 		
-		$data = $this->mtrr->get_data_emp()->row();
+		$emp_data = $this->mtrr->get_data_emp()->row();
+		$this->mtrr->Emp_ID = $emp_id;
+		$data = $this->mtrr->get_emp_department($emp_data->Sectioncode_ID)->row();
+
 		echo json_encode($data);
 	}
 	// function search_get_emp

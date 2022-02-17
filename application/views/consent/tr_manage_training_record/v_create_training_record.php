@@ -347,7 +347,7 @@
                               "</td>"
                         data_table += "<td>" + obj.Position_name + "</td>"
                         data_table += "<td>" + obj.Department + "</td>"
-                        data_table += "<td>" + obj.Sectioncode + "</td>"
+                        data_table += "<td>" + obj.Sectioncode_ID + "</td>"
                         data_table += "<td>" + total_h + "</td>"
                         data_table += "<td><font color='green'>Pass</font></td>"
                         if (checkbox == true) {

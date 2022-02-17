@@ -225,7 +225,7 @@
                               "</td>"
                         data_table += "<td>" + obj.Position_name + "</td>"
                         data_table += "<td>" + obj.Department + "</td>"
-                        data_table += "<td>" + obj.Sectioncode + "</td>"
+                        data_table += "<td>" + obj.Sectioncode_ID + "</td>"
                         data_table += "<td>" + total_h + "</td>"
                         data_table += "<td><font color='green'>Pass</font></td>"
                         if (checkbox == true) {
@@ -274,9 +274,10 @@
                   success: function(data, status) {
 
                         console.log(data)
+                        
                         count = 0;
 
-                        data.forEach((row, index) => {
+                        data[0].forEach((row, index) => {
 
                               
                               member_count.push(count)
@@ -289,8 +290,8 @@
                                     .Empsurname_eng +
                                     "</td>"
                               data_table += "<td>" + row.Position_name + "</td>"
-                              data_table += "<td>" + row.Department + "</td>"
-                              data_table += "<td>" + row.Sectioncode + "</td>"
+                              data_table += "<td>" + data[1][index].Department + "</td>"
+                              data_table += "<td>" + row.Sectioncode_ID + "</td>"
                               data_table += "<td>" + row.Total_hours + "</td>"
                               data_table += "<td><font color='green'>Pass</font></td>"
                               if (row.Certificate_member == "1") {
@@ -670,6 +671,7 @@
                                                                               </tr>
                                                                         </thead>
                                                                         <tbody id="show_member">
+                              
                                                                         </tbody>
                                                                   </table>
                                                             </div>
