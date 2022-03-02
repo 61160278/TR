@@ -80,12 +80,12 @@
                                                             <div class="row">
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <img
                                                                         src="<?php echo base_url();?>elaadmin/images/1.jpg"
-                                                                        width="200" height="200"
-                                                                        class="rounded-circle" />
+                                                                        width="400" height="400"
+                                                                        class="rounded-square" />
 
                                                             </div>
-                                                            <br>
-                                                            <br>
+                                                           <br>
+                                                           <br>
                                                             <?php foreach($data_id->result() as $row){ ?>
                                                             <div class="row">
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; รหัสประจำตัวพนักงาน :
@@ -315,15 +315,16 @@
                                           </div>
                                     </div><!-- .animated -->
                               </div><!-- .content -->
-
-                        </div>
-
-                  </div>
-                  <!-- Start col-lg-12 -->
-                  <div class="col-md-3">
+                              <div class="col-md-3">
                         <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
                               <button type="button" class="btn btn-secondary">Back</button>
                         </a>
                   </div>
+                        </div>
+                        
+
+                  </div>
+                  <!-- Start col-lg-12 -->
+                 
 
             </div> <!-- /.container-fluid -->
