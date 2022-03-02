@@ -113,12 +113,9 @@
 
                                                             <div class="row form-group">
                                                                   <div class="col-md-1">
-                                                                        Employee ID :
+                                                                        Emp. ID :
                                                                   </div>
-
                                                                   <div class="col-md-3">
-                                                                        
-                                                                      
                                                                               <form action="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Show_Profile"
                                                                                     method="post">
                                                                                     <input class="form-control"
