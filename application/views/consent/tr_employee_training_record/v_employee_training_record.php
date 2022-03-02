@@ -141,17 +141,25 @@
                                           </div>
                                     </div>
 
-
-                              </div>
-                        </div><!-- .animated -->
-                  </div><!-- .content -->
-            </div>
-            <!-- card-shadow mb-4 -->
-            <div class="col-md-7">
+                                    <div class="col-md-7">
                   <a href="<?php echo base_url()?>Trs_Controller/index">
                         <button type="button" class="btn btn-secondary">Back</button>
                   </a>
+            </div> <!-- div 7 -->
+
+                              </div>
+                        </div><!-- .animated -->
+
+
+
+
+                        
+                  </div><!-- .content -->
+
+                  
             </div>
+            <!-- card-shadow mb-4 -->
+            
       </div>
       <!-- col-lg-12 -->
       </div>
