@@ -108,15 +108,16 @@
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
                                                                               id="grouptext"
-                                                                              placeholder="-----"
+                                                                              placeholder="4 ปี 3 เดือน 2 วัน"
                                                                               disabled>
                                                                   </div>
 
                                                                   &nbsp;&nbsp;&nbsp;&nbsp; วุฒิการศึกษา :
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="-----"
+                                                                              id="grouptext" value ="<?php echo $row->Degree2; ?>" 
                                                                               disabled>
+                                                                              
                                                                   </div>
 
                                                             </div>
@@ -146,7 +147,7 @@
                                                                   <div class="col-sm-2">
                                                                         <input type="text" class="form-control"
                                                                               id="grouptext"
-                                                                              placeholder="-----" disabled>
+                                                                              placeholder="Human Resources" disabled>
                                                                   </div>
                                                                   <!-- fix -->
 
