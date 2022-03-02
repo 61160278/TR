@@ -253,7 +253,7 @@
                                                                                                             id="checkbox2"
                                                                                                             name="checkbox2"
                                                                                                             value="option2"
-                                                                                                            class="form-check-input">
+                                                                                                            class="form-check-input" checked>
 
 
                                                                                                 </td>
@@ -316,7 +316,7 @@
                                     </div><!-- .animated -->
                               </div><!-- .content -->
                               <div class="col-md-3">
-                        <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
+                        <a href="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Employee_training">
                               <button type="button" class="btn btn-secondary">Back</button>
                         </a>
                   </div>
