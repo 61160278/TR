@@ -314,12 +314,15 @@
 
                                           </div>
                                     </div><!-- .animated -->
-                              </div><!-- .content -->
-                              <div class="col-md-3">
+
+                                    <div class="col-md-3">
                         <a href="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Employee_training">
                               <button type="button" class="btn btn-secondary">Back</button>
                         </a>
                   </div>
+
+                              </div><!-- .content -->
+                             
                         </div>
                         
 
