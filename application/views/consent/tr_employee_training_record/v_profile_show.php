@@ -78,86 +78,114 @@
                                                 <div class="card border border-secondary">
                                                       <div class="card-body">
                                                             <div class="row">
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <img
-                                                                        src="<?php echo base_url();?>elaadmin/images/1.jpg"
-                                                                        width="400" height="400"
-                                                                        class="rounded-square" />
-
-                                                            </div>
-                                                           <br>
-                                                           <br>
-                                                            <?php foreach($data_id->result() as $row){ ?>
-                                                            <div class="row">
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; รหัสประจำตัวพนักงาน :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext" value ="<?php echo $row->Emp_ID; ?>" disabled>
+                                                                  <div class="col-md-4">
+                                                                        <img src="<?php echo base_url();?>elaadmin/images/1.jpg"
+                                                                              width="400" height="400"
+                                                                              class="rounded-square" />
                                                                   </div>
+                                                                  <div class="col-md-8">
+                                                                        <?php foreach($data_id->result() as $row){ ?>
+                                                                        <div class="row">
+                                                                              <div class="col-md-2">
+                                                                                    รหัสพนักงาน :
+                                                                              </div>
+
+                                                                              <div class="col-md-2">
+                                                                              <?php echo $row->Emp_ID; ?>
+                                                                              </div>
+
+                                                                              <div class="col-md-1">
+                                                                                    ชื่อ :
+                                                                              </div>
+
+                                                                              <div class="col-md-3">
+                                                                                    <input type="text"
+                                                                                          class="form-control"
+                                                                                          id="grouptext"
+                                                                                          value="<?php echo $row->Emp_nametitle.$row->Empname_th." ".$row->Empsurname_th; ?>"
+                                                                                          disabled>
+                                                                              </div>
+
+                                                                              <div class="col-md-2">
+                                                                                    อายุงาน :
+                                                                              </div>
 
 
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; ชื่อ :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext"
-                                                                              value ="<?php echo $row->Emp_nametitle.$row->Empname_th." ".$row->Empsurname_th; ?>" disabled>
+                                                                              <div class="col-md-2">
+                                                                                    <input type="text"
+                                                                                          class="form-control"
+                                                                                          id="grouptext"
+                                                                                          placeholder="4 ปี 3 เดือน 2 วัน"
+                                                                                          disabled>
+                                                                              </div>
+                                                                        </div>
+                                                                        <br>
+                                                                        <div class="row">
+                                                                              <div class="col-md-2">
+                                                                                    วุฒิการศึกษา :
+                                                                              </div>
+
+                                                                              <div class="col-md-2">
+                                                                                    <input type="text"
+                                                                                          class="form-control"
+                                                                                          id="grouptext"
+                                                                                          value="<?php echo $row->Degree2; ?>"
+                                                                                          disabled>
+
+                                                                              </div>
+                                                                              <div class="col-md-2">
+                                                                              ชื่ออังกฤษ :
+                                                                              </div>
+                                                                             
+                                                                              <div class="col-md-3">
+                                                                                    <input type="text"
+                                                                                          class="form-control"
+                                                                                          id="grouptext"
+                                                                                          value="<?php echo $row->Empname_engTitle.".".$row->Empname_eng." ".$row->Empsurname_eng; ?>"
+                                                                                          disabled>
+                                                                              </div>
+
+
+                                                                              &nbsp;&nbsp;&nbsp;&nbsp; ตำแหน่ง :
+                                                                              <div class="col-sm-2">
+                                                                                    <input type="text"
+                                                                                          class="form-control"
+                                                                                          id="grouptext"
+                                                                                          value="<?php echo $row->Position_ID; ?>"
+                                                                                          disabled>
+
+                                                                              </div>
+                                                                        </div>
+                                                                        <div class="row">
+
+                                                                              &nbsp;&nbsp;&nbsp;&nbsp; แผนก :
+                                                                              <div class="col-sm-2">
+                                                                                    <input type="text"
+                                                                                          class="form-control"
+                                                                                          id="grouptext"
+                                                                                          placeholder="Human Resources"
+                                                                                          disabled>
+                                                                              </div>
+                                                                              <!-- fix -->
+
+                                                                              &nbsp;&nbsp;&nbsp;&nbsp; Section :
+                                                                              <div class="col-sm-2">
+                                                                                    <input type="text"
+                                                                                          class="form-control"
+                                                                                          id="grouptext"
+                                                                                          value="<?php echo $row->Sectioncode_ID; ?>"
+                                                                                          disabled>
+                                                                              </div>
+                                                                              <!-- row 2 -->
+                                                                        </div>
                                                                   </div>
+                                                                  <br>
+                                                                  <br>
+
+                                                                  <!-- row 1 -->
+                                                                  <br>
 
 
-
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; อายุงาน :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext"
-                                                                              placeholder="4 ปี 3 เดือน 2 วัน"
-                                                                              disabled>
-                                                                  </div>
-
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; วุฒิการศึกษา :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext" value ="<?php echo $row->Degree2; ?>" 
-                                                                              disabled>
-                                                                              
-                                                                  </div>
-
-                                                            </div>
-                                                            <!-- row 1 -->
-                                                            <br>
-
-                                                            <div class="row">
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; ชื่ออังกฤษ :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext"
-                                                                              value ="<?php echo $row->Empname_engTitle.".".$row->Empname_eng." ".$row->Empsurname_eng; ?>" disabled>
-                                                                  </div>
-
-
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; ตำแหน่ง :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext" value ="<?php echo $row->Position_ID; ?>"
-                                                                              disabled>
-                                                                              
-                                                                  </div>
-
-
-
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; แผนก :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext"
-                                                                              placeholder="Human Resources" disabled>
-                                                                  </div>
-                                                                  <!-- fix -->
-
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Section :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext" value ="<?php echo $row->Sectioncode_ID; ?>"
-                                                                              disabled>
-                                                                  </div>
-                                                                  <!-- row 2 -->
 
                                                             </div>
                                                             <!-- card-body -->
@@ -235,15 +263,22 @@
                                                                                           </tr>
                                                                                     </thead>
                                                                                     <tbody>
-                                                                                    <?php foreach($training_data->result() as $index => $row){ ?>
+                                                                                          <?php foreach($training_data->result() as $index => $row){ ?>
                                                                                           <tr align="center">
-                                                                                                <td><?php echo $index+1 ?></td>
-                                                                                                <td><?php echo $row->Course_code; ?></td>
-                                                                                                <td><?php echo $row->Course_name; ?></td>
-                                                                                                <td><?php echo $row->Course_description; ?></td>
-                                                                                                <td><?php echo $row->Start_date; ?></td>
-                                                                                                <td><?php echo $row->End_date; ?></td>
-                                                                                                <td><?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?></td>
+                                                                                                <td><?php echo $index+1 ?>
+                                                                                                </td>
+                                                                                                <td><?php echo $row->Course_code; ?>
+                                                                                                </td>
+                                                                                                <td><?php echo $row->Course_name; ?>
+                                                                                                </td>
+                                                                                                <td><?php echo $row->Course_description; ?>
+                                                                                                </td>
+                                                                                                <td><?php echo $row->Start_date; ?>
+                                                                                                </td>
+                                                                                                <td><?php echo $row->End_date; ?>
+                                                                                                </td>
+                                                                                                <td><?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?>
+                                                                                                </td>
                                                                                                 <td>
 
                                                                                                       &nbsp;&nbsp;
@@ -253,13 +288,14 @@
                                                                                                             id="checkbox2"
                                                                                                             name="checkbox2"
                                                                                                             value="option2"
-                                                                                                            class="form-check-input" checked>
+                                                                                                            class="form-check-input"
+                                                                                                            checked>
 
 
                                                                                                 </td>
                                                                                           </tr>
                                                                                           <?php }   ?>
-                                                                                         
+
 
                                                                                     </tbody>
                                                                               </table>
@@ -316,18 +352,19 @@
                                     </div><!-- .animated -->
 
                                     <div class="col-md-3">
-                        <a href="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Employee_training">
-                              <button type="button" class="btn btn-secondary">Back</button>
-                        </a>
-                  </div>
+                                          <a
+                                                href="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Employee_training">
+                                                <button type="button" class="btn btn-secondary">Back</button>
+                                          </a>
+                                    </div>
 
                               </div><!-- .content -->
-                             
+
                         </div>
-                        
+
 
                   </div>
                   <!-- Start col-lg-12 -->
-                 
+
 
             </div> <!-- /.container-fluid -->
