@@ -91,7 +91,7 @@
                                                                               </div>
 
                                                                               <div class="col-md-2">
-                                                                              <?php echo $row->Emp_ID; ?>
+                                                                                    <?php echo $row->Emp_ID; ?>
                                                                               </div>
 
                                                                               <div class="col-md-1">
@@ -99,11 +99,9 @@
                                                                               </div>
 
                                                                               <div class="col-md-3">
-                                                                                    <input type="text"
-                                                                                          class="form-control"
-                                                                                          id="grouptext"
-                                                                                          value="<?php echo $row->Emp_nametitle.$row->Empname_th." ".$row->Empsurname_th; ?>"
-                                                                                          disabled>
+
+                                                                                    <?php echo $row->Emp_nametitle.$row->Empname_th." ".$row->Empsurname_th; ?>
+
                                                                               </div>
 
                                                                               <div class="col-md-2">
@@ -112,11 +110,9 @@
 
 
                                                                               <div class="col-md-2">
-                                                                                    <input type="text"
-                                                                                          class="form-control"
-                                                                                          id="grouptext"
-                                                                                          placeholder="4 ปี 3 เดือน 2 วัน"
-                                                                                          disabled>
+
+                                                                                    <?php echo "4 ปี 3 เดือน 2 วัน"; ?>
+
                                                                               </div>
                                                                         </div>
                                                                         <br>
@@ -125,56 +121,47 @@
                                                                                     วุฒิการศึกษา :
                                                                               </div>
 
-                                                                              <div class="col-md-2">
-                                                                                    <input type="text"
-                                                                                          class="form-control"
-                                                                                          id="grouptext"
-                                                                                          value="<?php echo $row->Degree2; ?>"
-                                                                                          disabled>
+                                                                              <div class="col-md-1">
+
+                                                                                    <?php echo $row->Degree2; ?>
+
 
                                                                               </div>
                                                                               <div class="col-md-2">
-                                                                              ชื่ออังกฤษ :
+                                                                                    ชื่ออังกฤษ :
                                                                               </div>
-                                                                             
+
                                                                               <div class="col-md-3">
-                                                                                    <input type="text"
-                                                                                          class="form-control"
-                                                                                          id="grouptext"
-                                                                                          value="<?php echo $row->Empname_engTitle.".".$row->Empname_eng." ".$row->Empsurname_eng; ?>"
-                                                                                          disabled>
+
+                                                                                    <?php echo $row->Empname_engTitle.".".$row->Empname_eng." ".$row->Empsurname_eng; ?>
+
                                                                               </div>
 
-
-                                                                              &nbsp;&nbsp;&nbsp;&nbsp; ตำแหน่ง :
+                                                                              <div class="col-md-2">
+                                                                              ตำแหน่ง :
+                                                                        </div>
                                                                               <div class="col-sm-2">
-                                                                                    <input type="text"
-                                                                                          class="form-control"
-                                                                                          id="grouptext"
-                                                                                          value="<?php echo $row->Position_ID; ?>"
-                                                                                          disabled>
+
+                                                                                    <?php echo $row->Position_ID; ?>
 
                                                                               </div>
                                                                         </div>
+                                                                        <br>
                                                                         <div class="row">
-
-                                                                              &nbsp;&nbsp;&nbsp;&nbsp; แผนก :
-                                                                              <div class="col-sm-2">
-                                                                                    <input type="text"
-                                                                                          class="form-control"
-                                                                                          id="grouptext"
-                                                                                          placeholder="Human Resources"
-                                                                                          disabled>
+                                                                        <div class="col-md-2">
+                                                                             แผนก :
+                                                                        </div>
+                                                                              <div class="col-sm-3">
+                                                                              <?php echo "Human Resources"; ?>      
                                                                               </div>
                                                                               <!-- fix -->
-
-                                                                              &nbsp;&nbsp;&nbsp;&nbsp; Section :
+                                                                              <div class="col-md-2">
+                                                                             Section :
+                                                                        </div>
                                                                               <div class="col-sm-2">
-                                                                                    <input type="text"
-                                                                                          class="form-control"
-                                                                                          id="grouptext"
-                                                                                          value="<?php echo $row->Sectioncode_ID; ?>"
-                                                                                          disabled>
+                                                                                   
+                                                                                         <?php echo $row->Sectioncode_ID; ?>
+                                                                                        
                                                                               </div>
                                                                               <!-- row 2 -->
                                                                         </div>
