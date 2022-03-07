@@ -113,6 +113,8 @@ class M_trs_training_Search extends trs_model {
 	function get_data_emp(){	
 		$sql = "SELECT *
 				FROM dbmc.employee
+				INNER JOIN dbmc.position
+				ON position.Position_ID = employee.Position_ID 
 				WHERE employee.Emp_ID = ? ";
 		$query = $this->db->query($sql, array($this->Emp_ID));
 		return $query;
@@ -134,7 +136,44 @@ class M_trs_training_Search extends trs_model {
 	
 	}//get_group
 
-
+	function get_emp_department($sec_id){	
+		$temp = substr($sec_id,4);
+        $temp_sec = substr($temp,0,2);
+        $sec = "";
+        if($temp_sec == "DP"){
+            $sec = "Department_id";
+        }
+        // if 
+        else if($temp_sec == "SC"){
+            $sec = "Section_id";
+        }
+        // else if
+        else if($temp_sec == "SB"){
+            $sec = "SubSection_id";
+        }
+        // else if 
+        else if($temp_sec == "LN"){
+            $sec = "Line_id";
+        }
+        // else if
+        else if($temp_sec == "DV"){
+            $sec = "Division_id";
+        }
+        // else if
+        else if($temp_sec == "GR"){
+            $sec = "Group_id";
+        }
+        // else if
+		$sql = "SELECT * 
+                FROM dbmc.employee AS emp
+		    INNER JOIN dbmc.master_mapping AS map
+                ON map.".$sec." = emp.Sectioncode_ID
+                INNER JOIN dbmc.position AS pos
+                ON pos.Position_ID = emp.Position_ID
+                WHERE emp.Emp_ID=? " ;
+        $query = $this->db->query($sql,array($this->Emp_ID));
+        return $query;
+	}
 
 
 }		 

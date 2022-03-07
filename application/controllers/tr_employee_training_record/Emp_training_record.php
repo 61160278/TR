@@ -50,7 +50,11 @@ class Emp_training_record extends MainController {
 		$this->load->model('M_trs_training_Search','mtts');
 		$this->mtts->Emp_ID = $Emp_id;
 		$data["data_id"] = $this->mtts->get_data_emp();
-		if(sizeof($data["data_id"]->result()) != 0){
+		if(sizeof($data["data_id"]->row()) != 0){
+			$temp = $data["data_id"]->row();
+		   $this->load->model('M_trs_training_Search','mtts');
+		   $data["department"] = $this->mtts->get_emp_department($temp->Sectioncode_ID)->row();
+		   
 		   $this->load->model('M_trs_training_Search','mttt');
 		   $this->mttt->Employee_Code = $Emp_id;
 		   $data["training_data"] = $this->mttt->training_table();

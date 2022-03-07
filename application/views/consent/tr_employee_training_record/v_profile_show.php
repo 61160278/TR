@@ -142,7 +142,7 @@
                                                                         </div>
                                                                               <div class="col-sm-2">
 
-                                                                                    <?php echo $row->Position_ID; ?>
+                                                                                    <?php echo $row->Position_name; ?>
 
                                                                               </div>
                                                                         </div>
@@ -152,7 +152,7 @@
                                                                              แผนก :
                                                                         </div>
                                                                               <div class="col-sm-3">
-                                                                              <?php echo "Human Resources"; ?>      
+                                                                              <?php echo $department->Department; ?>      
                                                                               </div>
                                                                               <!-- fix -->
                                                                               <div class="col-md-2">
