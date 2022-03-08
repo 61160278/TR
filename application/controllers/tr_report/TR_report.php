@@ -48,6 +48,13 @@ class TR_report extends MainController {
 	{
 		$this->output('/consent/tr_report/v_report_person');
 	}
- 
+	function Report_group()
+	{
+		$this->output('/consent/tr_report/v_report_group');
+	}
+	function Report_support()
+	{
+		$this->output('/consent/tr_report/v_report_support');
+	}
 }
 // 
