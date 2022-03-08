@@ -59,10 +59,8 @@
                         </div>
                         <!-- End header  -->
 
-
-
-                           <!-- Start content  -->
-                  <div class="card-body row">
+  <!-- Start content  -->
+  <div class="card-body row">
 
 <!-- Start Menu Manage Training Configuration -->
 <div class="col-xl-4 col-md-6 mb-4">
@@ -72,8 +70,6 @@
                   <div class="card-body">
                         <div class="row no-gutters align-items-center">
                               <div class="col mr-2">
-                                    <div class="menu-icon fa fa-tasks" 
-                                          id="icon_main_menu"></div>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">Employee Training Record form</div>
                               </div>
                               <!-- col-2 -->
@@ -95,8 +91,6 @@
                   <div class="card-body">
                         <div class="row no-gutters align-items-center">
                               <div class="col mr-2">
-                                    <div class="menu-icon fa fa-pencil-square"
-                                          style="color: gray-800" id="icon_main_menu"></div>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">Employee Training Record Group</div>
                               </div>
                               <!-- col-2 -->
@@ -119,8 +113,6 @@
                   <div class="card-body">
                         <div class="row no-gutters align-items-center">
                               <div class="col mr-2">
-                                    <div class="menu-icon fa fa-users" style="color: gray-800"
-                                          id="icon_main_menu"></div>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">Employee Training Support Audit</div>
                               </div>
                               <!-- col-2 -->
@@ -134,13 +126,18 @@
       <!-- a href -->
 </div>
 <!-- End Menu Employee Training Record  -->
-            </div>
-            <!-- card-shadow mb-4 -->
-            <div class="col-md-7">
+
+            
+<div class="col-md-7">
                   <a href="<?php echo base_url()?>Trs_Controller/index">
                         <button type="button" class="btn btn-secondary">Back</button>
                   </a>
             </div>
+
+
+            </div>
+            <!-- card-shadow mb-4 -->
+           
       </div>
       <!-- col-lg-12 -->
       </div>
