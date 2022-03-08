@@ -61,47 +61,79 @@
 
 
 
-                        <div class="content">
-                              <div class="animated fadeIn">
-                                    <div class="row">
+                           <!-- Start content  -->
+                  <div class="card-body row">
 
-                                          <div class="col-md-12">
-                                                <div class="card">
-
-                                                      <div class="card-body">
-
-                                                            <div class="row form-group">
-                                                                  <div class="col-sm-4">
-
-                                                                        Employee Training Record Form :
-                                                                        <img src="<?php echo base_url();?>elaadmin/images/Excel.png" alt="Excel" height="8%">
-                                                                        <br>
-                                                                        <br>
-                                                                        Employee Training Record By Department :
-                                                                        <img src="<?php echo base_url();?>elaadmin/images/Excel.png" alt="Excel" height="8%">
-                                                                        <br>
-                                                                        <br>
-                                                                        Employee Training Record By Course :
-                                                                        <img src="<?php echo base_url();?>elaadmin/images/Excel.png" alt="Excel" height="8%">
-
-                                                                  </div>
-
-                                                                  
-                                                            </div>
-                                                      </div>
-
-
-
-
-
-                                                </div>
-                                          </div>
-                                    </div>
-
-
+<!-- Start Menu Manage Training Configuration -->
+<div class="col-xl-4 col-md-6 mb-4">
+      <a
+            href="<?php echo base_url() ?>tr_manage_training_configuration/Manage_training_configuration/index">
+            <div class="card border4 shadow h-100 py-2">
+                  <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                              <div class="col mr-2">
+                                    <div class="menu-icon fa fa-tasks" 
+                                          id="icon_main_menu"></div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">Employee Training Record form</div>
                               </div>
-                        </div><!-- .animated -->
-                  </div><!-- .content -->
+                              <!-- col-2 -->
+                        </div>
+                        <!-- row -->
+                  </div>
+                  <!-- card body -->
+            </div>
+            <!-- card -->
+      </a>
+      <!-- a href -->
+</div>
+<!-- End Menu Manage Training Configuration  -->
+
+<!-- Start Menu Manage Training Record -->
+<div class="col-xl-4 col-md-6 mb-4">
+      <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
+            <div class="card border4 shadow h-100 py-2">
+                  <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                              <div class="col mr-2">
+                                    <div class="menu-icon fa fa-pencil-square"
+                                          style="color: gray-800" id="icon_main_menu"></div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">Employee Training Record Group</div>
+                              </div>
+                              <!-- col-2 -->
+                        </div>
+                        <!-- row -->
+                  </div>
+                  <!-- card body -->
+            </div>
+            <!-- card -->
+      </a>
+      <!-- a href -->
+</div>
+<!-- End Menu Manage Training Record -->
+
+
+<!-- Start Menu Employee Training Record -->
+<div class="col-xl-4 col-md-6 mb-4">
+      <a href="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Employee_training">
+            <div class="card border4 shadow h-100 py-2">
+                  <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                              <div class="col mr-2">
+                                    <div class="menu-icon fa fa-users" style="color: gray-800"
+                                          id="icon_main_menu"></div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">Employee Training Support Audit</div>
+                              </div>
+                              <!-- col-2 -->
+                        </div>
+                        <!-- row -->
+                  </div>
+                  <!-- card body -->
+            </div>
+            <!-- card -->
+      </a>
+      <!-- a href -->
+</div>
+<!-- End Menu Employee Training Record  -->
             </div>
             <!-- card-shadow mb-4 -->
             <div class="col-md-7">

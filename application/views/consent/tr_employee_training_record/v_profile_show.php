@@ -80,7 +80,7 @@
                                                             <div class="row">
                                                                   <div class="col-md-4">
                                                                         <img src="<?php echo base_url();?>elaadmin/images/1.jpg"
-                                                                              width="400" height="400"
+                                                                              width="220" height="200"
                                                                               class="rounded-square" />
                                                                   </div>
                                                                   <div class="col-md-8">
