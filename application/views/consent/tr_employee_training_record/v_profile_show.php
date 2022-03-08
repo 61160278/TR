@@ -78,12 +78,14 @@
                                                 <div class="card border border-secondary">
                                                       <div class="card-body">
                                                             <div class="row">
-                                                                  <div class="col-md-4">
+                                                                  <div class="col-md-3">
                                                                         <img src="<?php echo base_url();?>elaadmin/images/1.jpg"
-                                                                              width="220" height="200"
+                                                                              width="320" height="300"
                                                                               class="rounded-square" />
                                                                   </div>
-                                                                  <div class="col-md-8">
+                                                                  <div class="col-md-9">
+                                                                        <br>
+                                                                        <br>
                                                                         <?php foreach($data_id->result() as $row){ ?>
                                                                         <div class="row">
                                                                               <div class="col-md-2">
@@ -94,7 +96,7 @@
                                                                                     <?php echo $row->Emp_ID; ?>
                                                                               </div>
 
-                                                                              <div class="col-md-1">
+                                                                              <div class="col-md-1" align="right">
                                                                                     ชื่อ :
                                                                               </div>
 
@@ -104,7 +106,7 @@
 
                                                                               </div>
 
-                                                                              <div class="col-md-2">
+                                                                              <div class="col-md-2" align="right">
                                                                                     อายุงาน :
                                                                               </div>
 
@@ -116,6 +118,7 @@
                                                                               </div>
                                                                         </div>
                                                                         <br>
+                                                                        <hr>
                                                                         <div class="row">
                                                                               <div class="col-md-2">
                                                                                     วุฒิการศึกษา :
@@ -127,7 +130,7 @@
 
 
                                                                               </div>
-                                                                              <div class="col-md-2">
+                                                                              <div class="col-md-2" align="right">
                                                                                     ชื่ออังกฤษ :
                                                                               </div>
 
@@ -137,7 +140,7 @@
 
                                                                               </div>
 
-                                                                              <div class="col-md-2">
+                                                                              <div class="col-md-2" align="right">
                                                                               ตำแหน่ง :
                                                                         </div>
                                                                               <div class="col-sm-2">
@@ -147,18 +150,19 @@
                                                                               </div>
                                                                         </div>
                                                                         <br>
+                                                                        <hr>
                                                                         <div class="row">
-                                                                        <div class="col-md-2">
+                                                                        <div class="col-md-1" align="right">
                                                                              แผนก :
                                                                         </div>
-                                                                              <div class="col-sm-3">
+                                                                              <div class="col-md-2" align="center">
                                                                               <?php echo $department->Department; ?>      
                                                                               </div>
                                                                               <!-- fix -->
-                                                                              <div class="col-md-2">
+                                                                              <div class="col-md-2" align="right">
                                                                              Section :
                                                                         </div>
-                                                                              <div class="col-sm-2">
+                                                                              <div class="col-md-2">
                                                                                    
                                                                                          <?php echo $row->Sectioncode_ID; ?>
                                                                                         
