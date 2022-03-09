@@ -85,19 +85,21 @@
                                           </div>
 
                                     </div>
-<br>
+                                    <br>
                                     <div class="row">
-
-
 
                                           <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                                 <thead>
                                                       <tr>
                                                             <th>No.</th>
-                                                            <th>Position</th>
-                                                            <th>Department</th>
-                                                            <th>Section</th>
-                                                            <th>Duration</th>
+                                                            <th>Course Code</th>
+                                                            <th>Training Name</th>
+                                                            <th>Training Description</th>
+                                                            <th>Start-Date</th>
+                                                            <th>End-Date</th>
+                                                            <th>Trainer</th>
+                                                            <th>Certificate</th>
+
                                                       </tr>
                                                 </thead>
                                                 <tbody>
