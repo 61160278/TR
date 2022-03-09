@@ -77,13 +77,60 @@
 
                                                 </div>
                                                 <!--col3-->
-
-
+                                                <div class="col-md-1">
+                                                      <button class="btn btn-primary btn-lg" type="submit">
+                                                            <i class="fa  fa-search"></i>
+                                                </div>
 
                                           </div>
 
                                     </div>
+<br>
+                                    <div class="row">
 
+
+
+                                          <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                                <thead>
+                                                      <tr>
+                                                            <th>No.</th>
+                                                            <th>Position</th>
+                                                            <th>Department</th>
+                                                            <th>Section</th>
+                                                            <th>Duration</th>
+                                                      </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                      <tr>
+                                                            <td>1</td>
+                                                            <td>Staff</td>
+                                                            <td>Human Resourse</td>
+                                                            <td>6180</td>
+                                                            <td>02/01/2021 -
+                                                                  11/04/2022</td>
+                                                      </tr>
+                                                      <tr>
+                                                            <td>2</td>
+                                                            <td>Senior Staff</td>
+                                                            <td>Human Resourse</td>
+                                                            <td>6180</td>
+                                                            <td>11/04/2022 - Now
+                                                            </td>
+                                                      </tr>
+
+
+                                                </tbody>
+                                          </table>
+
+
+
+
+
+
+
+
+                                    </div>
 
 
                                     <div class="row">
@@ -99,7 +146,7 @@
                                                 <button type="button" class="btn btn-primary">Dowload Excel</button>
                                           </div>
                                           <div class="col-md-2">
-                                          <img class="rounded-circle"
+                                                <img class="rounded-circle"
                                                       src="<?php echo base_url();?>elaadmin/images/Excel.png"
                                                       alt="Excel" width="50">
                                                 <button type="button" class="btn btn-primary">Dowload PDF</button>
