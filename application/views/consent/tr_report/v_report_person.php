@@ -58,38 +58,61 @@
 
                         </div>
                         <!-- End header  -->
-                        <div class="card-body">
-                              <div class="card-text text-sm-center">
+                        <div class="col-md-12">
+                              <div class="card-body">
+
+                                    <br>
+                                    <div class="card-text text-sm-center">
+                                          <div class="row">
 
 
-                              
-                                    <button type="button" class="btn btn-primary">Dowload</button>
+                                                <div class="col-md-1">
+                                                      Emp. ID :
+                                                </div>
+                                                <div class="col-md-3">
+                                                      <form action="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Show_Profile"
+                                                            method="post">
+                                                            <input class="form-control" type="text" placeholder="Search"
+                                                                  name="emp_id" required>
+
+                                                </div>
+                                                <!--col3-->
 
 
-                                    <button type="button" class="btn btn-primary">Dowload</button>
+
+                                          </div>
+
+                                    </div>
+
+
+
+                                    <div class="row">
+                                          <div class="col-md-8">
+                                                <a href="<?php echo base_url()?>tr_report/TR_report/Report">
+                                                      <button type="button" class="btn btn-secondary">Back</button>
+                                                </a>
+                                          </div>
+                                          <div class="col-md-2">
+                                                <img class="rounded-circle"
+                                                      src="<?php echo base_url();?>elaadmin/images/Excel.png"
+                                                      alt="Excel" width="50">
+                                                <button type="button" class="btn btn-primary">Dowload Excel</button>
+                                          </div>
+                                          <div class="col-md-2">
+                                          <img class="rounded-circle"
+                                                      src="<?php echo base_url();?>elaadmin/images/Excel.png"
+                                                      alt="Excel" width="50">
+                                                <button type="button" class="btn btn-primary">Dowload PDF</button>
+                                          </div>
+
+
+                                    </div>
+                                    <br>
                               </div>
                         </div>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
+                        <!-- card-shadow mb-4 -->
 
-
-
-                        <div class="col-md-7">
-                              <a href="<?php echo base_url()?>tr_report/TR_report/Report">
-                                    <button type="button" class="btn btn-secondary">Back</button>
-                              </a>
-                        </div>
-
-                        <br>
                   </div>
-                  <!-- card-shadow mb-4 -->
-
+                  <!-- col-lg-12 -->
             </div>
-            <!-- col-lg-12 -->
-      </div>
-      <!-- /.container-fluid -->
+            <!-- /.container-fluid -->
