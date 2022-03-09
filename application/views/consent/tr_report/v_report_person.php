@@ -90,7 +90,7 @@
 
                                           <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                                 <thead>
-                                                      <tr>
+                                                      <tr align="center">
                                                             <th>No.</th>
                                                             <th>Course Code</th>
                                                             <th>Training Name</th>
@@ -104,37 +104,43 @@
                                                 </thead>
                                                 <tbody>
 
-                                                      <tr>
+                                                      <tr align="center">
                                                             <td>1</td>
-                                                            <td>Staff</td>
-                                                            <td>Human Resourse</td>
-                                                            <td>6180</td>
-                                                            <td>02/01/2021 -
-                                                                  11/04/2022</td>
+                                                            <td>IN-0001</td>
+                                                            <td>General Safety</td>
+                                                            <td>How to Safe</td>
+                                                            <td>02/01/2021</td>
+                                                            <td>02/01/2021</td>
+                                                            <td>Mr.Jirayut</td>
+                                                            <td> &nbsp;&nbsp;
+                                                                  &nbsp;&nbsp;
+                                                                  &nbsp;<input type="checkbox" id="checkbox2"
+                                                                        name="checkbox2" value="option2"
+                                                                        class="form-check-input" checked></td>
                                                       </tr>
-                                                      <tr>
+
+                                                      <tr align="center">
                                                             <td>2</td>
-                                                            <td>Senior Staff</td>
-                                                            <td>Human Resourse</td>
-                                                            <td>6180</td>
-                                                            <td>11/04/2022 - Now
-                                                            </td>
+                                                            <td>IN-0002</td>
+                                                            <td>Data Analysis</td>
+                                                            <td>Data</td>
+                                                            <td>03/01/2021</td>
+                                                            <td>03/01/2021</td>
+                                                            <td>Mr.Terapong</td>
+                                                            <td> &nbsp;&nbsp;
+                                                                  &nbsp;&nbsp;
+                                                                  &nbsp;<input type="checkbox" id="checkbox2"
+                                                                        name="checkbox2" value="option2"
+                                                                        class="form-check-input" checked></td>
                                                       </tr>
+
 
 
                                                 </tbody>
                                           </table>
-
-
-
-
-
-
-
-
                                     </div>
 
-
+                                    <br>
                                     <div class="row">
                                           <div class="col-md-8">
                                                 <a href="<?php echo base_url()?>tr_report/TR_report/Report">
@@ -144,13 +150,13 @@
                                           <div class="col-md-2">
                                                 <img class="rounded-circle"
                                                       src="<?php echo base_url();?>elaadmin/images/Excel.png"
-                                                      alt="Excel" width="50">
+                                                      alt="Excel" width="55">
                                                 <button type="button" class="btn btn-primary">Dowload Excel</button>
                                           </div>
                                           <div class="col-md-2">
                                                 <img class="rounded-circle"
                                                       src="<?php echo base_url();?>elaadmin/images/Excel.png"
-                                                      alt="Excel" width="50">
+                                                      alt="Excel" width="55">
                                                 <button type="button" class="btn btn-primary">Dowload PDF</button>
                                           </div>
 
