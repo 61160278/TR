@@ -58,31 +58,38 @@
 
                         </div>
                         <!-- End header  -->
-
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
+                        <div class="card-body">
+                              <div class="card-text text-sm-center">
 
 
-            
-<div class="col-md-7">
-                  <a href="<?php echo base_url()?>tr_report/TR_report/Report">
-                        <button type="button" class="btn btn-secondary">Back</button>
-                  </a>
+                              
+                                    <button type="button" class="btn btn-primary">Dowload</button>
+
+
+                                    <button type="button" class="btn btn-primary">Dowload</button>
+                              </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+
+
+                        <div class="col-md-7">
+                              <a href="<?php echo base_url()?>tr_report/TR_report/Report">
+                                    <button type="button" class="btn btn-secondary">Back</button>
+                              </a>
+                        </div>
+
+                        <br>
+                  </div>
+                  <!-- card-shadow mb-4 -->
+
             </div>
-
-
-            </div>
-            <!-- card-shadow mb-4 -->
-           
-      </div>
-      <!-- col-lg-12 -->
+            <!-- col-lg-12 -->
       </div>
       <!-- /.container-fluid -->
-
-
-     
