@@ -63,8 +63,18 @@ class Emp_training_record extends MainController {
 			redirect("tr_employee_training_record/Emp_training_record/Employee_training");
 		}
 		
-	}
-	
+	}//แสดงข้อมูลของพนักงานและการอบรมต่างๆในการค้นหาข้อมูลการอบรม
+
+	function Show_training()
+	{
+		$Emp_id = $this->input->post('emp_id');   
+		   $this->load->model('M_trs_training_Search','mtst');
+		   $this->mtst->Employee_Code = $Emp_id;
+		   $data["training_data"] = $this->mtst->training_table();
+			$this->output('/consent/tr_report/v_report_person', $data);
+
+		
+	}//แสดงการอบรมต่างๆใน Report person
  
 }
 // 

@@ -34,6 +34,41 @@
       }
       </style>
       <!-- End style CSS  -->
+      <script>
+      function get_Emp_id() {
+            Emp_id = document.getElementById("emp_id").value;
+
+
+            $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url(); ?>/tr_employee_training_record/Emp_training_record/search_employee_id",
+                  data: {
+                        "Emp_id": Emp_id
+                  },
+                  dataType: "JSON",
+                  success: function(data, status) {
+                        // console.log(status)
+                        // console.log(data)
+
+                        if (data.length == 0) {
+
+                              document.getElementById("Showname_modol").value = "ไม่มีข้อมูล";
+
+                        } else {
+                              empname = data[0].Empname_eng + " " + data[0].Empsurname_eng
+                              document.getElementById("Showname_modol").value = empname;
+
+                              console.log(999)
+                              console.log(empname)
+                        }
+
+                        // if-else
+                  }
+            });
+            // ajax
+      }
+      // function get_Emp
+      </script>
 
       <!-- Begin Page Content -->
       <div class="container-fluid">

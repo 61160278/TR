@@ -70,11 +70,7 @@
       // function get_Emp
 
 
-      function shown_profile(emp_id) {
-
-            console.log(emp_id);
-            // window.location.href = "<?php echo base_url(); ?>/tr_employee_training_record/Emp_training_record/Show_Profile/" + emp_id;
-      }
+  
       </script>
       <!-- Begin Page Content -->
       <div class="container-fluid">
