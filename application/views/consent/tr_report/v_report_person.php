@@ -34,41 +34,6 @@
       }
       </style>
       <!-- End style CSS  -->
-      <script>
-      function get_Emp_id() {
-            Emp_id = document.getElementById("emp_id").value;
-
-
-            $.ajax({
-                  type: "POST",
-                  url: "<?php echo base_url(); ?>/tr_employee_training_record/Emp_training_record/search_employee_id",
-                  data: {
-                        "Emp_id": Emp_id
-                  },
-                  dataType: "JSON",
-                  success: function(data, status) {
-                        // console.log(status)
-                        // console.log(data)
-
-                        if (data.length == 0) {
-
-                              document.getElementById("Showname_modol").value = "ไม่มีข้อมูล";
-
-                        } else {
-                              empname = data[0].Empname_eng + " " + data[0].Empsurname_eng
-                              document.getElementById("Showname_modol").value = empname;
-
-                              console.log(999)
-                              console.log(empname)
-                        }
-
-                        // if-else
-                  }
-            });
-            // ajax
-      }
-      // function get_Emp
-      </script>
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
@@ -105,7 +70,7 @@
                                                       Emp. ID :
                                                 </div>
                                                 <div class="col-md-3">
-                                                      <form action="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Show_Profile"
+                                                      <form action="<?php echo base_url() ?>tr_report/Tr_report/Show_trainingperson"
                                                             method="post">
                                                             <input class="form-control" type="text" placeholder="Search"
                                                                   name="emp_id" required>
@@ -125,11 +90,14 @@
 
                                           <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                                 <thead>
+                                               <?php if(sizeof($Show_datapr) != 0){ ?>
                                                       <tr align="center">
+
                                                             <th>No.</th>
                                                             <th>Course Code</th>
                                                             <th>Training Name</th>
-                                                            <th>Training Description</th>
+                                                            <th>Training Description
+                                                            </th>
                                                             <th>Start-Date</th>
                                                             <th>End-Date</th>
                                                             <th>Trainer</th>
@@ -138,37 +106,41 @@
                                                       </tr>
                                                 </thead>
                                                 <tbody>
-
+                                                      <?php 
+                                                     
+                                                      foreach($Show_datapr as $index => $row){ ?>
                                                       <tr align="center">
-                                                            <td>1</td>
-                                                            <td>IN-0001</td>
-                                                            <td>General Safety</td>
-                                                            <td>How to Safe</td>
-                                                            <td>02/01/2021</td>
-                                                            <td>02/01/2021</td>
-                                                            <td>Mr.Jirayut</td>
-                                                            <td> &nbsp;&nbsp;
+                                                            <td><?php echo $index+1 ?>
+                                                            </td>
+                                                            <td><?php echo $row->Course_code; ?>
+                                                            </td>
+                                                            <td><?php echo $row->Course_name; ?>
+                                                            </td>
+                                                            <td><?php echo $row->Course_description; ?>
+                                                            </td>
+                                                            <td><?php echo $row->Start_date; ?>
+                                                            </td>
+                                                            <td><?php echo $row->End_date; ?>
+                                                            </td>
+                                                            <td><?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?>
+                                                            </td>
+                                                            <td>
+
                                                                   &nbsp;&nbsp;
-                                                                  &nbsp;<input type="checkbox" id="checkbox2"
-                                                                        name="checkbox2" value="option2"
-                                                                        class="form-check-input" checked></td>
+                                                                  &nbsp;&nbsp;
+                                                                  &nbsp;
+                                                                  <input type="checkbox" id="checkbox2" name="checkbox2"
+                                                                        value="option2" class="form-check-input"
+                                                                        checked>
+
+
+                                                            </td>
                                                       </tr>
 
-                                                      <tr align="center">
-                                                            <td>2</td>
-                                                            <td>IN-0002</td>
-                                                            <td>Data Analysis</td>
-                                                            <td>Data</td>
-                                                            <td>03/01/2021</td>
-                                                            <td>03/01/2021</td>
-                                                            <td>Mr.Terapong</td>
-                                                            <td> &nbsp;&nbsp;
-                                                                  &nbsp;&nbsp;
-                                                                  &nbsp;<input type="checkbox" id="checkbox2"
-                                                                        name="checkbox2" value="option2"
-                                                                        class="form-check-input" checked></td>
-                                                      </tr>
-
+                                                      <?php 
+                                                }
+                                                
+                                                }   ?>
 
 
                                                 </tbody>

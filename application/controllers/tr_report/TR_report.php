@@ -46,7 +46,9 @@ class TR_report extends MainController {
 	// function index()
 	function Report_person()
 	{
-		$this->output('/consent/tr_report/v_report_person');
+		$data["Show_datapr"] = [];
+		$this->output('/consent/tr_report/v_report_person',$data);
+		
 	}
 	function Report_group()
 	{
@@ -56,5 +58,22 @@ class TR_report extends MainController {
 	{
 		$this->output('/consent/tr_report/v_report_support');
 	}
+	function Show_trainingperson()
+	{
+		$Emp_id = $this->input->post('emp_id');
+		$this->load->model('M_trs_training_Search','mtts');
+		$this->mtts->Emp_ID = $Emp_id;
+		$data["data_id"] = $this->mtts->get_data_emp();
+		if(sizeof($data["data_id"]->row()) != 0){
+			
+			$this->load->model('M_trs_training_Search','mtst');
+			$this->mtst->Employee_Code = $Emp_id;
+			$data["Show_datapr"] = $this->mtst->training_table()->result();
+			   $this->output('/consent/tr_report/v_report_person', $data);
+		}else{
+			redirect("tr_report/Tr_report/Report_person");
+		}
+		  
+	}//แสดงการอบรมต่างๆใน Report person
 }
 // 
