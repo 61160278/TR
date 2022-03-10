@@ -155,6 +155,7 @@
                                                 </a>
                                           </div>
                                           <div class="col-md-2">
+                                          <?php if(sizeof($Show_datapr) != 0){ ?>
                                                 <img class="rounded-circle"
                                                       src="<?php echo base_url();?>elaadmin/images/Excel.png"
                                                       alt="Excel" width="55">
@@ -167,7 +168,7 @@
                                                 <button type="button" class="btn btn-primary">Dowload PDF</button>
                                           </div>
 
-
+<?php }  ?>
                                     </div>
                                     <br>
                               </div>
