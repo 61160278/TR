@@ -38,15 +38,15 @@
 <script>
 
 
-function select_depart() {
-    var Department_id = document.getElementById("select").value;
+function select_depart(department_id) {
+   
   
 
     $.ajax({
         type: "post",
         url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_department",
         data: {
-            "Department_id": Department_id
+            "department_id": department_id
             
         },
         dataType: "JSON",
@@ -96,7 +96,7 @@ function select_depart() {
 
                                                 <div class="col-md-3">
                                                 <select id="select" class="form-control " aria-controls="example"
-                                                            onchange="select_depart()">
+                                                            onchange="select_depart(value)">
                                                             <option value="0" selected>Select Department</option>
                                                             <?php foreach($get_dep as $row) {?>
                                                             <option value="<?php echo $row->Department_id; ?>">
