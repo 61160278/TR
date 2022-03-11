@@ -35,6 +35,33 @@
       </style>
       <!-- End style CSS  -->
 
+<script>
+
+
+function select_depart() {
+    var Department_id = document.getElementById("select").value;
+  
+
+    $.ajax({
+        type: "post",
+        url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_department",
+        data: {
+            "Department_id": Department_id
+            
+        },
+        dataType: "JSON",
+        success: function(data, status) {
+            console.log(status)
+            console.log(data)
+     
+        } //success
+    });
+}
+
+
+
+</script>
+
       <!-- Begin Page Content -->
       <div class="container-fluid">
 
@@ -68,27 +95,33 @@
 
 
                                                 <div class="col-md-3">
+                                                <select id="select" class="form-control " aria-controls="example"
+                                                            onchange="select_depart()">
+                                                            <option value="0" selected>Select Department</option>
+                                                            <?php foreach($get_dep as $row) {?>
+                                                            <option value="<?php echo $row->Department_id; ?>">
+                                                            <?php echo $row->Department; ?>
+                                                            </option>
+                                                            <?php } ?>
+                                                      </select>
+
+                                                </div>
+                                                <!--col3-->
+                                                <div class="col-md-3">
+                                                <select id="select" class="form-control " aria-controls="example"
+                                                            onchange="select_depart()">
+                                                            <option value="0" selected>Select Group</option>
+                                                            <?php foreach($get_dep as $row) {?>
+                                                            <option value="<?php echo $row->Department_id; ?>">
+                                                            <?php echo $row->Department; ?>
+                                                            </option>
+                                                            <?php } ?>
+                                                      </select>
+
+                                                </div>
+                                                <!--col3-->
+                                                <div class="col-md-3">
                                                       <select class="form-control " aria-controls="example"
-                                                            onChange="select_company(value)">
-                                                            <option value="">Select Department</option>
-                                                            <option value="1"><?php echo $department->Department; ?></option>
-                                                            <option value="2">HRR</option>
-                                                      </select>
-
-                                                </div>
-                                                <!--col3-->
-                                                <div class="col-md-3">
-                                                <select class="form-control " aria-controls="example"
-                                                            onChange="select_company(value)">
-                                                            <option value="">Select Group</option>
-                                                            <option value="1">HR</option>
-                                                            <option value="2">HRR</option>
-                                                      </select>
-
-                                                </div>
-                                                <!--col3-->
-                                                <div class="col-md-3">
-                                                <select class="form-control " aria-controls="example"
                                                             onChange="select_company(value)">
                                                             <option value="">Select Section</option>
                                                             <option value="1">HR</option>
@@ -98,7 +131,7 @@
                                                 </div>
                                                 <br>
                                                 <br>
-                                               
+
                                                 <!--col3-->
                                                 <div class="col-md-1">
                                                       <button class="btn btn-primary btn-lg" type="submit">

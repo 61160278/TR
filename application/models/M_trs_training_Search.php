@@ -175,6 +175,15 @@ class M_trs_training_Search extends trs_model {
         return $query;
 	}
 
+	function get_department(){	
+		$sql = "SELECT  Department_id, Department
+			  FROM dbmc.master_mapping
+				";
+		$query = $this->db->query($sql);
+		return $query;
+	}
+	
+
 
 }		 
 ?>

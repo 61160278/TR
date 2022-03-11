@@ -75,5 +75,17 @@ class TR_report extends MainController {
 		}
 		  
 	}//แสดงการอบรมต่างๆใน Report person
+
+
+	function Get_department(){
+		$Department_id = $this->input->post('Department_id');
+
+		$this->load->model('M_trs_training_Search','mevg');
+		$this->mevg->Department_id = $Department_id;
+		$data['get_dep'] = $this->mevg->get_department();
+		
+		echo json_encode($data);
+
+	}
 }
 // 
