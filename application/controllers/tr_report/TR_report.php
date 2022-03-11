@@ -83,7 +83,7 @@ class TR_report extends MainController {
 		$department_id = $this->input->post('department_id');
 
 		$this->load->model('M_trs_training_Search','mevg');
-		$this->mevg->department_id = $department_id;
+		// $this->mevg->department_id = $department_id;
 		$data['get_dep'] = $this->mevg->get_department()->result();
 		
 		echo json_encode($data);
