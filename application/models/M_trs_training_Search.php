@@ -176,11 +176,13 @@ class M_trs_training_Search extends trs_model {
 	}
 
 	function get_department(){	
-		$sql = "SELECT  Department_id, Department
-			  FROM dbmc.master_mapping
-				";
-		$query = $this->db->query($sql);
-		return $query;
+		$sql = "SELECT * 
+		FROM dbmc.master_mapping AS map
+		WHERE Department != ''
+		GROUP BY Department_id
+		ORDER BY Department_id";
+    $query = $this->db->query($sql);
+    return $query;
 	}
 	
 

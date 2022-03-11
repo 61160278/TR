@@ -52,7 +52,9 @@ class TR_report extends MainController {
 	}
 	function Report_group()
 	{
-		$this->output('/consent/tr_report/v_report_group');
+		$this->load->model('M_trs_training_Search','mevg');
+		$data['get_dep'] = $this->mevg->get_department()->result();
+		$this->output('/consent/tr_report/v_report_group', $data);
 	}
 	function Report_support()
 	{
@@ -78,11 +80,11 @@ class TR_report extends MainController {
 
 
 	function Get_department(){
-		$Department_id = $this->input->post('Department_id');
+		// $Department_id = $this->input->post('Department_id');
 
 		$this->load->model('M_trs_training_Search','mevg');
-		$this->mevg->Department_id = $Department_id;
-		$data['get_dep'] = $this->mevg->get_department();
+		// $this->mevg->Department_id = $Department_id;
+		$data['get_dep'] = $this->mevg->get_department()->result();
 		
 		echo json_encode($data);
 
