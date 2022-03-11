@@ -35,32 +35,29 @@
       </style>
       <!-- End style CSS  -->
 
-<script>
+      <script>
+      function select_depart(department_id) {
 
 
-function select_depart(department_id) {
-   
-  
 
-    $.ajax({
-        type: "post",
-        url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_department",
-        data: {
-            "department_id": department_id
-            
-        },
-        dataType: "JSON",
-        success: function(data, status) {
-            console.log(status)
-            console.log(data)
+            $.ajax({
+                  type: "post",
+                  url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_department",
+                  data: {
+                        "department_id": department_id
+
+                  },
+                  dataType: "JSON",
+                  success: function(data, status) {
+                        console.log(status)
+                        console.log(data)
+
+                  } //success
+            });
+      }
+
      
-        } //success
-    });
-}
-
-
-
-</script>
+      </script>
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
@@ -95,12 +92,12 @@ function select_depart(department_id) {
 
 
                                                 <div class="col-md-3">
-                                                <select id="select" class="form-control " aria-controls="example"
+                                                      <select id="select" class="form-control " aria-controls="example"
                                                             onchange="select_depart(value)">
                                                             <option value="0" selected>Select Department</option>
                                                             <?php foreach($get_dep as $row) {?>
                                                             <option value="<?php echo $row->Department_id; ?>">
-                                                            <?php echo $row->Department; ?>
+                                                                  <?php echo $row->Department; ?>
                                                             </option>
                                                             <?php } ?>
                                                       </select>
@@ -108,12 +105,12 @@ function select_depart(department_id) {
                                                 </div>
                                                 <!--col3-->
                                                 <div class="col-md-3">
-                                                <select id="select" class="form-control " aria-controls="example"
+                                                      <select id="select" class="form-control " aria-controls="example"
                                                             onchange="select_depart()">
                                                             <option value="0" selected>Select Group</option>
-                                                            <?php foreach($get_dep as $row) {?>
-                                                            <option value="<?php echo $row->Department_id; ?>">
-                                                            <?php echo $row->Department; ?>
+                                                            <?php foreach($get_grp as $row) {?>
+                                                            <option value="<?php echo $row->Group_id; ?>">
+                                                                  <?php echo $row->Group; ?>
                                                             </option>
                                                             <?php } ?>
                                                       </select>
@@ -148,13 +145,10 @@ function select_depart(department_id) {
                                                 <thead>
                                                       <tr align="center">
                                                             <th>No.</th>
-                                                            <th>Course Code</th>
-                                                            <th>Training Name</th>
-                                                            <th>Training Description</th>
-                                                            <th>Start-Date</th>
-                                                            <th>End-Date</th>
-                                                            <th>Trainer</th>
-                                                            <th>Certificate</th>
+                                                            <th>Name</th>
+                                                            <th>Position</th>
+                                                            <th>Department</th>
+                                                            <th>Training</th>
 
                                                       </tr>
                                                 </thead>
@@ -162,32 +156,19 @@ function select_depart(department_id) {
 
                                                       <tr align="center">
                                                             <td>1</td>
-                                                            <td>IN-0001</td>
-                                                            <td>General Safety</td>
-                                                            <td>How to Safe</td>
-                                                            <td>02/01/2021</td>
-                                                            <td>02/01/2021</td>
-                                                            <td>Mr.Jirayut</td>
-                                                            <td> &nbsp;&nbsp;
-                                                                  &nbsp;&nbsp;
-                                                                  &nbsp;<input type="checkbox" id="checkbox2"
-                                                                        name="checkbox2" value="option2"
-                                                                        class="form-check-input" checked></td>
+                                                            <td>Jirayu Jaravichit</td>
+                                                            <td>General manager</td>
+                                                            <td>HR</td>
+                                                            <td>Train</td>
+
                                                       </tr>
 
                                                       <tr align="center">
                                                             <td>2</td>
-                                                            <td>IN-0002</td>
-                                                            <td>Data Analysis</td>
-                                                            <td>Data</td>
-                                                            <td>03/01/2021</td>
-                                                            <td>03/01/2021</td>
-                                                            <td>Mr.Terapong</td>
-                                                            <td> &nbsp;&nbsp;
-                                                                  &nbsp;&nbsp;
-                                                                  &nbsp;<input type="checkbox" id="checkbox2"
-                                                                        name="checkbox2" value="option2"
-                                                                        class="form-check-input" checked></td>
+                                                            <td>Jirayut Soooo</td>
+                                                            <td>General manager</td>
+                                                            <td>HR</td>
+                                                            <td>Trainss</td>
                                                       </tr>
 
 

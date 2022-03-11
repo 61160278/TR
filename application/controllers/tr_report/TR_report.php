@@ -54,6 +54,7 @@ class TR_report extends MainController {
 	{
 		$this->load->model('M_trs_training_Search','mevg');
 		$data['get_dep'] = $this->mevg->get_department()->result();
+		
 		$this->output('/consent/tr_report/v_report_group', $data);
 	}
 	function Report_support()
@@ -89,5 +90,8 @@ class TR_report extends MainController {
 		echo json_encode($data);
 
 	}
+
+	
+
 }
 // 
