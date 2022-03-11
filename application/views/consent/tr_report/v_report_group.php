@@ -66,30 +66,39 @@
                                           <div class="row">
 
 
+
+                                                <div class="col-md-3">
+                                                      <select class="form-control " aria-controls="example"
+                                                            onChange="select_company(value)">
+                                                            <option value="">Select Department</option>
+                                                            <option value="1">HR</option>
+                                                            <option value="2">HRR</option>
+                                                      </select>
+
+                                                </div>
+                                                <!--col3-->
+                                                <div class="col-md-3">
+                                                <select class="form-control " aria-controls="example"
+                                                            onChange="select_company(value)">
+                                                            <option value="">Select Group</option>
+                                                            <option value="1">HR</option>
+                                                            <option value="2">HRR</option>
+                                                      </select>
+
+                                                </div>
+                                                <!--col3-->
+                                                <div class="col-md-3">
+                                                <select class="form-control " aria-controls="example"
+                                                            onChange="select_company(value)">
+                                                            <option value="">Select Section</option>
+                                                            <option value="1">HR</option>
+                                                            <option value="2">HRR</option>
+                                                      </select>
+
+                                                </div>
+                                                <br>
+                                                <br>
                                                
-                                                <div class="col-md-3">
-                                                      <form action="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Show_Profile"
-                                                            method="post">
-                                                            <input class="form-control" type="text" placeholder="Department"
-                                                                  name="emp_id" required>
-
-                                                </div>
-                                                <!--col3-->
-                                                <div class="col-md-3">
-                                                      <form action="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Show_Profile"
-                                                            method="post">
-                                                            <input class="form-control" type="text" placeholder="Group"
-                                                                  name="emp_id" required>
-
-                                                </div>
-                                                <!--col3-->
-                                                <div class="col-md-3">
-                                                      <form action="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Show_Profile"
-                                                            method="post">
-                                                            <input class="form-control" type="text" placeholder="Section"
-                                                                  name="emp_id" required>
-
-                                                </div>
                                                 <!--col3-->
                                                 <div class="col-md-1">
                                                       <button class="btn btn-primary btn-lg" type="submit">
