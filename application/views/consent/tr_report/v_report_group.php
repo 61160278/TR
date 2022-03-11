@@ -71,7 +71,7 @@
                                                       <select class="form-control " aria-controls="example"
                                                             onChange="select_company(value)">
                                                             <option value="">Select Department</option>
-                                                            <option value="1">HR</option>
+                                                            <option value="1"><?php echo $department->Department; ?></option>
                                                             <option value="2">HRR</option>
                                                       </select>
 
