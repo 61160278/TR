@@ -54,6 +54,12 @@ class TR_report extends MainController {
 	{
 		$this->load->model('M_trs_training_Search','mevg');
 		$data['get_dep'] = $this->mevg->get_department()->result();
+
+		$this->load->model('M_trs_training_Search','megg');
+		$data['get_grp'] = $this->megg->get_group()->result();
+
+		$this->load->model('M_trs_training_Search','mese');
+		$data['get_sec'] = $this->mese->get_section()->result();
 		
 		$this->output('/consent/tr_report/v_report_group', $data);
 	}

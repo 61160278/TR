@@ -118,11 +118,14 @@
                                                 </div>
                                                 <!--col3-->
                                                 <div class="col-md-3">
-                                                      <select class="form-control " aria-controls="example"
-                                                            onChange="select_company(value)">
-                                                            <option value="">Select Section</option>
-                                                            <option value="1">HR</option>
-                                                            <option value="2">HRR</option>
+                                                <select id="select" class="form-control " aria-controls="example"
+                                                            onchange="select_depart()">
+                                                            <option value="0" selected>Select Group</option>
+                                                            <?php foreach($get_sec as $row) {?>
+                                                            <option value="<?php echo $row->Section_id; ?>">
+                                                                  <?php echo $row->Section; ?>
+                                                            </option>
+                                                            <?php } ?>
                                                       </select>
 
                                                 </div>

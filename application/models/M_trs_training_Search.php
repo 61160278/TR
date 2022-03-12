@@ -184,7 +184,24 @@ class M_trs_training_Search extends trs_model {
     $query = $this->db->query($sql);
     return $query;
 	}
-	
+	function get_group(){	
+		$sql = "SELECT * 
+		FROM dbmc.master_mapping AS map
+		WHERE `Group` != '' 
+		GROUP BY Group_id
+		ORDER BY Group_id";
+    $query = $this->db->query($sql);
+    return $query;
+	}
+	function get_section(){	
+		$sql = "SELECT * 
+		FROM dbmc.master_mapping AS map
+		WHERE Section != '' 
+		GROUP BY Section_id
+		ORDER BY Section_id";
+    $query = $this->db->query($sql);
+    return $query;
+	}
 
 
 }		 
