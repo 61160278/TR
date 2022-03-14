@@ -91,16 +91,110 @@ class TR_report extends MainController {
 
 	function Get_department(){
 		$department_id = $this->input->post('department_id');
-
+		$Section_id = $this->input->post('Section_id');
+		$Group_id = $this->input->post('group_id');
+		
 		$this->load->model('M_trs_training_Search','mevg');
-		// $this->mevg->department_id = $department_id;
-		$data['get_dep'] = $this->mevg->get_department()->result();
+		$emp_temp = [];
+  		$emp_check = [];
+  		$emp_info = [];
+		  $this->mevg->Department_id = $department_id;
+		  $data['get_dep'] = $this->mevg->get_department_id()->result();
+				foreach($data['get_dep'] as $index => $row){
+					$count = $index;
+					$dp = $row->Department_id;
+					$sc = $row->Section_id;
+					$sb = $row->SubSection_id;
+					$gr = $row->Group_id;
+					$ln = $row->Line_id;
+					$emp = $this->mevg->get_emp_by_dpm($dp,$sc,$sb,$gr,$ln)->result();
+
+				foreach($emp as $index => $row){
+				if($count == 0){
+				array_push($emp_temp, $row);
+				array_push($emp_check, $row->Emp_ID);
+				}else if(!in_array($row->Emp_ID, $emp_check)){
+				array_push($emp_temp, $row);
+				array_push($emp_check, $row->Emp_ID);
+				}
+
+				}
+				}
+			$data = $emp_temp	;
 		
 		echo json_encode($data);
 
 	}
 
+
+	function Get_Section(){
+		$department_id = $this->input->post('department_id');
+
+		$this->load->model('M_trs_training_Search','mevg');
+		  $this->mevg->Department_id = $department_id;
+		  $data = $this->mevg->get_section_by_dpmid()->result();
+  
 	
+		
+		echo json_encode($data);
+
+	}
+	function Get_Group(){
+		$Section_id = $this->input->post('Section_id');
+
+		$this->load->model('M_trs_training_Search','mevg');
+		  $this->mevg->Section_id = $Section_id;
+		  $data = $this->mevg->get_group_by_sectionID()->result();
+  
+	
+		
+		echo json_encode($data);
+
+	}
+	
+
+	function Get_section_by_departmentID(){
+		$Department_id = $this->input->post('Department_id');
+		$Section_id = $this->input->post('Section_id');
+		
+		$this->load->model('M_trs_training_Search','mevg');
+		$emp_temp = [];
+  		$emp_check = [];
+  		$emp_info = [];
+		  $this->mevg->Department_id = $Department_id;
+		  $this->mevg->Section_id = $Section_id;
+		  $data['get_dep'] = $this->mevg->get_department_by_sectionID()->result();
+		  
+				foreach($data['get_dep'] as $index => $row){
+					$count = $index;
+					$dp = $row->Department_id;
+					$sc = $row->Section_id;
+					$sb = $row->SubSection_id;
+					$gr = $row->Group_id;
+					$ln = $row->Line_id;
+					$emp = $this->mevg->get_emp_by_dpm($dp,$sc,$sb,$gr,$ln)->result();
+
+				foreach($emp as $index => $row){
+					if($count == 0){
+						array_push($emp_temp, $row);
+						array_push($emp_check, $row->Emp_ID);
+					}else if(!in_array($row->Emp_ID, $emp_check)){
+						array_push($emp_temp, $row);
+						array_push($emp_check, $row->Emp_ID);
+				}
+
+				}
+					}
+		$data = $emp_temp	;
+		
+		echo json_encode($data);
+
+	}
+
+
+
+
+
 
 }
 // 

@@ -177,13 +177,49 @@ class M_trs_training_Search extends trs_model {
 
 	function get_department(){	
 		$sql = "SELECT * 
-		FROM dbmc.master_mapping AS map
+		FROM dbmc.master_mapping
 		WHERE Department != ''
 		GROUP BY Department_id
-		ORDER BY Department_id";
+		ORDER BY Department ASC";
     $query = $this->db->query($sql);
     return $query;
 	}
+
+	function get_department_id(){	
+		$sql = "SELECT * 
+		FROM dbmc.master_mapping
+		WHERE master_mapping.Department_id = ?
+		GROUP BY master_mapping.Department_id
+		";
+    $query = $this->db->query($sql,array($this->Department_id));
+    return $query;
+	}
+
+
+	function get_department_by_sectionID(){	
+		$sql = "SELECT * 
+		FROM dbmc.master_mapping
+		WHERE master_mapping.Department_id = ? AND master_mapping.Section_id = ? AND master_mapping.Section_id != ''
+		GROUP BY master_mapping.Section_id
+		";
+    $query = $this->db->query($sql,array($this->Department_id,$this->Section_id));
+    return $query;
+	}
+
+	function get_emp_by_dpm($dp,$sc,$sb,$gr,$ln){
+		$sql = "SELECT *
+		    FROM dbmc.employee AS emp
+		    INNER JOIN dbmc.position AS pos
+		    ON pos.Position_ID = emp.Position_ID
+		    WHERE emp.Sectioncode_ID = '".$dp."'
+		    OR emp.Sectioncode_ID = '".$sc."'
+		    OR emp.Sectioncode_ID = '".$sb."'
+		    OR emp.Sectioncode_ID = '".$gr."'
+		    OR emp.Sectioncode_ID = '".$ln."'";
+		$query = $this->db->query($sql);
+		return $query;
+	  }
+
 	function get_group(){	
 		$sql = "SELECT * 
 		FROM dbmc.master_mapping AS map
@@ -193,6 +229,18 @@ class M_trs_training_Search extends trs_model {
     $query = $this->db->query($sql);
     return $query;
 	}
+
+
+	function get_group_by_sectionID(){	
+		$sql = "SELECT * 
+		FROM dbmc.master_mapping
+		WHERE master_mapping.Section_id = ? AND master_mapping.Group != ''
+		GROUP BY master_mapping.Group_id
+		ORDER BY master_mapping.Group ASC";
+    $query = $this->db->query($sql,array($this->Section_id));
+    return $query;
+	}
+
 	function get_section(){	
 		$sql = "SELECT * 
 		FROM dbmc.master_mapping AS map
@@ -202,6 +250,20 @@ class M_trs_training_Search extends trs_model {
     $query = $this->db->query($sql);
     return $query;
 	}
+
+	function get_section_by_dpmid(){	
+		$sql = "SELECT * 
+		FROM dbmc.master_mapping
+		WHERE master_mapping.Department_id = ? AND master_mapping.Section != ''
+		GROUP BY master_mapping.Section_id
+		ORDER BY master_mapping.Section ASC";
+    $query = $this->db->query($sql,array($this->Department_id));
+    return $query;
+	}
+
+
+
+
 	function get_emp(){	
 		$sql = "SELECT *
 			  FROM dbmc.employee";

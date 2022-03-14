@@ -37,24 +37,175 @@
 
       <script>
       function select_depart(department_id) {
-
-
-
+            // var Department_text = document.getElementById("select_department").textContent;
+            var Section_id = document.getElementById("select_section").value;
+            var group_id = document.getElementById("select_group").value;
+            var temp = "";
+            var count = 0;
+            var e_department;
+    var department_name;
+ e_department = document.getElementById("select_department");
+        department_name = e_department.options[e_department.selectedIndex].text;
+      
             $.ajax({
                   type: "post",
                   url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_department",
                   data: {
-                        "department_id": department_id
+                        "department_id": department_id,
+                        
 
                   },
                   dataType: "JSON",
                   success: function(data, status) {
-                        console.log(status)
-                        console.log(data)
+
+                        data.forEach((row, i) => {
+                              count++;
+                              temp += '<tr>';
+                              temp += '<td>' + count + '</td>'; // #
+                              temp += '<td>' + row.Empname_eng + " " + row
+                                    .Empsurname_eng + '</td>'; // Type of Recruitment
+                              temp += '<td>' + row.Position_name + '</td>'; // Department
+                              temp += '<td>' + department_name +  '</td>'; // Section
+                              temp += '<td> </td>'; // Date of Create
+                             
+
+                              temp += '<tr>';
+                        }); // forEach
+                        // $('.dashboard tbody').html(temp);
+                        $("#show_data").html(temp);
+                        // console.log(status)
+                        // console.log(data)
+                        $.ajax({
+                              type: "post",
+                              url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_Section",
+                              data: {
+                                    "department_id": department_id
+
+                              },
+                              dataType: "JSON",
+                              success: function(data1, status) {
+                                    temp = '';
+                                 
+
+                                    $.each(data1, function(index, value) {
+                                          temp += '<option value="' +
+                                                value.Section_id +
+                                                '">' + value.Section +
+                                                '</option>';
+                                       
+
+                                    });
+                                    $("#select_section").html(temp);
+
+                                   
+                                    $.ajax({
+                                          type: "post",
+                                          url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_Group",
+                                          data: {
+                                                "Section_id": Section_id
+
+                                          },
+                                          dataType: "JSON",
+                                          success: function(data1,
+                                                status) {
+                                                temp = '';
+                                               
+
+                                                $.each(data1,
+                                                      function(
+                                                            index,
+                                                            value
+                                                            ) {
+                                                            temp +=
+                                                                  '<option value="' +
+                                                                  value
+                                                                  .Group_id +
+                                                                  '">' +
+                                                                  value
+                                                                  .Group +
+                                                                  '</option>';
+                                                            
+
+                                                      });
+                                                $("#select_group")
+                                                      .html(temp);
+
+                                          } //success
+                                    });
+
+
+
+
+
+
+
+                              } //success
+                        });
 
                   } //success
             });
       }
+
+
+
+      function select_section(Section_id) {
+            var Department_id = document.getElementById("select_department").value;
+            var temp = "";
+            var count = 0;
+            var e_department;
+    var department_name;
+ e_department = document.getElementById("select_department");
+        department_name = e_department.options[e_department.selectedIndex].text;
+      
+            $.ajax({
+                  type: "post",
+                  url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_section_by_departmentID",
+                  data: {
+                        "Department_id": Department_id,
+                        "Section_id" : Section_id
+                        
+                  },
+                  dataType: "JSON",
+                  success: function(data, status) {
+                        console.log(data)
+                        data.forEach((row, i) => {
+                              count++;
+                              temp += '<tr>';
+                              temp += '<td>' + count + '</td>'; // #
+                              temp += '<td>' + row.Empname_eng + " " + row
+                                    .Empsurname_eng + '</td>'; // Type of Recruitment
+                              temp += '<td>' + row.Position_name + '</td>'; // Department
+                              temp += '<td>' + department_name +  '</td>'; // Section
+                              temp += '<td> </td>'; // Date of Create
+                             
+
+                              temp += '<tr>';
+                        }); // forEach
+                        // $('.dashboard tbody').html(temp);
+                        $("#show_data").html(temp);
+                        // console.log(status)
+                        // console.log(data)
+                       
+
+                  } //success
+            });
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </script>
 
       <!-- Begin Page Content -->
@@ -90,7 +241,7 @@
 
 
                                                 <div class="col-md-3">
-                                                      <select id="select" class="form-control " aria-controls="example"
+                                                      <select id="select_department" class="form-control " aria-controls="example"
                                                             onchange="select_depart(value)">
                                                             <option value="0" selected>Select Department</option>
                                                             <?php foreach($get_dep as $row) {?>
@@ -102,31 +253,27 @@
 
                                                 </div>
                                                 <!--col3-->
+                                               
                                                 <div class="col-md-3">
-                                                      <select id="select" class="form-control " aria-controls="example"
-                                                            onchange="select_depart()">
+                                                      <select id="select_section" class="form-control "
+                                                            aria-controls="example" onchange="select_section(value)">
+                                                            <option value="0" selected>Select Section</option>
+
+                                                      </select>
+
+                                                </div>
+
+
+
+                                                <div class="col-md-3">
+                                                      <select id="select_group" class="form-control " aria-controls="example"
+                                                           >
                                                             <option value="0" selected>Select Group</option>
-                                                            <?php foreach($get_grp as $row) {?>
-                                                            <option value="<?php echo $row->Group_id; ?>">
-                                                                  <?php echo $row->Group; ?>
-                                                            </option>
-                                                            <?php } ?>
+                                                           
                                                       </select>
 
                                                 </div>
                                                 <!--col3-->
-                                                <div class="col-md-3">
-                                                      <select id="select" class="form-control " aria-controls="example"
-                                                            onchange="select_depart()">
-                                                            <option value="0" selected>Select Group</option>
-                                                            <?php foreach($get_sec as $row) {?>
-                                                            <option value="<?php echo $row->Section_id; ?>">
-                                                                  <?php echo $row->Section; ?>
-                                                            </option>
-                                                            <?php } ?>
-                                                      </select>
-
-                                                </div>
                                                 <br>
                                                 <br>
 
@@ -153,21 +300,8 @@
 
                                                       </tr>
                                                 </thead>
-                                                <tbody>
-                                                      <?php foreach($get_emp as $index=>$row) {?>
-                                                      <tr align="center">
-                                                            <td><?php echo $index+1 ?></td>
-                                                            <td><?php echo $row->Empname_engTitle.$row->Empname_eng."  ".$row->Empsurname_eng ?></td>
-                                                            <td><?php echo $row->Position_ID ?></td>
-                                                            <td><?php echo $row->Sectioncode_ID ?></td>
-                                                            <td>Train</td>
+                                                <tbody id="show_data">
 
-                                                      </tr>
-
-                                                
-
-
-                                                      <?php  } ?>
                                                 </tbody>
                                           </table>
                                     </div>
