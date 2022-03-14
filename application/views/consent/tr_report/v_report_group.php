@@ -55,8 +55,6 @@
                   } //success
             });
       }
-
-     
       </script>
 
       <!-- Begin Page Content -->
@@ -118,7 +116,7 @@
                                                 </div>
                                                 <!--col3-->
                                                 <div class="col-md-3">
-                                                <select id="select" class="form-control " aria-controls="example"
+                                                      <select id="select" class="form-control " aria-controls="example"
                                                             onchange="select_depart()">
                                                             <option value="0" selected>Select Group</option>
                                                             <?php foreach($get_sec as $row) {?>
@@ -156,26 +154,20 @@
                                                       </tr>
                                                 </thead>
                                                 <tbody>
-
+                                                      <?php foreach($get_emp as $index=>$row) {?>
                                                       <tr align="center">
-                                                            <td>1</td>
-                                                            <td>Jirayu Jaravichit</td>
-                                                            <td>General manager</td>
-                                                            <td>HR</td>
+                                                            <td><?php echo $index+1 ?></td>
+                                                            <td><?php echo $row->Empname_engTitle.$row->Empname_eng."  ".$row->Empsurname_eng ?></td>
+                                                            <td><?php echo $row->Position_ID ?></td>
+                                                            <td><?php echo $row->Sectioncode_ID ?></td>
                                                             <td>Train</td>
 
                                                       </tr>
 
-                                                      <tr align="center">
-                                                            <td>2</td>
-                                                            <td>Jirayut Soooo</td>
-                                                            <td>General manager</td>
-                                                            <td>HR</td>
-                                                            <td>Trainss</td>
-                                                      </tr>
+                                                
 
 
-
+                                                      <?php  } ?>
                                                 </tbody>
                                           </table>
                                     </div>

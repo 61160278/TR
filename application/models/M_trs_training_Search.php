@@ -202,6 +202,12 @@ class M_trs_training_Search extends trs_model {
     $query = $this->db->query($sql);
     return $query;
 	}
+	function get_emp(){	
+		$sql = "SELECT *
+			  FROM dbmc.employee";
+		$query = $this->db->query($sql);
+		return $query;
+	}
 
 
 }		 
