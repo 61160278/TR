@@ -52,10 +52,17 @@ class Manage_training_record extends MainController {
 		$this->load->model('M_trs_training_record','mtdr');
 		$this->mtdr->Training_id = $Training_id;
 		$data['trd'] = $this->mtdr->get_training_data()->result();
-
+		$dep_info = [];
 		$this->load->model('M_trs_training_record','mtrs');
 		$this->mtrs->Training_ID = $Training_id;
 		$data['mtr'] = $this->mtrs->get_member()->result();
+		$temp = $data['mtr'];
+		foreach($temp as $row){
+			$this->load->model('M_trs_training_record','mtrr');
+			$data['dep'] = $this->mtrr->get_member_dpartment($row->Sectioncode_ID)->row();
+			array_push($dep_info,$data['dep']);
+		}
+		$data['department'] = $dep_info;
 		$this->output('/consent/tr_manage_training_record/v_info_training_record' ,$data);
 	}
 	// function create_training_data()

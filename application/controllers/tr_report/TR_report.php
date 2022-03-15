@@ -111,11 +111,11 @@ class TR_report extends MainController {
 
 				foreach($emp as $index => $row){
 				if($count == 0){
-				array_push($emp_temp, $row);
-				array_push($emp_check, $row->Emp_ID);
+					array_push($emp_temp, $row);
+					array_push($emp_check, $row->Emp_ID);
 				}else if(!in_array($row->Emp_ID, $emp_check)){
-				array_push($emp_temp, $row);
-				array_push($emp_check, $row->Emp_ID);
+					array_push($emp_temp, $row);
+					array_push($emp_check, $row->Emp_ID);
 				}
 
 				}

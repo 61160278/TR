@@ -211,6 +211,8 @@ class M_trs_training_Search extends trs_model {
 		    FROM dbmc.employee AS emp
 		    INNER JOIN dbmc.position AS pos
 		    ON pos.Position_ID = emp.Position_ID
+		    INNER JOIN trs_database.trs_member_course AS trs
+		    ON trs.Training_ID = emp.Emp_ID
 		    WHERE emp.Sectioncode_ID = '".$dp."'
 		    OR emp.Sectioncode_ID = '".$sc."'
 		    OR emp.Sectioncode_ID = '".$sb."'

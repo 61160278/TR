@@ -278,8 +278,8 @@
                                                                               <td><?php echo $row->Employee_Code; ?></td>
                                                                               <td><?php echo $row->Empname_engTitle.$row->Empname_eng."  ".$row->Empsurname_eng ?></td>
                                                                               <td><?php echo $row->Position_name; ?></td>
-                                                                              <td><?php echo $row->Department; ?></td>
-                                                                              <td><?php echo $row->Sectioncode; ?></td>
+                                                                              <td><?php echo $department[$index]->Department; ?></td>
+                                                                              <td><?php echo $row->Sectioncode_ID; ?></td>
                                                                               <td><?php echo $row->Total_hours; ?></td>
                                                                               <td><font color="green"><?php echo $row->Training_Status; ?></font></td>
                                                                               <td>
