@@ -46,18 +46,17 @@
             var department_name;
             e_department = document.getElementById("select_department");
             department_name = e_department.options[e_department.selectedIndex].text;
+            console.log(department_id);
 
             $.ajax({
                   type: "post",
                   url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_department",
                   data: {
                         "department_id": department_id,
-
-
                   },
                   dataType: "JSON",
                   success: function(data, status) {
-
+                  console.log(data);
                         data.forEach((row, i) => {
                               count++;
                               temp += '<tr>';
@@ -66,7 +65,7 @@
                                     .Empsurname_eng + '</td>'; // Type of Recruitment
                               temp += '<td>' + row.Position_name + '</td>'; // Department
                               temp += '<td>' + department_name + '</td>'; // Section
-                              temp += '<td> </td>'; // Date of Create
+                              temp += '<td>'+row.Course_name+'</td>'; // Date of Create
 
 
                               temp += '<tr>';
@@ -144,7 +143,7 @@
                                     .Empsurname_eng + '</td>'; // Type of Recruitment
                               temp += '<td>' + row.Position_name + '</td>'; // Department
                               temp += '<td>' + department_name + '</td>'; // Section
-                              temp += '<td>' + Section + '</td>'; // Date of Create
+                              temp += '<td>'+row.Course_name+'</td>'; // Date of Create
 
 
                               temp += '<tr>';
@@ -165,7 +164,8 @@
                                     status) {
                                     console.log(data1);
                                     temp = '';
-
+                                    temp +=
+                                                      '<option value = "0">Select Group</option>';
 
                                     $.each(data1,
                                           function(
@@ -206,7 +206,7 @@
 
             $.ajax({
                   type: "post",
-                  url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_section_by_departmentID",
+                  url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_group_by_departmentID",
                   data: {
                         "Department_id": Department_id,
                         "Section_id": Section_id,
@@ -224,7 +224,7 @@
                                     .Empsurname_eng + '</td>'; // Type of Recruitment
                               temp += '<td>' + row.Position_name + '</td>'; // Department
                               temp += '<td>' + department_name + '</td>'; // Section
-                              temp += '<td>' + Section + '</td>'; // Date of Create
+                              temp += '<td>'+row.Course_name+'</td>'; // Date of Create
 
 
                               temp += '<tr>';

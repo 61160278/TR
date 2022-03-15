@@ -188,9 +188,7 @@ class M_trs_training_Search extends trs_model {
 	function get_department_id(){	
 		$sql = "SELECT * 
 		FROM dbmc.master_mapping
-		WHERE master_mapping.Department_id = ?
-		GROUP BY master_mapping.Department_id
-		";
+		WHERE master_mapping.Department_id = ?";
     $query = $this->db->query($sql,array($this->Department_id));
     return $query;
 	}
@@ -199,10 +197,16 @@ class M_trs_training_Search extends trs_model {
 	function get_department_by_sectionID(){	
 		$sql = "SELECT * 
 		FROM dbmc.master_mapping
-		WHERE master_mapping.Department_id = ? AND master_mapping.Section_id = ? AND master_mapping.Section_id != ''
-		GROUP BY master_mapping.Section_id
-		";
+		WHERE master_mapping.Department_id = ? AND master_mapping.Section_id = ? AND master_mapping.Section_id != ''";
     $query = $this->db->query($sql,array($this->Department_id,$this->Section_id));
+    return $query;
+	}
+
+	function get_department_by_groupID(){	
+		$sql = "SELECT * 
+		FROM dbmc.master_mapping
+		WHERE master_mapping.Department_id = ? AND master_mapping.Section_id = ? AND master_mapping.Section_id != '' AND master_mapping.Group_id = ?";
+    $query = $this->db->query($sql,array($this->Department_id,$this->Section_id,$this->Group_id));
     return $query;
 	}
 
@@ -212,7 +216,11 @@ class M_trs_training_Search extends trs_model {
 		    INNER JOIN dbmc.position AS pos
 		    ON pos.Position_ID = emp.Position_ID
 		    INNER JOIN trs_database.trs_member_course AS trs
-		    ON trs.Training_ID = emp.Emp_ID
+		    ON trs.Employee_Code = emp.Emp_ID
+		    INNER JOIN trs_database.trs_training_record AS ttr
+		    ON ttr.Training_id = trs.Training_ID
+		    INNER JOIN trs_database.trs_course_data AS tcd
+		    ON tcd.Course_id = ttr.Course_code_id
 		    WHERE emp.Sectioncode_ID = '".$dp."'
 		    OR emp.Sectioncode_ID = '".$sc."'
 		    OR emp.Sectioncode_ID = '".$sb."'

@@ -91,15 +91,15 @@ class TR_report extends MainController {
 
 	function Get_department(){
 		$department_id = $this->input->post('department_id');
-		$Section_id = $this->input->post('Section_id');
-		$Group_id = $this->input->post('group_id');
-		
+
 		$this->load->model('M_trs_training_Search','mevg');
 		$emp_temp = [];
   		$emp_check = [];
   		$emp_info = [];
+
 		  $this->mevg->Department_id = $department_id;
 		  $data['get_dep'] = $this->mevg->get_department_id()->result();
+
 				foreach($data['get_dep'] as $index => $row){
 					$count = $index;
 					$dp = $row->Department_id;
@@ -109,17 +109,23 @@ class TR_report extends MainController {
 					$ln = $row->Line_id;
 					$emp = $this->mevg->get_emp_by_dpm($dp,$sc,$sb,$gr,$ln)->result();
 
-				foreach($emp as $index => $row){
-				if($count == 0){
-					array_push($emp_temp, $row);
-					array_push($emp_check, $row->Emp_ID);
-				}else if(!in_array($row->Emp_ID, $emp_check)){
-					array_push($emp_temp, $row);
-					array_push($emp_check, $row->Emp_ID);
+					if(sizeof($emp) != 0){
+						foreach($emp as $index => $row){
+							array_push($emp_temp, $row);
+							// if($count == 0){
+							// 	array_push($emp_temp, $row);
+							// 	array_push($emp_check, $row->Emp_ID);
+							// }else if(!in_array($row->Emp_ID, $emp_check)){
+							// 	array_push($emp_temp, $row);
+							// 	array_push($emp_check, $row->Emp_ID);
+							// }
+	
+						}
+					}
+					// if 
+					
 				}
 
-				}
-				}
 			$data = $emp_temp	;
 		
 		echo json_encode($data);
@@ -156,7 +162,7 @@ class TR_report extends MainController {
 	function Get_section_by_departmentID(){
 		$Department_id = $this->input->post('Department_id');
 		$Section_id = $this->input->post('Section_id');
-		
+		$Section_id = $this->input->post('Section_id');
 		$this->load->model('M_trs_training_Search','mevg');
 		$emp_temp = [];
   		$emp_check = [];
@@ -174,25 +180,56 @@ class TR_report extends MainController {
 					$ln = $row->Line_id;
 					$emp = $this->mevg->get_emp_by_dpm($dp,$sc,$sb,$gr,$ln)->result();
 
-				foreach($emp as $index => $row){
-					if($count == 0){
-						array_push($emp_temp, $row);
-						array_push($emp_check, $row->Emp_ID);
-					}else if(!in_array($row->Emp_ID, $emp_check)){
-						array_push($emp_temp, $row);
-						array_push($emp_check, $row->Emp_ID);
-				}
+					if(sizeof($emp) != 0){
+						foreach($emp as $index => $row){
+							array_push($emp_temp, $row);
+						}
+					}
+					// if 
 
 				}
-					}
-		$data = $emp_temp	;
+		$data = $emp_temp;
 		
 		echo json_encode($data);
 
 	}
 
 
+	function Get_group_by_departmentID(){
+		$Department_id = $this->input->post('Department_id');
+		$Section_id = $this->input->post('Section_id');
+		$Group_id = $this->input->post('Group_id');
+		
+		$this->load->model('M_trs_training_Search','mevg');
+		$emp_temp = [];
+  		$emp_check = [];
+  		$emp_info = [];
+		  $this->mevg->Department_id = $Department_id;
+		  $this->mevg->Section_id = $Section_id;
+		  $this->mevg->Group_id = $Group_id;
+		  $data['get_dep'] = $this->mevg->get_department_by_groupID()->result();
+		  
+				foreach($data['get_dep'] as $index => $row){
+					$count = $index;
+					$dp = $row->Department_id;
+					$sc = $row->Section_id;
+					$sb = $row->SubSection_id;
+					$gr = $row->Group_id;
+					$ln = $row->Line_id;
+					$emp = $this->mevg->get_emp_by_dpm($dp,$sc,$sb,$gr,$ln)->result();
 
+					if(sizeof($emp) != 0){
+						foreach($emp as $index => $row){
+							array_push($emp_temp, $row);
+						}
+					}
+					// if
+					}
+		$data = $emp_temp	;
+		
+		echo json_encode($data);
+
+	}
 
 
 
