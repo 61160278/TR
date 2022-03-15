@@ -85,7 +85,8 @@
                               dataType: "JSON",
                               success: function(data1, status) {
                                     temp = '';
-
+                                    temp +=
+                                          '<option value="0"> Select Section </option>';
 
                                     $.each(data1, function(index, value) {
                                           temp += '<option value="' +
@@ -98,40 +99,7 @@
                                     $("#select_section").html(temp);
 
 
-                                    $.ajax({
-                                          type: "post",
-                                          url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_Group",
-                                          data: {
-                                                "Section_id": Section_id
 
-                                          },
-                                          dataType: "JSON",
-                                          success: function(data1,
-                                                status) {
-                                                temp = '';
-
-
-                                                $.each(data1,
-                                                      function(
-                                                            index,
-                                                            value
-                                                      ) {
-                                                            temp +=
-                                                                  '<option value="' +
-                                                                  value
-                                                                  .Group_id +
-                                                                  '">' +
-                                                                  value
-                                                                  .Group +
-                                                                  '</option>';
-
-
-                                                      });
-                                                $("#select_group")
-                                                      .html(temp);
-
-                                          } //success
-                                    });
 
 
 
@@ -185,7 +153,87 @@
                         $("#show_data").html(temp);
                         // console.log(status)
                         // console.log(data)
+                        $.ajax({
+                              type: "post",
+                              url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_Group",
+                              data: {
+                                    "Section_id": Section_id
 
+                              },
+                              dataType: "JSON",
+                              success: function(data1,
+                                    status) {
+                                    console.log(data1);
+                                    temp = '';
+
+
+                                    $.each(data1,
+                                          function(
+                                                index,
+                                                value
+                                          ) {
+                                                temp +=
+                                                      '<option value="' +
+                                                      value
+                                                      .Group_id +
+                                                      '">' +
+                                                      value
+                                                      .Group +
+                                                      '</option>';
+
+
+                                          });
+                                    $("#select_group")
+                                          .html(temp);
+
+                              } //success
+                        });
+
+                  } //success
+            });
+      }
+
+
+      function select_group(Group_id) {
+            var Department_id = document.getElementById("select_department").value;
+            var Section_id = document.getElementById("select_section").value;
+            var temp = "";
+            var count = 0;
+            var e_department;
+            var department_name;
+            e_department = document.getElementById("select_department");
+            department_name = e_department.options[e_department.selectedIndex].text;
+
+            $.ajax({
+                  type: "post",
+                  url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_section_by_departmentID",
+                  data: {
+                        "Department_id": Department_id,
+                        "Section_id": Section_id,
+                        "Group_id" : Group_id
+
+                  },
+                  dataType: "JSON",
+                  success: function(data, status) {
+                        console.log(data)
+                        data.forEach((row, i) => {
+                              count++;
+                              temp += '<tr>';
+                              temp += '<td>' + count + '</td>'; // #
+                              temp += '<td>' + row.Empname_eng + " " + row
+                                    .Empsurname_eng + '</td>'; // Type of Recruitment
+                              temp += '<td>' + row.Position_name + '</td>'; // Department
+                              temp += '<td>' + department_name + '</td>'; // Section
+                              temp += '<td>' + Section + '</td>'; // Date of Create
+
+
+                              temp += '<tr>';
+                        }); // forEach
+                        // $('.dashboard tbody').html(temp);
+                        $("#show_data").html(temp);
+                        // console.log(status)
+                        // console.log(data)
+                    
 
                   } //success
             });
@@ -223,17 +271,20 @@
                                           <div class="row">
                                                 <div class="col-md-3">
                                                       <label for="department">
-                                                Department
-                                                </label></div>
+                                                            Department
+                                                      </label>
+                                                </div>
                                                 <div class="col-md-3">
                                                       <label for="department">
-                                                Section
-                                                </label></div>
+                                                            Section
+                                                      </label>
+                                                </div>
                                                 <div class="col-md-3">
                                                       <label for="department">
-                                                Group
-                                                </label></div>
-</div>
+                                                            Group
+                                                      </label>
+                                                </div>
+                                          </div>
                                           <div class="row">
 
 
@@ -265,7 +316,7 @@
 
                                                 <div class="col-md-3">
                                                       <select id="select_group" class="form-control "
-                                                            aria-controls="example">
+                                                            aria-controls="example" onchange="select_group(value)">
                                                             <option value="0" selected>Select Group</option>
 
                                                       </select>
