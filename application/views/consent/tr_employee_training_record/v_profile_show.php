@@ -141,8 +141,8 @@
                                                                               </div>
 
                                                                               <div class="col-md-2" align="right">
-                                                                              ตำแหน่ง :
-                                                                        </div>
+                                                                                    ตำแหน่ง :
+                                                                              </div>
                                                                               <div class="col-sm-2">
 
                                                                                     <?php echo $row->Position_name; ?>
@@ -152,20 +152,20 @@
                                                                         <br>
                                                                         <hr>
                                                                         <div class="row">
-                                                                        <div class="col-md-1" align="right">
-                                                                             แผนก :
-                                                                        </div>
+                                                                              <div class="col-md-1" align="right">
+                                                                                    แผนก :
+                                                                              </div>
                                                                               <div class="col-md-2" align="center">
-                                                                              <?php echo $department->Department; ?>      
+                                                                                    <?php echo $department->Department; ?>
                                                                               </div>
                                                                               <!-- fix -->
                                                                               <div class="col-md-2" align="right">
-                                                                             Section :
-                                                                        </div>
+                                                                                    Section :
+                                                                              </div>
                                                                               <div class="col-md-2">
-                                                                                   
-                                                                                         <?php echo $row->Sectioncode_ID; ?>
-                                                                                        
+
+                                                                                    <?php echo $row->Sectioncode_ID; ?>
+
                                                                               </div>
                                                                               <!-- row 2 -->
                                                                         </div>
@@ -272,15 +272,11 @@
                                                                                                 </td>
                                                                                                 <td>
 
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;
-                                                                                                      <input type="checkbox"
-                                                                                                            id="checkbox2"
-                                                                                                            name="checkbox2"
-                                                                                                            value="option2"
-                                                                                                            class="form-check-input"
-                                                                                                            checked>
+                                                                                                      <?php if($row->Certificate == 1){
+                                                                        echo "O";
+                                                                  }else{
+                                                                        echo "-";
+                                                                  } ?>
 
 
                                                                                                 </td>
