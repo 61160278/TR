@@ -129,7 +129,7 @@ class M_trs_training_Search extends trs_model {
 				LEFT JOIN trs_database.trs_member_course as tmc
 				ON tmc.Training_ID = ttr.Training_id
 				WHERE tmc.Employee_Code = ?
-				";
+				ORDER BY Start_date DESC";
 				
 		$query = $this->db->query($sql, array($this->Employee_Code));
 		return $query;
