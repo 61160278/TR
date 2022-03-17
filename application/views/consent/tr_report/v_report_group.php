@@ -251,15 +251,15 @@
       }
 
       function exportfile() {
-            var sheet_name = "Report_Person";
-            var file_name = "Report_Person_Training";
+            var sheet_name = "Report_Group";
+            var file_name = "Report_Group_Training";
 
             var wb = {
                   SheetNames: [],
                   Sheets: {}
             };
 
-            var objectMaxLength = [3, 12, 14, 21, 11, 10, 18, 12];
+            var objectMaxLength = [3, 12, 14, 21, 11, 10, 18];
 
             var wscols = [{
                         width: objectMaxLength[0],
@@ -282,9 +282,9 @@
                   {
                         width: objectMaxLength[6]
                   },
-                  {
-                        width: objectMaxLength[7]
-                  },
+                  // {
+                  //       width: objectMaxLength[7]
+                  // },
 
             ];
 
@@ -403,7 +403,7 @@
                                     <br>
                                     <div class="row">
 
-                                          <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                          <table id="Export_Report_data" class="table table-striped table-bordered">
                                                 <thead>
                                                       <tr align="center">
                                                             <th>No.</th>
