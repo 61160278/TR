@@ -59,7 +59,7 @@
                   console.log(data);
                         data.forEach((row, i) => {
                               count++;
-                              temp += '<tr>';
+                              temp += '<tr align="center">';
                               temp += '<td>' + count + '</td>'; // Count
                               temp += '<td>' + row.Emp_ID + '</td>'; //Employee id
                               temp += '<td>' + row.Empname_engTitle +" "+ row.Empname_eng + " " + row
@@ -139,7 +139,7 @@
                         console.log(data)
                         data.forEach((row, i) => {
                               count++;
-                              temp += '<tr>';
+                              temp += '<tr align="center">';
                               temp += '<td>' + count + '</td>'; // Count
                               temp += '<td>' + row.Emp_ID + '</td>'; //Employee id
                               temp += '<td>' + row.Empname_engTitle +" "+ row.Empname_eng + " " + row
@@ -222,7 +222,7 @@
                         console.log(data)
                         data.forEach((row, i) => {
                               count++;
-                              temp += '<tr>';
+                              temp += '<tr align="center">';
                               temp += '<td>' + count + '</td>'; // Count
                               temp += '<td>' + row.Emp_ID + '</td>'; //Employee id
                               temp += '<td>' + row.Empname_engTitle +" "+ row.Empname_eng + " " + row
