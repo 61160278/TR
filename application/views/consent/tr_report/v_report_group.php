@@ -235,7 +235,6 @@
 
                               temp += '<tr>';
                         }); // forEach
-                        // $('.dashboard tbody').html(temp);
                         $("#show_data").html(temp);
                         // console.log(status)
                         // console.log(data)
