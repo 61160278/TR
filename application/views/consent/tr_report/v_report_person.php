@@ -170,7 +170,6 @@
                                                             <th>End-Date</th>
                                                             <th>Trainer</th>
                                                             <th>Certificate</th>
-
                                                       </tr>
                                                 </thead>
                                                 <tbody>
