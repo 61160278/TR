@@ -47,7 +47,10 @@ class TR_report extends MainController {
 	function Report_person()
 	{
 		$data["Show_datapr"] = [];
+		$data["data_id"] = [];
 		$this->output('/consent/tr_report/v_report_person',$data);
+
+		
 		
 	}
 	function Report_group()
@@ -231,7 +234,7 @@ class TR_report extends MainController {
 
 	}
 
-
+	
 
 }
 // 

@@ -364,7 +364,7 @@
 
                                     <br>
                                     <div class="row">
-                                          <div class="col-md-8">
+                                          <div class="col-md-10">
                                                 <a href="<?php echo base_url()?>tr_report/TR_report/Report">
                                                       <button type="button" class="btn btn-secondary">Back</button>
                                                 </a>
@@ -375,12 +375,7 @@
                                                       alt="Excel" width="55">
                                                 <button type="button" class="btn btn-primary">Dowload Excel</button>
                                           </div>
-                                          <div class="col-md-2">
-                                                <img class="rounded-circle"
-                                                      src="<?php echo base_url();?>elaadmin/images/Excel.png"
-                                                      alt="Excel" width="55">
-                                                <button type="button" class="btn btn-primary">Dowload PDF</button>
-                                          </div>
+                                         
 
 
                                     </div>

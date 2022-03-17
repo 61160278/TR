@@ -34,7 +34,64 @@
       }
       </style>
       <!-- End style CSS  -->
+      <script>
+      function exportfile() {
 
+
+
+            var sheet_name = "Report_Person";
+            var file_name = "Report_Person_Training";
+
+            var wb = {
+                  SheetNames: [],
+                  Sheets: {}
+            };
+
+            var objectMaxLength = [3, 12, 14, 21, 11, 10, 8, 12];
+
+            var wscols = [{
+                        width: objectMaxLength[0],
+                  },
+                  {
+                        width: objectMaxLength[1]
+                  },
+                  {
+                        width: objectMaxLength[2]
+                  }, //...
+                  {
+                        width: objectMaxLength[3]
+                  },
+                  {
+                        width: objectMaxLength[4]
+                  },
+                  {
+                        width: objectMaxLength[5]
+                  },
+                  {
+                        width: objectMaxLength[6]
+                  },
+                  {
+                        width: objectMaxLength[7]
+                  },
+
+            ];
+
+            var ws9 = XLSX.utils.table_to_sheet(document.getElementById('Export_Report_data'), {
+                  raw: true
+            });
+
+            ws9["!cols"] = wscols;
+
+
+            wb.SheetNames.push(sheet_name);
+            wb.Sheets[sheet_name] = ws9;
+            XLSX.writeFile(wb, file_name + ".xlsx", {
+                  cellStyles: true
+            });
+
+      }
+      // exportfile
+      </script>
       <!-- Begin Page Content -->
       <div class="container-fluid">
 
@@ -88,9 +145,18 @@
                                     <br>
                                     <div class="row">
 
-                                          <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                          <table id="Export_Report_data" class="table table-striped table-bordered">
                                                 <thead>
-                                               <?php if(sizeof($Show_datapr) != 0){ ?>
+                                                      <?php if(sizeof($data_id) != 0){
+                                                foreach($data_id->result() as $row){ ?>
+                                                      <tr>
+                                                            <th colspan="8">
+                                                                  <?php echo $row->Emp_nametitle.$row->Empname_th." ".$row->Empsurname_th; ?>
+                                                            </th>
+                                                      </tr>
+                                                      <?php } 
+                                                      }  ?>
+                                                      <?php if(sizeof($Show_datapr) != 0){ ?>
                                                       <tr align="center">
 
                                                             <th>No.</th>
@@ -126,13 +192,11 @@
                                                             </td>
                                                             <td>
 
-                                                                  &nbsp;&nbsp;
-                                                                  &nbsp;&nbsp;
-                                                                  &nbsp;
-                                                                  <input type="checkbox" id="checkbox2" name="checkbox2"
-                                                                        value="option2" class="form-check-input"
-                                                                        checked>
-
+                                                                  <?php if($row->Certificate == 1){
+                                                                        echo "O";
+                                                                  }else{
+                                                                        echo "-";
+                                                                  } ?>
 
                                                             </td>
                                                       </tr>
@@ -155,11 +219,12 @@
                                                 </a>
                                           </div>
                                           <div class="col-md-2">
-                                          <?php if(sizeof($Show_datapr) != 0){ ?>
+                                                <?php if(sizeof($Show_datapr) != 0){ ?>
                                                 <img class="rounded-circle"
                                                       src="<?php echo base_url();?>elaadmin/images/Excel.png"
                                                       alt="Excel" width="55">
-                                                <button type="button" class="btn btn-primary">Dowload Excel</button>
+                                                <button type="button" class="btn btn-primary"
+                                                      onclick="exportfile()">Dowload Excel</button>
                                           </div>
                                           <div class="col-md-2">
                                                 <img class="rounded-circle"
@@ -168,7 +233,7 @@
                                                 <button type="button" class="btn btn-primary">Dowload PDF</button>
                                           </div>
 
-<?php }  ?>
+                                          <?php }  ?>
                                     </div>
                                     <br>
                               </div>

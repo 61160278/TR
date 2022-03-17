@@ -51,3 +51,8 @@
 <script src="<?php echo base_url();?>elaadmin/assets/js/lib/data-table/buttons.colVis.min.js"></script>
 <script src="<?php echo base_url();?>elaadmin/assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
 <script src="<?php echo base_url();?>elaadmin/assets/js/init/datatables-init.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+<script src="https://unpkg.com/file-saver@1.3.3/FileSaver.js"></script>
+<script lang="javascript" src="dist/xlsx.bundle.js"></script>
