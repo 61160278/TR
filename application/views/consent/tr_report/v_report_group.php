@@ -422,6 +422,36 @@
                                           </table>
                                     </div>
 
+
+
+
+
+
+<!-- hidden table -->
+                                    <div class="row" hidden>
+
+<table id="Export_Report_data" class="table table-striped table-bordered" >
+      <thead>
+            <tr align="center">
+                  <th>No.</th>
+                  <th>Emp.</th>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Department</th>
+                  <th>Course Code</th>
+                  <th>Training</th>
+
+            </tr>
+      </thead>
+      <tbody id="show_data">
+
+      </tbody>
+</table>
+</div>
+
+
+
+
                                     <br>
                                     <div class="row">
                                           <div class="col-md-10">
