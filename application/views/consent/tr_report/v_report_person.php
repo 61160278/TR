@@ -36,9 +36,6 @@
       <!-- End style CSS  -->
       <script>
       function exportfile() {
-
-
-
             var sheet_name = "Report_Person";
             var file_name = "Report_Person_Training";
 
@@ -47,7 +44,7 @@
                   Sheets: {}
             };
 
-            var objectMaxLength = [3, 12, 14, 21, 11, 10, 8, 12];
+            var objectMaxLength = [3, 12, 14, 21, 11, 10, 18, 12];
 
             var wscols = [{
                         width: objectMaxLength[0],
@@ -90,7 +87,7 @@
             });
 
       }
-      // exportfile
+      // exportfile excel
       </script>
       <!-- Begin Page Content -->
       <div class="container-fluid">
@@ -153,7 +150,12 @@
                                                             <th colspan="8">
                                                                   <?php echo $row->Emp_nametitle.$row->Empname_th." ".$row->Empsurname_th; ?>
                                                             </th>
-                                                      </tr>
+                                                            </tr>
+                                                            <tr>
+                                                            <th colspan="8">
+                                                                  <?php echo "Training record report for Person"; ?>
+                                                            </th>
+                                                            </tr>
                                                       <?php } 
                                                       }  ?>
                                                       <?php if(sizeof($Show_datapr) != 0){ ?>

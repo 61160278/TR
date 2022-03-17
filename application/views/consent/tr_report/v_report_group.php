@@ -56,18 +56,20 @@
                   },
                   dataType: "JSON",
                   success: function(data, status) {
-                  console.log(data);
+                        console.log(data);
                         data.forEach((row, i) => {
                               count++;
                               temp += '<tr align="center">';
                               temp += '<td>' + count + '</td>'; // Count
                               temp += '<td>' + row.Emp_ID + '</td>'; //Employee id
-                              temp += '<td>' + row.Empname_engTitle +" "+ row.Empname_eng + " " + row
+                              temp += '<td>' + row.Empname_engTitle + " " + row
+                                    .Empname_eng + " " + row
                                     .Empsurname_eng + '</td>'; // Name Employee
                               temp += '<td>' + row.Position_name + '</td>'; // Position
-                              temp += '<td>' + department_name + '</td>'; // Name Department
-                              temp += '<td>'+row.Course_code+'</td>'; // Course Code
-                              temp += '<td>'+row.Course_name+'</td>'; // Course Name
+                              temp += '<td>' + department_name +
+                              '</td>'; // Name Department
+                              temp += '<td>' + row.Course_code + '</td>'; // Course Code
+                              temp += '<td>' + row.Course_name + '</td>'; // Course Name
 
 
                               temp += '<tr>';
@@ -142,12 +144,14 @@
                               temp += '<tr align="center">';
                               temp += '<td>' + count + '</td>'; // Count
                               temp += '<td>' + row.Emp_ID + '</td>'; //Employee id
-                              temp += '<td>' + row.Empname_engTitle +" "+ row.Empname_eng + " " + row
+                              temp += '<td>' + row.Empname_engTitle + " " + row
+                                    .Empname_eng + " " + row
                                     .Empsurname_eng + '</td>'; // Name Employee
                               temp += '<td>' + row.Position_name + '</td>'; // Position
-                              temp += '<td>' + department_name + '</td>'; // Name Department
-                              temp += '<td>'+row.Course_code+'</td>'; // Course Code
-                              temp += '<td>'+row.Course_name+'</td>'; // Course Name
+                              temp += '<td>' + department_name +
+                              '</td>'; // Name Department
+                              temp += '<td>' + row.Course_code + '</td>'; // Course Code
+                              temp += '<td>' + row.Course_name + '</td>'; // Course Name
 
 
                               temp += '<tr>';
@@ -169,7 +173,7 @@
                                     console.log(data1);
                                     temp = '';
                                     temp +=
-                                                      '<option value = "0">Select Group</option>';
+                                          '<option value = "0">Select Group</option>';
 
                                     $.each(data1,
                                           function(
@@ -214,7 +218,7 @@
                   data: {
                         "Department_id": Department_id,
                         "Section_id": Section_id,
-                        "Group_id" : Group_id
+                        "Group_id": Group_id
 
                   },
                   dataType: "JSON",
@@ -225,12 +229,14 @@
                               temp += '<tr align="center">';
                               temp += '<td>' + count + '</td>'; // Count
                               temp += '<td>' + row.Emp_ID + '</td>'; //Employee id
-                              temp += '<td>' + row.Empname_engTitle +" "+ row.Empname_eng + " " + row
+                              temp += '<td>' + row.Empname_engTitle + " " + row
+                                    .Empname_eng + " " + row
                                     .Empsurname_eng + '</td>'; // Name Employee
                               temp += '<td>' + row.Position_name + '</td>'; // Position
-                              temp += '<td>' + department_name + '</td>'; // Name Department
-                              temp += '<td>'+row.Course_code+'</td>'; // Course Code
-                              temp += '<td>'+row.Course_name+'</td>'; // Course Name
+                              temp += '<td>' + department_name +
+                              '</td>'; // Name Department
+                              temp += '<td>' + row.Course_code + '</td>'; // Course Code
+                              temp += '<td>' + row.Course_name + '</td>'; // Course Name
 
 
                               temp += '<tr>';
@@ -238,11 +244,65 @@
                         $("#show_data").html(temp);
                         // console.log(status)
                         // console.log(data)
-                    
+
 
                   } //success
             });
       }
+
+      function exportfile() {
+            var sheet_name = "Report_Person";
+            var file_name = "Report_Person_Training";
+
+            var wb = {
+                  SheetNames: [],
+                  Sheets: {}
+            };
+
+            var objectMaxLength = [3, 12, 14, 21, 11, 10, 18, 12];
+
+            var wscols = [{
+                        width: objectMaxLength[0],
+                  },
+                  {
+                        width: objectMaxLength[1]
+                  },
+                  {
+                        width: objectMaxLength[2]
+                  }, //...
+                  {
+                        width: objectMaxLength[3]
+                  },
+                  {
+                        width: objectMaxLength[4]
+                  },
+                  {
+                        width: objectMaxLength[5]
+                  },
+                  {
+                        width: objectMaxLength[6]
+                  },
+                  {
+                        width: objectMaxLength[7]
+                  },
+
+            ];
+
+            var ws9 = XLSX.utils.table_to_sheet(document.getElementById('Export_Report_data'), {
+                  raw: true
+            });
+
+            ws9["!cols"] = wscols;
+
+
+            wb.SheetNames.push(sheet_name);
+            wb.Sheets[sheet_name] = ws9;
+            XLSX.writeFile(wb, file_name + ".xlsx", {
+                  cellStyles: true
+            });
+
+      }
+      // exportfile excel
       </script>
 
       <!-- Begin Page Content -->
@@ -373,9 +433,9 @@
                                                 <img class="rounded-circle"
                                                       src="<?php echo base_url();?>elaadmin/images/Excel.png"
                                                       alt="Excel" width="55">
-                                                <button type="button" class="btn btn-primary">Dowload Excel</button>
+                                                <button type="button" class="btn btn-primary" onclick="exportfile()">Dowload Excel</button>
                                           </div>
-                                         
+
 
 
                                     </div>
