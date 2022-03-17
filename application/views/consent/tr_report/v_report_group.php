@@ -60,12 +60,14 @@
                         data.forEach((row, i) => {
                               count++;
                               temp += '<tr>';
-                              temp += '<td>' + count + '</td>'; // #
-                              temp += '<td>' + row.Empname_eng + " " + row
-                                    .Empsurname_eng + '</td>'; // Type of Recruitment
-                              temp += '<td>' + row.Position_name + '</td>'; // Department
-                              temp += '<td>' + department_name + '</td>'; // Section
-                              temp += '<td>'+row.Course_name+'</td>'; // Date of Create
+                              temp += '<td>' + count + '</td>'; // Count
+                              temp += '<td>' + row.Emp_ID + '</td>'; //Employee id
+                              temp += '<td>' + row.Empname_engTitle +" "+ row.Empname_eng + " " + row
+                                    .Empsurname_eng + '</td>'; // Name Employee
+                              temp += '<td>' + row.Position_name + '</td>'; // Position
+                              temp += '<td>' + department_name + '</td>'; // Name Department
+                              temp += '<td>'+row.Course_code+'</td>'; // Course Code
+                              temp += '<td>'+row.Course_name+'</td>'; // Course Name
 
 
                               temp += '<tr>';
@@ -138,12 +140,14 @@
                         data.forEach((row, i) => {
                               count++;
                               temp += '<tr>';
-                              temp += '<td>' + count + '</td>'; // #
-                              temp += '<td>' + row.Empname_eng + " " + row
-                                    .Empsurname_eng + '</td>'; // Type of Recruitment
-                              temp += '<td>' + row.Position_name + '</td>'; // Department
-                              temp += '<td>' + department_name + '</td>'; // Section
-                              temp += '<td>'+row.Course_name+'</td>'; // Date of Create
+                              temp += '<td>' + count + '</td>'; // Count
+                              temp += '<td>' + row.Emp_ID + '</td>'; //Employee id
+                              temp += '<td>' + row.Empname_engTitle +" "+ row.Empname_eng + " " + row
+                                    .Empsurname_eng + '</td>'; // Name Employee
+                              temp += '<td>' + row.Position_name + '</td>'; // Position
+                              temp += '<td>' + department_name + '</td>'; // Name Department
+                              temp += '<td>'+row.Course_code+'</td>'; // Course Code
+                              temp += '<td>'+row.Course_name+'</td>'; // Course Name
 
 
                               temp += '<tr>';
@@ -219,12 +223,14 @@
                         data.forEach((row, i) => {
                               count++;
                               temp += '<tr>';
-                              temp += '<td>' + count + '</td>'; // #
-                              temp += '<td>' + row.Empname_eng + " " + row
-                                    .Empsurname_eng + '</td>'; // Type of Recruitment
-                              temp += '<td>' + row.Position_name + '</td>'; // Department
-                              temp += '<td>' + department_name + '</td>'; // Section
-                              temp += '<td>'+row.Course_name+'</td>'; // Date of Create
+                              temp += '<td>' + count + '</td>'; // Count
+                              temp += '<td>' + row.Emp_ID + '</td>'; //Employee id
+                              temp += '<td>' + row.Empname_engTitle +" "+ row.Empname_eng + " " + row
+                                    .Empsurname_eng + '</td>'; // Name Employee
+                              temp += '<td>' + row.Position_name + '</td>'; // Position
+                              temp += '<td>' + department_name + '</td>'; // Name Department
+                              temp += '<td>'+row.Course_code+'</td>'; // Course Code
+                              temp += '<td>'+row.Course_name+'</td>'; // Course Name
 
 
                               temp += '<tr>';
@@ -342,9 +348,11 @@
                                                 <thead>
                                                       <tr align="center">
                                                             <th>No.</th>
+                                                            <th>Emp.</th>
                                                             <th>Name</th>
                                                             <th>Position</th>
                                                             <th>Department</th>
+                                                            <th>Course Code</th>
                                                             <th>Training</th>
 
                                                       </tr>
