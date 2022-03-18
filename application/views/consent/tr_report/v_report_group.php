@@ -37,7 +37,7 @@
 
       <script>
       function select_depart(department_id) {
-            // var Department_text = document.getElementById("select_department").textContent;
+           
             var Section_id = document.getElementById("select_section").value;
             var group_id = document.getElementById("select_group").value;
             var temp = "";
@@ -46,8 +46,9 @@
             var department_name;
             e_department = document.getElementById("select_department");
             department_name = e_department.options[e_department.selectedIndex].text;
-            console.log(department_id);
-
+            console.log(department_name);
+            $('#Show_depart').text('Department:'+' '+ department_name);
+    
             $.ajax({
                   type: "post",
                   url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_department",
@@ -67,13 +68,13 @@
                                     .Empsurname_eng + '</td>'; // Name Employee
                               temp += '<td>' + row.Position_name + '</td>'; // Position
                               temp += '<td>' + department_name +
-                              '</td>'; // Name Department
+                                    '</td>'; // Name Department
                               temp += '<td>' + row.Course_code + '</td>'; // Course Code
                               temp += '<td>' + row.Course_name + '</td>'; // Course Name
                               temp += '<td>' + row.Start_date + '</td>'; // Start date
                               temp += '<td>' + row.End_date + '</td>'; // End date
 
-                              
+
                               temp += '<tr>';
                         }); // forEach
                         // $('.dashboard tbody').html(temp);
@@ -151,7 +152,7 @@
                                     .Empsurname_eng + '</td>'; // Name Employee
                               temp += '<td>' + row.Position_name + '</td>'; // Position
                               temp += '<td>' + department_name +
-                              '</td>'; // Name Department
+                                    '</td>'; // Name Department
                               temp += '<td>' + row.Course_code + '</td>'; // Course Code
                               temp += '<td>' + row.Course_name + '</td>'; // Course Name
                               temp += '<td>' + row.Start_date + '</td>'; // Start date
@@ -237,7 +238,7 @@
                                     .Empsurname_eng + '</td>'; // Name Employee
                               temp += '<td>' + row.Position_name + '</td>'; // Position
                               temp += '<td>' + department_name +
-                              '</td>'; // Name Department
+                                    '</td>'; // Name Department
                               temp += '<td>' + row.Course_code + '</td>'; // Course Code
                               temp += '<td>' + row.Course_name + '</td>'; // Course Name
                               temp += '<td>' + row.Start_date + '</td>'; // Start date
@@ -412,19 +413,18 @@
 
                                           <table id="Export_Report_data" class="table table-striped table-bordered">
                                                 <thead>
-                                                <?php if(sizeof($get_dep) != 0){
-                                                foreach($get_dep as $row){ ?>
+
+                                                      <th colspan="9">
+
+                                                            <h3>Training record report for Group</h3>
+                                                      </th>
+                                                      </tr>
+                                                      <tr>
                                                             <th colspan="9">
-                                                            <?php echo $row->Department; ?>
+                                                                  <h3 id="Show_depart">Department</h3>
                                                             </th>
-                                                            </tr>
-                                                            <tr>
-                                                            <th colspan="9">
-                                                                  <?php echo "Training record report for Group"; ?>
-                                                            </th>
-                                                            </tr>
-                                                            <?php } 
-                                                      }  ?>
+                                                      </tr>
+
                                                       <tr align="center">
                                                             <th>No.</th>
                                                             <th>Emp.</th>
@@ -454,7 +454,8 @@
                                                 <img class="rounded-circle"
                                                       src="<?php echo base_url();?>elaadmin/images/Excel.png"
                                                       alt="Excel" width="55">
-                                                <button type="button" class="btn btn-primary" onclick="exportfile()">Dowload Excel</button>
+                                                <button type="button" class="btn btn-primary"
+                                                      onclick="exportfile()">Dowload Excel</button>
                                           </div>
 
 
