@@ -48,7 +48,6 @@
             department_name = e_department.options[e_department.selectedIndex].text;
             console.log(department_name);
             $('#Show_depart').text('Department:'+' '+ department_name);
-    
             $.ajax({
                   type: "post",
                   url: "<?php echo base_url(); ?>tr_report/Tr_report/Get_department",
