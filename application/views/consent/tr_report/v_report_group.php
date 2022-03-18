@@ -70,8 +70,10 @@
                               '</td>'; // Name Department
                               temp += '<td>' + row.Course_code + '</td>'; // Course Code
                               temp += '<td>' + row.Course_name + '</td>'; // Course Name
+                              temp += '<td>' + row.Start_date + '</td>'; // Start date
+                              temp += '<td>' + row.End_date + '</td>'; // End date
 
-
+                              
                               temp += '<tr>';
                         }); // forEach
                         // $('.dashboard tbody').html(temp);
@@ -152,7 +154,8 @@
                               '</td>'; // Name Department
                               temp += '<td>' + row.Course_code + '</td>'; // Course Code
                               temp += '<td>' + row.Course_name + '</td>'; // Course Name
-
+                              temp += '<td>' + row.Start_date + '</td>'; // Start date
+                              temp += '<td>' + row.End_date + '</td>'; // End date
 
                               temp += '<tr>';
                         }); // forEach
@@ -237,7 +240,8 @@
                               '</td>'; // Name Department
                               temp += '<td>' + row.Course_code + '</td>'; // Course Code
                               temp += '<td>' + row.Course_name + '</td>'; // Course Name
-
+                              temp += '<td>' + row.Start_date + '</td>'; // Start date
+                              temp += '<td>' + row.End_date + '</td>'; // End date
 
                               temp += '<tr>';
                         }); // forEach
@@ -259,7 +263,7 @@
                   Sheets: {}
             };
 
-            var objectMaxLength = [3, 12, 14, 21, 11, 10, 18];
+            var objectMaxLength = [3, 8, 24, 20, 11, 10, 18, 12, 12];
 
             var wscols = [{
                         width: objectMaxLength[0],
@@ -282,9 +286,12 @@
                   {
                         width: objectMaxLength[6]
                   },
-                  // {
-                  //       width: objectMaxLength[7]
-                  // },
+                  {
+                        width: objectMaxLength[7]
+                  },
+                  {
+                        width: objectMaxLength[8]
+                  },
 
             ];
 
@@ -413,6 +420,8 @@
                                                             <th>Department</th>
                                                             <th>Course Code</th>
                                                             <th>Training</th>
+                                                            <th>Start-time</th>
+                                                            <th>End-time</th>
 
                                                       </tr>
                                                 </thead>
