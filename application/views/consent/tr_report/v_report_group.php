@@ -412,6 +412,19 @@
 
                                           <table id="Export_Report_data" class="table table-striped table-bordered">
                                                 <thead>
+                                                <?php if(sizeof($get_dep) != 0){
+                                                foreach($get_dep as $row){ ?>
+                                                            <th colspan="9">
+                                                            <?php echo $row->Department; ?>
+                                                            </th>
+                                                            </tr>
+                                                            <tr>
+                                                            <th colspan="9">
+                                                                  <?php echo "Training record report for Group"; ?>
+                                                            </th>
+                                                            </tr>
+                                                            <?php } 
+                                                      }  ?>
                                                       <tr align="center">
                                                             <th>No.</th>
                                                             <th>Emp.</th>
@@ -430,37 +443,6 @@
                                                 </tbody>
                                           </table>
                                     </div>
-
-
-
-
-
-
-<!-- hidden table -->
-                                    <div class="row" hidden>
-
-<table id="Export_Report_data" class="table table-striped table-bordered" >
-      <thead>
-            <tr align="center">
-                  <th>No.</th>
-                  <th>Emp.</th>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Department</th>
-                  <th>Course Code</th>
-                  <th>Training</th>
-
-            </tr>
-      </thead>
-      <tbody id="show_data">
-
-      </tbody>
-</table>
-</div>
-
-
-
-
                                     <br>
                                     <div class="row">
                                           <div class="col-md-10">
