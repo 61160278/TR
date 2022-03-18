@@ -229,8 +229,8 @@
                                           </div>
                                           <div class="col-md-2">
                                                 <img class="rounded-circle"
-                                                      src="<?php echo base_url();?>elaadmin/images/Excel.png"
-                                                      alt="Excel" width="55">
+                                                      src="<?php echo base_url();?>elaadmin/images/PDF.png"
+                                                      alt="Excel" width="40">
                                                 <button type="button" class="btn btn-primary">Dowload PDF</button>
                                           </div>
 
