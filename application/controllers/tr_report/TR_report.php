@@ -1,17 +1,13 @@
 <?php
 /*
-* Trs_Controller
-* Form Management
-* @input  -   
-* @output -
-* @author Kunanya Singmee
-* @Create Date 2564-7-10
+* TR_report
+* @author Jirayu Jaravichit
 */
 ?>
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 require_once(dirname(__FILE__) . "/../MainController.php");
-
+require('WriteHTML.php');
 
 class TR_report extends MainController {
 
@@ -56,13 +52,22 @@ class TR_report extends MainController {
 
 	function Report_person_pdf()
 	{
-		$data["Show_datapr"] = [];
-		$data["data_id"] = [];
-		$this->output('/consent/tr_report/v_report_person_pdf',$data);
+		$pdf = new PDF_HTML(); 
+// Add Thai font 
+$pdf->AddFont('THSarabunNew','','THSarabunNew.php');
+$pdf->AddFont('THSarabunNew','B','THSarabunNew_b.php');
+$pdf->AddPage();
+$pdf->SetFont('THSarabunNew','B',16);
+$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'รายงานการอบรมของพนักงานรายบุคคล (Personnel Report Form)'), 0, 1, 'C', 0);
+$pdf->SetFont('THSarabunNew','',16);
+$pdf->Cell(40, 10, iconv('UTF-8', 'cp874', 'เนื้อหาต่างๆ'));
+$pdf->Output();
+// $pdf->Output('D','Report_person.pdf');
+		
 
 		
 		
-	}
+	}//ฟังก์ชันหน้าการแสดงผล PDF 
 
 	function Report_group()
 	{

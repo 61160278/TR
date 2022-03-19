@@ -1,11 +1,7 @@
 <?php
 /*
-* v_main_group.php
-* Display v_main_group
-* @input    
-* @output
+* v_report_person.php
 * @author Jirayu Jaravichit
-* @Create Date 2564-07-12
 */  
 ?>
 
