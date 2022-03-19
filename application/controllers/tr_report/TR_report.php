@@ -53,6 +53,17 @@ class TR_report extends MainController {
 		
 		
 	}
+
+	function Report_person_pdf()
+	{
+		$data["Show_datapr"] = [];
+		$data["data_id"] = [];
+		$this->output('/consent/tr_report/v_report_person_pdf',$data);
+
+		
+		
+	}
+
 	function Report_group()
 	{
 		$this->load->model('M_trs_training_Search','mevg');

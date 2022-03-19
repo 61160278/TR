@@ -88,6 +88,15 @@
 
       }
       // exportfile excel
+
+function export_pdf(){
+
+
+
+
+
+}
+
       </script>
       <!-- Begin Page Content -->
       <div class="container-fluid">
@@ -232,7 +241,9 @@
                                                 <img class="rounded-circle"
                                                       src="<?php echo base_url();?>elaadmin/images/PDF.png" alt="Excel"
                                                       width="40">
-                                                <button type="button" class="btn btn-primary">Dowload PDF</button>
+                                                      <a href="<?php echo base_url()?>tr_report/TR_report/Report_person_pdf">
+                                                <button type="button" class="btn btn-primary" onclick="export_pdf()">Dowload PDF</button>
+                                                </a>
                                           </div>
 
                                           <?php }  ?>
