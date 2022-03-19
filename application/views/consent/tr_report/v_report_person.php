@@ -87,7 +87,25 @@
 
 function export_pdf(){
 
+            var Emp_id = document.getElementById("emp_ids").value;
+            console.log(Emp_id);
 
+            $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url(); ?>/tr_report/TR_report/Report_person_pdf",
+                  data: {
+                        "Emp_id": Emp_id
+                      
+                  },
+                  dataType: "JSON",
+                  success: function(data) {
+                       
+                  }
+                  // success function
+
+            });
+
+            // ajax 
 
 
 
@@ -131,8 +149,8 @@ function export_pdf(){
                                                 <div class="col-md-3">
                                                       <form action="<?php echo base_url() ?>tr_report/Tr_report/Show_trainingperson"
                                                             method="post">
-                                                            <input class="form-control" type="text" placeholder="Search"
-                                                                  name="emp_id" required>
+                                                            <input class="form-control"  type="text" placeholder="Search"
+                                                            id="emp_id" name="emp_id" required>
 
                                                 </div>
                                                 <!--col3-->
@@ -237,9 +255,11 @@ function export_pdf(){
                                                 <img class="rounded-circle"
                                                       src="<?php echo base_url();?>elaadmin/images/PDF.png" alt="Excel"
                                                       width="40">
-                                                      <a href="<?php echo base_url()?>tr_report/TR_report/Report_person_pdf">
+                                                      <!-- <a href="<?php echo base_url()?>tr_report/TR_report/Report_person_pdf"> -->
+                                                      <input class="form-control"  type="text" value="<?php echo $Emp_id; ?>"
+                                                            id="emp_ids" >
                                                 <button type="button" class="btn btn-primary" onclick="export_pdf()">Dowload PDF</button>
-                                                </a>
+                                                <!-- </a> -->
                                           </div>
 
                                           <?php }  ?>

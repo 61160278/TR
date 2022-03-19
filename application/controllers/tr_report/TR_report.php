@@ -52,15 +52,33 @@ class TR_report extends MainController {
 
 	function Report_person_pdf()
 	{
+		$Emp_id = $this->input->post('emp_ids');
+		$this->load->model('M_trs_training_Search','mtts');
+		$this->mtts->Emp_ID = $Emp_id;
+		$data_id = $this->mtts->get_data_emp();
+		
+			
+		$this->load->model('M_trs_training_Search','mtst');
+		$this->mtst->Employee_Code = $Emp_id;
+		$Show_datapr = $this->mtst->training_table()->result();
+		
 		$pdf = new PDF_HTML(); 
 // Add Thai font 
+
 $pdf->AddFont('THSarabunNew','','THSarabunNew.php');
 $pdf->AddFont('THSarabunNew','B','THSarabunNew_b.php');
 $pdf->AddPage();
 $pdf->SetFont('THSarabunNew','B',16);
 $pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'รายงานการอบรมของพนักงานรายบุคคล (Personnel Report Form)'), 0, 1, 'C', 0);
+$pdf->WriteHTML('<br>');//ใช้แท็ก HTML
 $pdf->SetFont('THSarabunNew','',16);
+$pdf->SetLeftMargin(30);
 $pdf->Cell(40, 10, iconv('UTF-8', 'cp874', 'เนื้อหาต่างๆ'));
+// foreach($Show_datapr as $row){ 
+// // $pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'Department :'.$row->Department), 0, 1, 'C', 0);
+// $pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'Department :'.$row->Emp_nametitle.$row->Empname_th." ".$row->Empsurname_th), 0, 1, 'C', 0);
+// } 
+                                                   
 $pdf->Output();
 // $pdf->Output('D','Report_person.pdf');
 		
@@ -97,6 +115,7 @@ $pdf->Output();
 		$this->load->model('M_trs_training_Search','mtts');
 		$this->mtts->Emp_ID = $Emp_id;
 		$data["data_id"] = $this->mtts->get_data_emp();
+		$data["Emp_id"] = $Emp_id;
 		if(sizeof($data["data_id"]->row()) != 0){
 			
 			$this->load->model('M_trs_training_Search','mtst');
