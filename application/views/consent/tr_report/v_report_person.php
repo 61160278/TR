@@ -148,14 +148,15 @@
                                                 foreach($data_id->result() as $row){ ?>
                                                       <tr>
                                                             <th colspan="8">
-                                                                  <?php echo $row->Emp_nametitle.$row->Empname_th." ".$row->Empsurname_th; ?>
+                                                                  <h3>Training record report for Person </h3>
                                                             </th>
-                                                            </tr>
-                                                            <tr>
+                                                      </tr>
+                                                      <tr>
                                                             <th colspan="8">
-                                                                  <?php echo "Training record report for Person"; ?>
+                                                            <h3> <?php echo $row->Emp_nametitle.$row->Empname_th." ".$row->Empsurname_th; ?> </h3>
                                                             </th>
-                                                            </tr>
+                                                      </tr>
+
                                                       <?php } 
                                                       }  ?>
                                                       <?php if(sizeof($Show_datapr) != 0){ ?>
@@ -229,8 +230,8 @@
                                           </div>
                                           <div class="col-md-2">
                                                 <img class="rounded-circle"
-                                                      src="<?php echo base_url();?>elaadmin/images/PDF.png"
-                                                      alt="Excel" width="40">
+                                                      src="<?php echo base_url();?>elaadmin/images/PDF.png" alt="Excel"
+                                                      width="40">
                                                 <button type="button" class="btn btn-primary">Dowload PDF</button>
                                           </div>
 
