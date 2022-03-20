@@ -73,11 +73,17 @@ class TR_report extends MainController {
 	$pdf->WriteHTML('<br>');//ใช้แท็ก HTML
 	$pdf->SetFont('THSarabunNew','',16);
 	$pdf->SetLeftMargin(15);
-	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'Name :'.$data_id[0]->Emp_nametitle.$data_id[0]->Empname_th." ".$data_id[0]->Empsurname_th), 0, 0, 'L', 0);
-	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'Name :'.$data_id[0]->Emp_nametitle.$data_id[0]->Empname_th." ".$data_id[0]->Empsurname_th), 0, 0, 'R', 0);
+	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'รหัสพนักงาน :'.$data_id[0]->Emp_ID), 0, 0, 'L', 0);
+	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'ชื่อ-นามสกุล :'.$data_id[0]->Emp_nametitle.$data_id[0]->Empname_th." ".$data_id[0]->Empsurname_th), 0, 0, 'R', 0);
 	$pdf->Ln();
-	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'Name :'.$data_id[0]->Emp_nametitle.$data_id[0]->Empname_th." ".$data_id[0]->Empsurname_th), 0, 0, 'L', 0);
-	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'Name :'.$data_id[0]->Emp_nametitle.$data_id[0]->Empname_th." ".$data_id[0]->Empsurname_th), 0, 0, 'R', 0);
+	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'อายุงาน :'.'4 ปี'), 0, 0, 'L', 0);
+	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'วุฒิการศึกษา :'.$data_id[0]->Degree2), 0, 0, 'R', 0);
+	$pdf->Ln();
+	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'ชื่ออังกฤษ :'.$data_id[0]->Empname_engTitle.".".$data_id[0]->Empname_eng." ".$data_id[0]->Empsurname_eng), 0, 0, 'L', 0);
+	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'ตำแหน่ง :'.$data_id[0]->Position_name), 0, 0, 'R', 0);
+	$pdf->Ln();
+	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'แผนก :'.$data_id[0]->Department), 0, 0, 'L', 0);
+	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'Section :'.$data_id[0]->Sectioncode_ID), 0, 0, 'R', 0);
 	$pdf->Ln();
 	$pdf->Cell(10, 10, iconv('UTF-8', 'cp874','No.'), 1, 0, 'C', 0);
 	$pdf->Cell(30, 10, iconv('UTF-8', 'cp874', 'Course Code'), 1, 0, 'C', 0);
