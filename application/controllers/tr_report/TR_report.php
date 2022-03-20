@@ -56,6 +56,11 @@ class TR_report extends MainController {
 		$this->load->model('M_trs_training_Search','mtts');
 		$this->mtts->Emp_ID = $Emp_id;
 		$data_id = $this->mtts->get_data_emp()->result();
+
+
+		//    $temp = $data_id->row();
+		//    $this->load->model('M_trs_training_Search','mtss');
+		//    $department = $this->mtss->get_emp_department($temp->Sectioncode_ID)->row();
 			
 		$this->load->model('M_trs_training_Search','mtst');
 		$this->mtst->Employee_Code = $Emp_id;
@@ -73,6 +78,7 @@ class TR_report extends MainController {
 	$pdf->WriteHTML('<br>');//ใช้แท็ก HTML
 	$pdf->SetFont('THSarabunNew','',16);
 	$pdf->SetLeftMargin(15);
+	$pdf->Ln();
 	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'รหัสพนักงาน :'.$data_id[0]->Emp_ID), 0, 0, 'L', 0);
 	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'ชื่อ-นามสกุล :'.$data_id[0]->Emp_nametitle.$data_id[0]->Empname_th." ".$data_id[0]->Empsurname_th), 0, 0, 'R', 0);
 	$pdf->Ln();
@@ -82,8 +88,9 @@ class TR_report extends MainController {
 	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'ชื่ออังกฤษ :'.$data_id[0]->Empname_engTitle.".".$data_id[0]->Empname_eng." ".$data_id[0]->Empsurname_eng), 0, 0, 'L', 0);
 	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'ตำแหน่ง :'.$data_id[0]->Position_name), 0, 0, 'R', 0);
 	$pdf->Ln();
-	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'แผนก :'.$data_id[0]->Department), 0, 0, 'L', 0);
+	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'แผนก :'.'DDDD'), 0, 0, 'L', 0);
 	$pdf->Cell(0, 10, iconv('UTF-8', 'cp874', 'Section :'.$data_id[0]->Sectioncode_ID), 0, 0, 'R', 0);
+	$pdf->Ln();
 	$pdf->Ln();
 	$pdf->Cell(10, 10, iconv('UTF-8', 'cp874','No.'), 1, 0, 'C', 0);
 	$pdf->Cell(30, 10, iconv('UTF-8', 'cp874', 'Course Code'), 1, 0, 'C', 0);

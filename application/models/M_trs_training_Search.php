@@ -114,7 +114,9 @@ class M_trs_training_Search extends trs_model {
 		$sql = "SELECT *
 				FROM dbmc.employee
 				INNER JOIN dbmc.position
-				ON position.Position_ID = employee.Position_ID 
+				ON position.Position_ID = employee.Position_ID
+				-- LEFT JOIN dbmc.master_mapping
+				-- ON master_mapping.Section_id = employee.Sectioncode_ID
 				WHERE employee.Emp_ID = ? ";
 		$query = $this->db->query($sql, array($this->Emp_ID));
 		return $query;
