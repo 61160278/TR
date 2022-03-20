@@ -360,9 +360,9 @@ function AddPage($orientation='', $size='', $rotation=0)
 function Header()
 {
 
-	$this->AddFont('THSarabunNew','B','THSarabunNew_b.php');
-	$this->SetFont('THSarabunNew','B',16);
-	$this->Cell(0, 10, iconv('UTF-8', 'cp874', 'รายงานการอบรมของพนักงานรายบุคคล (Personnel Report Form)'), 0, 1, 'C', 0);
+	// $this->AddFont('THSarabunNew','B','THSarabunNew_b.php');
+	// $this->SetFont('THSarabunNew','B',16);
+	// $this->Cell(0, 10, iconv('UTF-8', 'cp874', 'รายงานการอบรมของพนักงานรายบุคคล (Personnel Report Form)'), 0, 1, 'C', 0);
 
 
 	// To be implemented in your own inherited class

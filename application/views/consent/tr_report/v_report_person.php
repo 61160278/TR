@@ -84,33 +84,6 @@
 
       }
       // exportfile excel
-
-function export_pdf(){
-
-            var Emp_id = document.getElementById("emp_ids").value;
-            console.log(Emp_id);
-
-            $.ajax({
-                  type: "POST",
-                  url: "<?php echo base_url(); ?>/tr_report/TR_report/Report_person_pdf",
-                  data: {
-                        "Emp_id": Emp_id
-                      
-                  },
-                  dataType: "JSON",
-                  success: function(data) {
-                       
-                  }
-                  // success function
-
-            });
-
-            // ajax 
-
-
-
-}
-
       </script>
       <!-- Begin Page Content -->
       <div class="container-fluid">
@@ -255,11 +228,12 @@ function export_pdf(){
                                                 <img class="rounded-circle"
                                                       src="<?php echo base_url();?>elaadmin/images/PDF.png" alt="Excel"
                                                       width="40">
-                                                      <!-- <a href="<?php echo base_url()?>tr_report/TR_report/Report_person_pdf"> -->
+                                                      
                                                       <input class="form-control"  type="text" value="<?php echo $Emp_id; ?>"
-                                                            id="emp_ids" >
-                                                <button type="button" class="btn btn-primary" onclick="export_pdf()">Dowload PDF</button>
-                                                <!-- </a> -->
+                                                            id="emp_ids" hidden>
+                                                            <a href="<?php echo base_url()?>tr_report/TR_report/Report_person_pdf/<?php echo $Emp_id; ?>">
+                                                <button type="button" class="btn btn-primary">Dowload PDF</button>
+                                                </a>
                                           </div>
 
                                           <?php }  ?>
