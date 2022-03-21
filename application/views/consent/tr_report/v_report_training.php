@@ -106,26 +106,6 @@
 <!-- End Menu Manage Training Record -->
 
 
-<!-- Start Menu Employee Training Record -->
-<div class="col-xl-4 col-md-6 mb-4">
-      <a href="<?php echo base_url() ?>tr_report/TR_report/Report_support">
-            <div class="card border4 shadow h-100 py-2">
-                  <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                              <div class="col mr-2">
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">Employee Training Support Audit</div>
-                              </div>
-                              <!-- col-2 -->
-                        </div>
-                        <!-- row -->
-                  </div>
-                  <!-- card body -->
-            </div>
-            <!-- card -->
-      </a>
-      <!-- a href -->
-</div>
-<!-- End Menu Employee Training Record  -->
 
             
 <div class="col-md-7">
