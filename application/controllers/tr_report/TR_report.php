@@ -132,10 +132,7 @@ $pdf->Output();
 		
 		$this->output('/consent/tr_report/v_report_group', $data);
 	}
-	function Report_support()
-	{
-		$this->output('/consent/tr_report/v_report_support');
-	}
+	
 	function Show_trainingperson()
 	{
 		$Emp_id = $this->input->post('emp_id');
