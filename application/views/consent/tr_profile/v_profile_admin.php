@@ -78,83 +78,105 @@
                                                 <div class="card border border-secondary">
                                                       <div class="card-body">
                                                             <div class="row">
-                                                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <img src="<?php echo base_url();?>elaadmin/images/1.jpg" width="200" height="200" class="rounded-circle"/>
-
-                                                            </div>
-                                                            <br>
-                                                            <br>
-
-                                                            <div class="row">
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; รหัสประจำตัวพนักงาน :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="AD00037"
-                                                                              disabled>
+                                                                  <div class="col-md-3">
+                                                                        <img src="<?php echo base_url();?>elaadmin/images/1.jpg"
+                                                                              width="320" height="300"
+                                                                              class="rounded-square" />
                                                                   </div>
+                                                                  <div class="col-md-9">
+                                                                        <br>
+                                                                        <br>
+                                                                      
+                                                                        <div class="row">
+                                                                              <div class="col-md-2">
+                                                                                    รหัสพนักงาน :
+                                                                              </div>
+
+                                                                              <div class="col-md-2">
+                                                                              <?php echo "HR00121"; ?>
+                                                                              </div>
+
+                                                                              <div class="col-md-1" align="right">
+                                                                                    ชื่อ :
+                                                                              </div>
+
+                                                                              <div class="col-md-3">
+
+                                                                              <?php echo "นายเอกชัย นามสมมุติ"; ?>
+
+                                                                              </div>
+
+                                                                              <div class="col-md-2" align="right">
+                                                                                    อายุงาน :
+                                                                              </div>
 
 
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; ชื่อ :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext"
-                                                                              placeholder="นาย แอดมิน จัดการได้หมด"
-                                                                              disabled>
+                                                                              <div class="col-md-2">
+
+                                                                                    <?php echo "6 ปี 4 เดือน 1 วัน"; ?>
+
+                                                                              </div>
+                                                                        </div>
+                                                                        <br>
+                                                                        <hr>
+                                                                        <div class="row">
+                                                                              <div class="col-md-2">
+                                                                                    วุฒิการศึกษา :
+                                                                              </div>
+
+                                                                              <div class="col-md-1">
+
+                                                                              <?php echo "5"; ?>
+
+
+                                                                              </div>
+                                                                              <div class="col-md-2" align="right">
+                                                                                    ชื่ออังกฤษ :
+                                                                              </div>
+
+                                                                              <div class="col-md-3">
+
+                                                                              <?php echo "Mr. Aekkachai Namsommud "; ?>
+
+                                                                              </div>
+
+                                                                              <div class="col-md-2" align="right">
+                                                                                    ตำแหน่ง :
+                                                                              </div>
+                                                                              <div class="col-sm-2">
+
+                                                                              <?php echo "Seniorstaff"; ?>
+
+                                                                              </div>
+                                                                        </div>
+                                                                        <br>
+                                                                        <hr>
+                                                                        <div class="row">
+                                                                              <div class="col-md-1" align="right">
+                                                                                    แผนก :
+                                                                              </div>
+                                                                              <div class="col-md-2" align="center">
+                                                                              <?php echo "Humanresourse"; ?>
+                                                                              </div>
+                                                                              <!-- fix -->
+                                                                              <div class="col-md-2" align="right">
+                                                                                    Section :
+                                                                              </div>
+                                                                              <div class="col-md-2">
+
+                                                                                    <?php echo "SDM-LN0036"; ?>
+
+                                                                              </div>
+                                                                              <!-- row 2 -->
+                                                                        </div>
                                                                   </div>
+                                                                  <br>
+                                                                  <br>
+
+                                                                  <!-- row 1 -->
+                                                                  <br>
 
 
-
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; อายุงาน :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext"
-                                                                              placeholder="13 ปี 1 เดือน 5 วัน"
-                                                                              disabled>
-                                                                  </div>
-
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; วุฒิการศึกษา :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="ปริญญาโท"
-                                                                              disabled>
-                                                                  </div>
-
-                                                            </div>
-                                                            <!-- row 1 -->
-                                                            <br>
-
-                                                            <div class="row">
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; ชื่ออังกฤษ :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext"
-                                                                              placeholder="Mr. Admin Jatkandaimod"
-                                                                              disabled>
-                                                                  </div>
-
-
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; ตำแหน่ง :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="Administrator"
-                                                                              disabled>
-                                                                  </div>
-
-
-
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; แผนก :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext"
-                                                                              placeholder="Human Resourse" disabled>
-                                                                  </div>
-
-                                                                  &nbsp;&nbsp;&nbsp;&nbsp; Section :
-                                                                  <div class="col-sm-2">
-                                                                        <input type="text" class="form-control"
-                                                                              id="grouptext" placeholder="6180"
-                                                                              disabled>
-                                                                  </div>
-                                                                  <!-- row 2 -->
 
                                                             </div>
                                                             <!-- card-body -->
@@ -163,7 +185,7 @@
                                                       </div>
                                                 </div>
                                           </div>
-
+                                    
 
 
                                     </div>
@@ -180,10 +202,11 @@
                                                             <div class="card-header" id="headdata">
                                                                   <strong class="card-title">History</strong>
                                                                   <div class="pull-right margin">
-                                                                  <input class="form-control col-md-12" type="text"
-                                                                        placeholder="Search ..." aria-label="Search">
+                                                                        <input class="form-control col-md-12"
+                                                                              type="text" placeholder="Search ..."
+                                                                              aria-label="Search">
 
-                                                            </div>
+                                                                  </div>
                                                             </div>
                                                             <div class="card-body">
                                                                   <ul class="nav nav-pills mb-3" id="pills-tab"
@@ -231,7 +254,8 @@
                                                                                           </tr>
                                                                                     </thead>
                                                                                     <tbody>
-                                                                                          <tr align="center">
+                                                                                         
+                                                                                                <tr align="center">
                                                                                                 <td>1.</td>
                                                                                                 <td>IN-00001</td>
                                                                                                 <td>General Safety</td>
@@ -257,7 +281,7 @@
                                                                                           <tr align="center">
                                                                                                 <td>2.</td>
                                                                                                 <td>IN-00002</td>
-                                                                                                <td>Leader andd
+                                                                                                <td>Leader and
                                                                                                       Management</td>
                                                                                                 <td>Communication for
                                                                                                       Leader</td>
@@ -281,8 +305,7 @@
                                                                                           <tr align="center">
                                                                                                 <td>3.</td>
                                                                                                 <td>IN-00003</td>
-                                                                                                <td>Professional Golf
-                                                                                                      Caddie</td>
+                                                                                                <td>Professional Skill</td>
                                                                                                 <td>Communication
                                                                                                       Efficiency</td>
                                                                                                 <td>05/08/2021</td>
@@ -354,6 +377,8 @@
 
                                                                                                 </td>
                                                                                           </tr>
+                                                                                        
+
 
                                                                                     </tbody>
                                                                               </table>
@@ -408,16 +433,21 @@
 
                                           </div>
                                     </div><!-- .animated -->
+
+                                    <div class="col-md-3">
+                                          <a
+                                                href="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Employee_training">
+                                                <button type="button" class="btn btn-secondary">Back</button>
+                                          </a>
+                                    </div>
+
                               </div><!-- .content -->
 
                         </div>
 
+
                   </div>
                   <!-- Start col-lg-12 -->
-                  <div class="col-md-3">
-                        <a href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/index">
-                              <button type="button" class="btn btn-secondary">Back</button>
-                        </a>
-                  </div>
+
 
             </div> <!-- /.container-fluid -->
