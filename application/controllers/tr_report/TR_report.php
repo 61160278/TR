@@ -57,7 +57,6 @@ class TR_report extends MainController {
 		$this->mtts->Emp_ID = $Emp_id;
 		$data_id = $this->mtts->get_data_emp()->result();
 		   $department_info = $this->mtts->get_emp_department($data_id[0]->Sectioncode_ID)->result();
-		   
 			
 		$this->load->model('M_trs_training_Search','mtst');
 		$this->mtst->Employee_Code = $Emp_id;
