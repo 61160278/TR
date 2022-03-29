@@ -435,8 +435,7 @@
                                     </div><!-- .animated -->
 
                                     <div class="col-md-3">
-                                          <a
-                                                href="<?php echo base_url() ?>tr_employee_training_record/Emp_training_record/Employee_training">
+                                    <a href="<?php echo base_url()?>Trs_Controller/index">
                                                 <button type="button" class="btn btn-secondary">Back</button>
                                           </a>
                                     </div>
