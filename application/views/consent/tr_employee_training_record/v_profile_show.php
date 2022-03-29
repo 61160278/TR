@@ -136,7 +136,7 @@
 
                                                                               <div class="col-md-3">
 
-                                                                                    <?php echo $row->Empname_engTitle.".".$row->Empname_eng." ".$row->Empsurname_eng; ?>
+                                                                                    <?php echo $row->Empname_engTitle." ".$row->Empname_eng." ".$row->Empsurname_eng; ?>
 
                                                                               </div>
 
