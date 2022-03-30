@@ -263,17 +263,10 @@
                                                                                                 <td>02/01/2021</td>
                                                                                                 <td>02/01/2021</td>
                                                                                                 <td>Mr.Kenji
-                                                                                                      Sleeptogether</td>
+                                                                                                      Namwong</td>
                                                                                                 <td>
 
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;
-                                                                                                      <input type="checkbox"
-                                                                                                            id="checkbox2"
-                                                                                                            name="checkbox2"
-                                                                                                            value="option2"
-                                                                                                            class="form-check-input">
+                                                                                                    O
 
 
                                                                                                 </td>
@@ -287,19 +280,11 @@
                                                                                                       Leader</td>
                                                                                                 <td>21/01/2021</td>
                                                                                                 <td>21/01/2021</td>
-                                                                                                <td>Mr.Denial Ok</td>
+                                                                                                <td>Mr.Denial Oswai</td>
                                                                                                 <td>
 
 
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;
-                                                                                                      <input type="checkbox"
-                                                                                                            id="checkbox2"
-                                                                                                            name="checkbox2"
-                                                                                                            value="option2"
-                                                                                                            class="form-check-input">
-
+                                                                                                     -
                                                                                                 </td>
                                                                                           </tr>
                                                                                           <tr align="center">
@@ -313,14 +298,7 @@
                                                                                                 <td>Mr.Kate J.son</td>
                                                                                                 <td>
 
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;
-                                                                                                      <input type="checkbox"
-                                                                                                            id="checkbox2"
-                                                                                                            name="checkbox2"
-                                                                                                            value="option2"
-                                                                                                            class="form-check-input">
+                                                                                                     O
 
 
                                                                                                 </td>
@@ -339,14 +317,8 @@
                                                                                                 <td>
 
 
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;
-                                                                                                      <input type="checkbox"
-                                                                                                            id="checkbox2"
-                                                                                                            name="checkbox2"
-                                                                                                            value="option2"
-                                                                                                            class="form-check-input">
+                                                                                                    
+                                                                                                      O
 
 
                                                                                                 </td>
@@ -362,17 +334,10 @@
                                                                                                 <td>07/03/2022</td>
                                                                                                 <td>07/03/2022</td>
                                                                                                 <td>Mr.Kenji
-                                                                                                      Sleeptogether</td>
+                                                                                                      Namwong</td>
                                                                                                 <td>
 
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;&nbsp;
-                                                                                                      &nbsp;
-                                                                                                      <input type="checkbox"
-                                                                                                            id="checkbox2"
-                                                                                                            name="checkbox2"
-                                                                                                            value="option2"
-                                                                                                            class="form-check-input">
+                                                                                                      -
 
 
                                                                                                 </td>
