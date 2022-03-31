@@ -136,6 +136,7 @@ class M_trs_training_record extends trs_model {
 				ON tcd.Course_id = ttr.Course_code_id
 				LEFT JOIN trs_database.trs_trainer_data as ttd
 				ON ttd.trainer_id = ttr.Trainer_id
+				ORDER BY Start_date DESC
 				";
 				
 		$query = $this->db->query($sql);
