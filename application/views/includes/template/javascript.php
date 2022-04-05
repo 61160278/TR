@@ -7,7 +7,6 @@
 * @author Kunanya Singmee
 * @Create Date 2563-09-3
 */
-
 ?>
 
 
@@ -37,20 +36,8 @@
 <script src="<?php echo base_url();?>elaadmin/assets/js/init/fullcalendar-init.js"></script>
 
 <!-- data-table -->
-<script src="<?php echo base_url();?>elaadmin/assets/js/lib/data-table/vfs_fonts.js"></script>
-<script src="<?php echo base_url();?>elaadmin/assets/js/lib/data-table/pdfmake.min.js"></script>
-<script src="<?php echo base_url();?>elaadmin/assets/js/lib/data-table/jszip.min.js"></script>
-<script src="<?php echo base_url();?>elaadmin/assets/js/lib/data-table/jquery-1.12.4.js"></script>
-<script src="<?php echo base_url();?>elaadmin/assets/js/lib/data-table/jquery.dataTables.min.js"></script>
-<script src="<?php echo base_url();?>elaadmin/assets/js/lib/data-table/datatables.min.js"></script>
-<script src="<?php echo base_url();?>elaadmin/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
-<script src="<?php echo base_url();?>elaadmin/assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
-<script src="<?php echo base_url();?>elaadmin/assets/js/lib/data-table/buttons.print.min.js"></script>
-<script src="<?php echo base_url();?>elaadmin/assets/js/lib/data-table/buttons.html5.min.js"></script>
-<script src="<?php echo base_url();?>elaadmin/assets/js/lib/data-table/buttons.flash.min.js"></script>
-<script src="<?php echo base_url();?>elaadmin/assets/js/lib/data-table/buttons.colVis.min.js"></script>
-<script src="<?php echo base_url();?>elaadmin/assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
-<script src="<?php echo base_url();?>elaadmin/assets/js/init/datatables-init.js"></script>
+
+<script type="text/javascript" src="<?php echo base_url();?>DataTables/datatables.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>

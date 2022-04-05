@@ -35,7 +35,7 @@
       </style>
       <!-- End style CSS  -->
       <script>
-      function Delete_training(Training_id,Course_code_id) {
+      function Delete_training(Training_id, Course_code_id) {
 
             console.log(Training_id);
 
@@ -44,7 +44,7 @@
                   url: "<?php echo base_url(); ?>/tr_manage_training_record/Manage_training_record/delete_training_data",
                   data: {
                         "Training_id": Training_id,
-                        "Course_code_id" : Course_code_id
+                        "Course_code_id": Course_code_id
                   },
                   dataType: "JSON",
                   success: function(data) {
@@ -75,6 +75,10 @@
                   Training_id;
       }
       //function info_data
+
+      $(document).ready(function() {
+            $("#training_data").DataTable();
+      });
       </script>
 
       <!-- Begin Page Content -->
@@ -110,12 +114,6 @@
                                           <div class="col-md-12">
                                                 <div class="card">
                                                       <div class="card-header">
-
-                                                            <div class="pull-left margin">
-                                                                  <input class="form-control col-md-12" type="text"
-                                                                        placeholder="Search ..." aria-label="Search">
-
-                                                            </div>
                                                             <div class="pull-right margin">
                                                                   <a
                                                                         href="<?php echo base_url() ?>tr_manage_training_record/Manage_training_record/create_training_data">
@@ -128,11 +126,10 @@
                                                             </div>
                                                       </div>
                                                       <div class="card-body">
-                                                            <table id="bootstrap-data-table"
+                                                            <table id="training_data"
                                                                   class="table table-striped table-bordered">
                                                                   <thead>
                                                                         <tr align="center">
-
                                                                               <th>No.</th>
                                                                               <th>Course Code</th>
                                                                               <th>Training Name</th>
@@ -161,7 +158,6 @@
                                                                               <td> <?php echo $row->trainer_titlename.$row->trainer_fname."  ".$row->trainer_Sname ?>
                                                                               </td>
 
-
                                                                               <td>
 
                                                                                     <button type="button"
@@ -181,8 +177,6 @@
                                                                               </td>
                                                                         </tr>
                                                                         <?php }   ?>
-
-
                                                                   </tbody>
                                                             </table>
                                                       </div>

@@ -20,38 +20,38 @@
 <!--<![endif]-->
 
 <head>
-    <!-- Start logo system  -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Training Record System </title>
-    <meta name="description" content="EVS - DENSO x TEAM 0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- End logo system  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <!-- Start include stylesheet -->
-    <link rel="apple-touch-icon" href="<?php echo base_url();?>elaadmin/images/Logo_TR.png">
-    <link rel="shortcut icon" href="<?php echo base_url();?>elaadmin/images/Logo_TR.png">
+      <!-- Start logo system  -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title> Training Record System </title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- End logo system  -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+      <script src="jquery-3.6.0.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+      <!-- Start include stylesheet -->
+      <link rel="apple-touch-icon" href="<?php echo base_url();?>elaadmin/images/Logo_TR.png">
+      <link rel="shortcut icon" href="<?php echo base_url();?>elaadmin/images/Logo_TR.png">
 
-    <link rel="stylesheet" href="<?php echo base_url();?>elaadmin/assets/css/normalize.min.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>elaadmin/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>elaadmin/assets/css/pe-icon-7-stroke.min.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>elaadmin/assets/css/flag-icon.min.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>elaadmin/assets/css/cs-skin-elastic.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>elaadmin/assets/css/style.css">
-    <link rel="stylesheet"
-        href="<?php echo base_url();?>elaadmin/assets/css/lib/datatable/dataTables.bootstrap.min.css">
+      <link rel="stylesheet" href="<?php echo base_url();?>elaadmin/assets/css/normalize.min.css">
+      <link rel="stylesheet" href="<?php echo base_url();?>elaadmin/assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+      <link rel="stylesheet" href="<?php echo base_url();?>elaadmin/assets/css/pe-icon-7-stroke.min.css">
+      <link rel="stylesheet" href="<?php echo base_url();?>elaadmin/assets/css/flag-icon.min.css">
+      <link rel="stylesheet" href="<?php echo base_url();?>elaadmin/assets/css/cs-skin-elastic.css">
+      <link rel="stylesheet" href="<?php echo base_url();?>elaadmin/assets/css/style.css">
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>DataTables/datatables.min.css">
 
-    <link href="<?php echo base_url();?>elaadmin/assets/css/chartist.min.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>elaadmin/assets/css/jqvmap.min.css" rel="stylesheet">
+      <link href="<?php echo base_url();?>elaadmin/assets/css/chartist.min.css" rel="stylesheet">
+      <link href="<?php echo base_url();?>elaadmin/assets/css/jqvmap.min.css" rel="stylesheet">
 
-    <!-- End include stylesheet -->
-    <?php date_default_timezone_set("Asia/Bangkok"); ?>
-
+      <!-- End include stylesheet -->
+      <?php date_default_timezone_set("Asia/Bangkok"); ?>
+      
+      
 
 </head>
 
