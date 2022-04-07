@@ -67,6 +67,7 @@
       }
       //function info_data
 
+      
       function edit_data(Training_id) {
 
             console.log(Training_id);
