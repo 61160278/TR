@@ -78,6 +78,8 @@
 
       $(document).ready(function() {
             $("#training_data").DataTable();
+            // jQuery methods go here...
+
       });
       </script>
 
@@ -127,7 +129,7 @@
                                                       </div>
                                                       <div class="card-body">
                                                             <table id="training_data"
-                                                                  class="table table-striped table-bordered">
+                                                                  class="table table-striped table-bordered ">
                                                                   <thead>
                                                                         <tr align="center">
                                                                               <th>No.</th>

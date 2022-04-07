@@ -4,10 +4,10 @@
  *
  * To rebuild or modify this file with the latest versions of the included
  * software please visit:
- *   https://datatables.net/download/#dt/jszip-2.5.0/pdfmake-0.1.36/dt-1.11.5/af-2.3.7/b-2.2.2/b-html5-2.2.2
+ *   https://datatables.net/download/#dt/jqc-1.12.4/jszip-2.5.0/pdfmake-0.1.36/dt-1.11.5/af-2.3.7/b-2.2.2/b-html5-2.2.2/b-print-2.2.2
  *
  * Included libraries:
- *   JSZip 2.5.0, pdfmake 0.1.36, DataTables 1.11.5, AutoFill 2.3.7, Buttons 2.2.2, HTML5 export 2.2.2
+ *   jQuery 1 1.12.4, JSZip 2.5.0, pdfmake 0.1.36, DataTables 1.11.5, AutoFill 2.3.7, Buttons 2.2.2, HTML5 export 2.2.2, Print view 2.2.2
  */
 
 table.dataTable th.dt-left,
