@@ -323,6 +323,13 @@
 
       }
       //check_data
+
+
+
+
+      $(document).ready(function() {
+    $("#training_data").DataTable();
+});
       </script>
 
       <!-- Begin Page Content -->
@@ -359,11 +366,6 @@
                                                 <div class="card">
                                                       <div class="card-header">
 
-                                                            <div class="pull-left margin">
-                                                                  <input class="form-control col-md-12" type="text"
-                                                                        placeholder="Search ..." aria-label="Search">
-
-                                                            </div>
                                                             <div class="pull-right margin">
                                                                   <button type="button" class="btn btn-success"
                                                                         data-toggle="modal"
@@ -376,7 +378,7 @@
                                                       <!-- card header -->
 
                                                       <div class="card-body">
-                                                            <table id="bootstrap-data-table"
+                                                            <table id="training_data"
                                                                   class="table table-striped table-bordered">
                                                                   <thead>
                                                                         <tr align="center">

@@ -43,7 +43,11 @@
       }
       </style>
       <!-- End style CSS  -->
-
+<script>
+       $(document).ready(function() {
+    $("#training_data").DataTable();
+});
+      </script>
       <!-- Begin Page Content -->
       <div class="container-fluid">
 
@@ -201,12 +205,6 @@
 
                                                             <div class="card-header" id="headdata">
                                                                   <strong class="card-title">History</strong>
-                                                                  <div class="pull-right margin">
-                                                                        <input class="form-control col-md-12"
-                                                                              type="text" placeholder="Search ..."
-                                                                              aria-label="Search">
-
-                                                                  </div>
                                                             </div>
                                                             <div class="card-body">
                                                                   <ul class="nav nav-pills mb-3" id="pills-tab"
@@ -236,7 +234,7 @@
                                                                               aria-labelledby="pills-home-tab">
 
 
-                                                                              <table id="bootstrap-data-table"
+                                                                              <table id="training_data"
                                                                                     class="table table-striped table-bordered">
                                                                                     <thead>
                                                                                           <tr align="center">
