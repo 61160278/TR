@@ -827,3 +827,5 @@ console.log(tr_course_code)
       <?php 
 $num++;
 } //foreach?>
+
+<script type="text/javascript" src="<?php echo base_url();?>DataTables/datatables.min.js"></script>
