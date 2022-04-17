@@ -279,7 +279,7 @@
 
 
       }
-      //check_data
+      //check_data for check all data course not empty input all data
 
       function check_edt_course(check) {
             var tr_course_code = document.getElementById("tr_course_code" + check).value;
@@ -352,11 +352,11 @@ console.log(tr_course_code)
 
 
       }
-      //check_data
+      //check_edt_course for check all data course not empty input all data in edit
 
       $(document).ready(function() {
     $("#training_data").DataTable();
-});
+});//table as Search set row of data
 
       </script>
 
