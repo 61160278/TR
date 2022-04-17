@@ -1,20 +1,14 @@
 <?php
 /*
-* Da_evs_group
+* M_trs_course_data
 * C
-* @author Jakkarin Pimpaeng
-* @Create Date 2564-04-8
+* @author Jirayu Jaravichit
 */ 
 
 
 include_once("trs_model.php");
 
-/*
-* Da_evs_group
-* 
-* @author Jakkarin Pimpaeng
-* @Create Date 2564-04-8
-*/ 
+
  
 class M_trs_course_data extends trs_model {		
 	
@@ -36,9 +30,8 @@ class M_trs_course_data extends trs_model {
 	* insert
 	* Insert  to database
 	* @input 
-	* @output -
-	* @author Jakkarin Pimpaeng
-	* @Create Date 2564-04-8
+	* @author Jirayu Jaravichit
+	
 	*/
 	
 	function insert() {
@@ -54,8 +47,7 @@ class M_trs_course_data extends trs_model {
 	* Update  into database
 	* @input 
 	* @output -
-	* @author Jakkarin Pimpaeng
-	* @Create Date 2564-04-8
+	* @author Jirayu Jaravichit
 	*/
 
 	function update() {
@@ -73,8 +65,7 @@ class M_trs_course_data extends trs_model {
 	* Delete from database
 	* @input 
 	* @output -
-	* @author Tippawan Aiemsaad
-	* @Create Date 2564-04-8
+	* @author Jirayu Jaravichit
 	*/
 
 	function delete() {
@@ -89,8 +80,7 @@ class M_trs_course_data extends trs_model {
 	* Get  from database
 	* @input 
 	* @output -
-	* @author Jakkarin Pimpaeng
-	* @Create Date 2564-04-8
+	* @author Jirayu Jaravichit
 	*/
 	function get_by_key() {	
 		$sql = "SELECT * 
@@ -101,7 +91,13 @@ class M_trs_course_data extends trs_model {
 	}
 
 
-
+/*
+	* get_all_crs
+	* Get  from database
+	* @input 
+	* @output -
+	* @author Jirayu Jaravichit
+	*/
 
 	function get_all_crs() {	
 		$sql = "SELECT * 
@@ -109,7 +105,13 @@ class M_trs_course_data extends trs_model {
 		$query = $this->db->query($sql);
 		return $query;
 	}
-
+/*
+	* upstatus
+	* upstatus when course use
+	* @input 
+	* @output -
+	* @author Jirayu Jaravichit
+	*/
 	function upstatus(){
 		$sql = "UPDATE trs_database.trs_course_data 
 				SET	Course_count = ? , Number_record =?
@@ -119,6 +121,13 @@ class M_trs_course_data extends trs_model {
 
 
 	}
+	/*
+	* upstatus
+	* upstatus when course dont use
+	* @input 
+	* @output -
+	* @author Jirayu Jaravichit
+	*/
 	function upstatus_del(){
 		$sql = "UPDATE trs_database.trs_course_data 
 				SET	Course_count = ? 

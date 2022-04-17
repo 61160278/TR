@@ -140,7 +140,7 @@
             });
 
             // ajax 
-      } //function add_courses
+      } //function add_courses For add course data to database
 
 
       function Edit_course(Course_id) {
@@ -181,7 +181,7 @@
 
 
       }
-      //function Edit_course
+      //function Edit_course for edit course data in database
 
       function Delete_course(Course_id) {
 
@@ -203,7 +203,7 @@
             });
 
       }
-      //function Delete_course
+      //function Delete_course fo delete course data in database
 
 
       function check_course() {
