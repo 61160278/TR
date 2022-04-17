@@ -89,7 +89,7 @@
                   },
                   dataType: "JSON",
                   success: function(data) {
-                        $("#addmember").collapse('show');
+                        $("#addmember").collapse('show'); 
                         $("#edt_place_training" + Training_id).attr("disabled", true);
                         $("#edt_start_date" + Training_id).attr("disabled", true);
                         $("#edt_start_time" + Training_id).attr("disabled", true);

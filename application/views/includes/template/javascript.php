@@ -40,4 +40,3 @@
 <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
 <script src="https://unpkg.com/file-saver@1.3.3/FileSaver.js"></script>
 <script lang="javascript" src="dist/xlsx.bundle.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>DataTables/datatables.min.js"></script>
