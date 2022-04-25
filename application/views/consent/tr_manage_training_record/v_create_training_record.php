@@ -371,7 +371,7 @@
 
             });
             // ajax
-      }
+      } //addmember in class
 
       function add_member_db() {
             var training = "";
@@ -641,7 +641,7 @@ console.log(cer)
 
                                                             <div class="card-body">
                                                                   <div class="row">
-                                                                        <!-- <div class="col-md-1"></div> -->
+                                                                       
                                                                         <div class="col-md-2">
 
                                                                               <input class="form-control" type="text"
